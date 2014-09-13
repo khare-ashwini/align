@@ -1,0 +1,6 @@
+Version information (commit SHA) for the original base code
+OpenTripPlanner-iOS - ad514caa8f68e650f074f67d8b51b436656d3a35
+MapBox - c1c957eb986d787215001def2e3d4c0f40ae27b5
+RestKit - 221e91e7822c01636e6262824d310d8a5e41ee5a
+FMDB - 0cfca849943c6d109934c9d708d0942a8708cb99
+GRMustache - b6a39ab86296269243f998af116bba1519261b2d

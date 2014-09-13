@@ -1,0 +1,20 @@
+#These commands were done to get the base code from OpenTripPlanner-iOS.git and need not be requried further.
+#Just for reference
+
+git clone https://github.com/opentripplanner/OpenTripPlanner-iOS.git
+
+cd OpenTripPlanner-iOS
+
+git submodule init
+#The submodules 'MapBox' and 'RestKit' should be initialized now
+
+git submodule update
+#The code for the submodules 'MapBox' and 'RestKit' should be updated
+
+cd MapBox/MapView/Map/
+
+git submodule init
+#Initializes the submodules 'FMDB' and 'GRMustache'
+
+git submodule update
+#Updates the submodules initialized in the previous command i.e. 'FMDB' and 'GRMustache' submodules

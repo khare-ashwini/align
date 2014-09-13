@@ -1,0 +1,33 @@
+The current code is compatible with XCode Version 4.6.3.
+
+https://github.com/chrismiles/CMPopTipView
+
+Testing the app
+-----------------
+http://stackoverflow.com/questions/18882481/testing-ios-6-apps-on-device-running-ios7
+http://stackoverflow.com/questions/18882481/testing-ios-6-apps-on-device-running-ios7/19053534#19053534
+
+Always close the project before closing the XCode. This is because when you open XCode (any version) it automatically opens the project that was last opened in any version of XCode.
+
+Since the current project is compatible with XCode-4, openning it on later XCode versions rewrites the metadata (.storyboard and other files). If you've accidentally opened theproject in a higher version of XCode, you may not be able to open it again in XCode-4, unless certain metadata changes are done. To change the storyboard metadata to be compatible with XCode-4, 
+	1) Select the storyboard file.
+	2) Open the 'File Inspector' dialog.
+	3) Under the 'Interface Builder Document' section, change the value of "Opens in" to "XCode 4.6" or a similar version.
+	4) Close the project.
+	5) Open the project in XCode-4.
+-----------------
+
+raywenderlich's ios tutorials are a good reference/starting point
+http://www.raywenderlich.com/21558/beginning-twitter-tutorial-updated-for-ios-6
+
+
+Getting iOS6-SDK in XCode-5
+----------------------------
+http://stackoverflow.com/questions/18894297/how-to-deploy-project-with-ios-base-sdk-6-1-to-device-with-ios-7
+http://blog.tallisoft.dk/blog/2013/10/23/using-ios-6-dot-1-sdk-with-xcode-5
+
+
+Tips for submitting the app to the AppStore
+--------------------------------------------
+When submitting the app Archive to the AppStore, XCode would validate the archive first. During the validation, if XCode-5 fails
+to get the identities from the developer account try submitting the archive from XCode-4.
