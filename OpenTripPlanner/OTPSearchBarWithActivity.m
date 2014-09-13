@@ -17,6 +17,7 @@
         {
             if ([subview conformsToProtocol:@protocol(UITextInputTraits)]) {
                 [(UITextField *)subview setClearButtonMode:UITextFieldViewModeWhileEditing];
+                
             }
         }
     }
