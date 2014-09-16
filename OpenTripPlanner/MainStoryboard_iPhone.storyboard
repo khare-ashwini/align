@@ -1159,6 +1159,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.56956060279999998" green="0.7130214399" blue="0.77848356959999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="At1-75-J7q"/>
                     <connections>
                         <outlet property="accessibilityImg" destination="7Lw-DH-qvI" id="ATE-cB-rQl"/>
                         <outlet property="accessibilityStepper" destination="NdV-UL-KUv" id="WNQ-Wh-4JG"/>
@@ -1269,7 +1270,7 @@
                                 </connections>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" alpha="0.70000000000000007" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" id="Or5-hV-OUe" customClass="OTPGeocodedTextField">
-                                <rect key="frame" x="0.0" y="50" width="320" height="30"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1324,9 +1325,9 @@
                                 <color key="tintColor" red="0.0039215688589999999" green="0.69411766529999996" blue="0.83137261870000001" alpha="1" colorSpace="deviceRGB"/>
                                 <items>
                                     <navigationItem title="Walk This Way!" id="Zsc-r6-gFg">
-                                        <barButtonItem key="leftBarButtonItem" image="clock.png" id="NgW-76-3OQ">
+                                        <barButtonItem key="leftBarButtonItem" image="clock.png" style="plain" id="NgW-76-3OQ">
                                             <connections>
-                                                <segue destination="eQD-1y-oNh" kind="modal" identifier="SelectParameters" id="joT-9h-qRS"/>
+                                                <segue destination="eQD-1y-oNh" kind="modal" id="ETC-cu-xlU"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="mode-walk.png" style="done" id="LNi-A5-pIl">
@@ -1469,17 +1470,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To Align!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wQi-sL-fgj">
-                                                <rect key="frame" x="58" y="41" width="184" height="68"/>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To Align!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wQi-sL-fgj">
+                                                <rect key="frame" x="72" y="40" width="146" height="68"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Qqo-6X-FK8">
-                                                <rect key="frame" x="78" y="250" width="135" height="33"/>
+                                                <rect key="frame" x="83" y="262" width="135" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.20197038980000001" green="0.50480787270000005" blue="0.64548658290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.1687152836282422" green="0.43397230196789338" blue="0.55713887117346939" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                                 <state key="normal" title="Log In">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1489,7 +1490,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0Yn-Fy-0eQ">
-                                                <rect key="frame" x="20" y="365" width="95" height="95"/>
+                                                <rect key="frame" x="-3" y="374" width="95" height="95"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" image="gohowto_52.png">
@@ -1504,7 +1505,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vXF-PP-erq">
-                                                <rect key="frame" x="211" y="365" width="96" height="95"/>
+                                                <rect key="frame" x="231" y="374" width="96" height="95"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" image="goinfo_52.png">
@@ -1518,22 +1519,24 @@
                                                     <segue destination="tRy-XK-iNc" kind="modal" modalTransitionStyle="partialCurl" id="vAK-aK-kkt"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pog-es-xwh">
-                                                <rect key="frame" x="78" y="144" width="135" height="39"/>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pog-es-xwh">
+                                                <rect key="frame" x="83" y="144" width="135" height="39"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" title="Username">
-                                                    <color key="titleColor" red="0.53433950678213304" green="0.52344063041604427" blue="0.57228685461956519" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <state key="highlighted">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UJH-L3-BHL">
-                                                <rect key="frame" x="78" y="190" width="135" height="38"/>
+                                                <rect key="frame" x="83" y="190" width="135" height="38"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Password">
                                                     <color key="titleColor" red="0.53433950679999997" green="0.5234406304" blue="0.57228685459999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1542,12 +1545,13 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YdG-2B-ms0">
-                                                <rect key="frame" x="93" y="403" width="135" height="38"/>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YdG-2B-ms0">
+                                                <rect key="frame" x="83" y="303" width="135" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.19549591576881656" green="0.39012464049351037" blue="0.53196747448979598" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <state key="normal" title="Sign Up">
-                                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <state key="highlighted">
@@ -1558,7 +1562,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="joJ-27-T2x">
-                                                <rect key="frame" x="80" y="365" width="141" height="21"/>
+                                                <rect key="frame" x="100" y="411" width="141" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>

@@ -190,6 +190,23 @@ NSMutableArray *poiAnnotationsOnMap;
     poiAnnotationsOnMap = [[NSMutableArray alloc] init];
     
     self.searchNearbyText.text = searchNearbyTextDefault;
+    
+    //*** Code by Chandra ***//
+    UIButton *dropdownButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    dropdownButton.frame = CGRectMake(0, 0, 32, 32);
+    [dropdownButton setImage:[UIImage imageNamed:@"dropdown1.png"] forState:UIControlStateNormal];
+    [dropdownButton addTarget:self action:@selector(openView) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *barButton=[[UIBarButtonItem alloc] init];
+    [barButton setCustomView:dropdownButton];
+    self.navigationItem.rightBarButtonItem=barButton;
+    
+    //[dropdownButton release];
+    //[barButton release];
+    
+    
+    //**ends**//
+    
 }
 
 - (void)go:(id)sender
@@ -216,13 +233,14 @@ NSMutableArray *poiAnnotationsOnMap;
     self.searchNearbyText.alpha = 1.0;
     [UIView animateWithDuration:0.3 animations:^{
         
-        CGFloat offset;
+        CGFloat offset=0;
+        /**
         if(UIInterfaceOrientationIsPortrait(self.interfaceOrientation)){
             offset = keyboardRect.size.height;
         }else{
             offset = keyboardRect.size.width;
         }
-        
+        **/
         self.userLocationButton.center = CGPointMake(self.userLocationButton.center.x, self.userLocationButton.center.y - offset);
         self.searchNearbyText.center = CGPointMake(self.searchNearbyText.center.x, self.searchNearbyText.center.y - offset);
     }];
@@ -1152,5 +1170,13 @@ RKResponse* _OTPResponse = nil;
     [self.showFromToButton setImage:img forState:state];
     self.showFromToButton.enabled = enabled;
 }
+
+
+
+
+
+
+
+
 
 @end

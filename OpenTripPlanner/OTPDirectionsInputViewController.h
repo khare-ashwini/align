@@ -47,6 +47,10 @@ typedef enum {
 @property (nonatomic) BOOL needsShowFromAndToLocations;
 @property (nonatomic) BOOL launchedFromUrl;
 
+
+//@property (nonatomic, strong) UIButton *dropdownButton;
+
+
 - (void) planTripFrom:(CLLocationCoordinate2D)startPoint to:(CLLocationCoordinate2D)endPoint;
 
 - (IBAction)go:(id)sender;

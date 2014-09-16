@@ -14,6 +14,7 @@
 @property(strong) UIActivityIndicatorView *activityIndicatorView;
 @property int startCount;
 
+
 - (void)startActivity;  // increments startCount and shows activity indicator
 - (void)finishActivity; // decrements startCount and hides activity indicator if 0
 
