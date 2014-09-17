@@ -726,9 +726,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kUy-4U-Ypc">
-                                <rect key="frame" x="82" y="92" width="135" height="39"/>
+                                <rect key="frame" x="93" y="92" width="135" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" red="0.1096759954" green="0.36565939330000002" blue="0.53196747450000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Username">
                                     <color key="titleColor" red="0.53433950679999997" green="0.5234406304" blue="0.57228685459999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -738,8 +740,9 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RfS-3d-cyc">
-                                <rect key="frame" x="85" y="138" width="135" height="38"/>
+                                <rect key="frame" x="93" y="138" width="135" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Mobile Number">
                                     <color key="titleColor" red="0.53433950679999997" green="0.5234406304" blue="0.57228685459999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -750,8 +753,9 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iBG-R9-f4S">
-                                <rect key="frame" x="85" y="183" width="135" height="36"/>
+                                <rect key="frame" x="93" y="183" width="135" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Password">
                                     <color key="titleColor" red="0.53433950679999997" green="0.5234406304" blue="0.57228685459999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -762,8 +766,9 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KGC-Ah-M7I">
-                                <rect key="frame" x="85" y="226" width="141" height="39"/>
+                                <rect key="frame" x="90" y="226" width="141" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Re-enter Password">
                                     <color key="titleColor" red="0.53433950679999997" green="0.5234406304" blue="0.57228685459999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -774,19 +779,23 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kJl-7t-jhw">
-                                <rect key="frame" x="88" y="329" width="135" height="38"/>
+                                <rect key="frame" x="93" y="329" width="135" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.12349436692603166" green="0.43658043272995412" blue="0.64594626913265307" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="tintColor" red="0.1096759954" green="0.36565939330000002" blue="0.53196747450000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Sign Up">
-                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="peN-Jn-A0e" kind="modal" id="WT2-qa-fnl"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bvv-8t-8TV">
-                                <rect key="frame" x="108" y="36" width="77" height="21"/>
+                                <rect key="frame" x="122" y="36" width="77" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1378,7 +1387,7 @@
                     </connections>
                 </segmentedControl>
             </objects>
-            <point key="canvasLocation" x="8" y="41"/>
+            <point key="canvasLocation" x="-70" y="29"/>
         </scene>
         <!--Geocode Disambigation View Controller - Did you mean...?-->
         <scene sceneID="2Yz-GV-gvv">
@@ -1452,7 +1461,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hca-gK-VWZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-858" y="-63"/>
+            <point key="canvasLocation" x="-964" y="117"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="z9Y-C7-zGQ">
@@ -1490,7 +1499,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0Yn-Fy-0eQ">
-                                                <rect key="frame" x="-3" y="374" width="95" height="95"/>
+                                                <rect key="frame" x="-14" y="377" width="95" height="95"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" image="gohowto_52.png">
@@ -1505,7 +1514,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vXF-PP-erq">
-                                                <rect key="frame" x="231" y="374" width="96" height="95"/>
+                                                <rect key="frame" x="237" y="377" width="96" height="95"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" image="goinfo_52.png">
@@ -1546,9 +1555,9 @@
                                                 </state>
                                             </button>
                                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YdG-2B-ms0">
-                                                <rect key="frame" x="83" y="303" width="135" height="35"/>
+                                                <rect key="frame" x="83" y="310" width="135" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.19549591576881656" green="0.39012464049351037" blue="0.53196747448979598" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.23943319742277147" green="0.40126779886662406" blue="0.53196747448979598" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <state key="normal" title="Sign Up">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1558,7 +1567,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="heq-Rd-7OC" kind="push" id="S8C-Tz-KqR"/>
+                                                    <segue destination="heq-Rd-7OC" kind="modal" id="6QH-gT-Du6"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="joJ-27-T2x">
@@ -1584,7 +1593,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3So-MQ-csq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-401" y="-29"/>
+            <point key="canvasLocation" x="-533" y="47"/>
         </scene>
         <!--Transit Time View Controller - Transit Time-->
         <scene sceneID="Ymu-dt-ESH">
@@ -1778,5 +1787,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="7sX-DS-9Oi"/>
+        <segue reference="ROX-Ex-uXK"/>
     </inferredMetricsTieBreakers>
 </document>

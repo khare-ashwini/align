@@ -79,7 +79,6 @@
 		4FC88F731896F8D30006E95D /* PlaceSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC88F721896F8D30006E95D /* PlaceSearchResult.m */; };
 		4FD0B1E918E23F580019FF28 /* WTWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD0B1E818E23F580019FF28 /* WTWHomeViewController.m */; };
 		4FE6A02C1924674500BB64C6 /* dots-0_75.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FE6A02B1924674500BB64C6 /* dots-0_75.png */; };
-		7688101519C51E7100DB5C60 /* dropdown1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7688101419C51E7100DB5C60 /* dropdown1.png */; };
 		8D9287731643A3C400170393 /* OTPArrivalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9287721643A3C400170393 /* OTPArrivalCell.m */; };
 		930531F21620E33C00F9A230 /* Step.m in Sources */ = {isa = PBXBuildFile; fileRef = 930531F11620E33C00F9A230 /* Step.m */; };
 		9378875B16154885007CF24C /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9378875016154866007CF24C /* libRestKit.a */; };
@@ -463,7 +462,6 @@
 		4FD0B1E718E23F580019FF28 /* WTWHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTWHomeViewController.h; sourceTree = "<group>"; };
 		4FD0B1E818E23F580019FF28 /* WTWHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTWHomeViewController.m; sourceTree = "<group>"; };
 		4FE6A02B1924674500BB64C6 /* dots-0_75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dots-0_75.png"; sourceTree = "<group>"; };
-		7688101419C51E7100DB5C60 /* dropdown1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dropdown1.png; path = ../../../../Downloads/UI8.25/dropdown1.png; sourceTree = "<group>"; };
 		8D9287711643A3C400170393 /* OTPArrivalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPArrivalCell.h; sourceTree = "<group>"; };
 		8D9287721643A3C400170393 /* OTPArrivalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTPArrivalCell.m; sourceTree = "<group>"; };
 		930531F01620E33C00F9A230 /* Step.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step.h; sourceTree = "<group>"; };
@@ -1074,7 +1072,6 @@
 				CCF6696A1631B12A007A9634 /* continue_52.png */,
 				CCF6696B1631B12A007A9634 /* continue_52@2x.png */,
 				CCF6696C1631B12A007A9634 /* bike_32.png */,
-				7688101419C51E7100DB5C60 /* dropdown1.png */,
 				CCF6696D1631B12A007A9634 /* bike_32@2x.png */,
 				CCF6696E1631B12A007A9634 /* bike_52.png */,
 				CCF6696F1631B12A007A9634 /* bike_52@2x.png */,
@@ -1500,7 +1497,6 @@
 			files = (
 				CCCDFB7215EEAAC600B26133 /* InfoPlist.strings in Resources */,
 				CC9CFCCC15EFCDA00070712C /* MainStoryboard_iPhone.storyboard in Resources */,
-				7688101519C51E7100DB5C60 /* dropdown1.png in Resources */,
 				CC2316DE1626067D00EE0F48 /* HeadingAngleSmall.png in Resources */,
 				CC2316DF1626067D00EE0F48 /* HeadingAngleSmall@2x.png in Resources */,
 				CC2316E01626067D00EE0F48 /* LoadingTile.png in Resources */,
