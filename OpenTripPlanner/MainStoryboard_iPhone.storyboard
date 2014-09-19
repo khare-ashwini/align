@@ -1276,16 +1276,28 @@
                                         <rect key="frame" x="0.0" y="319" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                         <items>
-                                            <barButtonItem title="Back" id="y5x-PV-kZR">
-                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <connections>
-                                                    <segue destination="R2j-Za-tXt" kind="modal" id="Ato-bR-hon"/>
-                                                </connections>
+                                            <barButtonItem style="plain" id="ff3-wq-W8k">
+                                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tmQ-kg-gik">
+                                                    <rect key="frame" x="12" y="2" width="63" height="41"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.3458815596" green="0.85073273159999996" blue="0.94325972579999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <state key="normal" title="Back">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="R2j-Za-tXt" kind="modal" id="MaU-fd-9hX"/>
+                                                    </connections>
+                                                </button>
                                             </barButtonItem>
-                                            <barButtonItem width="187" style="plain" systemItem="fixedSpace" id="Ub4-op-HJM"/>
+                                            <barButtonItem width="158" style="plain" systemItem="fixedSpace" id="Ub4-op-HJM"/>
                                             <barButtonItem style="plain" id="N3A-yM-Mop">
                                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PRF-qt-8lC">
-                                                    <rect key="frame" x="252" y="0.0" width="73" height="44"/>
+                                                    <rect key="frame" x="243" y="0.0" width="73" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.3458815596" green="0.85073273159999996" blue="0.94325972579999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -1455,10 +1467,9 @@
                                             <rect key="frame" x="6" y="0.0" width="97" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.3458815596" green="0.85073273159999996" blue="0.94325972579999995" alpha="1" colorSpace="calibratedRGB"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                             <state key="normal" title="Dropdown">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <state key="highlighted">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1469,7 +1480,20 @@
                                         </button>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </barButtonItem>
-                                    <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="wru-Eg-OX8"/>
+                                    <barButtonItem width="135" style="plain" systemItem="fixedSpace" id="wru-Eg-OX8"/>
+                                    <barButtonItem style="plain" id="iE3-ep-6CS">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DI9-Fe-PXR">
+                                            <rect key="frame" x="248" y="11" width="69" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <state key="normal" image="mode-walk.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="go:" destination="peN-Jn-A0e" eventType="touchUpInside" id="v8Q-bn-Htv"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
                                 </items>
                                 <color key="barTintColor" red="0.53427630981666485" green="0.93105468985623085" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
@@ -1518,7 +1542,7 @@
                     </connections>
                 </segmentedControl>
             </objects>
-            <point key="canvasLocation" x="-256" y="-11"/>
+            <point key="canvasLocation" x="-289" y="-11"/>
         </scene>
         <!--Geocode Disambigation View Controller - Did you mean...?-->
         <scene sceneID="2Yz-GV-gvv">
@@ -1625,7 +1649,7 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To Align!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wQi-sL-fgj">
-                                                <rect key="frame" x="72" y="40" width="146" height="68"/>
+                                                <rect key="frame" x="77" y="40" width="146" height="68"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -1672,7 +1696,7 @@
                                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YdG-2B-ms0">
                                                 <rect key="frame" x="83" y="310" width="135" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.23943319742277147" green="0.40126779886662406" blue="0.53196747448979598" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.21268608490390933" green="0.42314685928251405" blue="0.55861367984693877" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <state key="normal" title="Sign Up">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1686,7 +1710,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="joJ-27-T2x">
-                                                <rect key="frame" x="100" y="411" width="141" height="21"/>
+                                                <rect key="frame" x="90" y="398" width="141" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -1898,7 +1922,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="WT2-qa-fnl"/>
+        <segue reference="ROX-Ex-uXK"/>
         <segue reference="7sX-DS-9Oi"/>
     </inferredMetricsTieBreakers>
 </document>
