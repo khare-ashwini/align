@@ -222,7 +222,7 @@
                                     <barButtonItem image="gohome_32.png" width="32" id="2UZ-4j-bfQ" userLabel="Bar Button Item - Go Home">
                                         <inset key="imageInsets" minX="3" minY="2" maxX="3" maxY="4"/>
                                         <connections>
-                                            <segue destination="R2j-Za-tXt" kind="modal" modalTransitionStyle="flipHorizontal" id="XSC-3f-tXN"/>
+                                            <segue destination="peN-Jn-A0e" kind="modal" id="1UQ-u5-w7S"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="b8g-g9-mXN"/>
@@ -359,7 +359,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="72F-Je-uxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="926" y="631"/>
+            <point key="canvasLocation" x="250" y="583"/>
         </scene>
         <!--Itinerary Table View Controller - ItineraryTableViewController-->
         <scene sceneID="Yqw-CL-G6s">
@@ -726,7 +726,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kUy-4U-Ypc">
-                                <rect key="frame" x="93" y="92" width="135" height="39"/>
+                                <rect key="frame" x="69" y="92" width="183" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -740,7 +740,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RfS-3d-cyc">
-                                <rect key="frame" x="93" y="138" width="135" height="38"/>
+                                <rect key="frame" x="69" y="138" width="183" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -753,7 +753,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iBG-R9-f4S">
-                                <rect key="frame" x="93" y="183" width="135" height="36"/>
+                                <rect key="frame" x="69" y="183" width="183" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -766,7 +766,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KGC-Ah-M7I">
-                                <rect key="frame" x="90" y="226" width="141" height="39"/>
+                                <rect key="frame" x="69" y="226" width="183" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -779,7 +779,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kJl-7t-jhw">
-                                <rect key="frame" x="93" y="329" width="135" height="38"/>
+                                <rect key="frame" x="69" y="329" width="183" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.12349436692603166" green="0.43658043272995412" blue="0.64594626913265307" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
@@ -795,7 +795,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bvv-8t-8TV">
-                                <rect key="frame" x="122" y="36" width="77" height="21"/>
+                                <rect key="frame" x="122" y="36" width="77" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1209,11 +1209,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="wOd-Gs-Nfi" customClass="RMMapView">
-                                <rect key="frame" x="5" y="97" width="320" height="363"/>
+                                <rect key="frame" x="0.0" y="97" width="320" height="363"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="fCo-Vj-8Bb">
-                                        <rect key="frame" x="7" y="312" width="44" height="44"/>
+                                        <rect key="frame" x="276" y="251" width="44" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" image="geolocate.png">
@@ -1272,22 +1272,44 @@
                                             <segue destination="R2j-Za-tXt" kind="modal" modalTransitionStyle="flipHorizontal" id="7sX-DS-9Oi"/>
                                         </connections>
                                     </button>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="NN9-yJ-Kka">
+                                        <rect key="frame" x="0.0" y="319" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <items>
+                                            <barButtonItem title="Back" id="y5x-PV-kZR">
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <segue destination="R2j-Za-tXt" kind="modal" id="Ato-bR-hon"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem width="187" style="plain" systemItem="fixedSpace" id="Ub4-op-HJM"/>
+                                            <barButtonItem style="plain" id="N3A-yM-Mop">
+                                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PRF-qt-8lC">
+                                                    <rect key="frame" x="252" y="0.0" width="73" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.3458815596" green="0.85073273159999996" blue="0.94325972579999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="Next">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="go:" destination="peN-Jn-A0e" eventType="touchUpInside" id="aRd-Ak-dZv"/>
+                                                    </connections>
+                                                </button>
+                                            </barButtonItem>
+                                        </items>
+                                        <color key="barTintColor" red="0.3458815596" green="0.85073273159999996" blue="0.94325972579999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </toolbar>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="delegate" destination="peN-Jn-A0e" id="Ods-Dk-AFC"/>
                                 </connections>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" alpha="0.70000000000000007" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" id="Or5-hV-OUe" customClass="OTPGeocodedTextField">
-                                <rect key="frame" x="0.0" y="44" width="320" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="peN-Jn-A0e" id="2yR-iP-pck"/>
-                                </connections>
-                            </textField>
                             <view hidden="YES" contentMode="scaleToFill" id="J7m-s0-nnv" customClass="OTPVerticalGradientView">
                                 <rect key="frame" x="0.0" y="88" width="320" height="33"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -1328,25 +1350,136 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <navigationBar contentMode="scaleToFill" id="luo-OL-0uY">
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.70000000000000007" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" id="Or5-hV-OUe" customClass="OTPGeocodedTextField">
+                                <rect key="frame" x="0.0" y="44" width="320" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="peN-Jn-A0e" id="2yR-iP-pck"/>
+                                </connections>
+                            </textField>
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" id="Vqc-Sx-mUj" customClass="dropdownView">
+                                <rect key="frame" x="0.0" y="44" width="320" height="211"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9qX-IN-WiQ">
+                                        <rect key="frame" x="-6" y="174" width="331" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.37597885250000002" green="0.77918364600000001" blue="0.96000079719999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="About Us">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="tRy-XK-iNc" kind="modal" id="SFr-cX-5dn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1xG-Z9-n3R">
+                                        <rect key="frame" x="-6" y="20" width="331" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.37597885250000002" green="0.77918364600000001" blue="0.96000079719999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Help">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="l8A-pw-iMF" kind="modal" id="ovj-7H-cMq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dDS-Me-Uqd">
+                                        <rect key="frame" x="-6" y="61" width="331" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.37597885250000002" green="0.77918364600000001" blue="0.96000079719999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Settings">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="eQD-1y-oNh" kind="modal" id="PRa-R0-Zc5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qle-Yk-LGX">
+                                        <rect key="frame" x="-6" y="100" width="331" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.37597885250000002" green="0.77918364600000001" blue="0.96000079719999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Address book">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TZq-aN-dYE">
+                                        <rect key="frame" x="-6" y="137" width="331" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.37597885250000002" green="0.77918364600000001" blue="0.96000079719999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Logout">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.37597885250000002" green="0.77918364600000001" blue="0.96000079719999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="zRX-Wb-QBS">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.0039215688589999999" green="0.69411766529999996" blue="0.83137261870000001" alpha="1" colorSpace="deviceRGB"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.3458815596" green="0.85073273159999996" blue="0.94325972579999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <navigationItem title="Walk This Way!" id="Zsc-r6-gFg">
-                                        <barButtonItem key="leftBarButtonItem" image="clock.png" style="plain" id="NgW-76-3OQ">
+                                    <barButtonItem id="eel-2H-KRK">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oO8-EB-PxZ">
+                                            <rect key="frame" x="6" y="0.0" width="97" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.3458815596" green="0.85073273159999996" blue="0.94325972579999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <state key="normal" title="Dropdown">
+                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="highlighted">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
                                             <connections>
-                                                <segue destination="eQD-1y-oNh" kind="modal" id="ETC-cu-xlU"/>
+                                                <action selector="buttonClicked:" destination="peN-Jn-A0e" eventType="touchUpInside" id="7HU-LF-Qcg"/>
                                             </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="mode-walk.png" style="done" id="LNi-A5-pIl">
-                                            <connections>
-                                                <action selector="go:" destination="peN-Jn-A0e" id="XYq-Eu-l0N"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                        </button>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem width="10" style="plain" systemItem="fixedSpace" id="wru-Eg-OX8"/>
                                 </items>
-                            </navigationBar>
+                                <color key="barTintColor" red="0.53427630981666485" green="0.93105468985623085" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Align!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Lc-vF-HnU">
+                                <rect key="frame" x="135" y="32" width="50" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1356,15 +1489,13 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="dropdownView" destination="Vqc-Sx-mUj" id="RVU-bP-w5C"/>
                         <outlet property="fromTextField" destination="mav-FO-sJG" id="uGB-LY-jsR"/>
-                        <outlet property="goButton" destination="LNi-A5-pIl" id="Hvf-gn-VNN"/>
                         <outlet property="mapView" destination="wOd-Gs-Nfi" id="k1V-Rt-z9h"/>
                         <outlet property="modeControl" destination="QFt-BM-cJG" id="pi2-D2-BnQ"/>
-                        <outlet property="navBar" destination="luo-OL-0uY" id="1bC-mn-73Q"/>
                         <outlet property="searchNearbyText" destination="Or5-hV-OUe" id="F7A-ez-l1N"/>
                         <outlet property="showFromToButton" destination="pqk-Yr-Jgo" id="Epi-rx-8im"/>
                         <outlet property="textFieldContainer" destination="J7m-s0-nnv" id="bQa-n3-N76"/>
-                        <outlet property="timeButton" destination="NgW-76-3OQ" id="4ao-sG-Bnz"/>
                         <outlet property="toTextField" destination="Uks-WC-M9Y" id="CtZ-3A-ndO"/>
                         <outlet property="userLocationButton" destination="fCo-Vj-8Bb" id="VdP-fR-foi"/>
                         <segue destination="BUL-qi-1dN" kind="modal" identifier="ExploreItineraries" id="Es9-n8-4Nl"/>
@@ -1387,7 +1518,7 @@
                     </connections>
                 </segmentedControl>
             </objects>
-            <point key="canvasLocation" x="-70" y="29"/>
+            <point key="canvasLocation" x="-256" y="-11"/>
         </scene>
         <!--Geocode Disambigation View Controller - Did you mean...?-->
         <scene sceneID="2Yz-GV-gvv">
@@ -1419,7 +1550,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YKY-cg-2fs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-80" y="609"/>
+            <point key="canvasLocation" x="-194" y="835"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KWH-Vf-um4">
@@ -1437,7 +1568,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JkA-wV-Ni6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-590" y="617"/>
+            <point key="canvasLocation" x="-566" y="1177"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="pzU-3B-NdN">
@@ -1448,10 +1579,24 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" id="BDk-09-dmD">
-                                <rect key="frame" x="0.0" y="50" width="320" height="410"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="410"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="Fn2-0f-spY">
+                                <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Back" id="Cgv-ON-C7W">
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="peN-Jn-A0e" kind="modal" id="sbF-aq-Fr8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="187" style="plain" systemItem="fixedSpace" id="kzm-18-huS"/>
+                                </items>
+                                <color key="barTintColor" red="0.3458815596" green="0.85073273159999996" blue="0.94325972579999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1461,7 +1606,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hca-gK-VWZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-964" y="117"/>
+            <point key="canvasLocation" x="-595" y="575"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="z9Y-C7-zGQ">
@@ -1496,36 +1641,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="goToApp:" destination="R2j-Za-tXt" eventType="touchUpInside" id="7C6-jJ-XIE"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0Yn-Fy-0eQ">
-                                                <rect key="frame" x="-14" y="377" width="95" height="95"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <state key="normal" image="gohowto_52.png">
-                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <state key="highlighted">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="l8A-pw-iMF" kind="modal" modalTransitionStyle="flipHorizontal" id="kwH-Uz-TaV"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vXF-PP-erq">
-                                                <rect key="frame" x="237" y="377" width="96" height="95"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <state key="normal" image="goinfo_52.png">
-                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <state key="highlighted">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="tRy-XK-iNc" kind="modal" modalTransitionStyle="partialCurl" id="vAK-aK-kkt"/>
                                                 </connections>
                                             </button>
                                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Pog-es-xwh">
@@ -1593,7 +1708,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3So-MQ-csq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-533" y="47"/>
+            <point key="canvasLocation" x="-821" y="69"/>
         </scene>
         <!--Transit Time View Controller - Transit Time-->
         <scene sceneID="Ymu-dt-ESH">
@@ -1759,14 +1874,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </scene>
     </scenes>
     <resources>
-        <image name="clock.png" width="20" height="20"/>
         <image name="cross.png" width="20" height="20"/>
         <image name="curl.png" width="34" height="44"/>
         <image name="dots-0_75.png" width="75" height="15"/>
         <image name="geolocate.png" width="44" height="44"/>
         <image name="gohome_32.png" width="32" height="32"/>
-        <image name="gohowto_52.png" width="52" height="52"/>
-        <image name="goinfo_52.png" width="52" height="52"/>
         <image name="help-next-page_32.png" width="32" height="32"/>
         <image name="help-next-tip_32.png" width="32" height="32"/>
         <image name="help-pg01-tip01.png" width="320" height="459"/>
@@ -1786,7 +1898,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="WT2-qa-fnl"/>
         <segue reference="7sX-DS-9Oi"/>
-        <segue reference="ROX-Ex-uXK"/>
     </inferredMetricsTieBreakers>
 </document>

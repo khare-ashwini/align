@@ -1172,11 +1172,40 @@ RKResponse* _OTPResponse = nil;
 }
 
 
+//by Chandra
 
 
 
+- (IBAction)buttonClicked:(id)sender{
+    if (_dropdownView.alpha ==0){
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:0.5];
+        [UIView setAnimationDelay:0.2];
+        [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+        
+        [_dropdownView setBackgroundColor:[UIColor colorWithRed:(0/255.0) green:(170/255.0) blue:(255/255.0) alpha:1]];
+        _dropdownView.alpha =0.5;
+        [UIView commitAnimations];
+        
+        
+    } else {
+        
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:0.5];
+        [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+        
+        [_dropdownView setBackgroundColor:[UIColor whiteColor]];
+        _dropdownView.alpha =0;
+        [UIView commitAnimations];
+        
+    }
+    
+    
+    
+    
+}
 
-
+//ends
 
 
 @end

@@ -50,7 +50,14 @@ typedef enum {
 
 //@property (nonatomic, strong) UIButton *dropdownButton;
 
+//Chandra edit
 
+//@property(weak, nonatomic) IBOutlet UIView *dropdown;
+@property (weak, nonatomic) IBOutlet UIView *dropdownView;
+
+-(IBAction)buttonClicked:(id)sender;
+
+//end
 - (void) planTripFrom:(CLLocationCoordinate2D)startPoint to:(CLLocationCoordinate2D)endPoint;
 
 - (IBAction)go:(id)sender;
@@ -60,6 +67,7 @@ typedef enum {
 - (IBAction)touchAboutButton:(id)sender;
 - (void)enableUserLocation;
 - (void)showFromAndToLocations;
+
 
 - (void)updateTextField:(OTPGeocodedTextField*)textFiled withText:(NSString*)text andLocation:(CLLocation*)location;
 
