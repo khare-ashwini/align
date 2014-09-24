@@ -1183,7 +1183,7 @@ RKResponse* _OTPResponse = nil;
         [UIView setAnimationDelay:0.2];
         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
         
-        [_dropdownView setBackgroundColor:[UIColor colorWithRed:(0/255.0) green:(170/255.0) blue:(255/255.0) alpha:1]];
+        [_dropdownView setBackgroundColor:[UIColor colorWithRed:(0/255.0) green:(130/255.0) blue:(255/255.0) alpha:2]];
         _dropdownView.alpha =0.5;
         [UIView commitAnimations];
         
