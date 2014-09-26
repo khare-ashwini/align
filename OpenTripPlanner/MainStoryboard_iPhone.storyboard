@@ -1294,10 +1294,10 @@
                                                     </connections>
                                                 </button>
                                             </barButtonItem>
-                                            <barButtonItem width="158" style="plain" systemItem="fixedSpace" id="Ub4-op-HJM"/>
+                                            <barButtonItem width="152" style="plain" systemItem="fixedSpace" id="kfp-fs-J5l"/>
                                             <barButtonItem style="plain" id="N3A-yM-Mop">
                                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PRF-qt-8lC">
-                                                    <rect key="frame" x="243" y="0.0" width="73" height="44"/>
+                                                    <rect key="frame" x="237" y="0.0" width="73" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.32137857800115566" green="0.78016602669155888" blue="0.9368024553571429" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -1363,7 +1363,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" alpha="0.70000000000000007" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" id="Or5-hV-OUe" customClass="OTPGeocodedTextField">
-                                <rect key="frame" x="0.0" y="44" width="320" height="30"/>
+                                <rect key="frame" x="-5" y="44" width="330" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1372,8 +1372,8 @@
                                     <outlet property="delegate" destination="peN-Jn-A0e" id="2yR-iP-pck"/>
                                 </connections>
                             </textField>
-                            <view alpha="0.69999999999999996" contentMode="scaleToFill" id="Vqc-Sx-mUj" customClass="dropdownView">
-                                <rect key="frame" x="0.0" y="44" width="320" height="211"/>
+                            <view alpha="0.0" contentMode="scaleToFill" id="Vqc-Sx-mUj" customClass="dropdownView">
+                                <rect key="frame" x="0.0" y="44" width="320" height="187"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9qX-IN-WiQ">

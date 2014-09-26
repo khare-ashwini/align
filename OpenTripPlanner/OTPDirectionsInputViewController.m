@@ -33,6 +33,8 @@ NSString * const kArriveByArray[] = {
     @"true"
 };
 
+NSInteger count =0;
+
 typedef enum {
     MARKER_TYPE_SELECTION = 10
 } ActionSheetPurpose;
@@ -231,24 +233,30 @@ NSMutableArray *poiAnnotationsOnMap;
        self.searchNearbyText.text = @"";
     }
     self.searchNearbyText.alpha = 1.0;
+    
     [UIView animateWithDuration:0.3 animations:^{
         
         CGFloat offset=0;
-        /**
+        
         if(UIInterfaceOrientationIsPortrait(self.interfaceOrientation)){
-            offset = keyboardRect.size.height;
+            offset = 0;
+            //offset = keyboardRect.size.height;
         }else{
-            offset = keyboardRect.size.width;
+            offset = 0;
+            //offset = keyboardRect.size.width;
         }
-        **/
+     
+    
         self.userLocationButton.center = CGPointMake(self.userLocationButton.center.x, self.userLocationButton.center.y - offset);
         self.searchNearbyText.center = CGPointMake(self.searchNearbyText.center.x, self.searchNearbyText.center.y - offset);
     }];
+
+
 }
 
 - (void)willHideKeyboard:(NSNotification *)notification
 {
-    CGRect keyboardRect = [[notification.userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+    //CGRect keyboardRect = [[notification.userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue];
     
     topOfKeyboard = nil;
 
@@ -262,9 +270,11 @@ NSMutableArray *poiAnnotationsOnMap;
         
         CGFloat offset;
         if(UIInterfaceOrientationIsPortrait(self.interfaceOrientation)){
-            offset = keyboardRect.size.height;
+            offset = 0;
+            //offset = keyboardRect.size.height;
         }else{
-            offset = keyboardRect.size.width;
+            offset = 0;
+            //offset = keyboardRect.size.width;
         }
         
         self.userLocationButton.center = CGPointMake(self.userLocationButton.center.x, self.userLocationButton.center.y + offset);
@@ -1177,14 +1187,27 @@ RKResponse* _OTPResponse = nil;
 
 
 - (IBAction)buttonClicked:(id)sender{
+    
+    if (count <1){
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:0.5];
+        [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+        
+        [_dropdownView setBackgroundColor:[UIColor whiteColor]];
+        _dropdownView.alpha =0;
+        [UIView commitAnimations];
+        count += 1;
+    }
+    
+    
     if (_dropdownView.alpha ==0){
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationDuration:0.5];
         [UIView setAnimationDelay:0.2];
         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
         
-        [_dropdownView setBackgroundColor:[UIColor colorWithRed:(0/255.0) green:(130/255.0) blue:(255/255.0) alpha:2]];
-        _dropdownView.alpha =0.5;
+        [_dropdownView setBackgroundColor:[UIColor colorWithRed:(0/255.0) green:(150/255.0) blue:(255/255.0) alpha:1]];
+        _dropdownView.alpha =0.7;
         [UIView commitAnimations];
         
         
