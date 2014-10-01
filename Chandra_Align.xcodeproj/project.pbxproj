@@ -79,6 +79,8 @@
 		4FC88F731896F8D30006E95D /* PlaceSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC88F721896F8D30006E95D /* PlaceSearchResult.m */; };
 		4FD0B1E918E23F580019FF28 /* WTWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD0B1E818E23F580019FF28 /* WTWHomeViewController.m */; };
 		4FE6A02C1924674500BB64C6 /* dots-0_75.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FE6A02B1924674500BB64C6 /* dots-0_75.png */; };
+		763A7B8919DC87140035FFCD /* AlignSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 763A7B8819DC87140035FFCD /* AlignSettingsViewController.m */; };
+		76E1E4B919D7DA14008F410B /* AlignParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E1E4B819D7DA14008F410B /* AlignParameterViewController.m */; };
 		8D9287731643A3C400170393 /* OTPArrivalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9287721643A3C400170393 /* OTPArrivalCell.m */; };
 		930531F21620E33C00F9A230 /* Step.m in Sources */ = {isa = PBXBuildFile; fileRef = 930531F11620E33C00F9A230 /* Step.m */; };
 		9378875B16154885007CF24C /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9378875016154866007CF24C /* libRestKit.a */; };
@@ -462,6 +464,10 @@
 		4FD0B1E718E23F580019FF28 /* WTWHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTWHomeViewController.h; sourceTree = "<group>"; };
 		4FD0B1E818E23F580019FF28 /* WTWHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTWHomeViewController.m; sourceTree = "<group>"; };
 		4FE6A02B1924674500BB64C6 /* dots-0_75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dots-0_75.png"; sourceTree = "<group>"; };
+		763A7B8719DC87140035FFCD /* AlignSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlignSettingsViewController.h; sourceTree = "<group>"; };
+		763A7B8819DC87140035FFCD /* AlignSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlignSettingsViewController.m; sourceTree = "<group>"; };
+		76E1E4B719D7DA14008F410B /* AlignParameterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlignParameterViewController.h; sourceTree = "<group>"; };
+		76E1E4B819D7DA14008F410B /* AlignParameterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlignParameterViewController.m; sourceTree = "<group>"; };
 		8D9287711643A3C400170393 /* OTPArrivalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPArrivalCell.h; sourceTree = "<group>"; };
 		8D9287721643A3C400170393 /* OTPArrivalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTPArrivalCell.m; sourceTree = "<group>"; };
 		930531F01620E33C00F9A230 /* Step.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Step.h; sourceTree = "<group>"; };
@@ -878,6 +884,10 @@
 				CC9DC0411614F5F200C8B22E /* OTPTransitTimeViewController.m */,
 				CCBCD5221635FC9900037B29 /* OTPGradientView.h */,
 				CCBCD5231635FC9900037B29 /* OTPGradientView.m */,
+				76E1E4B719D7DA14008F410B /* AlignParameterViewController.h */,
+				76E1E4B819D7DA14008F410B /* AlignParameterViewController.m */,
+				763A7B8719DC87140035FFCD /* AlignSettingsViewController.h */,
+				763A7B8819DC87140035FFCD /* AlignSettingsViewController.m */,
 			);
 			name = "Routing Params View";
 			sourceTree = "<group>";
@@ -1751,6 +1761,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCCDFB7415EEAAC600B26133 /* main.m in Sources */,
+				76E1E4B919D7DA14008F410B /* AlignParameterViewController.m in Sources */,
 				CCCDFB7815EEAAC600B26133 /* OTPAppDelegate.m in Sources */,
 				CC9CFC6E15EFC3030070712C /* Itinerary.m in Sources */,
 				CC9CFC6F15EFC3030070712C /* Leg.m in Sources */,
@@ -1792,6 +1803,7 @@
 				93F4D9E01659B70B002C2790 /* Response.m in Sources */,
 				CCE01D67165C36B7008F873E /* NSString+MD5Addition.m in Sources */,
 				CCE01D68165C36B7008F873E /* UIDevice+IdentifierAddition.m in Sources */,
+				763A7B8919DC87140035FFCD /* AlignSettingsViewController.m in Sources */,
 				93F4DA311662ED1A002C2790 /* ZUUIRevealController.m in Sources */,
 				93F4DA3416630680002C2790 /* OTPDirectionPanGestureRecognizer.m in Sources */,
 				CC2C15201663FDF7006E4619 /* OTPItineraryOverlayViewController.m in Sources */,
