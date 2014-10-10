@@ -80,6 +80,9 @@
 		4FD0B1E918E23F580019FF28 /* WTWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD0B1E818E23F580019FF28 /* WTWHomeViewController.m */; };
 		4FE6A02C1924674500BB64C6 /* dots-0_75.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FE6A02B1924674500BB64C6 /* dots-0_75.png */; };
 		763A7B8919DC87140035FFCD /* AlignSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 763A7B8819DC87140035FFCD /* AlignSettingsViewController.m */; };
+		7654BD3D19E6EA700026D330 /* dropdown_original_14x21.png in Resources */ = {isa = PBXBuildFile; fileRef = 7654BD3C19E6EA700026D330 /* dropdown_original_14x21.png */; };
+		7654BD4319E6EB350026D330 /* dropdown_original.png in Resources */ = {isa = PBXBuildFile; fileRef = 7654BD4219E6EB350026D330 /* dropdown_original.png */; };
+		7654BD4519E6F02B0026D330 /* Forgot_Password.png in Resources */ = {isa = PBXBuildFile; fileRef = 7654BD4419E6F02B0026D330 /* Forgot_Password.png */; };
 		767BA0BF19E5DEDB006557BA /* Align_57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 767BA0BB19E5DEDB006557BA /* Align_57x57.png */; };
 		767BA0C019E5DEDB006557BA /* Align_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 767BA0BC19E5DEDB006557BA /* Align_114x114.png */; };
 		767BA0C119E5DEDB006557BA /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 767BA0BD19E5DEDB006557BA /* Default~iphone.png */; };
@@ -470,6 +473,9 @@
 		4FE6A02B1924674500BB64C6 /* dots-0_75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dots-0_75.png"; sourceTree = "<group>"; };
 		763A7B8719DC87140035FFCD /* AlignSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlignSettingsViewController.h; sourceTree = "<group>"; };
 		763A7B8819DC87140035FFCD /* AlignSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlignSettingsViewController.m; sourceTree = "<group>"; };
+		7654BD3C19E6EA700026D330 /* dropdown_original_14x21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdown_original_14x21.png; sourceTree = "<group>"; };
+		7654BD4219E6EB350026D330 /* dropdown_original.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdown_original.png; sourceTree = "<group>"; };
+		7654BD4419E6F02B0026D330 /* Forgot_Password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Forgot_Password.png; sourceTree = "<group>"; };
 		767BA0BB19E5DEDB006557BA /* Align_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Align_57x57.png; sourceTree = "<group>"; };
 		767BA0BC19E5DEDB006557BA /* Align_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Align_114x114.png; sourceTree = "<group>"; };
 		767BA0BD19E5DEDB006557BA /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iphone.png"; sourceTree = "<group>"; };
@@ -999,6 +1005,9 @@
 		CC2316EA16260F9200EE0F48 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				7654BD4419E6F02B0026D330 /* Forgot_Password.png */,
+				7654BD4219E6EB350026D330 /* dropdown_original.png */,
+				7654BD3C19E6EA700026D330 /* dropdown_original_14x21.png */,
 				767BA0BB19E5DEDB006557BA /* Align_57x57.png */,
 				767BA0BC19E5DEDB006557BA /* Align_114x114.png */,
 				767BA0BD19E5DEDB006557BA /* Default~iphone.png */,
@@ -1595,6 +1604,7 @@
 				CCF669F41631B12A007A9634 /* cardinal-southeast_52.png in Resources */,
 				CCF669F51631B12A007A9634 /* cardinal-southeast_52@2x.png in Resources */,
 				CCF669F61631B12A007A9634 /* cardinal-southwest_32.png in Resources */,
+				7654BD3D19E6EA700026D330 /* dropdown_original_14x21.png in Resources */,
 				CCF669F71631B12A007A9634 /* cardinal-southwest_32@2x.png in Resources */,
 				CCF669F81631B12A007A9634 /* cardinal-southwest_52.png in Resources */,
 				CCF669F91631B12A007A9634 /* cardinal-southwest_52@2x.png in Resources */,
@@ -1609,6 +1619,7 @@
 				CCF66A021631B12A007A9634 /* continue_32.png in Resources */,
 				CCF66A031631B12A007A9634 /* continue_32@2x.png in Resources */,
 				CCF66A041631B12A007A9634 /* counterclockwise_32.png in Resources */,
+				7654BD4519E6F02B0026D330 /* Forgot_Password.png in Resources */,
 				CCF66A051631B12A007A9634 /* counterclockwise_32@2x.png in Resources */,
 				CCF66A061631B12A007A9634 /* counterclockwise_52.png in Resources */,
 				CCF66A071631B12A007A9634 /* counterclockwise_52@2x.png in Resources */,
@@ -1701,6 +1712,7 @@
 				0D4553E416432356006D4A3B /* popup-transfer@2x.png in Resources */,
 				0D4553E516432356006D4A3B /* popup-walk.png in Resources */,
 				0D4553E616432356006D4A3B /* popup-walk@2x.png in Resources */,
+				7654BD4319E6EB350026D330 /* dropdown_original.png in Resources */,
 				0D4553E716432356006D4A3B /* transfer_walk.png in Resources */,
 				93EA08D4164582A500705096 /* README.md in Resources */,
 				93EA08D5164582A500705096 /* release_notes.md in Resources */,
