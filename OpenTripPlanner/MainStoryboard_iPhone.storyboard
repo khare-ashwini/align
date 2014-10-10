@@ -1389,7 +1389,7 @@
                                     <segment title="All Parameters"/>
                                     <segment title="My Parameters"/>
                                 </segments>
-                                <color key="tintColor" red="0.23943319739999999" green="0.40126779889999997" blue="0.53196747450000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.29351700889999999" green="0.50085832129999996" blue="0.66559709820000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="parameterSegment:" destination="49j-Ml-5AT" eventType="valueChanged" id="Zfg-jK-8Fe"/>
                                 </connections>
@@ -2106,7 +2106,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oNp-Ax-vpa">
                                 <rect key="frame" x="113" y="179" width="105" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.23943319739999999" green="0.40126779889999997" blue="0.53196747450000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.27610654704872156" green="0.47114905596831402" blue="0.6261160714285714" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="tintColor" red="0.37024804610000001" green="0.78086966410000003" blue="0.93518813779999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Parameters">
@@ -2130,7 +2130,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="o3m-TT-kTU">
                                 <rect key="frame" x="113" y="240" width="105" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.23943319739999999" green="0.40126779889999997" blue="0.53196747450000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.26906677928115014" green="0.45913637472848023" blue="0.61015226403061229" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="tintColor" red="0.37024804610000001" green="0.78086966410000003" blue="0.93518813779999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Usability">
@@ -2288,8 +2288,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ROX-Ex-uXK"/>
         <segue reference="MaU-fd-9hX"/>
+        <segue reference="n67-En-mWn"/>
         <segue reference="wHX-wU-hpy"/>
     </inferredMetricsTieBreakers>
 </document>
