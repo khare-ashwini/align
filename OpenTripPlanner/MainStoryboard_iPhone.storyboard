@@ -1208,7 +1208,7 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view hidden="YES" alpha="0.0" contentMode="scaleToFill" id="C25-zf-LMI" userLabel="My-Parameters">
+                            <view contentMode="scaleToFill" id="C25-zf-LMI" userLabel="My-Parameters">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -1381,8 +1381,8 @@
                                 <color key="backgroundColor" red="0.40529726929999998" green="0.84211103320000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.40529726929999998" green="0.84211103320000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" id="roa-OL-KjV">
-                                <rect key="frame" x="19" y="15" width="282" height="30"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" id="k3x-bL-Xuv">
+                                <rect key="frame" x="19" y="25" width="282" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <segments>
@@ -1391,7 +1391,7 @@
                                 </segments>
                                 <color key="tintColor" red="0.29351700889999999" green="0.50085832129999996" blue="0.66559709820000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <action selector="parameterSegment:" destination="49j-Ml-5AT" eventType="valueChanged" id="Zfg-jK-8Fe"/>
+                                    <action selector="parameterSegment:" destination="49j-Ml-5AT" eventType="valueChanged" id="YIg-cD-E4M"/>
                                 </connections>
                             </segmentedControl>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="AcC-04-tWP">
@@ -1436,6 +1436,36 @@
                                                 <action selector="done:" destination="49j-Ml-5AT" eventType="touchUpInside" id="0BJ-gi-2ge"/>
                                             </connections>
                                         </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="ZeW-1f-9el">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" id="roa-OL-KjV">
+                                            <rect key="frame" x="321" y="8" width="282" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <segments>
+                                                <segment title="All Parameters"/>
+                                                <segment title="My Parameters"/>
+                                            </segments>
+                                            <color key="tintColor" red="0.29351700889999999" green="0.50085832129999996" blue="0.66559709820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="parameterSegment:" destination="49j-Ml-5AT" eventType="valueChanged" id="Zfg-jK-8Fe"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="rir-CE-0bc">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" id="Dpc-e2-dpZ">
+                                            <rect key="frame" x="613" y="8" width="282" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <segments>
+                                                <segment title="All Parameters"/>
+                                                <segment title="My Parameters"/>
+                                            </segments>
+                                            <color key="tintColor" red="0.29351700889999999" green="0.50085832129999996" blue="0.66559709820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="parameterSegment:" destination="49j-Ml-5AT" eventType="valueChanged" id="9YV-Ly-UeI"/>
+                                            </connections>
+                                        </segmentedControl>
                                     </barButtonItem>
                                 </items>
                                 <color key="barTintColor" red="0.17401899770000001" green="0.632902992" blue="0.81118463009999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -1756,8 +1786,8 @@
                                 </items>
                                 <color key="barTintColor" red="0.45039413001283146" green="0.80979250257243751" blue="0.93397241709183676" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Align!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Lc-vF-HnU">
-                                <rect key="frame" x="135" y="32" width="50" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALIGN!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Lc-vF-HnU">
+                                <rect key="frame" x="127" y="30" width="66" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1907,7 +1937,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To Align!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wQi-sL-fgj">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To ALIGN!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wQi-sL-fgj">
                                                 <rect key="frame" x="77" y="40" width="146" height="68"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -2288,8 +2318,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="MaU-fd-9hX"/>
         <segue reference="n67-En-mWn"/>
         <segue reference="wHX-wU-hpy"/>
+        <segue reference="MaU-fd-9hX"/>
     </inferredMetricsTieBreakers>
 </document>

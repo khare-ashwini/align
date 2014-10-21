@@ -28,19 +28,31 @@
 
 @implementation AlignParameterViewController
 @synthesize allParameterView, myParameterView;
+@synthesize segmentedControl;
 @synthesize trafficButton, greeneryButton, slopeButton, crimeButton, accessibilityButton, residentialButton, sidewalkButton, intersectionsButton, landvariationsButton;
 
 NSInteger traffic = 0;
-NSInteger slope = 0;
+NSInteger greenery = 0;
 NSInteger crime = 0;
-NSInteger accessibility = 0;
+NSInteger sidewalk = 0;
+NSInteger slope = 0;
 NSInteger residential = 0;
 NSInteger business = 0;
-NSInteger greenery = 0;
-NSInteger sidewalk = 0;
+NSInteger accessibility = 0;
 NSInteger intersections = 0;
 NSInteger landvariations = 0;
 
+
+NSInteger parameter_array[10] = {0,0,0,0,0,0,0,0,0};
+
+NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Slope", @"Residential", @"Business",@"Accessibility", @"Intersections",@"Landvariations"};
+
+    
+
+
+
+
+//parameter_buttons = [NSArray arrayWithObjects:UIbutton traffic_button,UIButton greenery_button,UIButton crime_button,nil];
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -51,6 +63,7 @@ NSInteger landvariations = 0;
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -60,15 +73,14 @@ NSInteger landvariations = 0;
     wp.greenery = greenery;
     wp.crime = crime;
     wp.sidewalk = sidewalk;
+    wp.slope = slope;
     wp.resiDensity = residential;
     wp.busiDensity = business;
     wp.accessibility = accessibility;
     wp.intersection = intersections;
-    wp.slope = slope;
     wp.landVariation = landvariations;
     
-    //[self dismissViewControllerAnimated:YES completion:nil];
-    
+  
     
     // Do any additional setup after loading the view.
 }
@@ -94,13 +106,49 @@ NSInteger landvariations = 0;
     
     switch (sender.selectedSegmentIndex) {
         case 0:
+        {
             self.allParameterView.hidden = NO;
             self.myParameterView.hidden = YES;
             break;
+        }
         case 1:
+        {
             self.allParameterView.hidden = YES;
-            self.myParameterView.hidden = NO;
+            
+            NSInteger x = 80;
+            NSInteger y = 65;
+            NSInteger height = 30;
+            NSInteger width = 146;
+            NSMutableArray *buttons = [[NSMutableArray alloc] init];
+            //NSInteger essential_state = 0;
+            //NSInteger secondary_state = 0;
+            
+            for (NSInteger i = 0; i < 10; i++){
+                if (parameter_array[i] == 2){
+                    NSString *title = parameter_names[i];
+                    
+                    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(x,y,width,height)];
+                    [buttons addObject:button];
+                    button.frame = CGRectMake(x,y, width, height);
+                    [button setTitle:title forState:UIControlStateNormal];
+                    [[button layer] setCornerRadius:8.0f];
+                    
+                    [[button layer] setMasksToBounds:YES];
+                    [button setBackgroundColor:[UIColor blueColor]];
+                    //[button setImage:[UIImage imageNamed:@"crime2.png"] forState:UIControlStateNormal];
+                    
+                    [[button layer] setBorderWidth:1.0f];
+                    
+                    [self.myParameterView addSubview:button];
+                    self.myParameterView.hidden = NO;
+                    //NSLog(@"Button is ", button);
+                    y= y+35;
+                    
+                }
+            }
+            
             break;
+        }
         default:
             break;
     }
@@ -180,8 +228,6 @@ NSInteger landvariations = 0;
 }
 
 
-
-
 - (IBAction)intersections:(id)sender {
     
     UIAlertView *intersectionsPopup = [[UIAlertView alloc] initWithTitle:@"Intersections!" message:@"" delegate:self cancelButtonTitle:@"No Preference" otherButtonTitles:@"Introduction",@"Set as essential", @"Set as secondary", nil];
@@ -189,8 +235,6 @@ NSInteger landvariations = 0;
     intersectionsPopup.tag = 9;
     [intersectionsPopup show];
 }
-
-
 
 
 - (IBAction)landVariables:(id)sender {
@@ -202,60 +246,70 @@ NSInteger landvariations = 0;
 }
 
 
+
+
 - (void) alertView:(UIAlertView *) alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     
     if (alertView.tag == 1){
         if (buttonIndex == 1){
-            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"TRAFFIC!" message:@"This parameter indicates the light environment along your walk. It may influence your walk in night" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"TRAFFIC!" message:@"This parameter indicates the real-time traffic on roads" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
             [alertView2 show];
             
         } else if (buttonIndex == 2){
             traffic = 5;
+            parameter_array[0] = 2;
                [self.trafficButton setTitle:@"Traffic E!" forState:UIControlStateNormal];
         } else if (buttonIndex == 3){
             traffic = 2;
+            parameter_array[0] = 1;
             [self.trafficButton setTitle:@"Traffic S!" forState:UIControlStateNormal];
             
         }
     } else if (alertView.tag == 2){
         if (buttonIndex == 1){
-            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"GREENERY!" message:@"This parameter indicates the light environment along your walk. It may influence your walk in night" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"GREENERY!" message:@"This parameter indicates the greenery on the way." delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
             [alertView2 show];
             
         } else if (buttonIndex == 2){
             greenery = 5;
+            parameter_array[1] = 2;
             [self.greeneryButton setTitle:@"Greenery E!" forState:UIControlStateNormal];
             
         } else if (buttonIndex == 3){
             greenery = 2;
+            parameter_array[1] = 1;
             [self.greeneryButton setTitle:@"Greenery S!" forState:UIControlStateNormal];
         }
     }else if (alertView.tag == 3){
         if (buttonIndex == 1){
-            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"CRIME!" message:@"This parameter indicates the light environment along your walk. It may influence your walk in night" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"CRIME!" message:@"This parameter indicates the level of crime on the routes." delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
             [alertView2 show];
             
         } else if (buttonIndex == 2){
             crime = 5;
+            parameter_array[2] = 2;
             [self.crimeButton setTitle:@"Crime E!" forState:UIControlStateNormal];
             
         } else if (buttonIndex == 3){
             crime = 2;
+            parameter_array[2] = 1;
             [self.crimeButton setTitle:@"Crime S!" forState:UIControlStateNormal];
             
         }
     }else if (alertView.tag == 4){
         
         if (buttonIndex == 1){
-            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"SIDEWALK!" message:@"This parameter indicates the light environment along your walk. It may influence your walk in night" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"SIDEWALK!" message:@"This parameter indicates the importance to sidewalks." delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
             [alertView2 show];
             
         } else if (buttonIndex == 2){
             sidewalk = 5;
+            parameter_array[3] = 2;
             [self.sidewalkButton setTitle:@"Sidewalk E!" forState:UIControlStateNormal];
             
         } else if (buttonIndex == 3){
             sidewalk = 2;
+            parameter_array[3] = 1;
             [self.sidewalkButton setTitle:@"Sidewalk S!" forState:UIControlStateNormal];
             
         }
@@ -263,15 +317,17 @@ NSInteger landvariations = 0;
     }else if (alertView.tag == 5){
         
         if (buttonIndex == 1){
-            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"SLOPE!" message:@"This parameter indicates the light environment along your walk. It may influence your walk in night" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"SLOPE!" message:@"This parameter indicates the slope of the road. Can be useful for people on wheelchair." delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
             [alertView2 show];
             
         } else if (buttonIndex == 2){
             slope = 5;
+            parameter_array[4] = 2;
             [self.slopeButton setTitle:@"Slope E!" forState:UIControlStateNormal];
             
         } else if (buttonIndex == 3){
             slope = 2;
+            parameter_array[4] = 1;
             [self.slopeButton setTitle:@"Slope S!" forState:UIControlStateNormal];
             
         }
@@ -279,16 +335,18 @@ NSInteger landvariations = 0;
     }else if (alertView.tag == 6){
         
         if (buttonIndex == 1){
-            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"RESIDENTIAL DENSITY!" message:@"This parameter indicates the light environment along your walk. It may influence your walk in night" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"RESIDENTIAL DENSITY!" message:@"This parameter indicates the residential density of the routes." delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
             [alertView2 show];
             
         } else if (buttonIndex == 2){
             residential = 5;
+            parameter_array[5] = 2;
             [self.residentialButton setTitle:@"Residential Density E!" forState:UIControlStateNormal];
             
             
         } else if (buttonIndex == 3){
             residential = 2;
+            parameter_array[5] = 1;
             [self.residentialButton setTitle:@"Residential Density S!" forState:UIControlStateNormal];
             
         }
@@ -296,15 +354,17 @@ NSInteger landvariations = 0;
     }else if (alertView.tag == 7){
         
         if (buttonIndex == 1){
-            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"BUSINESS DENSITY!" message:@"This parameter indicates the light environment along your walk. It may influence your walk in night" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"BUSINESS DENSITY!" message:@"This parameter indicates the business density of the routes" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
             [alertView2 show];
             
         } else if (buttonIndex == 2){
             business = 5;
+            parameter_array[6] = 2;
             [self.businessButton setTitle:@"Business Density E!" forState:UIControlStateNormal];
             
         } else if (buttonIndex == 3){
             business = 2;
+            parameter_array[6] = 1;
             [self.businessButton setTitle:@"Business Density S!" forState:UIControlStateNormal];
             
         }
@@ -312,15 +372,17 @@ NSInteger landvariations = 0;
     } else if (alertView.tag == 8){
         
         if (buttonIndex == 1){
-            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"ACCESSIBILITY!" message:@"This parameter indicates the light environment along your walk. It may influence your walk in night" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"ACCESSIBILITY!" message:@"This parameter indicates the level of accessibility on the roads." delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
             [alertView2 show];
             
         } else if (buttonIndex == 2){
             accessibility = 5;
+            parameter_array[7] = 2;
             [self.accessibilityButton setTitle:@"Accessibility E!" forState:UIControlStateNormal];
     
         } else if (buttonIndex == 3){
             accessibility = 2;
+            parameter_array[7] = 1;
             [self.accessibilityButton setTitle:@"Accessibility S!" forState:UIControlStateNormal];
             
         }
@@ -328,15 +390,17 @@ NSInteger landvariations = 0;
     } else if (alertView.tag == 9){
         
         if (buttonIndex == 1){
-            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"INTERSECTIONS!" message:@"This parameter indicates the light environment along your walk. It may influence your walk in night" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"INTERSECTIONS!" message:@"This parameter indicates the importance to intersections" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
             [alertView2 show];
             
         } else if (buttonIndex == 2){
             intersections = 5;
+            parameter_array[8] = 2;
             [self.intersectionsButton setTitle:@"Intersections E!" forState:UIControlStateNormal];
             
         } else if (buttonIndex == 3){
             intersections = 2;
+            parameter_array[8] = 1;
             [self.intersectionsButton setTitle:@"Intersections S!" forState:UIControlStateNormal];
             
         }
@@ -349,10 +413,12 @@ NSInteger landvariations = 0;
             
         } else if (buttonIndex == 2){
             landvariations = 5;
+            parameter_array[9] = 2;
             [self.landvariationsButton setTitle:@"Land Variations E!" forState:UIControlStateNormal];
             
         } else if (buttonIndex == 3){
             landvariations = 2;
+            parameter_array[9] = 1;
             [self.landvariationsButton setTitle:@"Land Variations S!" forState:UIControlStateNormal];
             
         }

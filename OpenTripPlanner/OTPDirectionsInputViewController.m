@@ -40,7 +40,7 @@ typedef enum {
 } ActionSheetPurpose;
 
 NSString *const planServicePath = @"/plan";
-NSString *const searchNearbyTextDefault = @"Search..";
+NSString *const searchNearbyTextDefault = @"Type Your Destination...";
 NSString *const searchNearbyNoResultsPrefix = @"No places found for";
 double minSearchRadius = 200.0;
 
