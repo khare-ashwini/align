@@ -89,6 +89,7 @@
 		767BA0C119E5DEDB006557BA /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 767BA0BD19E5DEDB006557BA /* Default~iphone.png */; };
 		767BA0C219E5DEDB006557BA /* Default_old@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 767BA0BE19E5DEDB006557BA /* Default_old@2x~iphone.png */; };
 		769A589819F6B5A900084DC6 /* crime2.png in Resources */ = {isa = PBXBuildFile; fileRef = 769A589719F6B5A900084DC6 /* crime2.png */; };
+		769D857019F814D400AF144C /* AlignUsabilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 769D856F19F814D400AF144C /* AlignUsabilityViewController.m */; };
 		76DA387219F6138D006A8DFC /* crime_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 76DA387119F6138D006A8DFC /* crime_full.png */; };
 		76E1E4B919D7DA14008F410B /* AlignParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E1E4B819D7DA14008F410B /* AlignParameterViewController.m */; };
 		8D9287731643A3C400170393 /* OTPArrivalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9287721643A3C400170393 /* OTPArrivalCell.m */; };
@@ -485,6 +486,8 @@
 		767BA0BD19E5DEDB006557BA /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iphone.png"; sourceTree = "<group>"; };
 		767BA0BE19E5DEDB006557BA /* Default_old@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default_old@2x~iphone.png"; sourceTree = "<group>"; };
 		769A589719F6B5A900084DC6 /* crime2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crime2.png; sourceTree = "<group>"; };
+		769D856E19F814D400AF144C /* AlignUsabilityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlignUsabilityViewController.h; sourceTree = "<group>"; };
+		769D856F19F814D400AF144C /* AlignUsabilityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlignUsabilityViewController.m; sourceTree = "<group>"; };
 		76DA387119F6138D006A8DFC /* crime_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crime_full.png; sourceTree = "<group>"; };
 		76E1E4B719D7DA14008F410B /* AlignParameterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlignParameterViewController.h; sourceTree = "<group>"; };
 		76E1E4B819D7DA14008F410B /* AlignParameterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlignParameterViewController.m; sourceTree = "<group>"; };
@@ -957,6 +960,15 @@
 			name = Home;
 			sourceTree = "<group>";
 		};
+		769D856919F814A500AF144C /* Usability And Settings */ = {
+			isa = PBXGroup;
+			children = (
+				769D856E19F814D400AF144C /* AlignUsabilityViewController.h */,
+				769D856F19F814D400AF144C /* AlignUsabilityViewController.m */,
+			);
+			name = "Usability And Settings";
+			sourceTree = "<group>";
+		};
 		9378874516154865007CF24C /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -1345,6 +1357,7 @@
 		CCCDFB6D15EEAAC600B26133 /* OpenTripPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				769D856919F814A500AF144C /* Usability And Settings */,
 				4FA2B88D18E9C985001CD58E /* Webpage View */,
 				4F1C491B18E3A1AE00238834 /* Instructions View */,
 				4FD0B1DC18E22CCB0019FF28 /* Home */,
@@ -1838,6 +1851,7 @@
 				0D4553A316432087006D4A3B /* OTPItineraryOverviewCell.m in Sources */,
 				0D4553A416432087006D4A3B /* OTPSelectedSegment.m in Sources */,
 				8D9287731643A3C400170393 /* OTPArrivalCell.m in Sources */,
+				769D857019F814D400AF144C /* AlignUsabilityViewController.m in Sources */,
 				CCB1A9341656D2A1004791D6 /* OTPGeocodeDisambigationViewController.m in Sources */,
 				93F4D9DD1659B628002C2790 /* Error.m in Sources */,
 				93F4D9E01659B70B002C2790 /* Response.m in Sources */,
