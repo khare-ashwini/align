@@ -88,6 +88,7 @@
 		767BA0C019E5DEDB006557BA /* Align_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 767BA0BC19E5DEDB006557BA /* Align_114x114.png */; };
 		767BA0C119E5DEDB006557BA /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 767BA0BD19E5DEDB006557BA /* Default~iphone.png */; };
 		767BA0C219E5DEDB006557BA /* Default_old@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 767BA0BE19E5DEDB006557BA /* Default_old@2x~iphone.png */; };
+		769A589819F6B5A900084DC6 /* crime2.png in Resources */ = {isa = PBXBuildFile; fileRef = 769A589719F6B5A900084DC6 /* crime2.png */; };
 		76DA387219F6138D006A8DFC /* crime_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 76DA387119F6138D006A8DFC /* crime_full.png */; };
 		76E1E4B919D7DA14008F410B /* AlignParameterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E1E4B819D7DA14008F410B /* AlignParameterViewController.m */; };
 		8D9287731643A3C400170393 /* OTPArrivalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9287721643A3C400170393 /* OTPArrivalCell.m */; };
@@ -483,6 +484,7 @@
 		767BA0BC19E5DEDB006557BA /* Align_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Align_114x114.png; sourceTree = "<group>"; };
 		767BA0BD19E5DEDB006557BA /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iphone.png"; sourceTree = "<group>"; };
 		767BA0BE19E5DEDB006557BA /* Default_old@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default_old@2x~iphone.png"; sourceTree = "<group>"; };
+		769A589719F6B5A900084DC6 /* crime2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crime2.png; sourceTree = "<group>"; };
 		76DA387119F6138D006A8DFC /* crime_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crime_full.png; sourceTree = "<group>"; };
 		76E1E4B719D7DA14008F410B /* AlignParameterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlignParameterViewController.h; sourceTree = "<group>"; };
 		76E1E4B819D7DA14008F410B /* AlignParameterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlignParameterViewController.m; sourceTree = "<group>"; };
@@ -1009,6 +1011,7 @@
 		CC2316EA16260F9200EE0F48 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				769A589719F6B5A900084DC6 /* crime2.png */,
 				76DA387119F6138D006A8DFC /* crime_full.png */,
 				764BA83019E7BAA600C0094C /* Default@2x~iphone.png */,
 				7654BD4419E6F02B0026D330 /* Forgot_Password.png */,
@@ -1649,6 +1652,7 @@
 				CCF66A171631B12A007A9634 /* hard-left_52@2x.png in Resources */,
 				CCF66A181631B12A007A9634 /* hard-right_32.png in Resources */,
 				CCF66A191631B12A007A9634 /* hard-right_32@2x.png in Resources */,
+				769A589819F6B5A900084DC6 /* crime2.png in Resources */,
 				CCF66A1A1631B12A007A9634 /* hard-right_52.png in Resources */,
 				CCF66A1B1631B12A007A9634 /* hard-right_52@2x.png in Resources */,
 				CCF66A1C1631B12A007A9634 /* slight-left_32.png in Resources */,

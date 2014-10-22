@@ -80,14 +80,17 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
     wp.intersection = intersections;
     wp.landVariation = landvariations;
     
-  
+    //UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 450)];
     
+    //[self.view addSubview:scrollView];
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    
+    
     // Dispose of any resources that can be recreated.
 }
 
@@ -104,47 +107,221 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
 
 - (IBAction)parameterSegment:(UISegmentedControl *)sender {
     
+    NSMutableArray *buttons_primary = [[NSMutableArray alloc] init];
+    NSMutableArray *buttons_secondary = [[NSMutableArray alloc] init];
+    NSMutableArray *labels = [[NSMutableArray alloc] init];
+    int count = 0;
+    
     switch (sender.selectedSegmentIndex) {
         case 0:
         {
             self.allParameterView.hidden = NO;
             self.myParameterView.hidden = YES;
+            
+            /*
+            for (UIView* subV in self.myParameterView) {
+                if ([subV isKindOfClass:[UIButton class]])
+                    [subV removeFromSuperview];
+            }
+            */
+            
+            
+            for (UIView *btn in buttons_primary){
+                [btn removeFromSuperview];
+            }
+            for (UIView *btn in buttons_secondary){
+                [btn removeFromSuperview];
+            }
+            
+            for (UIView *lbl in labels){
+                [lbl removeFromSuperview];
+            }
+            
+            
+            
+            [buttons_primary makeObjectsPerformSelector:@selector(removeFromSuperview)];
+            [buttons_primary removeAllObjects];
+            [buttons_secondary makeObjectsPerformSelector:@selector(removeFromSuperview)];
+            [buttons_secondary removeAllObjects];
+            [labels makeObjectsPerformSelector:@selector(removeFromSuperview)];
+            [labels removeAllObjects];
+            
+            /*
+            for (int i = 0 ; i < count; i++){
+                [(UIButton*)[self.myParameterView viewWithTag:i]  removeFromSuperview];
+            }
+            count = 0;
+            */
+            
             break;
+            
         }
         case 1:
         {
             self.allParameterView.hidden = YES;
+            self.myParameterView.hidden = NO;
+            
+            for (UIView *btn in buttons_primary){
+                [btn removeFromSuperview];
+            }
+            for (UIView *btn in buttons_secondary){
+                [btn removeFromSuperview];
+            }
+            
+            for (UIView *lbl in labels){
+                [lbl removeFromSuperview];
+            }
+            
+            [buttons_primary makeObjectsPerformSelector:@selector(removeFromSuperview)];
+            [buttons_primary removeAllObjects];
+            [buttons_secondary makeObjectsPerformSelector:@selector(removeFromSuperview)];
+            [buttons_secondary removeAllObjects];
+            [labels makeObjectsPerformSelector:@selector(removeFromSuperview)];
+            [labels removeAllObjects];
+            
+            
+             for (int i = 0 ; i < count; i++){
+             [(UIButton*)[self.myParameterView viewWithTag:i]  removeFromSuperview];
+             }
+             count = 0;
+            
+            
+            for (UIView *view in self.view.subviews)
+            {
+                if ([view isMemberOfClass:[UIButton class]])
+                {
+                    [(UIButton *)view removeFromSuperview];
+                }
+            }
+            
             
             NSInteger x = 80;
             NSInteger y = 65;
             NSInteger height = 30;
             NSInteger width = 146;
-            NSMutableArray *buttons = [[NSMutableArray alloc] init];
-            //NSInteger essential_state = 0;
-            //NSInteger secondary_state = 0;
+            //NSMutableArray *buttons_primary = [[NSMutableArray alloc] init];
+            //NSMutableArray *buttons_secondary = [[NSMutableArray alloc] init];
+            NSInteger essential_state = 0;
+            NSInteger secondary_state = 0;
+            
+            for (NSInteger i=0; i<10; i++){
+                
+                if (parameter_array[i] == 2){
+                    essential_state = 1;
+                }
+                if(parameter_array[i] == 1){
+                    secondary_state = 1;
+                }
+            }
             
             for (NSInteger i = 0; i < 10; i++){
                 if (parameter_array[i] == 2){
                     NSString *title = parameter_names[i];
                     
-                    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(x,y,width,height)];
-                    [buttons addObject:button];
-                    button.frame = CGRectMake(x,y, width, height);
+                    UIButton *button = [[UIButton alloc]init];
+                    
+                    //button.frame = CGRectMake(x,y, width, height);
                     [button setTitle:title forState:UIControlStateNormal];
-                    [[button layer] setCornerRadius:8.0f];
+                
+                    //[[button layer] setCornerRadius:8.0f];
                     
-                    [[button layer] setMasksToBounds:YES];
-                    [button setBackgroundColor:[UIColor blueColor]];
+                    //[[button layer] setMasksToBounds:YES];
+                    //[button setBackgroundColor:[UIColor blueColor]];
                     //[button setImage:[UIImage imageNamed:@"crime2.png"] forState:UIControlStateNormal];
+                    //[[button layer] setBorderWidth:1.0f];
                     
-                    [[button layer] setBorderWidth:1.0f];
+                    //[self.myParameterView addSubview:button];
                     
-                    [self.myParameterView addSubview:button];
-                    self.myParameterView.hidden = NO;
-                    //NSLog(@"Button is ", button);
-                    y= y+35;
+                    button.tag = count;
+                    count = count +1;
                     
+                    [buttons_primary addObject:button];
+                    
+                    //y= y+35;
+                    
+                }else if (parameter_array[i] == 1){
+                    
+                    NSString *title = parameter_names[i];
+                    
+                    UIButton *button = [[UIButton alloc]init];
+                    
+                    //button.frame = CGRectMake(x,y, width, height);
+                    [button setTitle:title forState:UIControlStateNormal];
+                    button.tag = count;
+                    count = count +1;
+                    
+                    [buttons_secondary addObject:button];
                 }
+            }
+            
+            if (essential_state == 1){
+                NSLog(@"Primary label., %i", y);
+                UILabel *essential_label = [[UILabel alloc] initWithFrame:CGRectMake(70,y, 200,40)];
+                //[[essential_label layer] set];
+                essential_label.textColor = [UIColor whiteColor];
+                essential_label.text = @"Essential Parameters";
+                [labels addObject:essential_label];
+                //essential_label.textAlignment = NSTextAlignmentCenter;
+                
+                //essential_label.tag = count;
+                //count = count +1;
+                
+                [self.myParameterView addSubview:essential_label];
+                
+                y = y+ 40;
+            }
+            
+            for (UIButton *button in buttons_primary){
+                NSLog(@"button %i", y);
+                button.frame = CGRectMake(x,y, width, height);
+                //[button setTitle:title forState:UIControlStateNormal];
+                [[button layer] setCornerRadius:8.0f];
+                
+                [[button layer] setMasksToBounds:YES];
+                [button setBackgroundColor:[UIColor blueColor]];
+                //[button setImage:[UIImage imageNamed:@"crime2.png"] forState:UIControlStateNormal];
+                [[button layer] setBorderWidth:1.0f];
+                
+                [self.myParameterView addSubview:button];
+                
+                y = y+35;
+            }
+            
+            if (secondary_state == 1){
+                NSLog(@"secondary %i", y);
+                UILabel *secondary_label = [[UILabel alloc] initWithFrame:CGRectMake(70,y, 200,40)];
+                //[[essential_label layer] set];
+                secondary_label.textColor = [UIColor whiteColor];
+                secondary_label.text = @"Secondary Parameters";
+                
+                //secondary_label.textAlignment = NSTextAlignmentCenter;
+                [labels addObject:secondary_label];
+                
+                //secondary_label.tag = count;
+                //count = count +1;
+                
+                [self.myParameterView addSubview:secondary_label];
+                
+                
+                
+                y = y + 40;
+            }
+            
+            for (UIButton *button in buttons_secondary){
+                
+                NSLog(@"button %i", y);
+                
+                button.frame = CGRectMake(x,y, width, height);
+                //[button setTitle:title forState:UIControlStateNormal];
+                [[button layer] setCornerRadius:8.0f];
+                
+                [[button layer] setMasksToBounds:YES];
+                [button setBackgroundColor:[UIColor blueColor]];
+                [[button layer] setBorderWidth:1.0f];
+                
+                [self.myParameterView addSubview:button];
+                
+                y = y+35;
             }
             
             break;
