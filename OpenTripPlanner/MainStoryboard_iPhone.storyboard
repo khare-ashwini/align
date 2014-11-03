@@ -11,7 +11,7 @@
             <objects>
                 <tableViewController id="Kyn-yv-am1" customClass="OTPTransitTimesViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xAt-ml-2OA">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="MWh-AV-0V8">
@@ -211,11 +211,11 @@
             <objects>
                 <viewController id="l8A-pw-iMF" userLabel="Instructions View Controller" customClass="WTWHelpViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eSF-fi-hYb">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="fph-lR-Wu4">
-                                <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="504" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="iOf-qD-lxx"/>
@@ -258,7 +258,7 @@
                                 <color key="tintColor" red="0.0039215688589999999" green="0.69411766529999996" blue="0.83137261870000001" alpha="1" colorSpace="deviceRGB"/>
                             </toolbar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="iYo-7c-aDL">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="help-pg01-tip01.png" id="X4a-Pp-BCW">
@@ -708,7 +708,7 @@
             <objects>
                 <viewController id="fWf-iG-znn" customClass="OTPAboutViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Thw-Zw-Hrr">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </view>
@@ -1491,7 +1491,7 @@
             <objects>
                 <viewController storyboardIdentifier="DirectionsInputView" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="peN-Jn-A0e" customClass="OTPDirectionsInputViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mnb-u7-asp">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="wOd-Gs-Nfi" customClass="RMMapView">
@@ -1600,7 +1600,7 @@
                                                 </button>
                                             </barButtonItem>
                                         </items>
-                                        <color key="barTintColor" red="0.33529434497197202" green="0.78640530542962361" blue="0.93566645408163263" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="barTintColor" red="0.32624419092597756" green="0.7723464816255794" blue="0.93566645408163263" alpha="1" colorSpace="calibratedRGB"/>
                                     </toolbar>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1718,7 +1718,7 @@
                                         <color key="backgroundColor" red="0.37597885250000002" green="0.77918364600000001" blue="0.96000079719999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Address book">
+                                        <state key="normal" title="Saved Locations">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -1743,39 +1743,39 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.37597885250000002" green="0.77918364600000001" blue="0.96000079719999998" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="zRX-Wb-QBS">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Igm-Zc-GED">
+                                <rect key="frame" x="5" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" red="0.31250766458464802" green="0.76328952447510334" blue="0.85676419005102045" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <barButtonItem id="eel-2H-KRK">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oO8-EB-PxZ">
-                                            <rect key="frame" x="6" y="11" width="99" height="22"/>
+                                    <barButtonItem style="plain" id="ub2-JE-Zq2">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XFk-F5-SbL">
+                                            <rect key="frame" x="12" y="7" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <state key="normal" title="Dropdown"/>
-                                            <connections>
-                                                <action selector="buttonClicked:" destination="peN-Jn-A0e" eventType="touchUpInside" id="7HU-LF-Qcg"/>
-                                            </connections>
-                                        </button>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </barButtonItem>
-                                    <barButtonItem width="135" style="plain" systemItem="fixedSpace" id="wru-Eg-OX8"/>
-                                    <barButtonItem style="plain" id="iE3-ep-6CS">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DI9-Fe-PXR">
-                                            <rect key="frame" x="250" y="11" width="69" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <state key="normal" image="mode-walk.png">
+                                            <state key="normal" image="dropdown_cropped-2.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <action selector="go:" destination="peN-Jn-A0e" eventType="touchUpInside" id="v8Q-bn-Htv"/>
+                                                <action selector="buttonClicked:" destination="peN-Jn-A0e" eventType="touchUpInside" id="MMt-cu-yLc"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem width="217" style="plain" systemItem="fixedSpace" id="qky-lk-SVD"/>
+                                    <barButtonItem style="plain" id="I2V-Zv-1Q1">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gNK-Ar-3T3">
+                                            <rect key="frame" x="269" y="6" width="32" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <state key="normal" image="walk_32.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="go:" destination="peN-Jn-A0e" eventType="touchUpInside" id="Ewi-O5-uCi"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>
                                 </items>
-                                <color key="barTintColor" red="0.45039413001283146" green="0.80979250257243751" blue="0.93397241709183676" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.32624419090000001" green="0.77234648159999997" blue="0.93566645410000004" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALIGN!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Lc-vF-HnU">
                                 <rect key="frame" x="127" y="30" width="66" height="21"/>
@@ -1788,15 +1788,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="kUG-b6-l2K"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="dropdownView" destination="Vqc-Sx-mUj" id="RVU-bP-w5C"/>
                         <outlet property="fromTextField" destination="mav-FO-sJG" id="uGB-LY-jsR"/>
                         <outlet property="mapView" destination="wOd-Gs-Nfi" id="k1V-Rt-z9h"/>
-                        <outlet property="modeControl" destination="QFt-BM-cJG" id="pi2-D2-BnQ"/>
                         <outlet property="searchNearbyText" destination="Or5-hV-OUe" id="F7A-ez-l1N"/>
                         <outlet property="showFromToButton" destination="pqk-Yr-Jgo" id="Epi-rx-8im"/>
                         <outlet property="textFieldContainer" destination="J7m-s0-nnv" id="bQa-n3-N76"/>
@@ -1808,28 +1806,15 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcF-zl-uN4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" id="QFt-BM-cJG">
-                    <rect key="frame" x="0.0" y="0.0" width="163" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <segments>
-                        <segment title="" image="mode-transit.png"/>
-                        <segment title="" image="mode-bike-to-transit.png"/>
-                        <segment title="" image="mode-bike.png"/>
-                        <segment title="" image="mode-walk.png"/>
-                    </segments>
-                    <connections>
-                        <action selector="modeChanged:" destination="peN-Jn-A0e" eventType="valueChanged" id="4gT-6R-0HK"/>
-                    </connections>
-                </segmentedControl>
             </objects>
-            <point key="canvasLocation" x="-289" y="-11"/>
+            <point key="canvasLocation" x="-295" y="-11"/>
         </scene>
         <!--Geocode Disambigation View Controller - Did you mean...?-->
         <scene sceneID="2Yz-GV-gvv">
             <objects>
                 <tableViewController id="ADZ-6x-bOR" customClass="OTPGeocodeDisambigationViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Bdc-pW-kBY">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1879,16 +1864,16 @@
             <objects>
                 <viewController id="tRy-XK-iNc" userLabel="Web View Controller" customClass="WTWWebpageViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fIJ-8s-nR4">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" id="BDk-09-dmD">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="410"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="498"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="Fn2-0f-spY">
-                                <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="504" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Back" id="Cgv-ON-C7W">
@@ -2121,7 +2106,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <objects>
                 <viewController id="Gmd-nl-xOY" customClass="AlignUsabilityViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SHb-XL-yFY">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oNp-Ax-vpa">
@@ -2166,7 +2151,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </connections>
                             </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="AIg-3G-srj">
-                                <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="504" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.37024804610000001" green="0.78086966410000003" blue="0.93518813779999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
@@ -2212,7 +2197,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <color key="barTintColor" red="0.37024804610000001" green="0.78086966410000003" blue="0.93518813779999999" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" translucent="NO" id="HMI-AO-ax2">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="88" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.24513412413971444" green="0.75228136866571316" blue="0.91786910076530615" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
@@ -2320,7 +2305,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <objects>
                 <viewController id="4li-yF-gdE" customClass="AlignUsabilityViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q03-Ww-O1t">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Gxs-u1-Yoe">
@@ -2375,7 +2360,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </connections>
                             </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="X2U-nT-KN6">
-                                <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="504" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.37024804610000001" green="0.78086966410000003" blue="0.93518813779999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
@@ -2433,7 +2418,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <objects>
                 <viewController id="ifh-B6-VfN" customClass="AlignUsabilityViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D7i-lX-eE3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MKj-3a-mWF">
@@ -2465,7 +2450,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <nil key="highlightedColor"/>
                             </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="GsP-LV-ppx">
-                                <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="504" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.37024804610000001" green="0.78086966410000003" blue="0.93518813779999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
@@ -2537,6 +2522,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="cross.png" width="20" height="20"/>
         <image name="curl.png" width="34" height="44"/>
         <image name="dots-0_75.png" width="75" height="15"/>
+        <image name="dropdown_cropped-2.png" width="30" height="30"/>
         <image name="geolocate.png" width="44" height="44"/>
         <image name="gohome_32.png" width="32" height="32"/>
         <image name="help-next-page_32.png" width="32" height="32"/>
@@ -2545,12 +2531,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="help-prev-page_32.png" width="32" height="32"/>
         <image name="help-prev-tip_32.png" width="32" height="32"/>
         <image name="marker-end-cropped.png" width="30" height="40"/>
-        <image name="mode-bike-to-transit.png" width="32" height="15"/>
-        <image name="mode-bike.png" width="25" height="21"/>
-        <image name="mode-transit.png" width="21" height="21"/>
-        <image name="mode-walk.png" width="14" height="21"/>
         <image name="overview-disabled.png" width="44" height="48"/>
         <image name="overview.png" width="44" height="48"/>
+        <image name="walk_32.png" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -2558,9 +2541,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="fkt-Eh-CPt"/>
-        <segue reference="wHX-wU-hpy"/>
         <segue reference="n67-En-mWn"/>
+        <segue reference="rCH-Ep-34k"/>
+        <segue reference="fkt-Eh-CPt"/>
         <segue reference="MaU-fd-9hX"/>
     </inferredMetricsTieBreakers>
 </document>
