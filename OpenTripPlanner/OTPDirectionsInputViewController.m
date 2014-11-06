@@ -240,6 +240,10 @@ NSMutableArray *poiAnnotationsOnMap;
             
             [self performSegueWithIdentifier:@"toSettings" sender:self];
             
+            //UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"TRAFFIC!" message:@"This parameter indicates the real-time traffic on roads" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+            
+            //[alertView2 show];
+            
         }
         
     }
