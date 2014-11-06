@@ -93,6 +93,7 @@
 		767BA0C119E5DEDB006557BA /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 767BA0BD19E5DEDB006557BA /* Default~iphone.png */; };
 		767BA0C219E5DEDB006557BA /* Default_old@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 767BA0BE19E5DEDB006557BA /* Default_old@2x~iphone.png */; };
 		769313311A08683700CA80A4 /* Speaker_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 769313301A08683700CA80A4 /* Speaker_1.png */; };
+		769313331A087AC700CA80A4 /* arrow_enter_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 769313321A087AC700CA80A4 /* arrow_enter_1.png */; };
 		769A589819F6B5A900084DC6 /* crime2.png in Resources */ = {isa = PBXBuildFile; fileRef = 769A589719F6B5A900084DC6 /* crime2.png */; };
 		769D857019F814D400AF144C /* AlignUsabilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 769D856F19F814D400AF144C /* AlignUsabilityViewController.m */; };
 		76DA387219F6138D006A8DFC /* crime_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 76DA387119F6138D006A8DFC /* crime_full.png */; };
@@ -496,6 +497,7 @@
 		767BA0BD19E5DEDB006557BA /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iphone.png"; sourceTree = "<group>"; };
 		767BA0BE19E5DEDB006557BA /* Default_old@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default_old@2x~iphone.png"; sourceTree = "<group>"; };
 		769313301A08683700CA80A4 /* Speaker_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Speaker_1.png; sourceTree = "<group>"; };
+		769313321A087AC700CA80A4 /* arrow_enter_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_enter_1.png; sourceTree = "<group>"; };
 		769A589719F6B5A900084DC6 /* crime2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crime2.png; sourceTree = "<group>"; };
 		769D856E19F814D400AF144C /* AlignUsabilityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlignUsabilityViewController.h; sourceTree = "<group>"; };
 		769D856F19F814D400AF144C /* AlignUsabilityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlignUsabilityViewController.m; sourceTree = "<group>"; };
@@ -1035,6 +1037,7 @@
 		CC2316EA16260F9200EE0F48 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				769313321A087AC700CA80A4 /* arrow_enter_1.png */,
 				769313301A08683700CA80A4 /* Speaker_1.png */,
 				7654C3ED1A0861F0006B7D7F /* navigation_1.png */,
 				7654C3E91A08503D006B7D7F /* Parameters_1.png */,
@@ -1479,7 +1482,7 @@
 				ORGANIZATIONNAME = "GATech-CGIS";
 				TargetAttributes = {
 					CCCDFB6215EEAAC600B26133 = {
-						DevelopmentTeam = M3TV3TB4PN;
+						DevelopmentTeam = 89JRG4TE28;
 						SystemCapabilities = {
 							com.apple.iOS = {
 								enabled = 1;
@@ -1788,6 +1791,7 @@
 				4F0E5E8718E3DFFF00F05186 /* help-prev-page_32@2x.png in Resources */,
 				4F0E5E8818E3DFFF00F05186 /* help-prev-tip_32.png in Resources */,
 				4F0E5E8918E3DFFF00F05186 /* help-prev-tip_32@2x.png in Resources */,
+				769313331A087AC700CA80A4 /* arrow_enter_1.png in Resources */,
 				4F0E5E8D18E3F26100F05186 /* help-pg01-tip02.png in Resources */,
 				4F4AB31D18EA02DD00299AA1 /* dots-1_75.png in Resources */,
 				4F4AB32218EA2A7800299AA1 /* dots-2_75.png in Resources */,
@@ -2004,7 +2008,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Chandra Khatri (M889765538)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chandra Khatri (M889765538)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenTripPlanner/Chandra_Align-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -2024,8 +2029,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "Align!";
-				PROVISIONING_PROFILE = "8E4B807A-34CF-4623-8BC2-999AC0CF0475";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8E4B807A-34CF-4623-8BC2-999AC0CF0475";
+				PROVISIONING_PROFILE = "47ecfdda-f126-4bfe-88c6-d770ac5266eb";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "47ecfdda-f126-4bfe-88c6-d770ac5266eb";
 				SDKROOT = iphoneos6.1;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -2035,8 +2040,8 @@
 		CCCDFB9215EEAAC600B26133 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chandra Khatri (M889765538)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chandra Khatri (M889765538)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenTripPlanner/Chandra_Align-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -2056,8 +2061,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "Align!";
-				PROVISIONING_PROFILE = "8E4B807A-34CF-4623-8BC2-999AC0CF0475";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8E4B807A-34CF-4623-8BC2-999AC0CF0475";
+				PROVISIONING_PROFILE = "47ecfdda-f126-4bfe-88c6-d770ac5266eb";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "47ecfdda-f126-4bfe-88c6-d770ac5266eb";
 				SDKROOT = iphoneos6.1;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

@@ -34,6 +34,8 @@ NSString * const kArriveByArray[] = {
 };
 
 NSInteger count =0;
+NSInteger intro_count = 0;
+
 
 typedef enum {
     MARKER_TYPE_SELECTION = 10
@@ -90,6 +92,22 @@ NSMutableArray *poiAnnotationsOnMap;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    //Chandra
+    
+    if (intro_count < 1){
+        UIAlertView *intro = [[UIAlertView alloc] initWithTitle:@"Hello!" message:@"Would you like to set preferences for better experience?" delegate:self cancelButtonTitle:@"Later" otherButtonTitles:@"Set routing preferences",@"Set usability preferences", nil];
+        
+        intro.tag = 1;
+        
+        [intro show];
+        
+        intro_count = intro_count + 1;
+        
+    }
+    
+    
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
@@ -210,6 +228,34 @@ NSMutableArray *poiAnnotationsOnMap;
     //**ends**//
     
 }
+
+
+- (void) alertView:(UIAlertView *) alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    
+    
+    if (alertView.tag == 1){
+        
+        if (buttonIndex == 1){
+            
+            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"TRAFFIC!" message:@"This parameter indicates the real-time traffic on roads" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+            
+            [alertView2 show];
+            
+            
+            
+        } else if (buttonIndex == 2){
+            
+            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"TRAFFIC!" message:@"This parameter indicates the real-time traffic on roads" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+            
+            [alertView2 show];
+        
+        }
+        
+    }
+}
+
+
 
 - (void)go:(id)sender
 {
