@@ -42,7 +42,7 @@ typedef enum {
 } ActionSheetPurpose;
 
 NSString *const planServicePath = @"/plan";
-NSString *const searchNearbyTextDefault = @"Type Your Destination...";
+NSString *const searchNearbyTextDefault = @"Type your destination...";
 NSString *const searchNearbyNoResultsPrefix = @"No places found for";
 double minSearchRadius = 200.0;
 
@@ -97,7 +97,7 @@ NSMutableArray *poiAnnotationsOnMap;
     //Chandra
     
     if (intro_count < 1){
-        UIAlertView *intro = [[UIAlertView alloc] initWithTitle:@"Hello!" message:@"Would you like to set preferences for better experience?" delegate:self cancelButtonTitle:@"Later" otherButtonTitles:@"Set routing preferences",@"Set usability preferences", nil];
+        UIAlertView *intro = [[UIAlertView alloc] initWithTitle:@"Hello!" message:@"Would you like to set preferences for better experience?" delegate:self cancelButtonTitle:@"Later" otherButtonTitles:@"Set preferences", nil];
         
         intro.tag = 1;
         
@@ -238,18 +238,8 @@ NSMutableArray *poiAnnotationsOnMap;
         
         if (buttonIndex == 1){
             
-            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"TRAFFIC!" message:@"This parameter indicates the real-time traffic on roads" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+            [self performSegueWithIdentifier:@"toSettings" sender:self];
             
-            [alertView2 show];
-            
-            
-            
-        } else if (buttonIndex == 2){
-            
-            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"TRAFFIC!" message:@"This parameter indicates the real-time traffic on roads" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
-            
-            [alertView2 show];
-        
         }
         
     }
