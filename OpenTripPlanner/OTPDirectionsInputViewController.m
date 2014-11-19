@@ -240,10 +240,6 @@ NSMutableArray *poiAnnotationsOnMap;
             
             [self performSegueWithIdentifier:@"toSettings" sender:self];
             
-            //UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"TRAFFIC!" message:@"This parameter indicates the real-time traffic on roads" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
-            
-            //[alertView2 show];
-            
         }
         
     }
@@ -1247,7 +1243,7 @@ RKResponse* _OTPResponse = nil;
         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
         
         [_dropdownView setBackgroundColor:[UIColor colorWithRed:(0/255.0) green:(150/255.0) blue:(255/255.0) alpha:1]];
-        _dropdownView.alpha =0.7;
+        _dropdownView.alpha =0.9;
         [UIView commitAnimations];
         
         

@@ -42,8 +42,11 @@ NSInteger accessibility = 0;
 NSInteger intersections = 0;
 NSInteger landvariations = 0;
 
+NSInteger info_count = 0;
+NSInteger count_essential = 1;
 
-NSInteger parameter_array[10] = {0,0,0,0,0,0,0,0,0};
+
+NSInteger parameter_array[10] = {0,0,0,0,0,0,0,0,0,0};
 
 NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Slope", @"Residential", @"Business",@"Accessibility", @"Intersections",@"Landvariations"};
 
@@ -79,6 +82,18 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
     wp.accessibility = accessibility;
     wp.intersection = intersections;
     wp.landVariation = landvariations;
+    
+    
+    if (info_count < 1){
+        UIAlertView *intro = [[UIAlertView alloc] initWithTitle:@"Information!" message:@"You can set upto 5 essential parameters" delegate:self cancelButtonTitle:@"Ok, Got it." otherButtonTitles: nil];
+        
+        intro.tag = 1;
+        
+        [intro show];
+        
+        info_count = info_count + 1;
+        
+    }
     
     //UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 450)];
     
@@ -433,9 +448,19 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
             [alertView2 show];
             
         } else if (buttonIndex == 2){
-            traffic = 5;
-            parameter_array[0] = 2;
-               [self.trafficButton setTitle:@"Traffic E!" forState:UIControlStateNormal];
+            
+            if (count_essential < 6){
+                count_essential = count_essential +1;
+                traffic = 5;
+                parameter_array[0] = 2;
+                [self.trafficButton setTitle:@"Traffic E!" forState:UIControlStateNormal];
+                
+            }
+            else{
+                UIAlertView *infoAlert = [[UIAlertView alloc] initWithTitle:@"Information" message:@"Maximum number of essential parameters allowed is 5" delegate:self cancelButtonTitle:@"Ok, Got it" otherButtonTitles: nil];
+                [infoAlert show];
+            }
+            
         } else if (buttonIndex == 3){
             traffic = 2;
             parameter_array[0] = 1;
@@ -444,13 +469,22 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
         }
     } else if (alertView.tag == 2){
         if (buttonIndex == 1){
+            
             UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"GREENERY!" message:@"This parameter indicates the greenery on the way." delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
             [alertView2 show];
+        
             
         } else if (buttonIndex == 2){
-            greenery = 5;
-            parameter_array[1] = 2;
-            [self.greeneryButton setTitle:@"Greenery E!" forState:UIControlStateNormal];
+            if (count_essential < 6){
+                count_essential = count_essential +1;
+                greenery = 5;
+                parameter_array[1] = 2;
+                [self.greeneryButton setTitle:@"Greenery E!" forState:UIControlStateNormal];
+            }
+            else{
+                UIAlertView *infoAlert = [[UIAlertView alloc] initWithTitle:@"Information" message:@"Maximum number of essential parameters allowed is 5" delegate:self cancelButtonTitle:@"Ok, Got it" otherButtonTitles: nil];
+                [infoAlert show];
+            }
             
         } else if (buttonIndex == 3){
             greenery = 2;
@@ -459,13 +493,22 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
         }
     }else if (alertView.tag == 3){
         if (buttonIndex == 1){
+            
             UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"CRIME!" message:@"This parameter indicates the level of crime on the routes." delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
             [alertView2 show];
             
+            
         } else if (buttonIndex == 2){
-            crime = 5;
-            parameter_array[2] = 2;
-            [self.crimeButton setTitle:@"Crime E!" forState:UIControlStateNormal];
+            if (count_essential < 6){
+                count_essential = count_essential +1;
+                crime = 5;
+                parameter_array[2] = 2;
+                [self.crimeButton setTitle:@"Crime E!" forState:UIControlStateNormal];
+            }
+            else{
+                UIAlertView *infoAlert = [[UIAlertView alloc] initWithTitle:@"Information" message:@"Maximum number of essential parameters allowed is 5" delegate:self cancelButtonTitle:@"Ok, Got it" otherButtonTitles: nil];
+                [infoAlert show];
+            }
             
         } else if (buttonIndex == 3){
             crime = 2;
@@ -476,13 +519,23 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
     }else if (alertView.tag == 4){
         
         if (buttonIndex == 1){
+            
+            
             UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"SIDEWALK!" message:@"This parameter indicates the importance to sidewalks." delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
             [alertView2 show];
+                
             
         } else if (buttonIndex == 2){
-            sidewalk = 5;
-            parameter_array[3] = 2;
-            [self.sidewalkButton setTitle:@"Sidewalk E!" forState:UIControlStateNormal];
+            if (count_essential < 6){
+                count_essential = count_essential +1;
+                sidewalk = 5;
+                parameter_array[3] = 2;
+                [self.sidewalkButton setTitle:@"Sidewalk E!" forState:UIControlStateNormal];
+            }
+            else{
+                UIAlertView *infoAlert = [[UIAlertView alloc] initWithTitle:@"Information" message:@"Maximum number of essential parameters allowed is 5" delegate:self cancelButtonTitle:@"Ok, Got it" otherButtonTitles: nil];
+                [infoAlert show];
+            }
             
         } else if (buttonIndex == 3){
             sidewalk = 2;
@@ -494,13 +547,22 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
     }else if (alertView.tag == 5){
         
         if (buttonIndex == 1){
+            
             UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"SLOPE!" message:@"This parameter indicates the slope of the road. Can be useful for people on wheelchair." delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
             [alertView2 show];
             
+            
         } else if (buttonIndex == 2){
-            slope = 5;
-            parameter_array[4] = 2;
-            [self.slopeButton setTitle:@"Slope E!" forState:UIControlStateNormal];
+            if (count_essential < 6){
+                count_essential = count_essential +1;
+                slope = 5;
+                parameter_array[4] = 2;
+                [self.slopeButton setTitle:@"Slope E!" forState:UIControlStateNormal];
+            }
+            else{
+                UIAlertView *infoAlert = [[UIAlertView alloc] initWithTitle:@"Information" message:@"Maximum number of essential parameters allowed is 5" delegate:self cancelButtonTitle:@"Ok, Got it" otherButtonTitles: nil];
+                [infoAlert show];
+            }
             
         } else if (buttonIndex == 3){
             slope = 2;
@@ -512,16 +574,25 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
     }else if (alertView.tag == 6){
         
         if (buttonIndex == 1){
+            
             UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"RESIDENTIAL DENSITY!" message:@"This parameter indicates the residential density of the routes." delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
             [alertView2 show];
             
-        } else if (buttonIndex == 2){
-            residential = 5;
-            parameter_array[5] = 2;
-            [self.residentialButton setTitle:@"Residential Density E!" forState:UIControlStateNormal];
             
+        } else if (buttonIndex == 2){
+            if (count_essential < 6){
+                count_essential = count_essential +1;
+                residential = 5;
+                parameter_array[5] = 2;
+                [self.residentialButton setTitle:@"Residential Density E!" forState:UIControlStateNormal];
+            }
+            else{
+                UIAlertView *infoAlert = [[UIAlertView alloc] initWithTitle:@"Information" message:@"Maximum number of essential parameters allowed is 5" delegate:self cancelButtonTitle:@"Ok, Got it" otherButtonTitles: nil];
+                [infoAlert show];
+            }
             
         } else if (buttonIndex == 3){
+            
             residential = 2;
             parameter_array[5] = 1;
             [self.residentialButton setTitle:@"Residential Density S!" forState:UIControlStateNormal];
@@ -531,13 +602,23 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
     }else if (alertView.tag == 7){
         
         if (buttonIndex == 1){
-            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"BUSINESS DENSITY!" message:@"This parameter indicates the business density of the routes" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
-            [alertView2 show];
+            
+                UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"BUSINESS DENSITY!" message:@"This parameter indicates the business density of the routes" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+                [alertView2 show];
+            
             
         } else if (buttonIndex == 2){
-            business = 5;
-            parameter_array[6] = 2;
-            [self.businessButton setTitle:@"Business Density E!" forState:UIControlStateNormal];
+            if (count_essential < 6){
+                count_essential = count_essential +1;
+                business = 5;
+                parameter_array[6] = 2;
+                [self.businessButton setTitle:@"Business Density E!" forState:UIControlStateNormal];
+            }
+            else{
+                
+                UIAlertView *infoAlert = [[UIAlertView alloc] initWithTitle:@"Information" message:@"Maximum number of essential parameters allowed is 5" delegate:self cancelButtonTitle:@"Ok, Got it" otherButtonTitles: nil];
+                [infoAlert show];
+            }
             
         } else if (buttonIndex == 3){
             business = 2;
@@ -549,13 +630,23 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
     } else if (alertView.tag == 8){
         
         if (buttonIndex == 1){
-            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"ACCESSIBILITY!" message:@"This parameter indicates the level of accessibility on the roads." delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
-            [alertView2 show];
             
+            
+                UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"ACCESSIBILITY!" message:@"This parameter indicates the level of accessibility on the roads." delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+                [alertView2 show];
+            
+        
         } else if (buttonIndex == 2){
-            accessibility = 5;
-            parameter_array[7] = 2;
-            [self.accessibilityButton setTitle:@"Accessibility E!" forState:UIControlStateNormal];
+            if (count_essential < 6){
+                count_essential = count_essential +1;
+                accessibility = 5;
+                parameter_array[7] = 2;
+                [self.accessibilityButton setTitle:@"Accessibility E!" forState:UIControlStateNormal];
+            }
+            else{
+                UIAlertView *infoAlert = [[UIAlertView alloc] initWithTitle:@"Information" message:@"Maximum number of essential parameters allowed is 5" delegate:self cancelButtonTitle:@"Ok, Got it" otherButtonTitles: nil];
+                [infoAlert show];
+            }
     
         } else if (buttonIndex == 3){
             accessibility = 2;
@@ -567,13 +658,22 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
     } else if (alertView.tag == 9){
         
         if (buttonIndex == 1){
-            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"INTERSECTIONS!" message:@"This parameter indicates the importance to intersections" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
-            [alertView2 show];
+            
+                UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"INTERSECTIONS!" message:@"This parameter indicates the importance to intersections" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+                [alertView2 show];
+            
             
         } else if (buttonIndex == 2){
-            intersections = 5;
-            parameter_array[8] = 2;
-            [self.intersectionsButton setTitle:@"Intersections E!" forState:UIControlStateNormal];
+            if (count_essential < 6){
+                count_essential = count_essential +1;
+                intersections = 5;
+                parameter_array[8] = 2;
+                [self.intersectionsButton setTitle:@"Intersections E!" forState:UIControlStateNormal];
+            }
+            else{
+                UIAlertView *infoAlert = [[UIAlertView alloc] initWithTitle:@"Information" message:@"Maximum number of essential parameters allowed is 5" delegate:self cancelButtonTitle:@"Ok, Got it" otherButtonTitles: nil];
+                [infoAlert show];
+            }
             
         } else if (buttonIndex == 3){
             intersections = 2;
@@ -585,13 +685,22 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
     }else if (alertView.tag == 10){
         
         if (buttonIndex == 1){
-            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"LAND VARIATIONS!" message:@"This parameter indicates the light environment along your walk. It may influence your walk in night" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
-            [alertView2 show];
+            
+                UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"LAND VARIATIONS!" message:@"This parameter indicates the light environment along your walk. It may influence your walk in night" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+                [alertView2 show];
+            
             
         } else if (buttonIndex == 2){
-            landvariations = 5;
-            parameter_array[9] = 2;
-            [self.landvariationsButton setTitle:@"Land Variations E!" forState:UIControlStateNormal];
+            if (count_essential < 6){
+                count_essential = count_essential +1;
+                landvariations = 5;
+                parameter_array[9] = 2;
+                [self.landvariationsButton setTitle:@"Land Variations E!" forState:UIControlStateNormal];
+            }
+            else{
+                UIAlertView *infoAlert = [[UIAlertView alloc] initWithTitle:@"Information" message:@"Maximum number of essential parameters allowed is 5" delegate:self cancelButtonTitle:@"Ok, Got it" otherButtonTitles: nil];
+                [infoAlert show];
+            }
             
         } else if (buttonIndex == 3){
             landvariations = 2;

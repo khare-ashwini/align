@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="MWh-AV-0V8">
-                            <rect key="frame" x="0.0" y="156" width="320" height="50"/>
+                            <rect key="frame" x="0.0" y="92" width="320" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="From:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yUn-LA-iKR">
@@ -50,7 +50,7 @@
                         </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="itineraryCell" rowHeight="70" id="JyN-Vg-l9E" customClass="OTPItineraryCell">
-                                <rect key="frame" x="0.0" y="86" width="320" height="70"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JyN-Vg-l9E" id="nmv-Ia-p2O">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
@@ -1178,8 +1178,8 @@
                             <view contentMode="scaleToFill" id="C25-zf-LMI" userLabel="My-Parameters">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.40529726929999998" green="0.84211103320000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.40529726929999998" green="0.84211103320000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.3725802601" green="0.80756267960000006" blue="0.95157047189999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.3725802601" green="0.80756267960000006" blue="0.95157047189999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" id="Nht-qb-2mm" userLabel="All-Parameters">
                                 <rect key="frame" x="0.0" y="20" width="320" height="460"/>
@@ -1306,8 +1306,8 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.40529726929999998" green="0.84211103320000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.40529726929999998" green="0.84211103320000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.3725802601" green="0.80756267960000006" blue="0.95157047189999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.3725802601" green="0.80756267960000006" blue="0.95157047189999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" id="k3x-bL-Xuv">
                                 <rect key="frame" x="19" y="36" width="282" height="29"/>
@@ -1330,7 +1330,7 @@
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bBd-qg-P0h">
                                             <rect key="frame" x="16" y="0.0" width="60" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.37024804610000001" green="0.78086966410000003" blue="0.93518813779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.29359459660033771" green="0.63353993135692976" blue="0.76907286352040816" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="tintColor" red="0.37024804610000001" green="0.78086966410000003" blue="0.93518813779999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <state key="normal" title="Back">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1341,12 +1341,12 @@
                                             </connections>
                                         </button>
                                     </barButtonItem>
-                                    <barButtonItem width="172" style="plain" systemItem="fixedSpace" id="nZv-RH-Amf"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="6N5-BN-bpr"/>
                                     <barButtonItem style="plain" id="9bm-RH-0vL">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1Hp-Wt-NDx">
-                                            <rect key="frame" x="258" y="0.0" width="57" height="44"/>
+                                            <rect key="frame" x="247" y="0.0" width="57" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.37024804610000001" green="0.78086966410000003" blue="0.93518813779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.29359459659999998" green="0.63353993139999998" blue="0.76907286350000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="tintColor" red="0.37024804610000001" green="0.78086966410000003" blue="0.93518813779999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <state key="normal" title="Done">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1357,41 +1357,11 @@
                                             </connections>
                                         </button>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" id="ZeW-1f-9el">
-                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" id="roa-OL-KjV">
-                                            <rect key="frame" x="325" y="7" width="282" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <segments>
-                                                <segment title="All Parameters"/>
-                                                <segment title="My Parameters"/>
-                                            </segments>
-                                            <color key="tintColor" red="0.29351700889999999" green="0.50085832129999996" blue="0.66559709820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <connections>
-                                                <action selector="parameterSegment:" destination="49j-Ml-5AT" eventType="valueChanged" id="Zfg-jK-8Fe"/>
-                                            </connections>
-                                        </segmentedControl>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" id="rir-CE-0bc">
-                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" id="Dpc-e2-dpZ">
-                                            <rect key="frame" x="617" y="7" width="282" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <segments>
-                                                <segment title="All Parameters"/>
-                                                <segment title="My Parameters"/>
-                                            </segments>
-                                            <color key="tintColor" red="0.29351700889999999" green="0.50085832129999996" blue="0.66559709820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <connections>
-                                                <action selector="parameterSegment:" destination="49j-Ml-5AT" eventType="valueChanged" id="9YV-Ly-UeI"/>
-                                            </connections>
-                                        </segmentedControl>
-                                    </barButtonItem>
                                 </items>
-                                <color key="barTintColor" red="0.17401899770000001" green="0.632902992" blue="0.81118463009999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.20401343257211155" green="0.73904577682720274" blue="0.91366390306122447" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" red="0.40529726926188359" green="0.84211103322747938" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.37258026006339762" green="0.80756267955673233" blue="0.95157047193877553" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="480"/>
@@ -1405,7 +1375,6 @@
                         <outlet property="landvariationsButton" destination="aLH-XF-Ghf" id="ONa-Ui-YEP"/>
                         <outlet property="myParameterView" destination="C25-zf-LMI" id="njM-Yw-vcV"/>
                         <outlet property="residentialButton" destination="tvJ-BR-8qb" id="BnV-2d-zbC"/>
-                        <outlet property="segmentedControl" destination="roa-OL-KjV" id="DbL-5s-aF9"/>
                         <outlet property="sidewalkButton" destination="o3O-dk-KlW" id="CY5-Fx-k5q"/>
                         <outlet property="slopeButton" destination="3jp-Uh-gV2" id="qLk-r4-vVF"/>
                         <outlet property="trafficButton" destination="Tqd-Us-ztf" id="ZAG-u6-rtk"/>
@@ -1719,7 +1688,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="5LB-df-yu3">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5LB-df-yu3" id="OBy-c3-4pe">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -2009,7 +1978,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SETTINGS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZQW-3h-Oqx">
-                                <rect key="frame" x="112" y="86" width="106" height="21"/>
+                                <rect key="frame" x="112" y="99" width="106" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -2051,18 +2020,17 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         </button>
                                     </barButtonItem>
                                 </items>
-                                <color key="barTintColor" red="0.13646864750000001" green="0.59615630799999997" blue="0.80685985329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.13980903599716427" green="0.68782397278683427" blue="0.86326132015306123" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="AIg-3G-srj">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" red="0.37024804610000001" green="0.78086966410000003" blue="0.93518813779999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <barButtonItem style="plain" id="hlt-HI-toJ">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Kd0-xl-D2G">
                                             <rect key="frame" x="16" y="0.0" width="60" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.19281367357457327" green="0.63589128125569527" blue="0.81786112882653061" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.15729749342384072" green="0.65088343266064141" blue="0.7958984375" alpha="1" colorSpace="calibratedRGB"/>
                                             <state key="normal" title="Back">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -2080,7 +2048,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nkJ-LR-sYd">
                                             <rect key="frame" x="247" y="0.0" width="57" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.1364686474872582" green="0.59615630797892827" blue="0.80685985331632648" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.15729749339999999" green="0.65088343270000004" blue="0.7958984375" alpha="1" colorSpace="calibratedRGB"/>
                                             <state key="normal" title="Next">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -2089,7 +2057,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     </barButtonItem>
                                 </items>
                                 <color key="tintColor" red="0.37024804610000001" green="0.78086966410000003" blue="0.93518813779999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="barTintColor" red="0.2264238936755005" green="0.68516691863169588" blue="0.8953683035714286" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.10965112576942744" green="0.70485748716370444" blue="0.86326132020000002" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALIGN!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="C0Y-Zx-V8j">
                                 <rect key="frame" x="126" y="40" width="79" height="21"/>
@@ -2099,7 +2067,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.37024804610794138" green="0.78086966411569425" blue="0.93518813775510201" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.35818881168346317" green="0.80111017699545362" blue="0.93518813775510201" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MQ8-r1-H8Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2204,8 +2172,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <action selector="vibrationSwitch:" destination="4li-yF-gdE" eventType="valueChanged" id="a56-Nz-8Ed"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usability" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d94-Ru-4Jh">
-                                <rect key="frame" x="116" y="87" width="88" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USABILITY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d94-Ru-4Jh">
+                                <rect key="frame" x="111" y="103" width="108" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -2233,7 +2201,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="okd-Sg-kma">
                                             <rect key="frame" x="16" y="0.0" width="60" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.37024804610000001" green="0.78086966410000003" blue="0.93518813779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.23193240105962654" green="0.57915560438930824" blue="0.74659199617346939" alpha="1" colorSpace="calibratedRGB"/>
                                             <state key="normal" title="Back">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -2246,7 +2214,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <barButtonItem width="180" style="plain" systemItem="fixedSpace" id="LMW-vB-0oj"/>
                                 </items>
                                 <color key="tintColor" red="0.37024804610000001" green="0.78086966410000003" blue="0.93518813779999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="barTintColor" red="0.37024804610000001" green="0.78086966410000003" blue="0.93518813779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.27128217710000002" green="0.62894495250000004" blue="0.81570870539999996" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g2r-F1-QyZ">
                                 <rect key="frame" x="77" y="338" width="176" height="44"/>
@@ -2276,7 +2244,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         </button>
                                     </barButtonItem>
                                 </items>
-                                <color key="barTintColor" red="0.22060804589661076" green="0.65680792763643459" blue="0.75886878188775508" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.27128217710000002" green="0.62894495250000004" blue="0.81570870539999996" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALIGN!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pjh-lr-x7g">
                                 <rect key="frame" x="133" y="32" width="55" height="21"/>
@@ -2286,7 +2254,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.37024804610000001" green="0.78086966410000003" blue="0.93518813779999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.3418004418945858" green="0.73756203623338434" blue="0.89534837372448983" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="YYZ-Ac-ceE"/>
                     <connections>
@@ -2322,8 +2290,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <color key="onTintColor" red="0.47307872769999998" green="1" blue="0.4605899094" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="thumbTintColor" red="0.06564564178" green="0.23485250050000001" blue="0.37388392860000003" alpha="1" colorSpace="calibratedRGB"/>
                             </switch>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ofD-a5-z8C">
-                                <rect key="frame" x="116" y="69" width="88" height="26"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AUDIO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ofD-a5-z8C">
+                                <rect key="frame" x="116" y="77" width="88" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -2338,7 +2306,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Caj-AD-bFK">
                                             <rect key="frame" x="16" y="0.0" width="60" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.37024804610000001" green="0.78086966410000003" blue="0.93518813779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.26015876073264838" green="0.57788673139968416" blue="0.77044802295918369" alpha="1" colorSpace="calibratedRGB"/>
                                             <state key="normal" title="Back">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -2353,7 +2321,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     </barButtonItem>
                                 </items>
                                 <color key="tintColor" red="0.37024804610000001" green="0.78086966410000003" blue="0.93518813779999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="barTintColor" red="0.37024804610000001" green="0.78086966410000003" blue="0.93518813779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.22094025649999999" green="0.5881807979" blue="0.76624282529999999" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sno-Mv-qUC">
                                 <rect key="frame" x="61" y="203" width="199" height="46"/>
@@ -2409,10 +2377,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         </button>
                                     </barButtonItem>
                                 </items>
-                                <color key="barTintColor" red="0.2965645804" green="0.67568308720000003" blue="0.83147321429999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.22094025649999999" green="0.5881807979" blue="0.76624282529999999" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" red="0.37024804610000001" green="0.78086966410000003" blue="0.93518813779999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.26808611486848527" green="0.73989528278353012" blue="0.92613998724489799" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="QXZ-tA-yyB"/>
                 </viewController>
@@ -2437,11 +2405,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qdQ-ic-AIU">
                                             <rect key="frame" x="16" y="0.0" width="60" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.37024804610000001" green="0.78086966410000003" blue="0.93518813779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.26015876069999999" green="0.57788673140000002" blue="0.77044802300000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <state key="normal" title="Back">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <segue destination="4li-yF-gdE" kind="modal" id="7Ut-ia-NzR"/>
+                                            </connections>
                                         </button>
                                         <connections>
                                             <segue destination="4li-yF-gdE" kind="modal" id="Wb0-XA-jES"/>
@@ -2449,7 +2420,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     </barButtonItem>
                                 </items>
                                 <color key="tintColor" red="0.37024804610000001" green="0.78086966410000003" blue="0.93518813779999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="barTintColor" red="0.37024804610000001" green="0.78086966410000003" blue="0.93518813779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.27128217710000002" green="0.62894495250000004" blue="0.81570870539999996" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="3Ju-Zc-fu3">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -2465,7 +2436,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         </button>
                                     </barButtonItem>
                                 </items>
-                                <color key="barTintColor" red="0.2965645804" green="0.67568308720000003" blue="0.83147321429999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.27128217711756314" green="0.62894495249536231" blue="0.81570870535714279" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" id="P62-wd-YoX">
                                 <rect key="frame" x="68" y="292" width="185" height="31"/>
@@ -2473,8 +2444,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <color key="minimumTrackTintColor" red="0.47307872769999998" green="1" blue="0.4605899094" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="thumbTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </slider>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Font Size" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LYD-nk-Lve">
-                                <rect key="frame" x="113" y="95" width="94" height="22"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FONT SIZE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LYD-nk-Lve">
+                                <rect key="frame" x="107" y="100" width="106" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2509,7 +2480,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.37024804610000001" green="0.78086966410000003" blue="0.93518813779999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.2528950794954386" green="0.70196044605262853" blue="0.88793447066326525" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="NAv-4O-Bw8"/>
                 </viewController>
@@ -2544,9 +2515,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Nfn-mU-rYe"/>
         <segue reference="DpZ-py-2Be"/>
-        <segue reference="xCp-Pm-awy"/>
+        <segue reference="fkt-Eh-CPt"/>
+        <segue reference="n67-En-mWn"/>
         <segue reference="MaU-fd-9hX"/>
     </inferredMetricsTieBreakers>
 </document>
