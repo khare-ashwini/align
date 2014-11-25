@@ -386,7 +386,18 @@ NSMutableArray *poiAnnotationsOnMap;
     [dateFormatter setDateFormat:@"HH:mm"];
     NSString *timeString = [dateFormatter stringFromDate:self.date];
     
-    NSString *fromString = [NSString stringWithFormat:@"%f,%f", startPoint.latitude, startPoint.longitude];
+    
+    //NSString *fromString = [NSString stringWithFormat:@"%f,%f", startPoint.latitude, startPoint.longitude];
+    //Chandra adding the default location as the user's current location if start location not specified
+    NSString *fromString = @"";
+    if(startPoint.longitude == 0){
+        fromString = [NSString stringWithFormat:@"%f,%f", self.userLocation.location.coordinate.latitude, self.userLocation.location.coordinate.longitude];
+    }else{
+        fromString = [NSString stringWithFormat:@"%f,%f", startPoint.latitude, startPoint.longitude];
+    }
+    
+    
+    
     NSString *toString = [NSString stringWithFormat:@"%f,%f", endPoint.latitude, endPoint.longitude];
     
     // Vignesh: Commenting since WALK is the only supported mode
@@ -603,6 +614,9 @@ NSMutableArray *poiAnnotationsOnMap;
 {
     [TestFlight passCheckpoint:@"DIRECTIONS_PAN_TO_USER_LOCATION"];
     self.needsPanToUserLocation = YES;
+    
+    //NSLog (@"----User Location--- %f",self.mapView.centerCoordinate.latitude) ;
+    //NSLog (@"----User Location--- %f",self.mapView.centerCoordinate.longitude) ;
     [self enableUserLocation];
 }
 
