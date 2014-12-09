@@ -50,9 +50,11 @@ NSInteger parameter_array[10] = {0,0,0,0,0,0,0,0,0,0};
 
 NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Slope", @"Residential", @"Business",@"Accessibility", @"Intersections",@"Landvariations"};
 
-    
+NSString  *parameter_images[10]={@"pa_traffic_unclick-1.png",@"pa_Greenery_unclick-1.png",@"pa_Crime_unclick-1.png",@"pa_Sidewalk_unclick-1.png",@"pa_Slope_unclick-1.png", @"pa_Residential_Density_unclick-1.png", @"pa_Business_Density_unclick-1.png",@"pa_Business_Density_unclick-1.png", @"pa_Intersections_unclick-1.png",@"pa_LandVariation_unclick-1.png"};
 
+NSString  *parameter_primary_images[10]={@"pa_traffic_click_E-1.png",@"pa_Greenery_click_E-1.png",@"pa_Crime_click_E-1.png",@"pa_Sidewalk_click_E-1.png",@"pa_Slope_click_E-1.png", @"pa_Residential_Density_click_E-1.png", @"pa_Business_Density_click_E-1.png",@"pa_Business_Density_click_E-1.png", @"pa_Intersections_E-1.png",@"pa_LandVariation_click_E-1.png"};
 
+NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Greenery_click_S-1.png",@"pa_Crime_click_S-1.png",@"pa_Sidewalk_click_S-1.png",@"pa_Slope_click_S-1.png", @"pa_Residential_Density_click_S-1.png", @"pa_Business_Density_click_S-1.png",@"pa_Business_Density_click_S-1.png", @"pa_Intersections_click_S-1.png",@"pa_LandVariation_click_S-1.png"};
 
 
 //parameter_buttons = [NSArray arrayWithObjects:UIbutton traffic_button,UIButton greenery_button,UIButton crime_button,nil];
@@ -211,9 +213,9 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
             
             
             NSInteger x = 80;
-            NSInteger y = 65;
-            NSInteger height = 30;
-            NSInteger width = 146;
+            NSInteger y = 50;
+            NSInteger height = 42;
+            NSInteger width = 157;
             //NSMutableArray *buttons_primary = [[NSMutableArray alloc] init];
             //NSMutableArray *buttons_secondary = [[NSMutableArray alloc] init];
             NSInteger essential_state = 0;
@@ -231,18 +233,20 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
             
             for (NSInteger i = 0; i < 10; i++){
                 if (parameter_array[i] == 2){
-                    NSString *title = parameter_names[i];
+                    //NSString *title = parameter_names[i];
+                    
+                    NSString *image_name = parameter_primary_images[i];
                     
                     UIButton *button = [[UIButton alloc]init];
                     
                     //button.frame = CGRectMake(x,y, width, height);
-                    [button setTitle:title forState:UIControlStateNormal];
+                    //[button setTitle:title forState:UIControlStateNormal];
                 
                     //[[button layer] setCornerRadius:8.0f];
                     
                     //[[button layer] setMasksToBounds:YES];
                     //[button setBackgroundColor:[UIColor blueColor]];
-                    //[button setImage:[UIImage imageNamed:@"crime2.png"] forState:UIControlStateNormal];
+                    [button setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
                     //[[button layer] setBorderWidth:1.0f];
                     
                     //[self.myParameterView addSubview:button];
@@ -256,12 +260,14 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
                     
                 }else if (parameter_array[i] == 1){
                     
-                    NSString *title = parameter_names[i];
-                    
+                    //NSString *title = parameter_names[i];
+                    NSString *image_name = parameter_secondary_images[i];
                     UIButton *button = [[UIButton alloc]init];
                     
                     //button.frame = CGRectMake(x,y, width, height);
-                    [button setTitle:title forState:UIControlStateNormal];
+                    //[button setTitle:title forState:UIControlStateNormal];
+                    [button setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                    
                     button.tag = count;
                     count = count +1;
                     
@@ -283,23 +289,23 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
                 
                 [self.myParameterView addSubview:essential_label];
                 
-                y = y+ 40;
+                y = y+ 35;
             }
             
             for (UIButton *button in buttons_primary){
                 NSLog(@"button %i", y);
                 button.frame = CGRectMake(x,y, width, height);
                 //[button setTitle:title forState:UIControlStateNormal];
-                [[button layer] setCornerRadius:8.0f];
+                //[[button layer] setCornerRadius:8.0f];
                 
                 [[button layer] setMasksToBounds:YES];
-                [button setBackgroundColor:[UIColor blueColor]];
+                //[button setBackgroundColor:[UIColor blueColor]];
                 //[button setImage:[UIImage imageNamed:@"crime2.png"] forState:UIControlStateNormal];
-                [[button layer] setBorderWidth:1.0f];
+                //[[button layer] setBorderWidth:1.0f];
                 
                 [self.myParameterView addSubview:button];
                 
-                y = y+35;
+                y = y+42;
             }
             
             if (secondary_state == 1){
@@ -319,7 +325,7 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
                 
                 
                 
-                y = y + 40;
+                y = y + 35;
             }
             
             for (UIButton *button in buttons_secondary){
@@ -328,15 +334,15 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
                 
                 button.frame = CGRectMake(x,y, width, height);
                 //[button setTitle:title forState:UIControlStateNormal];
-                [[button layer] setCornerRadius:8.0f];
+                //[[button layer] setCornerRadius:8.0f];
                 
                 [[button layer] setMasksToBounds:YES];
-                [button setBackgroundColor:[UIColor blueColor]];
-                [[button layer] setBorderWidth:1.0f];
+                //[button setBackgroundColor:[UIColor blueColor]];
+                //[[button layer] setBorderWidth:1.0f];
                 
                 [self.myParameterView addSubview:button];
                 
-                y = y+35;
+                y = y+42;
             }
             
             break;
@@ -453,8 +459,9 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
                 count_essential = count_essential +1;
                 traffic = 5;
                 parameter_array[0] = 2;
-                [self.trafficButton setTitle:@"Traffic E!" forState:UIControlStateNormal];
-                
+                //[self.trafficButton setTitle:@"Traffic E!" forState:UIControlStateNormal];
+                NSString *image_name = parameter_primary_images[0];
+                [self.trafficButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
             }
             else{
                 UIAlertView *infoAlert = [[UIAlertView alloc] initWithTitle:@"Information" message:@"Maximum number of essential parameters allowed is 5" delegate:self cancelButtonTitle:@"Ok, Got it" otherButtonTitles: nil];
@@ -464,7 +471,11 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
         } else if (buttonIndex == 3){
             traffic = 2;
             parameter_array[0] = 1;
-            [self.trafficButton setTitle:@"Traffic S!" forState:UIControlStateNormal];
+            NSString *image_name = parameter_secondary_images[0];
+            [self.trafficButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+            
+            
+            //[self.trafficButton setTitle:@"Traffic S!" forState:UIControlStateNormal];
             
         }
     } else if (alertView.tag == 2){
@@ -479,7 +490,10 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
                 count_essential = count_essential +1;
                 greenery = 5;
                 parameter_array[1] = 2;
-                [self.greeneryButton setTitle:@"Greenery E!" forState:UIControlStateNormal];
+                //[self.greeneryButton setTitle:@"Greenery E!" forState:UIControlStateNormal];
+                NSString *image_name = parameter_primary_images[1];
+                [self.greeneryButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                
             }
             else{
                 UIAlertView *infoAlert = [[UIAlertView alloc] initWithTitle:@"Information" message:@"Maximum number of essential parameters allowed is 5" delegate:self cancelButtonTitle:@"Ok, Got it" otherButtonTitles: nil];
@@ -489,7 +503,11 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
         } else if (buttonIndex == 3){
             greenery = 2;
             parameter_array[1] = 1;
-            [self.greeneryButton setTitle:@"Greenery S!" forState:UIControlStateNormal];
+            NSString *image_name = parameter_secondary_images[1];
+            [self.greeneryButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+            
+            
+            //[self.greeneryButton setTitle:@"Greenery S!" forState:UIControlStateNormal];
         }
     }else if (alertView.tag == 3){
         if (buttonIndex == 1){
@@ -503,7 +521,10 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
                 count_essential = count_essential +1;
                 crime = 5;
                 parameter_array[2] = 2;
-                [self.crimeButton setTitle:@"Crime E!" forState:UIControlStateNormal];
+                NSString *image_name = parameter_primary_images[2];
+                [self.crimeButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                
+                //[self.crimeButton setTitle:@"Crime E!" forState:UIControlStateNormal];
             }
             else{
                 UIAlertView *infoAlert = [[UIAlertView alloc] initWithTitle:@"Information" message:@"Maximum number of essential parameters allowed is 5" delegate:self cancelButtonTitle:@"Ok, Got it" otherButtonTitles: nil];
@@ -513,7 +534,10 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
         } else if (buttonIndex == 3){
             crime = 2;
             parameter_array[2] = 1;
-            [self.crimeButton setTitle:@"Crime S!" forState:UIControlStateNormal];
+            NSString *image_name = parameter_secondary_images[2];
+            [self.crimeButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+            
+            //[self.crimeButton setTitle:@"Crime S!" forState:UIControlStateNormal];
             
         }
     }else if (alertView.tag == 4){
@@ -530,7 +554,10 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
                 count_essential = count_essential +1;
                 sidewalk = 5;
                 parameter_array[3] = 2;
-                [self.sidewalkButton setTitle:@"Sidewalk E!" forState:UIControlStateNormal];
+                NSString *image_name = parameter_primary_images[3];
+                [self.sidewalkButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                
+                //[self.sidewalkButton setTitle:@"Sidewalk E!" forState:UIControlStateNormal];
             }
             else{
                 UIAlertView *infoAlert = [[UIAlertView alloc] initWithTitle:@"Information" message:@"Maximum number of essential parameters allowed is 5" delegate:self cancelButtonTitle:@"Ok, Got it" otherButtonTitles: nil];
@@ -540,7 +567,10 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
         } else if (buttonIndex == 3){
             sidewalk = 2;
             parameter_array[3] = 1;
-            [self.sidewalkButton setTitle:@"Sidewalk S!" forState:UIControlStateNormal];
+            NSString *image_name = parameter_secondary_images[3];
+            [self.sidewalkButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+            
+            //[self.sidewalkButton setTitle:@"Sidewalk S!" forState:UIControlStateNormal];
             
         }
         
@@ -557,7 +587,10 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
                 count_essential = count_essential +1;
                 slope = 5;
                 parameter_array[4] = 2;
-                [self.slopeButton setTitle:@"Slope E!" forState:UIControlStateNormal];
+                NSString *image_name = parameter_primary_images[4];
+                [self.slopeButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                
+                //[self.slopeButton setTitle:@"Slope E!" forState:UIControlStateNormal];
             }
             else{
                 UIAlertView *infoAlert = [[UIAlertView alloc] initWithTitle:@"Information" message:@"Maximum number of essential parameters allowed is 5" delegate:self cancelButtonTitle:@"Ok, Got it" otherButtonTitles: nil];
@@ -567,7 +600,10 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
         } else if (buttonIndex == 3){
             slope = 2;
             parameter_array[4] = 1;
-            [self.slopeButton setTitle:@"Slope S!" forState:UIControlStateNormal];
+            NSString *image_name = parameter_secondary_images[4];
+            [self.slopeButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+            
+            //[self.slopeButton setTitle:@"Slope S!" forState:UIControlStateNormal];
             
         }
         
@@ -584,7 +620,10 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
                 count_essential = count_essential +1;
                 residential = 5;
                 parameter_array[5] = 2;
-                [self.residentialButton setTitle:@"Residential Density E!" forState:UIControlStateNormal];
+                NSString *image_name = parameter_primary_images[5];
+                [self.residentialButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                
+                //[self.residentialButton setTitle:@"Residential Density E!" forState:UIControlStateNormal];
             }
             else{
                 UIAlertView *infoAlert = [[UIAlertView alloc] initWithTitle:@"Information" message:@"Maximum number of essential parameters allowed is 5" delegate:self cancelButtonTitle:@"Ok, Got it" otherButtonTitles: nil];
@@ -595,7 +634,10 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
             
             residential = 2;
             parameter_array[5] = 1;
-            [self.residentialButton setTitle:@"Residential Density S!" forState:UIControlStateNormal];
+            NSString *image_name = parameter_secondary_images[5];
+            [self.residentialButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+            
+            //[self.residentialButton setTitle:@"Residential Density S!" forState:UIControlStateNormal];
             
         }
         
@@ -612,7 +654,10 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
                 count_essential = count_essential +1;
                 business = 5;
                 parameter_array[6] = 2;
-                [self.businessButton setTitle:@"Business Density E!" forState:UIControlStateNormal];
+                NSString *image_name = parameter_primary_images[6];
+                [self.businessButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                
+                //[self.businessButton setTitle:@"Business Density E!" forState:UIControlStateNormal];
             }
             else{
                 
@@ -623,7 +668,10 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
         } else if (buttonIndex == 3){
             business = 2;
             parameter_array[6] = 1;
-            [self.businessButton setTitle:@"Business Density S!" forState:UIControlStateNormal];
+            NSString *image_name = parameter_secondary_images[6];
+            [self.businessButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+            
+            //[self.businessButton setTitle:@"Business Density S!" forState:UIControlStateNormal];
             
         }
         
@@ -641,7 +689,10 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
                 count_essential = count_essential +1;
                 accessibility = 5;
                 parameter_array[7] = 2;
-                [self.accessibilityButton setTitle:@"Accessibility E!" forState:UIControlStateNormal];
+                NSString *image_name = parameter_primary_images[7];
+                [self.accessibilityButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                
+                //[self.accessibilityButton setTitle:@"Accessibility E!" forState:UIControlStateNormal];
             }
             else{
                 UIAlertView *infoAlert = [[UIAlertView alloc] initWithTitle:@"Information" message:@"Maximum number of essential parameters allowed is 5" delegate:self cancelButtonTitle:@"Ok, Got it" otherButtonTitles: nil];
@@ -651,7 +702,10 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
         } else if (buttonIndex == 3){
             accessibility = 2;
             parameter_array[7] = 1;
-            [self.accessibilityButton setTitle:@"Accessibility S!" forState:UIControlStateNormal];
+            NSString *image_name = parameter_secondary_images[7];
+            [self.accessibilityButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+            
+            //[self.accessibilityButton setTitle:@"Accessibility S!" forState:UIControlStateNormal];
             
         }
         
@@ -668,7 +722,10 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
                 count_essential = count_essential +1;
                 intersections = 5;
                 parameter_array[8] = 2;
-                [self.intersectionsButton setTitle:@"Intersections E!" forState:UIControlStateNormal];
+                NSString *image_name = parameter_primary_images[8];
+                [self.intersectionsButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                
+                //[self.intersectionsButton setTitle:@"Intersections E!" forState:UIControlStateNormal];
             }
             else{
                 UIAlertView *infoAlert = [[UIAlertView alloc] initWithTitle:@"Information" message:@"Maximum number of essential parameters allowed is 5" delegate:self cancelButtonTitle:@"Ok, Got it" otherButtonTitles: nil];
@@ -678,7 +735,10 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
         } else if (buttonIndex == 3){
             intersections = 2;
             parameter_array[8] = 1;
-            [self.intersectionsButton setTitle:@"Intersections S!" forState:UIControlStateNormal];
+            NSString *image_name = parameter_secondary_images[8];
+            [self.intersectionsButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+            
+            //[self.intersectionsButton setTitle:@"Intersections S!" forState:UIControlStateNormal];
             
         }
         
@@ -695,7 +755,10 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
                 count_essential = count_essential +1;
                 landvariations = 5;
                 parameter_array[9] = 2;
-                [self.landvariationsButton setTitle:@"Land Variations E!" forState:UIControlStateNormal];
+                NSString *image_name = parameter_primary_images[9];
+                [self.landvariationsButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                
+                //[self.landvariationsButton setTitle:@"Land Variations E!" forState:UIControlStateNormal];
             }
             else{
                 UIAlertView *infoAlert = [[UIAlertView alloc] initWithTitle:@"Information" message:@"Maximum number of essential parameters allowed is 5" delegate:self cancelButtonTitle:@"Ok, Got it" otherButtonTitles: nil];
@@ -705,7 +768,10 @@ NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Sl
         } else if (buttonIndex == 3){
             landvariations = 2;
             parameter_array[9] = 1;
-            [self.landvariationsButton setTitle:@"Land Variations S!" forState:UIControlStateNormal];
+            NSString *image_name = parameter_secondary_images[9];
+            [self.landvariationsButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+            
+            //[self.landvariationsButton setTitle:@"Land Variations S!" forState:UIControlStateNormal];
             
         }
         
