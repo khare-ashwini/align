@@ -63,6 +63,11 @@
     return self;
 }
 
+-(BOOL)shouldAutorotate
+{
+    return NO;
+}
+
 - (void)viewDidLoad
 {
 	// Do any additional setup after loading the view.
@@ -174,6 +179,7 @@
     _primaryInstructionStrings = [[NSMutableArray alloc] init];
     _secondaryInstructionStrings = [[NSMutableArray alloc] init];
     _cellIcons = [[NSMutableArray alloc] init];
+
     if (_shouldDisplaySteps) {
         for (int i = 0; i < _allSteps.count; i++) {
             Step *step = [_allSteps objectAtIndex:i];
@@ -184,6 +190,7 @@
                     break;
                 }
             }
+            NSLog(@"|||||||||| Steps ||||||||| %@", leg.steps);
             NSString *instruction;
             if ([leg.steps indexOfObject:step] == 0) {
                 instruction = [NSString stringWithFormat:@"%@ %@ on %@",
@@ -202,6 +209,7 @@
         }
     } else {
         for (int i = 0; i < self.itinerary.legs.count; i++) {
+            NSLog(@"|||||||||| Count ||||||||| @", self.itinerary.legs.count);
             Leg *leg = [self.itinerary.legs objectAtIndex:i];
             
             // distance based leg
@@ -414,7 +422,7 @@
 {
     // Overview cell
     if (indexPath.row == 0) {
-        return 60;
+        return 120;
     }
     
     // Feedback cell
@@ -594,13 +602,14 @@
     [self.itineraryTableViewController.tableView deselectRowAtIndexPath:[self.itineraryTableViewController.tableView indexPathForSelectedRow] animated:YES];
 }
 
+// Plot the steps
 - (void) displayItinerary
 {
     [self.itineraryMapViewController.mapView removeAllAnnotations];
     
     int legCounter = 0;
     for (Leg* leg in self.itinerary.legs) {
-        if (legCounter == 0) {
+       if (legCounter == 0) {
             // start marker:
             RMAnnotation* startAnnotation = [RMAnnotation
                                              annotationWithMapView:self.itineraryMapViewController.mapView
@@ -651,25 +660,40 @@
             [self.itineraryMapViewController.mapView addAnnotation:modeAnnotationAlt];
         }
 
+        NSLog(@"Leg Counter: %i", legCounter);
         
-        RMShape *polyline = [[RMShape alloc] initWithView:self.itineraryMapViewController.mapView];
-        polyline.lineColor = [UIColor colorWithRed:0 green:0 blue:1 alpha:0.5];
-        polyline.lineWidth = 6;
-        polyline.lineCap = kCALineCapRound;
-        polyline.lineJoin = kCALineJoinRound;
         
         int counter = 0;
+        RMShape *polyline = [[RMShape alloc] initWithView:self.itineraryMapViewController.mapView];
+
         
         for (CLLocation *loc in leg.decodedLegGeometry) {
+            if(counter > 5) break;
+            if(counter > 5){
+                
+                polyline.lineWidth = 3;
+                polyline.lineCap = kCALineCapRound;
+                polyline.lineJoin = kCALineJoinRound;
+                polyline.lineColor =  [UIColor colorWithRed:1 green:0 blue:1 alpha:0.5];
+            }
+            else{
+        
+                polyline.lineWidth = 6;
+                polyline.lineCap = kCALineCapRound;
+                polyline.lineJoin = kCALineJoinRound;
+                polyline.lineColor = [UIColor colorWithRed:0 green:0 blue:1 alpha:0.5];
+            }
+            NSLog(@"Loc Counter: %i", counter);
             if (counter == 0) {
                 [polyline moveToCoordinate:loc.coordinate];
             } else {
                 [polyline addLineToCoordinate:loc.coordinate];
             }
+            [_shapesForLegs addObject:polyline];
             counter++;
         }
         
-        [_shapesForLegs addObject:polyline];
+        //[_shapesForLegs addObject:polyline];
         
         RMAnnotation *polylineAnnotation = [[RMAnnotation alloc] init];
         [polylineAnnotation setMapView:self.itineraryMapViewController.mapView];
@@ -806,7 +830,7 @@
         [controller setMessageBody:body isHTML:NO];
         if (controller) [self presentViewController:controller animated:YES completion:nil];
     } else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unable to send feedback on this device" message:@"You can still send us feedback by emailing < Feedback email address >." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Contact" message:@"Mail your feedback at subhro.guha@coa.gatech.edu ." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
     }
 }

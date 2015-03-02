@@ -11,5 +11,6 @@
 @interface WTWWebpageViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UIWebView *webViewAbout;
 
 @end

@@ -27,7 +27,7 @@
 @property (nonatomic, strong) OTPGeocodedTextField *toTextField;
 @property (nonatomic) BOOL mapShowedUserLocation;
 
-
+@property (nonatomic,strong) NSString *debug_value;
 - (void)presentFeedbackView;
 - (IBAction)done:(UIBarButtonItem *)sender;
 

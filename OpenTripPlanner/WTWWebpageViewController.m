@@ -27,9 +27,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
+   
     NSURL *myURL = [NSURL URLWithString:@"http://geo.gatech.edu/walkability/about.html"];
-    [self.webView loadRequest:[NSURLRequest requestWithURL:myURL]];
+    [self.webViewAbout loadRequest:[NSURLRequest requestWithURL:myURL]];
+    NSLog(@"Webview Debug --- %@", self.webViewAbout);
 }
 
 - (void)didReceiveMemoryWarning

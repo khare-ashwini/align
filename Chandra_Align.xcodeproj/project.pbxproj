@@ -79,6 +79,7 @@
 		4FC88F731896F8D30006E95D /* PlaceSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC88F721896F8D30006E95D /* PlaceSearchResult.m */; };
 		4FD0B1E918E23F580019FF28 /* WTWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD0B1E818E23F580019FF28 /* WTWHomeViewController.m */; };
 		4FE6A02C1924674500BB64C6 /* dots-0_75.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FE6A02B1924674500BB64C6 /* dots-0_75.png */; };
+		5EF12CAF1AA506EE002E807F /* AboutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF12CAE1AA506EE002E807F /* AboutTableViewController.m */; };
 		762DB7661A360E4100238625 /* dropdown_cropped-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 762DB7651A360E4100238625 /* dropdown_cropped-2.png */; };
 		762DB7711A36199800238625 /* pa_Business_Density_unclick-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 762DB7671A36199700238625 /* pa_Business_Density_unclick-1.png */; };
 		762DB7721A36199800238625 /* pa_Crime_unclick-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 762DB7681A36199700238625 /* pa_Crime_unclick-1.png */; };
@@ -517,6 +518,8 @@
 		4FD0B1E718E23F580019FF28 /* WTWHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTWHomeViewController.h; sourceTree = "<group>"; };
 		4FD0B1E818E23F580019FF28 /* WTWHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTWHomeViewController.m; sourceTree = "<group>"; };
 		4FE6A02B1924674500BB64C6 /* dots-0_75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dots-0_75.png"; sourceTree = "<group>"; };
+		5EF12CAD1AA506EE002E807F /* AboutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutTableViewController.h; sourceTree = "<group>"; };
+		5EF12CAE1AA506EE002E807F /* AboutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutTableViewController.m; sourceTree = "<group>"; };
 		762DB7651A360E4100238625 /* dropdown_cropped-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dropdown_cropped-2.png"; sourceTree = "<group>"; };
 		762DB7671A36199700238625 /* pa_Business_Density_unclick-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_Business_Density_unclick-1.png"; sourceTree = "<group>"; };
 		762DB7681A36199700238625 /* pa_Crime_unclick-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_Crime_unclick-1.png"; sourceTree = "<group>"; };
@@ -1490,6 +1493,8 @@
 				CCCDFB7615EEAAC600B26133 /* OTPAppDelegate.h */,
 				CCCDFB7715EEAAC600B26133 /* OTPAppDelegate.m */,
 				CC9CFCCB15EFCDA00070712C /* MainStoryboard_iPhone.storyboard */,
+				5EF12CAD1AA506EE002E807F /* AboutTableViewController.h */,
+				5EF12CAE1AA506EE002E807F /* AboutTableViewController.m */,
 				CCB1A9311656D24E004791D6 /* Geocode Disambiguation View */,
 				0D8259B11644344D00D5F446 /* About View */,
 				0D8259B0164433A900D5F446 /* Routing Params View */,
@@ -2010,6 +2015,7 @@
 				93B179C3162BC69C00F09EC6 /* OTPUnitData.m in Sources */,
 				93B179C6162D253000F09EC6 /* OTPStepCell.m in Sources */,
 				1CE5C55D16275187001E83D3 /* OTPItineraryCell.m in Sources */,
+				5EF12CAF1AA506EE002E807F /* AboutTableViewController.m in Sources */,
 				1CE5C57E162C672E001E83D3 /* OTPItineraryCollectionView.m in Sources */,
 				CC23176D162F17A600EE0F48 /* OTPTransferCell.m in Sources */,
 				CCBCD51D1635E0E300037B29 /* NSString+HMAC.m in Sources */,
@@ -2147,9 +2153,9 @@
 		CCCDFB9115EEAAC600B26133 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Chandra Khatri (M889765538)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chandra Khatri (M889765538)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ashwini Khare (C7J8WTZM54)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenTripPlanner/Chandra_Align-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -2169,8 +2175,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "Align!";
-				PROVISIONING_PROFILE = "47ecfdda-f126-4bfe-88c6-d770ac5266eb";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "47ecfdda-f126-4bfe-88c6-d770ac5266eb";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "402574d9-384c-47c6-a821-2d9b56f7e404";
 				SDKROOT = iphoneos6.1;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -2180,8 +2186,8 @@
 		CCCDFB9215EEAAC600B26133 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Chandra Khatri (M889765538)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chandra Khatri (M889765538)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenTripPlanner/Chandra_Align-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -2201,8 +2207,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "Align!";
-				PROVISIONING_PROFILE = "47ecfdda-f126-4bfe-88c6-d770ac5266eb";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "47ecfdda-f126-4bfe-88c6-d770ac5266eb";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "402574d9-384c-47c6-a821-2d9b56f7e404";
 				SDKROOT = iphoneos6.1;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

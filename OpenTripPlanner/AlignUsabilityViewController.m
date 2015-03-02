@@ -89,6 +89,10 @@
     }
 }
 
+-(BOOL)shouldAutorotate{
+    return NO;
+}
+
 - (IBAction)vibrationsButton:(id)sender {
 
     [self vibrationSwitch:(id)sender];

@@ -96,6 +96,7 @@
     return self.headerView;
 }
 
+// Space Displayed above Shortest and Most Walkable
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 50;

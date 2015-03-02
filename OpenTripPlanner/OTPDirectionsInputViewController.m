@@ -89,6 +89,11 @@ static NSString *OTPPOIAnnotation = @"OTPPOIAnnotation";
 RMMarker *previousMarkerTapped;
 NSMutableArray *poiAnnotationsOnMap;
 
+-(BOOL) shouldAutorotate
+{
+    return NO;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -687,7 +692,7 @@ NSMutableArray *poiAnnotationsOnMap;
     CLLocationCoordinate2D coord = [self.mapView pixelToCoordinate:point];
     currentLongPressLocation = [[CLLocation alloc] initWithLatitude:coord.latitude longitude:coord.longitude];
     
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel Button" destructiveButtonTitle:nil otherButtonTitles:@"Start here", @"End here", @"Share a Tweet", nil];
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Start here", @"End here", @"Share a Tweet", nil];
     actionSheet.actionSheetStyle = UIBarStyleBlackTranslucent;
     actionSheet.tag = MARKER_TYPE_SELECTION;
     [actionSheet showInView:self.view];
@@ -872,7 +877,7 @@ RKResponse* _OTPResponse = nil;
         [TestFlight passCheckpoint:@"DIRECTIONS_RECEIVED_RESPONSE_FROM_API"];
         //NSLog(@"Loaded payload: %@", [response bodyAsString]);
         _OTPResponse = response;
-        
+        NSLog(@"Response : %@", response);
         // Save the URL so we can display it in the feedback email if needed.
         OTPAppDelegate *deleage = (OTPAppDelegate *)[[UIApplication sharedApplication] delegate];
         deleage.currentUrlString = request.URL.absoluteString;
@@ -888,7 +893,8 @@ RKResponse* _OTPResponse = nil;
     
     BOOL doPOIGeocoding = NO;
     currentResponse = (Response*)[objects objectAtIndex:0];
-    
+    NSLog(@"=====================Response accessibility values");
+    NSLog (@"%@",currentResponse.accessibilityValue);
     if (currentResponse.error != nil) {
         if([currentResponse.error.msg hasPrefix:searchNearbyNoResultsPrefix]) {
             doPOIGeocoding = YES;

@@ -103,6 +103,12 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
     // Do any additional setup after loading the view.
 }
 
+-(BOOL)shouldAutorotate
+{
+    return NO;
+}
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -153,7 +159,6 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
             for (UIView *lbl in labels){
                 [lbl removeFromSuperview];
             }
-            
             
             
             [buttons_primary makeObjectsPerformSelector:@selector(removeFromSuperview)];
