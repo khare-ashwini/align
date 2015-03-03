@@ -93,6 +93,19 @@ NSMutableArray *poiAnnotationsOnMap;
 {
     return NO;
 }
+- (IBAction)exitButtonAction:(id)sender {
+    // Click on exit button in Menu;
+    exit(0);
+}
+- (IBAction)savedLocationsButton:(id)sender {
+    UIAlertView *savedLocationsPopup = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                  message:@"No saved Locations Found."
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"OK"
+                                                        otherButtonTitles:nil];
+    [savedLocationsPopup show];
+    //[savedLocationsPopup release];
+}
 
 - (void)viewDidLoad
 {

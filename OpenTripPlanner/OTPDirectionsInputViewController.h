@@ -29,6 +29,7 @@ typedef enum {
 {
     MBProgressHUD *HUD;
 }
+@property (weak, nonatomic) IBOutlet UIButton *exitButton;
 
 @property (nonatomic, strong) IBOutlet UINavigationBar *navBar;
 @property (nonatomic, strong) IBOutlet UISegmentedControl *modeControl;

@@ -27,6 +27,7 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
+				<string>Align_120x120</string>
 				<string>Align_114x114</string>
 				<string>Align_57x57</string>
 				<string>home-icon.png</string>

@@ -1469,6 +1469,9 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="savedLocationsButton:" destination="peN-Jn-A0e" eventType="touchUpInside" id="e19-ZW-yQC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9qX-IN-WiQ">
                                         <rect key="frame" x="0.0" y="82" width="331" height="40"/>
@@ -1493,6 +1496,9 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="exitButtonAction:" destination="peN-Jn-A0e" eventType="touchUpInside" id="Kbf-DI-e5a"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1xG-Z9-n3R">
                                         <rect key="frame" x="-6" y="160" width="331" height="40"/>
@@ -1548,6 +1554,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="dropdownView" destination="Vqc-Sx-mUj" id="RVU-bP-w5C"/>
+                        <outlet property="exitButton" destination="TZq-aN-dYE" id="KgN-oy-fMz"/>
                         <outlet property="fromTextField" destination="mav-FO-sJG" id="uGB-LY-jsR"/>
                         <outlet property="mapView" destination="wOd-Gs-Nfi" id="k1V-Rt-z9h"/>
                         <outlet property="searchNearbyText" destination="Or5-hV-OUe" id="F7A-ez-l1N"/>
