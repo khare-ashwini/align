@@ -58,6 +58,7 @@
 		4F3D61D418EC6539003CE02C /* help-pg02-tip02.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3D61D118EC6539003CE02C /* help-pg02-tip02.png */; };
 		4F3D61D518EC6539003CE02C /* help-pg02-tip03.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3D61D218EC6539003CE02C /* help-pg02-tip03.png */; };
 		4F3D61D618EC6539003CE02C /* help-pg02-tip04.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3D61D318EC6539003CE02C /* help-pg02-tip04.png */; };
+		4F3D61D818ED1178003CE02C /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F3D61D718ED1178003CE02C /* Social.framework */; };
 		4F4AB31D18EA02DD00299AA1 /* dots-1_75.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F4AB31C18EA02DD00299AA1 /* dots-1_75.png */; };
 		4F4AB32218EA2A7800299AA1 /* dots-2_75.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F4AB31E18EA2A7800299AA1 /* dots-2_75.png */; };
 		4F4AB32318EA2A7800299AA1 /* dots-3_75.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F4AB31F18EA2A7800299AA1 /* dots-3_75.png */; };
@@ -484,6 +485,13 @@
 			remoteGlobalIDString = 259C301615128079003066A2;
 			remoteInfo = RestKitResources;
 		};
+		9378875916154879007CF24C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9378874416154865007CF24C /* RestKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 25160D1514564E810060A5C5;
+			remoteInfo = RestKit;
+		};
 		9378877516154AF2007CF24C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9378876A16154AF2007CF24C /* MapView.xcodeproj */;
@@ -596,83 +604,6 @@
 		4FD0B1E818E23F580019FF28 /* WTWHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTWHomeViewController.m; sourceTree = "<group>"; };
 		4FE6A02B1924674500BB64C6 /* dots-0_75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dots-0_75.png"; sourceTree = "<group>"; };
 		5E290AEE1AA62845005B102F /* Align_120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Align_120x120.png; path = icons/Align_120x120.png; sourceTree = "<group>"; };
-		5E290AF51AA62E46005B102F /* pa_Accessibility_click_S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Accessibility_click_S.png; sourceTree = "<group>"; };
-		5E290AF61AA62E46005B102F /* pa_Accessibility_E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Accessibility_E.png; sourceTree = "<group>"; };
-		5E290AF71AA62E46005B102F /* pa_Accessibility_unclick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Accessibility_unclick.png; sourceTree = "<group>"; };
-		5E290AF91AA62E46005B102F /* all parameter click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "all parameter click.png"; sourceTree = "<group>"; };
-		5E290AFA1AA62E46005B102F /* all parameter unclick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "all parameter unclick.png"; sourceTree = "<group>"; };
-		5E290AFB1AA62E46005B102F /* my parameter click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my parameter click.png"; sourceTree = "<group>"; };
-		5E290AFC1AA62E46005B102F /* my parameter unclick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my parameter unclick.png"; sourceTree = "<group>"; };
-		5E290AFE1AA62E46005B102F /* audio_direction_off_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audio_direction_off_btn.png; sourceTree = "<group>"; };
-		5E290AFF1AA62E46005B102F /* audio_direction_on_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audio_direction_on_btn.png; sourceTree = "<group>"; };
-		5E290B001AA62E46005B102F /* audio_generaluse_off_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audio_generaluse_off_btn.png; sourceTree = "<group>"; };
-		5E290B011AA62E46005B102F /* audio_generaluse_on_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audio_generaluse_on_btn.png; sourceTree = "<group>"; };
-		5E290B031AA62E46005B102F /* pa_CurbCuts_click_S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_CurbCuts_click_S.png; sourceTree = "<group>"; };
-		5E290B041AA62E46005B102F /* pa_CurbCuts_E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_CurbCuts_E.png; sourceTree = "<group>"; };
-		5E290B051AA62E46005B102F /* pa_CurbCuts_unclick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_CurbCuts_unclick.png; sourceTree = "<group>"; };
-		5E290B071AA62E46005B102F /* pa_Intersections_click_S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Intersections_click_S.png; sourceTree = "<group>"; };
-		5E290B081AA62E46005B102F /* pa_Intersections_E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Intersections_E.png; sourceTree = "<group>"; };
-		5E290B091AA62E46005B102F /* pa_Intersections_unclick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Intersections_unclick.png; sourceTree = "<group>"; };
-		5E290B0B1AA62E46005B102F /* pa_LandVariation_click_E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_LandVariation_click_E.png; sourceTree = "<group>"; };
-		5E290B0C1AA62E46005B102F /* pa_LandVariation_click_S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_LandVariation_click_S.png; sourceTree = "<group>"; };
-		5E290B0D1AA62E46005B102F /* pa_LandVariation_unclick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_LandVariation_unclick.png; sourceTree = "<group>"; };
-		5E290B0F1AA62E46005B102F /* LogIn_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogIn_btn.png; sourceTree = "<group>"; };
-		5E290B101AA62E46005B102F /* SignUp_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUp_btn.png; sourceTree = "<group>"; };
-		5E290B131AA62E46005B102F /* pa_Business Density_click_E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_Business Density_click_E.png"; sourceTree = "<group>"; };
-		5E290B141AA62E46005B102F /* pa_Business Density_click_S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_Business Density_click_S.png"; sourceTree = "<group>"; };
-		5E290B151AA62E46005B102F /* pa_BusinessDensity_unclick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_BusinessDensity_unclick.png; sourceTree = "<group>"; };
-		5E290B171AA62E46005B102F /* pa_Crime_click_E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Crime_click_E.png; sourceTree = "<group>"; };
-		5E290B181AA62E46005B102F /* pa_Crime_click_S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Crime_click_S.png; sourceTree = "<group>"; };
-		5E290B191AA62E46005B102F /* pa_Crime_unclick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Crime_unclick.png; sourceTree = "<group>"; };
-		5E290B1B1AA62E46005B102F /* pa_Greenery_click_E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Greenery_click_E.png; sourceTree = "<group>"; };
-		5E290B1C1AA62E46005B102F /* pa_Greenery_click_S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Greenery_click_S.png; sourceTree = "<group>"; };
-		5E290B1D1AA62E46005B102F /* pa_Greenery_unclick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Greenery_unclick.png; sourceTree = "<group>"; };
-		5E290B1F1AA62E46005B102F /* pa_Residential Density_click_E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_Residential Density_click_E.png"; sourceTree = "<group>"; };
-		5E290B201AA62E46005B102F /* pa_Residential Density_click_S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_Residential Density_click_S.png"; sourceTree = "<group>"; };
-		5E290B211AA62E46005B102F /* pa_Residential Density_unclick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_Residential Density_unclick.png"; sourceTree = "<group>"; };
-		5E290B231AA62E46005B102F /* pa_Sidewalk_click_E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Sidewalk_click_E.png; sourceTree = "<group>"; };
-		5E290B241AA62E46005B102F /* pa_Sidewalk_click_S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Sidewalk_click_S.png; sourceTree = "<group>"; };
-		5E290B251AA62E46005B102F /* pa_Sidewalk_unclick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Sidewalk_unclick.png; sourceTree = "<group>"; };
-		5E290B271AA62E46005B102F /* pa_Slope_click_E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Slope_click_E.png; sourceTree = "<group>"; };
-		5E290B281AA62E46005B102F /* pa_Slope_click_S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Slope_click_S.png; sourceTree = "<group>"; };
-		5E290B291AA62E46005B102F /* pa_Slope_unclick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Slope_unclick.png; sourceTree = "<group>"; };
-		5E290B2B1AA62E46005B102F /* pa_traffic_click_E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_traffic_click_E.png; sourceTree = "<group>"; };
-		5E290B2C1AA62E46005B102F /* pa_traffic_click_S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_traffic_click_S.png; sourceTree = "<group>"; };
-		5E290B2D1AA62E46005B102F /* pa_traffic_unclick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_traffic_unclick.png; sourceTree = "<group>"; };
-		5E290B2F1AA62E47005B102F /* SavedLocations_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SavedLocations_btn.png; sourceTree = "<group>"; };
-		5E290B301AA62E47005B102F /* SavedLocations_btnSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SavedLocations_btnSelected.png; sourceTree = "<group>"; };
-		5E290B311AA62E47005B102F /* SavedRoutes_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SavedRoutes_btn.png; sourceTree = "<group>"; };
-		5E290B321AA62E47005B102F /* SavedRoutes_btnSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SavedRoutes_btnSelected.png; sourceTree = "<group>"; };
-		5E290B351AA62E47005B102F /* audio_direction_off_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audio_direction_off_btn.png; sourceTree = "<group>"; };
-		5E290B361AA62E47005B102F /* audio_direction_on_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audio_direction_on_btn.png; sourceTree = "<group>"; };
-		5E290B371AA62E47005B102F /* audio_generaluse_off_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audio_generaluse_off_btn.png; sourceTree = "<group>"; };
-		5E290B381AA62E47005B102F /* audio_generaluse_on_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audio_generaluse_on_btn.png; sourceTree = "<group>"; };
-		5E290B3B1AA62E47005B102F /* pa_Business Density_click_E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_Business Density_click_E.png"; sourceTree = "<group>"; };
-		5E290B3C1AA62E47005B102F /* pa_Business Density_click_S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_Business Density_click_S.png"; sourceTree = "<group>"; };
-		5E290B3D1AA62E47005B102F /* pa_BusinessDensity_unclick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_BusinessDensity_unclick.png; sourceTree = "<group>"; };
-		5E290B3F1AA62E47005B102F /* pa_Crime_click_E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Crime_click_E.png; sourceTree = "<group>"; };
-		5E290B401AA62E47005B102F /* pa_Crime_click_S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Crime_click_S.png; sourceTree = "<group>"; };
-		5E290B411AA62E47005B102F /* pa_Crime_unclick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Crime_unclick.png; sourceTree = "<group>"; };
-		5E290B431AA62E47005B102F /* pa_Greenery_click_E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Greenery_click_E.png; sourceTree = "<group>"; };
-		5E290B441AA62E47005B102F /* pa_Greenery_click_S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Greenery_click_S.png; sourceTree = "<group>"; };
-		5E290B451AA62E47005B102F /* pa_Greenery_unclick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Greenery_unclick.png; sourceTree = "<group>"; };
-		5E290B471AA62E47005B102F /* pa_Residential Density_click_E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_Residential Density_click_E.png"; sourceTree = "<group>"; };
-		5E290B481AA62E47005B102F /* pa_Residential Density_click_S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_Residential Density_click_S.png"; sourceTree = "<group>"; };
-		5E290B491AA62E47005B102F /* pa_Residential Density_unclick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_Residential Density_unclick.png"; sourceTree = "<group>"; };
-		5E290B4B1AA62E47005B102F /* pa_Sidewalk_click_E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Sidewalk_click_E.png; sourceTree = "<group>"; };
-		5E290B4C1AA62E47005B102F /* pa_Sidewalk_click_S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Sidewalk_click_S.png; sourceTree = "<group>"; };
-		5E290B4D1AA62E47005B102F /* pa_Sidewalk_unclick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Sidewalk_unclick.png; sourceTree = "<group>"; };
-		5E290B4F1AA62E47005B102F /* pa_Slope_click_E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Slope_click_E.png; sourceTree = "<group>"; };
-		5E290B501AA62E47005B102F /* pa_Slope_click_S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Slope_click_S.png; sourceTree = "<group>"; };
-		5E290B511AA62E47005B102F /* pa_Slope_unclick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Slope_unclick.png; sourceTree = "<group>"; };
-		5E290B531AA62E47005B102F /* pa_traffic_click_E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_traffic_click_E.png; sourceTree = "<group>"; };
-		5E290B541AA62E47005B102F /* pa_traffic_click_S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_traffic_click_S.png; sourceTree = "<group>"; };
-		5E290B551AA62E47005B102F /* pa_traffic_unclick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_traffic_unclick.png; sourceTree = "<group>"; };
-		5E290B571AA62E47005B102F /* usability_vibration_off_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usability_vibration_off_btn.png; sourceTree = "<group>"; };
-		5E290B581AA62E47005B102F /* usability_vibration_on_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usability_vibration_on_btn.png; sourceTree = "<group>"; };
-		5E290B5A1AA62E47005B102F /* usability_vibration_off_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usability_vibration_off_btn.png; sourceTree = "<group>"; };
-		5E290B5B1AA62E47005B102F /* usability_vibration_on_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = usability_vibration_on_btn.png; sourceTree = "<group>"; };
-		5E7FB2B21AA68D2700E023C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Chandra_Align/Images.xcassets; sourceTree = "<group>"; };
 		5EF12CAD1AA506EE002E807F /* AboutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutTableViewController.h; sourceTree = "<group>"; };
 		5EF12CAE1AA506EE002E807F /* AboutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutTableViewController.m; sourceTree = "<group>"; };
 		762DB7651A360E4100238625 /* dropdown_cropped-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dropdown_cropped-2.png"; sourceTree = "<group>"; };
@@ -843,19 +774,19 @@
 		CCBCD51C1635E0E300037B29 /* NSString+HMAC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HMAC.m"; sourceTree = "<group>"; };
 		CCBCD5221635FC9900037B29 /* OTPGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPGradientView.h; sourceTree = "<group>"; };
 		CCBCD5231635FC9900037B29 /* OTPGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTPGradientView.m; sourceTree = "<group>"; };
-		CCCDFB6315EEAAC600B26133 /* Align.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Align.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCCDFB6315EEAAC600B26133 /* Align!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Align!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCCDFB6715EEAAC600B26133 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CCCDFB6915EEAAC600B26133 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CCCDFB6B15EEAAC600B26133 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		CCCDFB6F15EEAAC600B26133 /* AlignProject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AlignProject-Info.plist"; sourceTree = "<group>"; };
+		CCCDFB6F15EEAAC600B26133 /* Chandra_Align-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Chandra_Align-Info.plist"; sourceTree = "<group>"; };
 		CCCDFB7115EEAAC600B26133 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CCCDFB7315EEAAC600B26133 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CCCDFB7515EEAAC600B26133 /* AlignProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AlignProject-Prefix.pch"; sourceTree = "<group>"; };
+		CCCDFB7515EEAAC600B26133 /* Chandra_Align-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chandra_Align-Prefix.pch"; sourceTree = "<group>"; };
 		CCCDFB7615EEAAC600B26133 /* OTPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTPAppDelegate.h; sourceTree = "<group>"; };
 		CCCDFB7715EEAAC600B26133 /* OTPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTPAppDelegate.m; sourceTree = "<group>"; };
-		CCCDFB7E15EEAAC600B26133 /* AlignProjectTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlignProjectTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCCDFB7E15EEAAC600B26133 /* Chandra_AlignTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Chandra_AlignTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCCDFB7F15EEAAC600B26133 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		CCCDFB8715EEAAC600B26133 /* AlignProjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AlignProjectTests-Info.plist"; sourceTree = "<group>"; };
+		CCCDFB8715EEAAC600B26133 /* Chandra_AlignTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Chandra_AlignTests-Info.plist"; sourceTree = "<group>"; };
 		CCCDFB8915EEAAC600B26133 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CCCDFB8B15EEAAC600B26133 /* OpenTripPlannerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenTripPlannerTests.h; sourceTree = "<group>"; };
 		CCCDFB8C15EEAAC600B26133 /* OpenTripPlannerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenTripPlannerTests.m; sourceTree = "<group>"; };
@@ -1202,313 +1133,6 @@
 			name = Home;
 			sourceTree = "<group>";
 		};
-		5E290AF31AA62E46005B102F /* Buttons */ = {
-			isa = PBXGroup;
-			children = (
-				5E290AF41AA62E46005B102F /* Accessibility */,
-				5E290AF81AA62E46005B102F /* All:my parameter */,
-				5E290AFD1AA62E46005B102F /* Audio */,
-				5E290B021AA62E46005B102F /* Curb cuts */,
-				5E290B061AA62E46005B102F /* Intersections */,
-				5E290B0A1AA62E46005B102F /* Land variation */,
-				5E290B0E1AA62E46005B102F /* Login:Signup */,
-				5E290B111AA62E46005B102F /* Parameter */,
-				5E290B2E1AA62E47005B102F /* Saved routes */,
-				5E290B331AA62E47005B102F /* updated buttons */,
-				5E290B591AA62E47005B102F /* Vibration */,
-			);
-			path = Buttons;
-			sourceTree = "<group>";
-		};
-		5E290AF41AA62E46005B102F /* Accessibility */ = {
-			isa = PBXGroup;
-			children = (
-				5E290AF51AA62E46005B102F /* pa_Accessibility_click_S.png */,
-				5E290AF61AA62E46005B102F /* pa_Accessibility_E.png */,
-				5E290AF71AA62E46005B102F /* pa_Accessibility_unclick.png */,
-			);
-			path = Accessibility;
-			sourceTree = "<group>";
-		};
-		5E290AF81AA62E46005B102F /* All:my parameter */ = {
-			isa = PBXGroup;
-			children = (
-				5E290AF91AA62E46005B102F /* all parameter click.png */,
-				5E290AFA1AA62E46005B102F /* all parameter unclick.png */,
-				5E290AFB1AA62E46005B102F /* my parameter click.png */,
-				5E290AFC1AA62E46005B102F /* my parameter unclick.png */,
-			);
-			path = "All:my parameter";
-			sourceTree = "<group>";
-		};
-		5E290AFD1AA62E46005B102F /* Audio */ = {
-			isa = PBXGroup;
-			children = (
-				5E290AFE1AA62E46005B102F /* audio_direction_off_btn.png */,
-				5E290AFF1AA62E46005B102F /* audio_direction_on_btn.png */,
-				5E290B001AA62E46005B102F /* audio_generaluse_off_btn.png */,
-				5E290B011AA62E46005B102F /* audio_generaluse_on_btn.png */,
-			);
-			path = Audio;
-			sourceTree = "<group>";
-		};
-		5E290B021AA62E46005B102F /* Curb cuts */ = {
-			isa = PBXGroup;
-			children = (
-				5E290B031AA62E46005B102F /* pa_CurbCuts_click_S.png */,
-				5E290B041AA62E46005B102F /* pa_CurbCuts_E.png */,
-				5E290B051AA62E46005B102F /* pa_CurbCuts_unclick.png */,
-			);
-			path = "Curb cuts";
-			sourceTree = "<group>";
-		};
-		5E290B061AA62E46005B102F /* Intersections */ = {
-			isa = PBXGroup;
-			children = (
-				5E290B071AA62E46005B102F /* pa_Intersections_click_S.png */,
-				5E290B081AA62E46005B102F /* pa_Intersections_E.png */,
-				5E290B091AA62E46005B102F /* pa_Intersections_unclick.png */,
-			);
-			path = Intersections;
-			sourceTree = "<group>";
-		};
-		5E290B0A1AA62E46005B102F /* Land variation */ = {
-			isa = PBXGroup;
-			children = (
-				5E290B0B1AA62E46005B102F /* pa_LandVariation_click_E.png */,
-				5E290B0C1AA62E46005B102F /* pa_LandVariation_click_S.png */,
-				5E290B0D1AA62E46005B102F /* pa_LandVariation_unclick.png */,
-			);
-			path = "Land variation";
-			sourceTree = "<group>";
-		};
-		5E290B0E1AA62E46005B102F /* Login:Signup */ = {
-			isa = PBXGroup;
-			children = (
-				5E290B0F1AA62E46005B102F /* LogIn_btn.png */,
-				5E290B101AA62E46005B102F /* SignUp_btn.png */,
-			);
-			path = "Login:Signup";
-			sourceTree = "<group>";
-		};
-		5E290B111AA62E46005B102F /* Parameter */ = {
-			isa = PBXGroup;
-			children = (
-				5E290B121AA62E46005B102F /* Business density */,
-				5E290B161AA62E46005B102F /* Crime */,
-				5E290B1A1AA62E46005B102F /* Greenery */,
-				5E290B1E1AA62E46005B102F /* Residential density */,
-				5E290B221AA62E46005B102F /* Sidewalk */,
-				5E290B261AA62E46005B102F /* Slope */,
-				5E290B2A1AA62E46005B102F /* Traffic */,
-			);
-			path = Parameter;
-			sourceTree = "<group>";
-		};
-		5E290B121AA62E46005B102F /* Business density */ = {
-			isa = PBXGroup;
-			children = (
-				5E290B131AA62E46005B102F /* pa_Business Density_click_E.png */,
-				5E290B141AA62E46005B102F /* pa_Business Density_click_S.png */,
-				5E290B151AA62E46005B102F /* pa_BusinessDensity_unclick.png */,
-			);
-			path = "Business density";
-			sourceTree = "<group>";
-		};
-		5E290B161AA62E46005B102F /* Crime */ = {
-			isa = PBXGroup;
-			children = (
-				5E290B171AA62E46005B102F /* pa_Crime_click_E.png */,
-				5E290B181AA62E46005B102F /* pa_Crime_click_S.png */,
-				5E290B191AA62E46005B102F /* pa_Crime_unclick.png */,
-			);
-			path = Crime;
-			sourceTree = "<group>";
-		};
-		5E290B1A1AA62E46005B102F /* Greenery */ = {
-			isa = PBXGroup;
-			children = (
-				5E290B1B1AA62E46005B102F /* pa_Greenery_click_E.png */,
-				5E290B1C1AA62E46005B102F /* pa_Greenery_click_S.png */,
-				5E290B1D1AA62E46005B102F /* pa_Greenery_unclick.png */,
-			);
-			path = Greenery;
-			sourceTree = "<group>";
-		};
-		5E290B1E1AA62E46005B102F /* Residential density */ = {
-			isa = PBXGroup;
-			children = (
-				5E290B1F1AA62E46005B102F /* pa_Residential Density_click_E.png */,
-				5E290B201AA62E46005B102F /* pa_Residential Density_click_S.png */,
-				5E290B211AA62E46005B102F /* pa_Residential Density_unclick.png */,
-			);
-			path = "Residential density";
-			sourceTree = "<group>";
-		};
-		5E290B221AA62E46005B102F /* Sidewalk */ = {
-			isa = PBXGroup;
-			children = (
-				5E290B231AA62E46005B102F /* pa_Sidewalk_click_E.png */,
-				5E290B241AA62E46005B102F /* pa_Sidewalk_click_S.png */,
-				5E290B251AA62E46005B102F /* pa_Sidewalk_unclick.png */,
-			);
-			path = Sidewalk;
-			sourceTree = "<group>";
-		};
-		5E290B261AA62E46005B102F /* Slope */ = {
-			isa = PBXGroup;
-			children = (
-				5E290B271AA62E46005B102F /* pa_Slope_click_E.png */,
-				5E290B281AA62E46005B102F /* pa_Slope_click_S.png */,
-				5E290B291AA62E46005B102F /* pa_Slope_unclick.png */,
-			);
-			path = Slope;
-			sourceTree = "<group>";
-		};
-		5E290B2A1AA62E46005B102F /* Traffic */ = {
-			isa = PBXGroup;
-			children = (
-				5E290B2B1AA62E46005B102F /* pa_traffic_click_E.png */,
-				5E290B2C1AA62E46005B102F /* pa_traffic_click_S.png */,
-				5E290B2D1AA62E46005B102F /* pa_traffic_unclick.png */,
-			);
-			path = Traffic;
-			sourceTree = "<group>";
-		};
-		5E290B2E1AA62E47005B102F /* Saved routes */ = {
-			isa = PBXGroup;
-			children = (
-				5E290B2F1AA62E47005B102F /* SavedLocations_btn.png */,
-				5E290B301AA62E47005B102F /* SavedLocations_btnSelected.png */,
-				5E290B311AA62E47005B102F /* SavedRoutes_btn.png */,
-				5E290B321AA62E47005B102F /* SavedRoutes_btnSelected.png */,
-			);
-			path = "Saved routes";
-			sourceTree = "<group>";
-		};
-		5E290B331AA62E47005B102F /* updated buttons */ = {
-			isa = PBXGroup;
-			children = (
-				5E290B341AA62E47005B102F /* Audio */,
-				5E290B391AA62E47005B102F /* Parameter */,
-				5E290B561AA62E47005B102F /* Vibration */,
-			);
-			path = "updated buttons";
-			sourceTree = "<group>";
-		};
-		5E290B341AA62E47005B102F /* Audio */ = {
-			isa = PBXGroup;
-			children = (
-				5E290B351AA62E47005B102F /* audio_direction_off_btn.png */,
-				5E290B361AA62E47005B102F /* audio_direction_on_btn.png */,
-				5E290B371AA62E47005B102F /* audio_generaluse_off_btn.png */,
-				5E290B381AA62E47005B102F /* audio_generaluse_on_btn.png */,
-			);
-			path = Audio;
-			sourceTree = "<group>";
-		};
-		5E290B391AA62E47005B102F /* Parameter */ = {
-			isa = PBXGroup;
-			children = (
-				5E290B3A1AA62E47005B102F /* Business density */,
-				5E290B3E1AA62E47005B102F /* Crime */,
-				5E290B421AA62E47005B102F /* Greenery */,
-				5E290B461AA62E47005B102F /* Residential density */,
-				5E290B4A1AA62E47005B102F /* Sidewalk */,
-				5E290B4E1AA62E47005B102F /* Slope */,
-				5E290B521AA62E47005B102F /* Traffic */,
-			);
-			path = Parameter;
-			sourceTree = "<group>";
-		};
-		5E290B3A1AA62E47005B102F /* Business density */ = {
-			isa = PBXGroup;
-			children = (
-				5E290B3B1AA62E47005B102F /* pa_Business Density_click_E.png */,
-				5E290B3C1AA62E47005B102F /* pa_Business Density_click_S.png */,
-				5E290B3D1AA62E47005B102F /* pa_BusinessDensity_unclick.png */,
-			);
-			path = "Business density";
-			sourceTree = "<group>";
-		};
-		5E290B3E1AA62E47005B102F /* Crime */ = {
-			isa = PBXGroup;
-			children = (
-				5E290B3F1AA62E47005B102F /* pa_Crime_click_E.png */,
-				5E290B401AA62E47005B102F /* pa_Crime_click_S.png */,
-				5E290B411AA62E47005B102F /* pa_Crime_unclick.png */,
-			);
-			path = Crime;
-			sourceTree = "<group>";
-		};
-		5E290B421AA62E47005B102F /* Greenery */ = {
-			isa = PBXGroup;
-			children = (
-				5E290B431AA62E47005B102F /* pa_Greenery_click_E.png */,
-				5E290B441AA62E47005B102F /* pa_Greenery_click_S.png */,
-				5E290B451AA62E47005B102F /* pa_Greenery_unclick.png */,
-			);
-			path = Greenery;
-			sourceTree = "<group>";
-		};
-		5E290B461AA62E47005B102F /* Residential density */ = {
-			isa = PBXGroup;
-			children = (
-				5E290B471AA62E47005B102F /* pa_Residential Density_click_E.png */,
-				5E290B481AA62E47005B102F /* pa_Residential Density_click_S.png */,
-				5E290B491AA62E47005B102F /* pa_Residential Density_unclick.png */,
-			);
-			path = "Residential density";
-			sourceTree = "<group>";
-		};
-		5E290B4A1AA62E47005B102F /* Sidewalk */ = {
-			isa = PBXGroup;
-			children = (
-				5E290B4B1AA62E47005B102F /* pa_Sidewalk_click_E.png */,
-				5E290B4C1AA62E47005B102F /* pa_Sidewalk_click_S.png */,
-				5E290B4D1AA62E47005B102F /* pa_Sidewalk_unclick.png */,
-			);
-			path = Sidewalk;
-			sourceTree = "<group>";
-		};
-		5E290B4E1AA62E47005B102F /* Slope */ = {
-			isa = PBXGroup;
-			children = (
-				5E290B4F1AA62E47005B102F /* pa_Slope_click_E.png */,
-				5E290B501AA62E47005B102F /* pa_Slope_click_S.png */,
-				5E290B511AA62E47005B102F /* pa_Slope_unclick.png */,
-			);
-			path = Slope;
-			sourceTree = "<group>";
-		};
-		5E290B521AA62E47005B102F /* Traffic */ = {
-			isa = PBXGroup;
-			children = (
-				5E290B531AA62E47005B102F /* pa_traffic_click_E.png */,
-				5E290B541AA62E47005B102F /* pa_traffic_click_S.png */,
-				5E290B551AA62E47005B102F /* pa_traffic_unclick.png */,
-			);
-			path = Traffic;
-			sourceTree = "<group>";
-		};
-		5E290B561AA62E47005B102F /* Vibration */ = {
-			isa = PBXGroup;
-			children = (
-				5E290B571AA62E47005B102F /* usability_vibration_off_btn.png */,
-				5E290B581AA62E47005B102F /* usability_vibration_on_btn.png */,
-			);
-			path = Vibration;
-			sourceTree = "<group>";
-		};
-		5E290B591AA62E47005B102F /* Vibration */ = {
-			isa = PBXGroup;
-			children = (
-				5E290B5A1AA62E47005B102F /* usability_vibration_off_btn.png */,
-				5E290B5B1AA62E47005B102F /* usability_vibration_on_btn.png */,
-			);
-			path = Vibration;
-			sourceTree = "<group>";
-		};
 		769D856919F814A500AF144C /* Usability And Settings View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1572,7 +1196,6 @@
 		CC2316EA16260F9200EE0F48 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				5E290AF31AA62E46005B102F /* Buttons */,
 				76430E761A369B590005A3B4 /* pa_Business_Density_click_S-1.png */,
 				76430E771A369B590005A3B4 /* pa_Crime_click_S-1.png */,
 				76430E781A369B590005A3B4 /* pa_CurbCuts_click_S-1.png */,
@@ -1897,7 +1520,6 @@
 		CCCDFB5815EEAAC600B26133 = {
 			isa = PBXGroup;
 			children = (
-				5E7FB2B21AA68D2700E023C8 /* Images.xcassets */,
 				5E290AEE1AA62845005B102F /* Align_120x120.png */,
 				4F32C46718FCAAB50081A3EC /* atl.geojson */,
 				4F3D61D718ED1178003CE02C /* Social.framework */,
@@ -1919,8 +1541,8 @@
 		CCCDFB6415EEAAC600B26133 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CCCDFB6315EEAAC600B26133 /* Align.app */,
-				CCCDFB7E15EEAAC600B26133 /* AlignProjectTests.octest */,
+				CCCDFB6315EEAAC600B26133 /* Align!.app */,
+				CCCDFB7E15EEAAC600B26133 /* Chandra_AlignTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1977,10 +1599,10 @@
 		CCCDFB6E15EEAAC600B26133 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CCCDFB6F15EEAAC600B26133 /* AlignProject-Info.plist */,
+				CCCDFB6F15EEAAC600B26133 /* Chandra_Align-Info.plist */,
 				CCCDFB7015EEAAC600B26133 /* InfoPlist.strings */,
 				CCCDFB7315EEAAC600B26133 /* main.m */,
-				CCCDFB7515EEAAC600B26133 /* AlignProject-Prefix.pch */,
+				CCCDFB7515EEAAC600B26133 /* Chandra_Align-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1998,7 +1620,7 @@
 		CCCDFB8615EEAAC600B26133 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CCCDFB8715EEAAC600B26133 /* AlignProjectTests-Info.plist */,
+				CCCDFB8715EEAAC600B26133 /* Chandra_AlignTests-Info.plist */,
 				CCCDFB8815EEAAC600B26133 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -2007,9 +1629,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CCCDFB6215EEAAC600B26133 /* AlignProject */ = {
+		CCCDFB6215EEAAC600B26133 /* Chandra_Align */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CCCDFB9015EEAAC600B26133 /* Build configuration list for PBXNativeTarget "AlignProject" */;
+			buildConfigurationList = CCCDFB9015EEAAC600B26133 /* Build configuration list for PBXNativeTarget "Chandra_Align" */;
 			buildPhases = (
 				CCCDFB5F15EEAAC600B26133 /* Sources */,
 				CCCDFB6015EEAAC600B26133 /* Frameworks */,
@@ -2020,15 +1642,16 @@
 			dependencies = (
 				5E9688991AA8ECAD0015DF8B /* PBXTargetDependency */,
 				9378877B16154D97007CF24C /* PBXTargetDependency */,
+				9378875A16154879007CF24C /* PBXTargetDependency */,
 			);
-			name = AlignProject;
+			name = Chandra_Align;
 			productName = OpenTripPlanner;
-			productReference = CCCDFB6315EEAAC600B26133 /* Align.app */;
+			productReference = CCCDFB6315EEAAC600B26133 /* Align!.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CCCDFB7D15EEAAC600B26133 /* AlignProjectTests */ = {
+		CCCDFB7D15EEAAC600B26133 /* Chandra_AlignTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CCCDFB9315EEAAC600B26133 /* Build configuration list for PBXNativeTarget "AlignProjectTests" */;
+			buildConfigurationList = CCCDFB9315EEAAC600B26133 /* Build configuration list for PBXNativeTarget "Chandra_AlignTests" */;
 			buildPhases = (
 				CCCDFB7915EEAAC600B26133 /* Sources */,
 				CCCDFB7A15EEAAC600B26133 /* Frameworks */,
@@ -2040,10 +1663,10 @@
 			dependencies = (
 				CCCDFB8415EEAAC600B26133 /* PBXTargetDependency */,
 			);
-			name = AlignProjectTests;
+			name = Chandra_AlignTests;
 			productName = OpenTripPlannerTests;
-			productReference = CCCDFB7E15EEAAC600B26133 /* AlignProjectTests.octest */;
-			productType = "com.apple.product-type.bundle.ocunit-test";
+			productReference = CCCDFB7E15EEAAC600B26133 /* Chandra_AlignTests.octest */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -2057,7 +1680,7 @@
 				ORGANIZATIONNAME = "GATech-CGIS";
 				TargetAttributes = {
 					CCCDFB6215EEAAC600B26133 = {
-						DevelopmentTeam = M3TV3TB4PN;
+						DevelopmentTeam = 89JRG4TE28;
 						SystemCapabilities = {
 							com.apple.iOS = {
 								enabled = 1;
@@ -2066,7 +1689,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CCCDFB5D15EEAAC600B26133 /* Build configuration list for PBXProject "AlignProject" */;
+			buildConfigurationList = CCCDFB5D15EEAAC600B26133 /* Build configuration list for PBXProject "Chandra_Align" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -2088,8 +1711,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				CCCDFB6215EEAAC600B26133 /* AlignProject */,
-				CCCDFB7D15EEAAC600B26133 /* AlignProjectTests */,
+				CCCDFB6215EEAAC600B26133 /* Chandra_Align */,
+				CCCDFB7D15EEAAC600B26133 /* Chandra_AlignTests */,
 			);
 		};
 /* End PBXProject section */
@@ -2144,23 +1767,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E290B7F1AA62E47005B102F /* pa_Sidewalk_click_S.png in Resources */,
-				5E290BA11AA62E47005B102F /* pa_traffic_click_E.png in Resources */,
-				5E290BA61AA62E47005B102F /* usability_vibration_off_btn.png in Resources */,
-				5E290B701AA62E47005B102F /* LogIn_btn.png in Resources */,
-				5E290B6B1AA62E47005B102F /* pa_Intersections_E.png in Resources */,
-				5E290B6A1AA62E47005B102F /* pa_Intersections_click_S.png in Resources */,
 				76430E821A369B590005A3B4 /* pa_CurbCuts_click_S-1.png in Resources */,
 				CCCDFB7215EEAAC600B26133 /* InfoPlist.strings in Resources */,
 				CC9CFCCC15EFCDA00070712C /* MainStoryboard_iPhone.storyboard in Resources */,
 				CC2316DE1626067D00EE0F48 /* HeadingAngleSmall.png in Resources */,
-				5E290B741AA62E47005B102F /* pa_BusinessDensity_unclick.png in Resources */,
 				76430E741A369B470005A3B4 /* pa_Slope_click_E-1.png in Resources */,
 				766735591A360BF800E79F0B /* Menu_btn-1.png in Resources */,
 				CC2316DF1626067D00EE0F48 /* HeadingAngleSmall@2x.png in Resources */,
 				CC2316E01626067D00EE0F48 /* LoadingTile.png in Resources */,
 				CC2316E11626067D00EE0F48 /* LoadingTileZoom.png in Resources */,
-				5E290B7D1AA62E47005B102F /* pa_Residential Density_unclick.png in Resources */,
 				CC2316E21626067D00EE0F48 /* TrackingDot.png in Resources */,
 				CC2316E31626067D00EE0F48 /* TrackingDot@2x.png in Resources */,
 				CC2316E41626067D00EE0F48 /* TrackingDotHalo.png in Resources */,
@@ -2169,51 +1784,38 @@
 				762DB7721A36199800238625 /* pa_Crime_unclick-1.png in Resources */,
 				76430E871A369B590005A3B4 /* pa_Sidewalk_click_S-1.png in Resources */,
 				CC2316E61626067D00EE0F48 /* TrackingHeading.png in Resources */,
-				5E290B841AA62E47005B102F /* pa_traffic_click_E.png in Resources */,
 				CC2316E71626067D00EE0F48 /* TrackingHeading@2x.png in Resources */,
 				CC2316E81626067D00EE0F48 /* TrackingLocation.png in Resources */,
 				CC2316E91626067D00EE0F48 /* TrackingLocation@2x.png in Resources */,
-				5E290B9F1AA62E47005B102F /* pa_Slope_click_S.png in Resources */,
 				CC23170716260F9200EE0F48 /* geolocate.png in Resources */,
 				7654C3E81A085000006B7D7F /* Usability_1.png in Resources */,
 				CC23170816260F9200EE0F48 /* geolocate@2x.png in Resources */,
 				CC23170B16260F9200EE0F48 /* magnifier.png in Resources */,
-				5E290B7B1AA62E47005B102F /* pa_Residential Density_click_E.png in Resources */,
 				76AEB0DF1A3604AF005D88C6 /* LocateMe_btn.png in Resources */,
 				76430E801A369B590005A3B4 /* pa_Business_Density_click_S-1.png in Resources */,
 				CC23170C16260F9200EE0F48 /* magnifier@2x.png in Resources */,
 				CC23170D16260F9200EE0F48 /* marker-end.png in Resources */,
 				CC23170E16260F9200EE0F48 /* marker-end@2x.png in Resources */,
-				5E290B681AA62E47005B102F /* pa_CurbCuts_E.png in Resources */,
 				CC23170F16260F9200EE0F48 /* marker-start.png in Resources */,
-				5E290B9E1AA62E47005B102F /* pa_Slope_click_E.png in Resources */,
 				76430E721A369B470005A3B4 /* pa_Residential_Density_click_E-1.png in Resources */,
 				CC23171016260F9200EE0F48 /* marker-start@2x.png in Resources */,
 				CC23171116260F9200EE0F48 /* mode-bike.png in Resources */,
 				CC23171216260F9200EE0F48 /* mode-bike@2x.png in Resources */,
-				5E290B851AA62E47005B102F /* pa_traffic_click_S.png in Resources */,
-				5E290B6D1AA62E47005B102F /* pa_LandVariation_click_E.png in Resources */,
 				CC23171D16260F9200EE0F48 /* mode-transit.png in Resources */,
 				CC23171E16260F9200EE0F48 /* mode-transit@2x.png in Resources */,
-				5E7FB2B31AA68D2700E023C8 /* Images.xcassets in Resources */,
 				762DB7661A360E4100238625 /* dropdown_cropped-2.png in Resources */,
 				CC23171F16260F9200EE0F48 /* mode-walk.png in Resources */,
 				CC23172016260F9200EE0F48 /* mode-walk@2x.png in Resources */,
 				76430E6F1A369B470005A3B4 /* pa_Greenery_click_E-1.png in Resources */,
 				CCF669661630BA6E007A9634 /* marker-dropped.png in Resources */,
-				5E290BA01AA62E47005B102F /* pa_Slope_unclick.png in Resources */,
 				CCF669671630BA6E007A9634 /* marker-dropped@2x.png in Resources */,
 				CCF669681630BA6E007A9634 /* mode-bike-to-transit.png in Resources */,
 				76430E731A369B470005A3B4 /* pa_Sidewalk_click_E-1.png in Resources */,
-				5E290B781AA62E47005B102F /* pa_Greenery_click_E.png in Resources */,
 				CCF669691630BA6E007A9634 /* mode-bike-to-transit@2x.png in Resources */,
-				5E290B871AA62E47005B102F /* SavedLocations_btn.png in Resources */,
 				CCF669CC1631B12A007A9634 /* continue_52.png in Resources */,
 				CCF669CD1631B12A007A9634 /* continue_52@2x.png in Resources */,
 				CCF669CE1631B12A007A9634 /* bike_32.png in Resources */,
 				CCF669CF1631B12A007A9634 /* bike_32@2x.png in Resources */,
-				5E290B961AA62E47005B102F /* pa_Greenery_click_S.png in Resources */,
-				5E290B8B1AA62E47005B102F /* audio_direction_off_btn.png in Resources */,
 				76430E881A369B590005A3B4 /* pa_Slope_click_S-1.png in Resources */,
 				CCF669D01631B12A007A9634 /* bike_52.png in Resources */,
 				CCF669D11631B12A007A9634 /* bike_52@2x.png in Resources */,
@@ -2225,15 +1827,12 @@
 				CCF669D51631B12A007A9634 /* bus_52@2x.png in Resources */,
 				CCF669D61631B12A007A9634 /* cable-car_32.png in Resources */,
 				CCF669D71631B12A007A9634 /* cable-car_32@2x.png in Resources */,
-				5E290B7A1AA62E47005B102F /* pa_Greenery_unclick.png in Resources */,
 				CCF669D81631B12A007A9634 /* cable-car_52.png in Resources */,
 				CCF669D91631B12A007A9634 /* cable-car_52@2x.png in Resources */,
 				CCF669DA1631B12A007A9634 /* car_32.png in Resources */,
-				5E290B5E1AA62E47005B102F /* pa_Accessibility_unclick.png in Resources */,
 				CCF669DB1631B12A007A9634 /* car_32@2x.png in Resources */,
 				CCF669DC1631B12A007A9634 /* car_52.png in Resources */,
 				CCF669DD1631B12A007A9634 /* car_52@2x.png in Resources */,
-				5E290B801AA62E47005B102F /* pa_Sidewalk_unclick.png in Resources */,
 				CCF669DE1631B12A007A9634 /* cardinal-east_32.png in Resources */,
 				CCF669DF1631B12A007A9634 /* cardinal-east_32@2x.png in Resources */,
 				CCF669E01631B12A007A9634 /* cardinal-east_52.png in Resources */,
@@ -2242,14 +1841,9 @@
 				CCF669E21631B12A007A9634 /* cardinal-north_32.png in Resources */,
 				CCF669E31631B12A007A9634 /* cardinal-north_32@2x.png in Resources */,
 				CCF669E41631B12A007A9634 /* cardinal-north_52.png in Resources */,
-				5E290B601AA62E47005B102F /* all parameter unclick.png in Resources */,
-				5E290B5F1AA62E47005B102F /* all parameter click.png in Resources */,
 				768BB5B21A0B2A6C00F388A5 /* Default-568h@2x~iphone.png in Resources */,
-				5E290B691AA62E47005B102F /* pa_CurbCuts_unclick.png in Resources */,
 				CCF669E51631B12A007A9634 /* cardinal-north_52@2x.png in Resources */,
 				76430E701A369B470005A3B4 /* pa_Intersections_E-1.png in Resources */,
-				5E290B7E1AA62E47005B102F /* pa_Sidewalk_click_E.png in Resources */,
-				5E290BA21AA62E47005B102F /* pa_traffic_click_S.png in Resources */,
 				CCF669E61631B12A007A9634 /* cardinal-northeast_32.png in Resources */,
 				CCF669E71631B12A007A9634 /* cardinal-northeast_32@2x.png in Resources */,
 				767BA0C019E5DEDB006557BA /* Align_114x114.png in Resources */,
@@ -2274,13 +1868,10 @@
 				CCF669F61631B12A007A9634 /* cardinal-southwest_32.png in Resources */,
 				7654BD3D19E6EA700026D330 /* dropdown_original_14x21.png in Resources */,
 				CCF669F71631B12A007A9634 /* cardinal-southwest_32@2x.png in Resources */,
-				5E290B6F1AA62E47005B102F /* pa_LandVariation_unclick.png in Resources */,
-				5E290B721AA62E47005B102F /* pa_Business Density_click_E.png in Resources */,
 				CCF669F81631B12A007A9634 /* cardinal-southwest_52.png in Resources */,
 				CCF669F91631B12A007A9634 /* cardinal-southwest_52@2x.png in Resources */,
 				76430E811A369B590005A3B4 /* pa_Crime_click_S-1.png in Resources */,
 				CCF669FA1631B12A007A9634 /* cardinal-west_32.png in Resources */,
-				5E290B751AA62E47005B102F /* pa_Crime_click_E.png in Resources */,
 				CCF669FB1631B12A007A9634 /* cardinal-west_32@2x.png in Resources */,
 				CCF669FC1631B12A007A9634 /* cardinal-west_52.png in Resources */,
 				CCF669FD1631B12A007A9634 /* cardinal-west_52@2x.png in Resources */,
@@ -2292,7 +1883,6 @@
 				CCF66A011631B12A007A9634 /* clockwise_52@2x.png in Resources */,
 				CCF66A021631B12A007A9634 /* continue_32.png in Resources */,
 				76430E6C1A369B470005A3B4 /* pa_Business_Density_click_E-1.png in Resources */,
-				5E290B7C1AA62E47005B102F /* pa_Residential Density_click_S.png in Resources */,
 				CCF66A031631B12A007A9634 /* continue_32@2x.png in Resources */,
 				CCF66A041631B12A007A9634 /* counterclockwise_32.png in Resources */,
 				7654BD4519E6F02B0026D330 /* Forgot_Password.png in Resources */,
@@ -2307,7 +1897,6 @@
 				762DB7791A36199800238625 /* pa_Slope_unclick-1.png in Resources */,
 				CCF66A0D1631B12A007A9634 /* ferry_32@2x.png in Resources */,
 				CCF66A0E1631B12A007A9634 /* ferry_52.png in Resources */,
-				5E290B8F1AA62E47005B102F /* pa_Business Density_click_E.png in Resources */,
 				CCF66A0F1631B12A007A9634 /* ferry_52@2x.png in Resources */,
 				CCF66A101631B12A007A9634 /* gondola_32.png in Resources */,
 				CCF66A111631B12A007A9634 /* gondola_32@2x.png in Resources */,
@@ -2315,10 +1904,7 @@
 				CCF66A131631B12A007A9634 /* gondola_52@2x.png in Resources */,
 				CCF66A141631B12A007A9634 /* hard-left_32.png in Resources */,
 				CCF66A151631B12A007A9634 /* hard-left_32@2x.png in Resources */,
-				5E290B861AA62E47005B102F /* pa_traffic_unclick.png in Resources */,
 				CCF66A161631B12A007A9634 /* hard-left_52.png in Resources */,
-				5E290B831AA62E47005B102F /* pa_Slope_unclick.png in Resources */,
-				5E290B931AA62E47005B102F /* pa_Crime_click_S.png in Resources */,
 				CCF66A171631B12A007A9634 /* hard-left_52@2x.png in Resources */,
 				CCF66A181631B12A007A9634 /* hard-right_32.png in Resources */,
 				CCF66A191631B12A007A9634 /* hard-right_32@2x.png in Resources */,
@@ -2327,34 +1913,23 @@
 				CCF66A1B1631B12A007A9634 /* hard-right_52@2x.png in Resources */,
 				762DB77A1A36199800238625 /* pa_traffic_unclick-1.png in Resources */,
 				CCF66A1C1631B12A007A9634 /* slight-left_32.png in Resources */,
-				5E290B941AA62E47005B102F /* pa_Crime_unclick.png in Resources */,
 				CCF66A1D1631B12A007A9634 /* slight-left_32@2x.png in Resources */,
 				CCF66A1E1631B12A007A9634 /* slight-left_52.png in Resources */,
-				5E290B6C1AA62E47005B102F /* pa_Intersections_unclick.png in Resources */,
 				CCF66A1F1631B12A007A9634 /* slight-left_52@2x.png in Resources */,
 				CCF66A201631B12A007A9634 /* slight-right_32.png in Resources */,
-				5E290B981AA62E47005B102F /* pa_Residential Density_click_E.png in Resources */,
-				5E290B991AA62E47005B102F /* pa_Residential Density_click_S.png in Resources */,
-				5E290B5C1AA62E47005B102F /* pa_Accessibility_click_S.png in Resources */,
 				CCF66A211631B12A007A9634 /* slight-right_32@2x.png in Resources */,
 				CCF66A221631B12A007A9634 /* slight-right_52.png in Resources */,
-				5E290B9C1AA62E47005B102F /* pa_Sidewalk_click_S.png in Resources */,
-				5E290B641AA62E47005B102F /* audio_direction_on_btn.png in Resources */,
-				5E290B661AA62E47005B102F /* audio_generaluse_on_btn.png in Resources */,
 				CCF66A231631B12A007A9634 /* slight-right_52@2x.png in Resources */,
 				CCF66A241631B12A007A9634 /* train_32.png in Resources */,
 				CCF66A251631B12A007A9634 /* train_32@2x.png in Resources */,
 				769313311A08683700CA80A4 /* Speaker_1.png in Resources */,
 				CCF66A261631B12A007A9634 /* train_52.png in Resources */,
-				5E290B761AA62E47005B102F /* pa_Crime_click_S.png in Resources */,
 				CCF66A271631B12A007A9634 /* train_52@2x.png in Resources */,
 				CCF66A281631B12A007A9634 /* walk_32.png in Resources */,
 				CCF66A291631B12A007A9634 /* walk_32@2x.png in Resources */,
 				CCF66A2A1631B12A007A9634 /* walk_52.png in Resources */,
-				5E290B911AA62E47005B102F /* pa_BusinessDensity_unclick.png in Resources */,
 				CCF66A2B1631B12A007A9634 /* walk_52@2x.png in Resources */,
 				CCF66A2C1631B12A007A9634 /* swap-addresses.png in Resources */,
-				5E290B651AA62E47005B102F /* audio_generaluse_off_btn.png in Resources */,
 				767BA0C219E5DEDB006557BA /* Default_old@2x~iphone.png in Resources */,
 				CCF66A2D1631B12A007A9634 /* swap-addresses@2x.png in Resources */,
 				CCF66A341631BE00007A9634 /* clock.png in Resources */,
@@ -2367,7 +1942,6 @@
 				CCF66A481631F5EB007A9634 /* cross@2x.png in Resources */,
 				CCF66A491631F5EB007A9634 /* pin_32.png in Resources */,
 				CCF66A4A1631F5EB007A9634 /* pin_32@2x.png in Resources */,
-				5E290B8A1AA62E47005B102F /* SavedRoutes_btnSelected.png in Resources */,
 				CCF66A4B1631F5EB007A9634 /* pin_52.png in Resources */,
 				CCF66A4C1631F5EB007A9634 /* pin_52@2x.png in Resources */,
 				76430E851A369B590005A3B4 /* pa_LandVariation_click_S-1.png in Resources */,
@@ -2378,7 +1952,6 @@
 				CCF66A501631F5EB007A9634 /* tick-43bf77@2x.png in Resources */,
 				CCF66A5816321132007A9634 /* funicular_32.png in Resources */,
 				CCF66A5916321132007A9634 /* funicular_32@2x.png in Resources */,
-				5E290B811AA62E47005B102F /* pa_Slope_click_E.png in Resources */,
 				CCF66A5A16321132007A9634 /* funicular_52.png in Resources */,
 				CCF66A5B16321132007A9634 /* funicular_52@2x.png in Resources */,
 				7654C3EA1A08503D006B7D7F /* Parameters_1.png in Resources */,
@@ -2388,90 +1961,64 @@
 				CCF66A6016321333007A9634 /* home-icon.png in Resources */,
 				76F3AD861A08007400309B55 /* dropdown.png in Resources */,
 				76430E841A369B590005A3B4 /* pa_Intersections_click_S-1.png in Resources */,
-				5E290B611AA62E47005B102F /* my parameter click.png in Resources */,
 				4FE6A02C1924674500BB64C6 /* dots-0_75.png in Resources */,
 				762DB7741A36199800238625 /* pa_Greenery_unclick-1.png in Resources */,
 				CCF66A6216321352007A9634 /* home-icon@2x.png in Resources */,
 				0D1909CC164315EF00432963 /* curl.png in Resources */,
 				0D1909CD164315EF00432963 /* curl@2x.png in Resources */,
 				0D4553D116432356006D4A3B /* popup-bike.png in Resources */,
-				5E290B671AA62E47005B102F /* pa_CurbCuts_click_S.png in Resources */,
 				0D4553D216432356006D4A3B /* popup-bike@2x.png in Resources */,
 				762DB7751A36199800238625 /* pa_Intersections_unclick-1.png in Resources */,
 				0D4553D316432356006D4A3B /* popup-bus.png in Resources */,
-				5E290B821AA62E47005B102F /* pa_Slope_click_S.png in Resources */,
-				5E290B9D1AA62E47005B102F /* pa_Sidewalk_unclick.png in Resources */,
 				0D4553D416432356006D4A3B /* popup-bus@2x.png in Resources */,
 				0D4553D516432356006D4A3B /* popup-cable-car.png in Resources */,
 				0D4553D616432356006D4A3B /* popup-cable-car@2x.png in Resources */,
 				0D4553D716432356006D4A3B /* popup-car.png in Resources */,
 				768BB5AB1A0B297C00F388A5 /* Align_320x480.png in Resources */,
 				0D4553D816432356006D4A3B /* popup-car@2x.png in Resources */,
-				5E290B951AA62E47005B102F /* pa_Greenery_click_E.png in Resources */,
-				5E290B731AA62E47005B102F /* pa_Business Density_click_S.png in Resources */,
 				762DB7761A36199800238625 /* pa_LandVariation_unclick-1.png in Resources */,
 				0D4553D916432356006D4A3B /* popup-elevator.png in Resources */,
-				5E290B6E1AA62E47005B102F /* pa_LandVariation_click_S.png in Resources */,
 				0D4553DA16432356006D4A3B /* popup-elevator@2x.png in Resources */,
 				0D4553DB16432356006D4A3B /* popup-ferry.png in Resources */,
 				0D4553DC16432356006D4A3B /* popup-ferry@2x.png in Resources */,
 				0D4553DD16432356006D4A3B /* popup-funicular.png in Resources */,
 				0D4553DE16432356006D4A3B /* popup-funicular@2x.png in Resources */,
 				0D4553DF16432356006D4A3B /* popup-gondola.png in Resources */,
-				5E290BA41AA62E47005B102F /* usability_vibration_off_btn.png in Resources */,
 				0D4553E016432356006D4A3B /* popup-gondola@2x.png in Resources */,
-				5E290B791AA62E47005B102F /* pa_Greenery_click_S.png in Resources */,
 				0D4553E116432356006D4A3B /* popup-train.png in Resources */,
 				0D4553E216432356006D4A3B /* popup-train@2x.png in Resources */,
 				0D4553E316432356006D4A3B /* popup-transfer.png in Resources */,
 				0D4553E416432356006D4A3B /* popup-transfer@2x.png in Resources */,
-				5E290B971AA62E47005B102F /* pa_Greenery_unclick.png in Resources */,
 				0D4553E516432356006D4A3B /* popup-walk.png in Resources */,
-				5E290B8C1AA62E47005B102F /* audio_direction_on_btn.png in Resources */,
 				0D4553E616432356006D4A3B /* popup-walk@2x.png in Resources */,
-				5E290B901AA62E47005B102F /* pa_Business Density_click_S.png in Resources */,
 				7654BD4319E6EB350026D330 /* dropdown_original.png in Resources */,
 				0D4553E716432356006D4A3B /* transfer_walk.png in Resources */,
 				93EA08D4164582A500705096 /* README.md in Resources */,
-				5E290B8E1AA62E47005B102F /* audio_generaluse_on_btn.png in Resources */,
 				93EA08D5164582A500705096 /* release_notes.md in Resources */,
 				CC2C154A1666D28A006E4619 /* marker-dropped-cropped.png in Resources */,
 				CC2C154B1666D28A006E4619 /* marker-dropped-cropped@2x.png in Resources */,
 				CC2C154C1666D28A006E4619 /* marker-end-cropped.png in Resources */,
-				5E290B711AA62E47005B102F /* SignUp_btn.png in Resources */,
 				CC2C154D1666D28A006E4619 /* marker-end-cropped@2x.png in Resources */,
-				5E290BA51AA62E47005B102F /* usability_vibration_on_btn.png in Resources */,
 				CC2C154E1666D28A006E4619 /* marker-start-cropped.png in Resources */,
-				5E290B921AA62E47005B102F /* pa_Crime_click_E.png in Resources */,
-				5E290B631AA62E47005B102F /* audio_direction_off_btn.png in Resources */,
 				CC2C154F1666D28A006E4619 /* marker-start-cropped@2x.png in Resources */,
 				76430E711A369B470005A3B4 /* pa_LandVariation_click_E-1.png in Resources */,
 				CC2C15501666D28A006E4619 /* overview.png in Resources */,
 				CC2C15511666D28A006E4619 /* overview@2x.png in Resources */,
 				768BB5AC1A0B297C00F388A5 /* Default@2x~iphone.png in Resources */,
-				5E290B621AA62E47005B102F /* my parameter unclick.png in Resources */,
 				4F8C0F2F18BFEE9A005D1BF4 /* overview-disabled.png in Resources */,
 				4F399B7D18BFFA20001B10F7 /* overview-disabled@2x.png in Resources */,
 				4F98665818C52FD900F40C67 /* popup-walk-left.png in Resources */,
 				4F98665918C52FD900F40C67 /* popup-walk-left@2x.png in Resources */,
-				5E290B891AA62E47005B102F /* SavedRoutes_btn.png in Resources */,
 				4F91D30A18E2A0B8002E9219 /* goapp_52@2x.png in Resources */,
 				4F91D30C18E2A2BA002E9219 /* goinfo_52@2x.png in Resources */,
 				76430E6E1A369B470005A3B4 /* pa_CurbCuts_E-1.png in Resources */,
-				5E290BA71AA62E47005B102F /* usability_vibration_on_btn.png in Resources */,
 				762DB7731A36199800238625 /* pa_CurbCuts_unclick-1.png in Resources */,
-				5E290B881AA62E47005B102F /* SavedLocations_btnSelected.png in Resources */,
 				4F91D30E18E2A5A4002E9219 /* gohowto_52@2x.png in Resources */,
-				5E290B9B1AA62E47005B102F /* pa_Sidewalk_click_E.png in Resources */,
-				5E290B5D1AA62E47005B102F /* pa_Accessibility_E.png in Resources */,
-				5E290B771AA62E47005B102F /* pa_Crime_unclick.png in Resources */,
 				4F91D31018E3501B002E9219 /* gohome_32@2x.png in Resources */,
 				4F0E5E8218E3DFFF00F05186 /* help-next-page_32.png in Resources */,
 				4F0E5E8318E3DFFF00F05186 /* help-next-page_32@2x.png in Resources */,
 				4F0E5E8418E3DFFF00F05186 /* help-next-tip_32.png in Resources */,
 				4F0E5E8518E3DFFF00F05186 /* help-next-tip_32@2x.png in Resources */,
-				5E290BA31AA62E47005B102F /* pa_traffic_unclick.png in Resources */,
-				5E290B8D1AA62E47005B102F /* audio_generaluse_off_btn.png in Resources */,
 				4F0E5E8618E3DFFF00F05186 /* help-prev-page_32.png in Resources */,
 				4F0E5E8718E3DFFF00F05186 /* help-prev-page_32@2x.png in Resources */,
 				4F0E5E8818E3DFFF00F05186 /* help-prev-tip_32.png in Resources */,
@@ -2483,7 +2030,6 @@
 				4F4AB32318EA2A7800299AA1 /* dots-3_75.png in Resources */,
 				76430E6D1A369B470005A3B4 /* pa_Crime_click_E-1.png in Resources */,
 				767BA0BF19E5DEDB006557BA /* Align_57x57.png in Resources */,
-				5E290B9A1AA62E47005B102F /* pa_Residential Density_unclick.png in Resources */,
 				4F4AB32418EA2A7800299AA1 /* dots-4_75.png in Resources */,
 				4F4AB32518EA2A7800299AA1 /* dots-5_75.png in Resources */,
 				7654C3EE1A0861F0006B7D7F /* navigation_1.png in Resources */,
@@ -2612,7 +2158,7 @@
 		};
 		CCCDFB8415EEAAC600B26133 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CCCDFB6215EEAAC600B26133 /* AlignProject */;
+			target = CCCDFB6215EEAAC600B26133 /* Chandra_Align */;
 			targetProxy = CCCDFB8315EEAAC600B26133 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -2695,22 +2241,18 @@
 		CCCDFB9115EEAAC600B26133 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Rama Sivakumar (2NVJJACAT3)";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Janet Peterson";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ashwini Khare (C7J8WTZM54)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OpenTripPlanner/AlignProject-Prefix.pch";
+				GCC_PREFIX_HEADER = "OpenTripPlanner/Chandra_Align-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"/**",
 					"\"$(SRCROOT)/MapBox\"/**",
 					"\"$(SRCROOT)/OHAttributedLabel\"/**",
-					"$(SRCROOT)/Restkit",
 				);
-				INFOPLIST_FILE = "OpenTripPlanner/AlignProject-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				INFOPLIST_FILE = "OpenTripPlanner/Chandra_Align-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SDKROOT)/usr/lib/system\"",
@@ -2720,10 +2262,10 @@
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_NAME = Align;
-				PROVISIONING_PROFILE = "6ed1fe06-6409-4465-ac38-be6b019ea470";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6ed1fe06-6409-4465-ac38-be6b019ea470";
-				SDKROOT = iphoneos8.1;
+				PRODUCT_NAME = "Align!";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "402574d9-384c-47c6-a821-2d9b56f7e404";
+				SDKROOT = iphoneos6.1;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -2732,21 +2274,17 @@
 		CCCDFB9215EEAAC600B26133 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Janet Peterson";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OpenTripPlanner/AlignProject-Prefix.pch";
+				GCC_PREFIX_HEADER = "OpenTripPlanner/Chandra_Align-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"/**",
 					"\"$(SRCROOT)/MapBox\"/**",
 					"\"$(SRCROOT)/OHAttributedLabel\"/**",
-					"$(SRCROOT)/Restkit",
 				);
-				INFOPLIST_FILE = "OpenTripPlanner/AlignProject-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				INFOPLIST_FILE = "OpenTripPlanner/Chandra_Align-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SDKROOT)/usr/lib/system\"",
@@ -2756,10 +2294,10 @@
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_NAME = Align;
-				PROVISIONING_PROFILE = "887b25d1-4ee4-42cc-af42-18ee581cd744";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "887b25d1-4ee4-42cc-af42-18ee581cd744";
-				SDKROOT = iphoneos8.1;
+				PRODUCT_NAME = "Align!";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "402574d9-384c-47c6-a821-2d9b56f7e404";
+				SDKROOT = iphoneos6.1;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -2768,18 +2306,15 @@
 		CCCDFB9415EEAAC600B26133 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OpenTripPlanner.app/OpenTripPlanner";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenTripPlanner/OpenTripPlanner-Prefix.pch";
-				INFOPLIST_FILE = "OpenTripPlannerTests/AlignProjectTests-Info.plist";
-				LIBRARY_SEARCH_PATHS = "$(inherited)/**";
-				PRODUCT_NAME = AlignProjectTests;
+				INFOPLIST_FILE = "OpenTripPlannerTests/Chandra_AlignTests-Info.plist";
+				PRODUCT_NAME = Chandra_AlignTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -2788,18 +2323,15 @@
 		CCCDFB9515EEAAC600B26133 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OpenTripPlanner.app/OpenTripPlanner";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenTripPlanner/OpenTripPlanner-Prefix.pch";
-				INFOPLIST_FILE = "OpenTripPlannerTests/AlignProjectTests-Info.plist";
-				LIBRARY_SEARCH_PATHS = "$(inherited)/**";
-				PRODUCT_NAME = AlignProjectTests;
+				INFOPLIST_FILE = "OpenTripPlannerTests/Chandra_AlignTests-Info.plist";
+				PRODUCT_NAME = Chandra_AlignTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -2808,7 +2340,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CCCDFB5D15EEAAC600B26133 /* Build configuration list for PBXProject "AlignProject" */ = {
+		CCCDFB5D15EEAAC600B26133 /* Build configuration list for PBXProject "Chandra_Align" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CCCDFB8E15EEAAC600B26133 /* Debug */,
@@ -2817,7 +2349,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CCCDFB9015EEAAC600B26133 /* Build configuration list for PBXNativeTarget "AlignProject" */ = {
+		CCCDFB9015EEAAC600B26133 /* Build configuration list for PBXNativeTarget "Chandra_Align" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CCCDFB9115EEAAC600B26133 /* Debug */,
@@ -2826,7 +2358,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CCCDFB9315EEAAC600B26133 /* Build configuration list for PBXNativeTarget "AlignProjectTests" */ = {
+		CCCDFB9315EEAAC600B26133 /* Build configuration list for PBXNativeTarget "Chandra_AlignTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CCCDFB9415EEAAC600B26133 /* Debug */,

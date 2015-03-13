@@ -1143,7 +1143,7 @@
                                         <rect key="frame" x="82" y="144" width="157" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                        <state key="normal" image="pa_Crime_unclick.png">
+                                        <state key="normal" image="pa_Crime_unclick-1.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -1178,7 +1178,7 @@
                                         <rect key="frame" x="5" y="270" width="311" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                        <state key="normal" image="pa_LandVariation_unclick-1.png">
+                                        <state key="normal" image="pa_LandVariation_click_S-1.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -2273,10 +2273,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="overview-disabled.png" width="44" height="48"/>
         <image name="overview.png" width="44" height="48"/>
         <image name="pa_Business_Density_unclick-1.png" width="157" height="40"/>
-        <image name="pa_Crime_unclick.png" width="572" height="142"/>
+        <image name="pa_Crime_unclick-1.png" width="572" height="142"/>
         <image name="pa_Greenery_unclick-1.png" width="157" height="40"/>
         <image name="pa_Intersections_unclick-1.png" width="157" height="40"/>
-        <image name="pa_LandVariation_unclick-1.png" width="157" height="40"/>
+        <image name="pa_LandVariation_click_S-1.png" width="157" height="40"/>
         <image name="pa_Sidewalk_unclick-1.png" width="157" height="40"/>
         <image name="pa_Slope_unclick-1.png" width="157" height="40"/>
         <image name="pa_traffic_unclick-1.png" width="157" height="40"/>
