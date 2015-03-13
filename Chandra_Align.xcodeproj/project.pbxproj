@@ -80,7 +80,6 @@
 		4FD0B1E918E23F580019FF28 /* WTWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD0B1E818E23F580019FF28 /* WTWHomeViewController.m */; };
 		4FE6A02C1924674500BB64C6 /* dots-0_75.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FE6A02B1924674500BB64C6 /* dots-0_75.png */; };
 		5E00B5AC1AA82A6A00C22F09 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F3D61D718ED1178003CE02C /* Social.framework */; };
-		5E00B5CE1AA8E28200C22F09 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9378875016154866007CF24C /* libRestKit.a */; };
 		5E290B5C1AA62E47005B102F /* pa_Accessibility_click_S.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E290AF51AA62E46005B102F /* pa_Accessibility_click_S.png */; };
 		5E290B5D1AA62E47005B102F /* pa_Accessibility_E.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E290AF61AA62E46005B102F /* pa_Accessibility_E.png */; };
 		5E290B5E1AA62E47005B102F /* pa_Accessibility_unclick.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E290AF71AA62E46005B102F /* pa_Accessibility_unclick.png */; };
@@ -216,6 +215,7 @@
 		76F3AD861A08007400309B55 /* dropdown.png in Resources */ = {isa = PBXBuildFile; fileRef = 76F3AD851A08007400309B55 /* dropdown.png */; };
 		8D9287731643A3C400170393 /* OTPArrivalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9287721643A3C400170393 /* OTPArrivalCell.m */; };
 		930531F21620E33C00F9A230 /* Step.m in Sources */ = {isa = PBXBuildFile; fileRef = 930531F11620E33C00F9A230 /* Step.m */; };
+		9378875B16154885007CF24C /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9378875016154866007CF24C /* libRestKit.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		9378877C16154DA1007CF24C /* libMapView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9378877616154AF2007CF24C /* libMapView.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		9388194116193310002021EA /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9388193F161927A6002021EA /* MBProgressHUD.m */; };
 		93B179C0162BBAB400F09EC6 /* OTPUnitFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B179BF162BBAB400F09EC6 /* OTPUnitFormatter.m */; };
@@ -443,7 +443,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5E9688981AA8ECAD0015DF8B /* PBXContainerItemProxy */ = {
+		5E00B5B81AA82D9600C22F09 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9378874416154865007CF24C /* RestKit.xcodeproj */;
 			proxyType = 1;
@@ -943,10 +943,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E00B5CE1AA8E28200C22F09 /* libRestKit.a in Frameworks */,
 				5E00B5AC1AA82A6A00C22F09 /* Social.framework in Frameworks */,
 				CCE01DA0165DF5F7008F873E /* MessageUI.framework in Frameworks */,
 				9378877C16154DA1007CF24C /* libMapView.a in Frameworks */,
+				9378875B16154885007CF24C /* libRestKit.a in Frameworks */,
 				CCCDFBE415EEC1BC00B26133 /* libz.dylib in Frameworks */,
 				CCCDFBE215EEC1AB00B26133 /* libsqlite3.dylib in Frameworks */,
 				CCCDFBDF15EEC16C00B26133 /* CoreLocation.framework in Frameworks */,
@@ -1640,7 +1640,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				5E9688991AA8ECAD0015DF8B /* PBXTargetDependency */,
+				5E00B5B91AA82D9600C22F09 /* PBXTargetDependency */,
 				9378877B16154D97007CF24C /* PBXTargetDependency */,
 				9378875A16154879007CF24C /* PBXTargetDependency */,
 			);
@@ -2146,10 +2146,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5E9688991AA8ECAD0015DF8B /* PBXTargetDependency */ = {
+		5E00B5B91AA82D9600C22F09 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RestKit;
-			targetProxy = 5E9688981AA8ECAD0015DF8B /* PBXContainerItemProxy */;
+			targetProxy = 5E00B5B81AA82D9600C22F09 /* PBXContainerItemProxy */;
 		};
 		9378877B16154D97007CF24C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
