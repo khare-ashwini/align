@@ -422,7 +422,7 @@
 {
     // Overview cell
     if (indexPath.row == 0) {
-        return 120;
+        return 80;
     }
     
     // Feedback cell

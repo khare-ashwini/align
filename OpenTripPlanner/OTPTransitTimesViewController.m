@@ -150,6 +150,8 @@
     return nil;
 }
 
+//Space of each item - "Most Walkable" and "Shortest"
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 70;

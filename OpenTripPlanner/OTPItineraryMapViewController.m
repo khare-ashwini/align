@@ -28,6 +28,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+   // UIEdgeInsets inset = UIEdgeInsetsMake(20, 0, 0, 0);
+   // self.tableView.contentInset = inset;
 	// Do any additional setup after loading the view.
     CGFloat scale = [[UIScreen mainScreen] scale];
     NSString *mapUrl = nil;
