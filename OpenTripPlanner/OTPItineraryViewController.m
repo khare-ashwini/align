@@ -20,6 +20,7 @@
 #import "OTPUnitFormatter.h"
 #import "OTPUnitData.h"
 #import "OTPSelectedSegment.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface OTPItineraryViewController ()
 {
@@ -73,7 +74,6 @@
 	// Do any additional setup after loading the view.
     
     self.navigationController.delegate = self;
-    
     _mapShowing = NO;
     
     // WALK, BICYCLE, CAR, TRAM, SUBWAY, RAIL, BUS, FERRY, CABLE_CAR, GONDOLA, FUNICULAR, TRANSFER
@@ -190,7 +190,7 @@
                     break;
                 }
             }
-            NSLog(@"|||||||||| Steps ||||||||| %@", leg.steps);
+           // NSLog(@"|||||||||| Steps ||||||||| %@", leg.steps);
             NSString *instruction;
             if ([leg.steps indexOfObject:step] == 0) {
                 instruction = [NSString stringWithFormat:@"%@ %@ on %@",
@@ -198,18 +198,30 @@
                                          [_absoluteDirectionDisplayStrings objectForKey:step.absoluteDirection],
                                          step.streetName];
                 [_cellIcons insertObject:[_modeIcons objectForKey:leg.mode] atIndex:i];
+                
+                //Speech for each step
+                AVSpeechUtterance *utterance = [AVSpeechUtterance
+                                                speechUtteranceWithString:instruction];
+                AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc] init];
+                [synth speakUtterance:utterance];
             } else {
                 instruction = [NSString stringWithFormat:@"%@ on %@",
                                          [_relativeDirectionDisplayStrings objectForKey:step.relativeDirection],
                                          step.streetName];
                 [_cellIcons insertObject:[_relativeDirectionIcons objectForKey:step.relativeDirection] atIndex:i];
+                //Speech for each step
+                AVSpeechUtterance *utterance = [AVSpeechUtterance
+                                                speechUtteranceWithString:instruction];
+                AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc] init];
+                [synth speakUtterance:utterance];
             }
             [_primaryInstructionStrings insertObject:instruction atIndex:i];
             [_secondaryInstructionStrings insertObject:[NSNull null] atIndex:i];
         }
     } else {
+        
         for (int i = 0; i < self.itinerary.legs.count; i++) {
-            NSLog(@"|||||||||| Count ||||||||| @", self.itinerary.legs.count);
+           // NSLog(@"|||||||||| Count ||||||||| @", self.itinerary.legs.count);
             Leg *leg = [self.itinerary.legs objectAtIndex:i];
             
             // distance based leg
@@ -217,6 +229,10 @@
                 [_cellIcons insertObject:[_modeIcons objectForKey:leg.mode] atIndex:i];
                 [_primaryInstructionStrings insertObject:[NSString stringWithFormat:@"%@ to %@", [_modeDisplayStrings objectForKey:leg.mode], leg.to.name.capitalizedString] atIndex:i];
                 [_secondaryInstructionStrings insertObject:[NSNull null] atIndex:i];
+                
+                AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:[NSString stringWithFormat:@"%@ to %@", [_modeDisplayStrings objectForKey:leg.mode], leg.to.name.capitalizedString]];
+                AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc] init];
+                [synth speakUtterance:utterance];
                 
             // stop based leg
             } else if ([_stopBasedModes containsObject:leg.mode]) {
@@ -227,6 +243,10 @@
                     destination = leg.to.name.capitalizedString;
                 }
                 [_primaryInstructionStrings insertObject:[NSString stringWithFormat: @"Take the %@ %@ towards %@", leg.route.capitalizedString, ((NSString*)[_modeDisplayStrings objectForKey:leg.mode]).lowercaseString, destination] atIndex:i];
+                AVSpeechUtterance *utterance = [AVSpeechUtterance
+                                                speechUtteranceWithString:[NSString stringWithFormat: @"Take the %@ %@ towards %@", leg.route.capitalizedString, ((NSString*)[_modeDisplayStrings objectForKey:leg.mode]).lowercaseString, destination]];
+                AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc] init];
+                [synth speakUtterance:utterance];
                 [_secondaryInstructionStrings insertObject:[NSString stringWithFormat:@"Get off at %@", leg.to.name.capitalizedString] atIndex:i];
                 
             // transfer leg
@@ -239,6 +259,10 @@
         }
     }
     [_primaryInstructionStrings addObject:[NSString stringWithFormat:@"Arrive at %@", self.toTextField.text]];
+    AVSpeechUtterance *utterance = [AVSpeechUtterance
+                                    speechUtteranceWithString:[NSString stringWithFormat:@"Arrive at Destination"]];
+    AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc] init];
+    [synth speakUtterance:utterance];
     [_secondaryInstructionStrings addObject:[NSNull null]];
     
     self.itineraryTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ItineraryTableViewController"];

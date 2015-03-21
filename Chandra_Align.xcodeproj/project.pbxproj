@@ -79,6 +79,7 @@
 		4FD0B1E918E23F580019FF28 /* WTWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD0B1E818E23F580019FF28 /* WTWHomeViewController.m */; };
 		4FE6A02C1924674500BB64C6 /* dots-0_75.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FE6A02B1924674500BB64C6 /* dots-0_75.png */; };
 		5E00B5AC1AA82A6A00C22F09 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F3D61D718ED1178003CE02C /* Social.framework */; };
+		5EC035DA1ABD373A00BF06BC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC035D91ABD373A00BF06BC /* AVFoundation.framework */; };
 		5EF12CAF1AA506EE002E807F /* AboutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF12CAE1AA506EE002E807F /* AboutTableViewController.m */; };
 		762DB7661A360E4100238625 /* dropdown_cropped-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 762DB7651A360E4100238625 /* dropdown_cropped-2.png */; };
 		762DB7711A36199800238625 /* pa_Business_Density_unclick-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 762DB7671A36199700238625 /* pa_Business_Density_unclick-1.png */; };
@@ -519,6 +520,7 @@
 		4FD0B1E818E23F580019FF28 /* WTWHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTWHomeViewController.m; sourceTree = "<group>"; };
 		4FE6A02B1924674500BB64C6 /* dots-0_75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dots-0_75.png"; sourceTree = "<group>"; };
 		5E290AEE1AA62845005B102F /* Align_120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Align_120x120.png; path = icons/Align_120x120.png; sourceTree = "<group>"; };
+		5EC035D91ABD373A00BF06BC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5EF12CAD1AA506EE002E807F /* AboutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutTableViewController.h; sourceTree = "<group>"; };
 		5EF12CAE1AA506EE002E807F /* AboutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutTableViewController.m; sourceTree = "<group>"; };
 		762DB7651A360E4100238625 /* dropdown_cropped-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dropdown_cropped-2.png"; sourceTree = "<group>"; };
@@ -858,6 +860,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EC035DA1ABD373A00BF06BC /* AVFoundation.framework in Frameworks */,
 				5E00B5AC1AA82A6A00C22F09 /* Social.framework in Frameworks */,
 				CCE01DA0165DF5F7008F873E /* MessageUI.framework in Frameworks */,
 				9378877C16154DA1007CF24C /* libMapView.a in Frameworks */,
@@ -1465,6 +1468,7 @@
 		CCCDFB6615EEAAC600B26133 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5EC035D91ABD373A00BF06BC /* AVFoundation.framework */,
 				4F32C46518FCA41B0081A3EC /* MapKit.framework */,
 				CCE01D9F165DF5F6008F873E /* MessageUI.framework */,
 				CCCDFBC015EEBA7600B26133 /* CFNetwork.framework */,
