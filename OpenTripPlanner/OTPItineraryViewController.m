@@ -572,6 +572,7 @@
         
         [self.itineraryMapViewController.mapView zoomWithLatitudeLongitudeBoundsSouthWest:sw northEast:ne animated:YES];
     // Handle step based segments
+    //@ToDo Add Voice Command here.
     } else if (_shouldDisplaySteps) {
         [TestFlight passCheckpoint:@"ITINERARY_DISPLAY_STEP"];
         Step *step = [_allSteps objectAtIndex:indexPath.row-1];
@@ -579,8 +580,15 @@
         CLLocationCoordinate2D ne = CLLocationCoordinate2DMake(step.lat.doubleValue + 0.002, step.lon.doubleValue + 0.002);
         
         [self moveAnnotationWRTStepAndDest:step];
+        instruction = [NSString stringWithFormat:@"%@ on %@ for %d feet",
+        [_relativeDirectionDisplayStrings objectForKey:step.relativeDirection],
+         step.streetName, step.distance.intValue];
+        AVSpeechUtterance *utterance = [AVSpeechUtterance
+                                        speechUtteranceWithString:instruction];
+        AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc] init];
+        [synth speakUtterance:utterance];
         
-        [self.itineraryMapViewController.mapView zoomWithLatitudeLongitudeBoundsSouthWest:sw northEast:ne animated:YES];
+        //[self.itineraryMapViewController.mapView zoomWithLatitudeLongitudeBoundsSouthWest:sw northEast:ne animated:YES];
     // Handle leg based segments
     } else {
         [TestFlight passCheckpoint:@"ITINERARY_DISPLAY_LEG"];
@@ -626,11 +634,11 @@
     [self.itineraryTableViewController.tableView deselectRowAtIndexPath:[self.itineraryTableViewController.tableView indexPathForSelectedRow] animated:YES];
 }
 
-// Plot the steps
+//@ Todo : look at the critical bug of routing in chore trips
 - (void) displayItinerary
 {
     [self.itineraryMapViewController.mapView removeAllAnnotations];
-    
+    NSLog(@"display Itinerary called");
     int legCounter = 0;
     for (Leg* leg in self.itinerary.legs) {
        if (legCounter == 0) {
