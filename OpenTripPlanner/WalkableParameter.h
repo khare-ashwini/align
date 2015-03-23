@@ -19,5 +19,6 @@
 @property (nonatomic) int intersection;
 @property (nonatomic) int slope;
 @property (nonatomic) int landVariation;
+@property (nonatomic) int crosswalk;
 + (id)params;
 @end

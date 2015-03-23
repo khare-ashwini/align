@@ -430,6 +430,7 @@ NSMutableArray *poiAnnotationsOnMap;
     
     WalkableParameter *wp = [WalkableParameter params];
     
+    //@Todo Change required for adding parameters
     NSMutableDictionary* params = [NSMutableDictionary dictionaryWithKeysAndObjects:
                                    @"optimize", @"SAFE",
                                    @"time", timeString,

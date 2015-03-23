@@ -29,6 +29,7 @@
         _intersection = 0;
         _slope = 0;
         _landVariation = 0;
+        _crosswalk = 0;
     }
     return self;
 }

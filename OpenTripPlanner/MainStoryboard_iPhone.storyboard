@@ -2298,10 +2298,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="rzO-mV-U6T"/>
         <segue reference="1UQ-u5-w7S"/>
         <segue reference="rCH-Ep-34k"/>
+        <segue reference="7sX-DS-9Oi"/>
         <segue reference="o4K-HA-Rwa"/>
-        <segue reference="9Qv-oq-JMH"/>
+        <segue reference="rzO-mV-U6T"/>
     </inferredMetricsTieBreakers>
 </document>

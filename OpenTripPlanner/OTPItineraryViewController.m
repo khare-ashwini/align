@@ -193,10 +193,10 @@
            // NSLog(@"|||||||||| Steps ||||||||| %@", leg.steps);
             NSString *instruction;
             if ([leg.steps indexOfObject:step] == 0) {
-                instruction = [NSString stringWithFormat:@"%@ %@ on %@",
+                instruction = [NSString stringWithFormat:@"%@ %@ on %@ for %d feet",
                                          [_modeDisplayStrings objectForKey:leg.mode],
                                          [_absoluteDirectionDisplayStrings objectForKey:step.absoluteDirection],
-                                         step.streetName];
+                                         step.streetName, step.distance.intValue];
                 [_cellIcons insertObject:[_modeIcons objectForKey:leg.mode] atIndex:i];
                 
                 //Speech for each step
@@ -205,9 +205,9 @@
                 AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc] init];
                 [synth speakUtterance:utterance];
             } else {
-                instruction = [NSString stringWithFormat:@"%@ on %@",
+                instruction = [NSString stringWithFormat:@"%@ on %@ for %d feet",
                                          [_relativeDirectionDisplayStrings objectForKey:step.relativeDirection],
-                                         step.streetName];
+                                         step.streetName, step.distance.intValue];
                 [_cellIcons insertObject:[_relativeDirectionIcons objectForKey:step.relativeDirection] atIndex:i];
                 //Speech for each step
                 AVSpeechUtterance *utterance = [AVSpeechUtterance
@@ -692,22 +692,22 @@
 
         
         for (CLLocation *loc in leg.decodedLegGeometry) {
-            if(counter > 5) break;
-            if(counter > 5){
+           // if(counter > 5) break;
+           // if(counter > 5){
                 
                 polyline.lineWidth = 3;
                 polyline.lineCap = kCALineCapRound;
                 polyline.lineJoin = kCALineJoinRound;
                 polyline.lineColor =  [UIColor colorWithRed:1 green:0 blue:1 alpha:0.5];
-            }
-            else{
+           // }
+           // else{
         
                 polyline.lineWidth = 6;
                 polyline.lineCap = kCALineCapRound;
                 polyline.lineJoin = kCALineJoinRound;
                 polyline.lineColor = [UIColor colorWithRed:0 green:0 blue:1 alpha:0.5];
-            }
-            NSLog(@"Loc Counter: %i", counter);
+           // }
+           // NSLog(@"Loc Counter: %i", counter);
             if (counter == 0) {
                 [polyline moveToCoordinate:loc.coordinate];
             } else {
