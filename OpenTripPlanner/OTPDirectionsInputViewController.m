@@ -169,7 +169,7 @@ NSMutableArray *poiAnnotationsOnMap;
     self.mapView.adjustTilesForRetinaDisplay = NO;
     self.mapView.tileSource = source;
     self.mapView.delegate = self;
-    [self.mapView setConstraintsSouthWest:CLLocationCoordinate2DMake(33.2988912648916, -84.8327537259032) northEast:CLLocationCoordinate2DMake(34.2551952258634, -83.9477342897018)];
+    [self.mapView setConstraintsSouthWest:CLLocationCoordinate2DMake(33.771124, -84.397774) northEast:CLLocationCoordinate2DMake(33.782753, -84.383998)];
     
     float zoom = [defaults floatForKey:@"mapZoom"] == 0 ? 4 : [defaults floatForKey:@"mapZoom"];
     float lon = [defaults floatForKey:@"mapLon"] == 0 ? -95 : [defaults floatForKey:@"mapLon"];
