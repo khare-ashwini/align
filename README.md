@@ -1,4 +1,4 @@
-OpenTripPlanner-iOS
-===================
+ALIGN Project
+=============
 
-An iOS application that gives users the ability to plan trip itineraries powered by OpenTripPlanner.
+Navigation Application for Mobility challenged powered by Open Trip Planner
