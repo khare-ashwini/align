@@ -318,7 +318,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEf-0d-0W3">
-                                        <rect key="frame" x="7" y="101" width="24" height="24"/>
+                                        <rect key="frame" x="8" y="87" width="24" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Go Home" image="gohome_32.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -328,16 +328,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="R2j-Za-tXt" kind="modal" modalTransitionStyle="crossDissolve" id="9Qv-oq-JMH"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JID-OC-fTc">
-                                        <rect key="frame" x="8" y="365" width="35" height="32"/>
-                                        <state key="normal" title="Feedback" image="line_chart.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="yQd-II-FUm" kind="push" id="7Vr-bn-Did"/>
+                                            <segue destination="peN-Jn-A0e" kind="push" id="0Mc-MM-mch"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1242,7 +1233,7 @@
                         <viewControllerLayoutGuide type="bottom" id="IGK-MY-PME"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mnb-u7-asp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wOd-Gs-Nfi" customClass="RMMapView">
@@ -1465,8 +1456,8 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="gjn-mV-aKd"/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="dropdownView" destination="Vqc-Sx-mUj" id="RVU-bP-w5C"/>
@@ -2221,7 +2212,6 @@
         <image name="help-pg01-tip01.png" width="320" height="459"/>
         <image name="help-prev-page_32.png" width="32" height="32"/>
         <image name="help-prev-tip_32.png" width="32" height="32"/>
-        <image name="line_chart.png" width="32" height="32"/>
         <image name="marker-end-cropped.png" width="30" height="40"/>
         <image name="overview-disabled.png" width="44" height="48"/>
         <image name="overview.png" width="44" height="48"/>
@@ -2240,10 +2230,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="UNF-hY-sWH"/>
-        <segue reference="9Qv-oq-JMH"/>
-        <segue reference="gbR-He-fHT"/>
-        <segue reference="rzO-mV-U6T"/>
+        <segue reference="0Mc-MM-mch"/>
+        <segue reference="rCH-Ep-34k"/>
         <segue reference="o4K-HA-Rwa"/>
+        <segue reference="rzO-mV-U6T"/>
     </inferredMetricsTieBreakers>
 </document>

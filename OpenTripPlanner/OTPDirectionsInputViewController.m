@@ -42,7 +42,7 @@ typedef enum {
 } ActionSheetPurpose;
 
 NSString *const planServicePath = @"/plan";
-NSString *const searchNearbyTextDefault = @"Type your destination...";
+NSString *const searchNearbyTextDefault = @"Type Location";
 NSString *const searchNearbyNoResultsPrefix = @"No places found for";
 double minSearchRadius = 200.0;
 
@@ -76,6 +76,12 @@ double minSearchRadius = 200.0;
 @end
 
 @implementation OTPDirectionsInputViewController
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [super viewWillAppear:animated];
+}
 
 CLGeocoder *geocoder;
 CLPlacemark *fromPlacemark;
