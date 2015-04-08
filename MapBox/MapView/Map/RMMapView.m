@@ -2655,10 +2655,13 @@
             [_delegate mapViewWillStartLocatingUser:self];
 
         self.userLocation = [RMUserLocation annotationWithMapView:self coordinate:CLLocationCoordinate2DMake(MAXFLOAT, MAXFLOAT) andTitle:nil];
-
+ 
         locationManager = [[CLLocationManager alloc] init];
         locationManager.headingFilter = 5.0;
         locationManager.delegate = self;
+        if ([locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+            [locationManager requestWhenInUseAuthorization];
+        }
         [locationManager startUpdatingLocation];
     }
     else

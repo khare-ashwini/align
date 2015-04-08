@@ -192,6 +192,7 @@
                     break;
                 }
             }
+            
            // NSLog(@"|||||||||| Steps ||||||||| %@", leg.steps);
             NSString *instruction;
             if ([leg.steps indexOfObject:step] == 0) {
@@ -203,11 +204,12 @@
                 
                 //Speech for each step
                 AVSpeechUtterance *utterance = [AVSpeechUtterance
-                                                speechUtteranceWithString:instruction];
+                                                speechUtteranceWithString:instruction ];
                 AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc] init];
                 [synth speakUtterance:utterance];
-            } else {
                 
+            } else {
+            
                 instruction = [NSString stringWithFormat:@"%@ on %@ for %d feet",
                                          [_relativeDirectionDisplayStrings objectForKey:step.relativeDirection],
                                          step.streetName, step.distance.intValue];
