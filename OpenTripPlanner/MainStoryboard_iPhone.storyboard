@@ -331,9 +331,9 @@
                                             <segue destination="R2j-Za-tXt" kind="modal" modalTransitionStyle="crossDissolve" id="9Qv-oq-JMH"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JID-OC-fTc">
-                                        <rect key="frame" x="113" y="338" width="73" height="30"/>
-                                        <state key="normal" title="Feedback">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JID-OC-fTc">
+                                        <rect key="frame" x="8" y="365" width="35" height="32"/>
+                                        <state key="normal" title="Feedback" image="line_chart.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -2079,10 +2079,18 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Feedback" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVh-zM-ptp">
+                                <rect key="frame" x="109" y="79" width="101" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="3px-jL-gaz" secondAttribute="centerX" id="Dek-eQ-Kqa"/>
+                            <constraint firstAttribute="centerX" secondItem="qVh-zM-ptp" secondAttribute="centerX" id="kUP-Ta-4GY"/>
+                            <constraint firstItem="qVh-zM-ptp" firstAttribute="top" secondItem="CNs-f9-OtW" secondAttribute="bottom" constant="15" id="vye-jz-62R"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CtP-uf-v4n"/>
@@ -2213,6 +2221,7 @@
         <image name="help-pg01-tip01.png" width="320" height="459"/>
         <image name="help-prev-page_32.png" width="32" height="32"/>
         <image name="help-prev-tip_32.png" width="32" height="32"/>
+        <image name="line_chart.png" width="32" height="32"/>
         <image name="marker-end-cropped.png" width="30" height="40"/>
         <image name="overview-disabled.png" width="44" height="48"/>
         <image name="overview.png" width="44" height="48"/>

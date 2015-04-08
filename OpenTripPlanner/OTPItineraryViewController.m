@@ -47,6 +47,8 @@
     
     RMAnnotation* modeAnnotation;
     RMAnnotation* modeAnnotationAlt;
+    /* @Change : curbCuts */
+    RMAnnotation* curbCuts;
 }
 
 - (void)resetLegsWithColor:(UIColor *)color;
@@ -205,6 +207,7 @@
                 AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc] init];
                 [synth speakUtterance:utterance];
             } else {
+                
                 instruction = [NSString stringWithFormat:@"%@ on %@ for %d feet",
                                          [_relativeDirectionDisplayStrings objectForKey:step.relativeDirection],
                                          step.streetName, step.distance.intValue];
@@ -640,7 +643,10 @@
     [self.itineraryMapViewController.mapView removeAllAnnotations];
     NSLog(@"display Itinerary called");
     int legCounter = 0;
+    RMAnnotation* curbCutAnnotation;
     for (Leg* leg in self.itinerary.legs) {
+        
+        
        if (legCounter == 0) {
             // start marker:
             RMAnnotation* startAnnotation = [RMAnnotation
@@ -665,6 +671,24 @@
             [self.itineraryMapViewController.mapView addAnnotation:endAnnotation];
         }
         
+        _allSteps = [self.itinerary.legs valueForKeyPath:@"@unionOfArrays.steps"];
+        
+        for(int i=1; i<_allSteps.count; i++){
+            Step *step = [_allSteps objectAtIndex:i];
+            /*Change Adds notation 33.776475, -84.387259*/
+            NSLog(@"Annotation Called");
+            curbCutAnnotation = [RMAnnotation
+                                 annotationWithMapView:self.itineraryMapViewController.mapView
+                                 coordinate:CLLocationCoordinate2DMake(step.lat.floatValue, step.lon.floatValue)
+                                 andTitle:@"Curb"];
+            RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"popup-funicular.png"]];
+            curbCutAnnotation.userInfo = [[NSMutableDictionary alloc] init];
+            [curbCutAnnotation.userInfo setObject:marker forKey:@"layer"];
+            [self.itineraryMapViewController.mapView addAnnotation:curbCutAnnotation];
+            /*End Adds Notation */
+
+        }
+        
         // map mode popup:
         modeAnnotation = [RMAnnotation
                                         annotationWithMapView:self.itineraryMapViewController.mapView
@@ -675,6 +699,19 @@
         modeAnnotation.userInfo = [[NSMutableDictionary alloc] init];
         [modeAnnotation.userInfo setObject:popupMarker forKey:@"layer"];
         [self.itineraryMapViewController.mapView addAnnotation:modeAnnotation];
+        
+        
+        /*Change Adds notation 33.776475, -84.387259
+        NSLog(@"Annotation Called");
+        RMAnnotation* curbCutAnnotation = [RMAnnotation
+                                       annotationWithMapView:self.itineraryMapViewController.mapView
+                                       coordinate:CLLocationCoordinate2DMake(33.776475, -84.387259)
+                                       andTitle:leg.from.name];
+        RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"popup-ferry.png"]];
+        curbCutAnnotation.userInfo = [[NSMutableDictionary alloc] init];
+        [curbCutAnnotation.userInfo setObject:marker forKey:@"layer"];
+        [self.itineraryMapViewController.mapView addAnnotation:curbCutAnnotation];
+        /*End Adds Notation */
         
         id altObj = [_popuprModeIcons objectForKey:[NSString stringWithFormat:@"%@-ALT", leg.mode]];
         if(altObj == nil) {
