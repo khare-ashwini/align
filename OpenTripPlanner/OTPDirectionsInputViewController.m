@@ -20,6 +20,7 @@
 
 #import "ParametersViewController.h"
 #import "WalkableParameter.h"
+#import <AVFoundation/AVFoundation.h>
 
 NSString * const kTransitModeTypeArray[] = {
     @"WALK,TRANSIT",
@@ -116,7 +117,6 @@ NSMutableArray *poiAnnotationsOnMap;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     
     //Chandra
     

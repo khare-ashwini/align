@@ -204,7 +204,8 @@
                 
                 //Speech for each step
                 AVSpeechUtterance *utterance = [AVSpeechUtterance
-                                                speechUtteranceWithString:instruction ];
+                                                speechUtteranceWithString:instruction];
+                utterance.rate = AVSpeechUtteranceMinimumSpeechRate;
                 AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc] init];
                 [synth speakUtterance:utterance];
                 
@@ -217,6 +218,7 @@
                 //Speech for each step
                 AVSpeechUtterance *utterance = [AVSpeechUtterance
                                                 speechUtteranceWithString:instruction];
+                utterance.rate = AVSpeechUtteranceMinimumSpeechRate;
                 AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc] init];
                 [synth speakUtterance:utterance];
             }
@@ -236,6 +238,7 @@
                 [_secondaryInstructionStrings insertObject:[NSNull null] atIndex:i];
                 
                 AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:[NSString stringWithFormat:@"%@ to %@", [_modeDisplayStrings objectForKey:leg.mode], leg.to.name.capitalizedString]];
+                utterance.rate = AVSpeechUtteranceMinimumSpeechRate;
                 AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc] init];
                 [synth speakUtterance:utterance];
                 
@@ -250,6 +253,7 @@
                 [_primaryInstructionStrings insertObject:[NSString stringWithFormat: @"Take the %@ %@ towards %@", leg.route.capitalizedString, ((NSString*)[_modeDisplayStrings objectForKey:leg.mode]).lowercaseString, destination] atIndex:i];
                 AVSpeechUtterance *utterance = [AVSpeechUtterance
                                                 speechUtteranceWithString:[NSString stringWithFormat: @"Take the %@ %@ towards %@", leg.route.capitalizedString, ((NSString*)[_modeDisplayStrings objectForKey:leg.mode]).lowercaseString, destination]];
+                utterance.rate = AVSpeechUtteranceMinimumSpeechRate;
                 AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc] init];
                 [synth speakUtterance:utterance];
                 [_secondaryInstructionStrings insertObject:[NSString stringWithFormat:@"Get off at %@", leg.to.name.capitalizedString] atIndex:i];
@@ -266,6 +270,7 @@
     [_primaryInstructionStrings addObject:[NSString stringWithFormat:@"Arrive at %@", self.toTextField.text]];
     AVSpeechUtterance *utterance = [AVSpeechUtterance
                                     speechUtteranceWithString:[NSString stringWithFormat:@"Arrive at Destination"]];
+    utterance.rate = AVSpeechUtteranceMinimumSpeechRate;
     AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc] init];
     [synth speakUtterance:utterance];
     [_secondaryInstructionStrings addObject:[NSNull null]];
@@ -590,6 +595,7 @@
          step.streetName, step.distance.intValue];
         AVSpeechUtterance *utterance = [AVSpeechUtterance
                                         speechUtteranceWithString:instruction];
+        utterance.rate = AVSpeechUtteranceMinimumSpeechRate;
         AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc] init];
         [synth speakUtterance:utterance];
         
