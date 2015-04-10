@@ -82,6 +82,7 @@
 		5E55BBDC1ACE522900A49A06 /* line_chart.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E55BBDB1ACE522900A49A06 /* line_chart.png */; };
 		5EC035DA1ABD373A00BF06BC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC035D91ABD373A00BF06BC /* AVFoundation.framework */; };
 		5EF12CAF1AA506EE002E807F /* AboutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF12CAE1AA506EE002E807F /* AboutTableViewController.m */; };
+		5EF8649D1AD74D4F004EE552 /* node.json in Resources */ = {isa = PBXBuildFile; fileRef = 5EF8649C1AD74D4F004EE552 /* node.json */; };
 		762DB7661A360E4100238625 /* dropdown_cropped-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 762DB7651A360E4100238625 /* dropdown_cropped-2.png */; };
 		762DB7711A36199800238625 /* pa_Business_Density_unclick-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 762DB7671A36199700238625 /* pa_Business_Density_unclick-1.png */; };
 		762DB7721A36199800238625 /* pa_Crime_unclick-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 762DB7681A36199700238625 /* pa_Crime_unclick-1.png */; };
@@ -525,6 +526,7 @@
 		5EC035D91ABD373A00BF06BC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5EF12CAD1AA506EE002E807F /* AboutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutTableViewController.h; sourceTree = "<group>"; };
 		5EF12CAE1AA506EE002E807F /* AboutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutTableViewController.m; sourceTree = "<group>"; };
+		5EF8649C1AD74D4F004EE552 /* node.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = node.json; sourceTree = "<group>"; };
 		762DB7651A360E4100238625 /* dropdown_cropped-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dropdown_cropped-2.png"; sourceTree = "<group>"; };
 		762DB7671A36199700238625 /* pa_Business_Density_unclick-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_Business_Density_unclick-1.png"; sourceTree = "<group>"; };
 		762DB7681A36199700238625 /* pa_Crime_unclick-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_Crime_unclick-1.png"; sourceTree = "<group>"; };
@@ -1441,6 +1443,7 @@
 		CCCDFB5815EEAAC600B26133 = {
 			isa = PBXGroup;
 			children = (
+				5EF8649C1AD74D4F004EE552 /* node.json */,
 				5E290AEE1AA62845005B102F /* Align_120x120.png */,
 				4F32C46718FCAAB50081A3EC /* atl.geojson */,
 				4F3D61D718ED1178003CE02C /* Social.framework */,
@@ -1899,6 +1902,7 @@
 				768BB5AB1A0B297C00F388A5 /* Align_320x480.png in Resources */,
 				0D4553D816432356006D4A3B /* popup-car@2x.png in Resources */,
 				762DB7761A36199800238625 /* pa_LandVariation_unclick-1.png in Resources */,
+				5EF8649D1AD74D4F004EE552 /* node.json in Resources */,
 				0D4553D916432356006D4A3B /* popup-elevator.png in Resources */,
 				0D4553DA16432356006D4A3B /* popup-elevator@2x.png in Resources */,
 				0D4553DB16432356006D4A3B /* popup-ferry.png in Resources */,

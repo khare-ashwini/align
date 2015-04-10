@@ -250,9 +250,12 @@
                 if(destination == nil) {
                     destination = leg.to.name.capitalizedString;
                 }
+                
                 [_primaryInstructionStrings insertObject:[NSString stringWithFormat: @"Take the %@ %@ towards %@", leg.route.capitalizedString, ((NSString*)[_modeDisplayStrings objectForKey:leg.mode]).lowercaseString, destination] atIndex:i];
+                
                 AVSpeechUtterance *utterance = [AVSpeechUtterance
                                                 speechUtteranceWithString:[NSString stringWithFormat: @"Take the %@ %@ towards %@", leg.route.capitalizedString, ((NSString*)[_modeDisplayStrings objectForKey:leg.mode]).lowercaseString, destination]];
+                
                 utterance.rate = AVSpeechUtteranceMinimumSpeechRate;
                 AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc] init];
                 [synth speakUtterance:utterance];
@@ -649,7 +652,10 @@
 - (void) displayItinerary
 {
     [self.itineraryMapViewController.mapView removeAllAnnotations];
-    NSLog(@"display Itinerary called");
+    
+    
+    
+    //NSLog(@"display Itinerary called");
     int legCounter = 0;
     RMAnnotation* curbCutAnnotation;
     for (Leg* leg in self.itinerary.legs) {
@@ -697,6 +703,41 @@
 
         }
         
+        // Retrieve local JSON file called example.json
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"node" ofType:@"json"];
+        // Load the file into an NSData object called JSONData
+        NSError *error = nil;
+        NSData *JSONData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
+        
+        /*Test - Start parsing of JSON points*/
+        // Create an Objective-C object from JSON Data
+        id JSONObject = [NSJSONSerialization
+                         JSONObjectWithData:JSONData
+                         options:NSJSONReadingAllowFragments
+                         error:&error];
+        
+        NSArray *features = [JSONObject valueForKey:@"features"];
+        
+        
+        
+        for(NSDictionary *dic in features){
+            NSDictionary* attributes = [dic valueForKey:@"attributes"];
+            NSString *Lat = [attributes valueForKey:@"Lat"];
+            NSString *Long = [attributes valueForKey:@"Long"];
+            NSLog(@"Annotation %f %f", [Lat floatValue], [Long floatValue]);
+            curbCutAnnotation = [RMAnnotation
+                                 annotationWithMapView:self.itineraryMapViewController.mapView
+                                 coordinate:CLLocationCoordinate2DMake([Lat floatValue], [Long floatValue])
+                                 andTitle:@"Curb"];
+            RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"popup-transfer.png"]];
+            curbCutAnnotation.userInfo = [[NSMutableDictionary alloc] init];
+            [curbCutAnnotation.userInfo setObject:marker forKey:@"layer"];
+            [self.itineraryMapViewController.mapView addAnnotation:curbCutAnnotation];
+            /*End Adds Notation */
+        }
+        //NSString *test = [JSONObject valueForKey:@"displayFieldName"];
+        //NSLog(@"displayFieldName %@", test);
+        
         // map mode popup:
         modeAnnotation = [RMAnnotation
                                         annotationWithMapView:self.itineraryMapViewController.mapView
@@ -737,7 +778,7 @@
             [self.itineraryMapViewController.mapView addAnnotation:modeAnnotationAlt];
         }
 
-        NSLog(@"Leg Counter: %i", legCounter);
+       // NSLog(@"Leg Counter: %i", legCounter);
         
         
         int counter = 0;
