@@ -16,7 +16,7 @@
 
 @implementation AlignUsabilityViewController
 @synthesize vibrateButton;
-
+@synthesize backButton;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -28,8 +28,18 @@
 
 - (void)viewDidLoad
 {
+
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    //backButton.action = @selector(back:);
+    // backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:self action:@selector(back:)];    // Do any additional setup after loading the view.
+}
+
+- (void) back:(UIBarButtonItem *)sender {
+    NSLog(@"back action called");
+    // Perform your custom actions
+    // ...
+    // Go back to the previous ViewController
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning

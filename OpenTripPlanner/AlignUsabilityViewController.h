@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *vibrateButton;
 - (IBAction)vibrationSwitch:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *backButton;
 
 /*
 - (IBAction)dropdown:(id)sender;

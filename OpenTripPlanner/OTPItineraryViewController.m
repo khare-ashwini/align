@@ -77,7 +77,7 @@
     
     self.navigationController.delegate = self;
     _mapShowing = NO;
-    
+
     // WALK, BICYCLE, CAR, TRAM, SUBWAY, RAIL, BUS, FERRY, CABLE_CAR, GONDOLA, FUNICULAR, TRANSFER
     
     _distanceBasedModes = @[@"WALK", @"BICYCLE", @"CAR"];
@@ -293,7 +293,7 @@
     self.rearViewRevealWidth = 260;
     self.maxRearViewRevealOverdraw = 0;
     self.toggleAnimationDuration = 0.1;
-    
+    self.itineraryMapViewController.instructionLabel.hidden = FALSE;
     self.delegate = self;
     
     OTPDirectionPanGestureRecognizer *navigationBarPanGestureRecognizer = [[OTPDirectionPanGestureRecognizer alloc] initWithTarget:self action:@selector(revealGesture:)];
@@ -530,6 +530,7 @@
     // Overview cell selected
     if (indexPath.row == 0) {
         [TestFlight passCheckpoint:@"ITINERARY_DISPLAY_OVERVIEW"];
+        /*
         [UIView animateWithDuration:0.3 animations:^{
             self.itineraryMapViewController.instructionLabel.center = CGPointMake(self.itineraryMapViewController.instructionLabel.center.x, self.itineraryMapViewController.instructionLabel.center.y - self.itineraryMapViewController.instructionLabel.bounds.size.height);
             
@@ -537,6 +538,7 @@
         } completion:^(BOOL finished) {
             self.itineraryMapViewController.instructionLabel.hidden = YES;
         }];
+         */
         self.itineraryMapViewController.mapView.topPadding = 0;
         
         Leg *leg = [self.itinerary.legs lastObject];
@@ -562,15 +564,17 @@
     self.itineraryMapViewController.instructionLabel.text = instruction;
     [self.itineraryMapViewController.instructionLabel resizeHeightToFitText];
     if (self.itineraryMapViewController.instructionLabel.isHidden) {
-        self.itineraryMapViewController.instructionLabel.center = CGPointMake(self.itineraryMapViewController.instructionLabel.center.x, self.itineraryMapViewController.instructionLabel.center.y - self.itineraryMapViewController.instructionLabel.bounds.size.height);
+       // self.itineraryMapViewController.instructionLabel.center = CGPointMake(self.itineraryMapViewController.instructionLabel.center.x, self.itineraryMapViewController.instructionLabel.center.y - self.itineraryMapViewController.instructionLabel.bounds.size.height);
         self.itineraryMapViewController.instructionLabel.hidden = NO;
+        /*
         [UIView animateWithDuration:0.3 animations:^{
             self.itineraryMapViewController.instructionLabel.center = CGPointMake(self.itineraryMapViewController.instructionLabel.center.x, self.itineraryMapViewController.instructionLabel.bounds.size.height/2);
 
             self.itineraryMapViewController.goHomeBtn.center = CGPointMake(self.itineraryMapViewController.goHomeBtn.center.x, (self.itineraryMapViewController.instructionLabel.bounds.size.height + self.itineraryMapViewController.goHomeBtn.bounds.size.height/2) + 10);
         }];
+         */
     }
-    self.itineraryMapViewController.mapView.topPadding = self.itineraryMapViewController.instructionLabel.bounds.size.height;
+   // self.itineraryMapViewController.mapView.topPadding = self.itineraryMapViewController.instructionLabel.bounds.size.height;
     
     // Arrival cell (the last cell) selected
     if ((!_shouldDisplaySteps && indexPath.row == self.itinerary.legs.count + 1) ||
@@ -687,9 +691,10 @@
         
         _allSteps = [self.itinerary.legs valueForKeyPath:@"@unionOfArrays.steps"];
         
+        /*
         for(int i=1; i<_allSteps.count; i++){
             Step *step = [_allSteps objectAtIndex:i];
-            /*Change Adds notation 33.776475, -84.387259*/
+            /*Change Adds notation 33.776475, -84.387259
             NSLog(@"Annotation Called");
             curbCutAnnotation = [RMAnnotation
                                  annotationWithMapView:self.itineraryMapViewController.mapView
@@ -699,10 +704,11 @@
             curbCutAnnotation.userInfo = [[NSMutableDictionary alloc] init];
             [curbCutAnnotation.userInfo setObject:marker forKey:@"layer"];
             [self.itineraryMapViewController.mapView addAnnotation:curbCutAnnotation];
-            /*End Adds Notation */
+            /*End Adds Notation
 
         }
         
+        */
         // Retrieve local JSON file called example.json
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"node" ofType:@"json"];
         // Load the file into an NSData object called JSONData
@@ -718,21 +724,23 @@
         
         NSArray *features = [JSONObject valueForKey:@"features"];
         
-        
-        
         for(NSDictionary *dic in features){
             NSDictionary* attributes = [dic valueForKey:@"attributes"];
             NSString *Lat = [attributes valueForKey:@"Lat"];
             NSString *Long = [attributes valueForKey:@"Long"];
-            NSLog(@"Annotation %f %f", [Lat floatValue], [Long floatValue]);
-            curbCutAnnotation = [RMAnnotation
+            NSString *curbCutFlag = [attributes valueForKey:@"CURB_CUT"];
+            NSString *n = @"0";
+            NSLog(@"Curb Cut Flag : %@", curbCutFlag);
+            if([curbCutFlag integerValue] == 0){
+                curbCutAnnotation = [RMAnnotation
                                  annotationWithMapView:self.itineraryMapViewController.mapView
                                  coordinate:CLLocationCoordinate2DMake([Lat floatValue], [Long floatValue])
                                  andTitle:@"Curb"];
-            RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"popup-transfer.png"]];
-            curbCutAnnotation.userInfo = [[NSMutableDictionary alloc] init];
-            [curbCutAnnotation.userInfo setObject:marker forKey:@"layer"];
-            [self.itineraryMapViewController.mapView addAnnotation:curbCutAnnotation];
+                RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"popup-transfer.png"]];
+                curbCutAnnotation.userInfo = [[NSMutableDictionary alloc] init];
+                [curbCutAnnotation.userInfo setObject:marker forKey:@"layer"];
+                [self.itineraryMapViewController.mapView addAnnotation:curbCutAnnotation];
+            }
             /*End Adds Notation */
         }
         //NSString *test = [JSONObject valueForKey:@"displayFieldName"];

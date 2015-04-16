@@ -45,6 +45,12 @@ typedef enum {
 NSString *const planServicePath = @"/plan";
 NSString *const searchNearbyTextDefault = @"Type Location";
 NSString *const searchNearbyNoResultsPrefix = @"No places found for";
+
+CLLocationCoordinate2D start_stored;
+CLLocationCoordinate2D end_stored;
+
+BOOL stored_flag = FALSE;
+
 double minSearchRadius = 200.0;
 
 @interface OTPDirectionsInputViewController ()
@@ -116,7 +122,6 @@ NSMutableArray *poiAnnotationsOnMap;
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
     
     //Chandra
     
@@ -251,6 +256,15 @@ NSMutableArray *poiAnnotationsOnMap;
     
     //**ends**//
     
+    if(stored_flag){
+        NSLog(@"Coordiantes are store");
+        CLLocation* temp_start = [[CLLocation alloc] initWithLatitude:start_stored.latitude longitude:start_stored.longitude];
+       // OTP
+       // [self updateTextField:textField withText:@"Dropped Pin" andLocation:currentLongPressLocation];
+    }
+    
+    [super viewDidLoad];
+    
 }
 
 
@@ -276,7 +290,9 @@ NSMutableArray *poiAnnotationsOnMap;
     [TestFlight passCheckpoint:@"DIRECTIONS_GO"];
     [self initHUDWithLabel:@"Routing"];
 	[HUD show:YES];
-    
+    stored_flag = TRUE;
+    start_stored = self.fromTextField.location.coordinate;
+    end_stored = self.toTextField.location.coordinate;
     [self planTripFrom:self.fromTextField.location.coordinate to:self.toTextField.location.coordinate];
     [self.fromTextField resignFirstResponder];
     [self.toTextField resignFirstResponder];
@@ -414,6 +430,7 @@ NSMutableArray *poiAnnotationsOnMap;
     //NSString *fromString = [NSString stringWithFormat:@"%f,%f", startPoint.latitude, startPoint.longitude];
     //Chandra adding the default location as the user's current location if start location not specified
     NSString *fromString = @"";
+    
     if(startPoint.longitude == 0){
         fromString = [NSString stringWithFormat:@"%f,%f", self.userLocation.location.coordinate.latitude, self.userLocation.location.coordinate.longitude];
     }else{
