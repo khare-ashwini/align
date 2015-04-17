@@ -360,7 +360,7 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
 
 - (IBAction)traffic:(id)sender {
     
-    UIAlertView *trafficPopup = [[UIAlertView alloc] initWithTitle:@"Traffic!" message:@"" delegate:self cancelButtonTitle:@"No Preference" otherButtonTitles:@"Introduction",@"Set as essential", @"Set as secondary", nil];
+    UIAlertView *trafficPopup = [[UIAlertView alloc] initWithTitle:@"Traffic" message:@"" delegate:self cancelButtonTitle:@"No Preference" otherButtonTitles:@"Information",@"Set as essential", @"Set as secondary", nil];
     
     trafficPopup.tag = 1;
     
@@ -370,7 +370,7 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
 
 - (IBAction)greenery:(id)sender {
     
-    UIAlertView *greeneryPopup = [[UIAlertView alloc] initWithTitle:@"Greenery!" message:@"" delegate:self cancelButtonTitle:@"No Preference" otherButtonTitles:@"Introduction",@"Set as essential", @"Set as secondary", nil];
+    UIAlertView *greeneryPopup = [[UIAlertView alloc] initWithTitle:@"Greenery" message:@"" delegate:self cancelButtonTitle:@"No Preference" otherButtonTitles:@"Information",@"Set as essential", @"Set as secondary", nil];
     
     greeneryPopup.tag = 2;
     [greeneryPopup show];
@@ -379,7 +379,7 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
 
 - (IBAction)crime:(id)sender {
     
-    UIAlertView *crimePopup = [[UIAlertView alloc] initWithTitle:@"Crime!" message:@"" delegate:self cancelButtonTitle:@"No Preference" otherButtonTitles:@"Introduction",@"Set as essential", @"Set as secondary", nil];
+    UIAlertView *crimePopup = [[UIAlertView alloc] initWithTitle:@"Crime" message:@"" delegate:self cancelButtonTitle:@"No Preference" otherButtonTitles:@"Information",@"Set as essential", @"Set as secondary", nil];
     
     crimePopup.tag = 3;
     [crimePopup show];
@@ -388,7 +388,7 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
 
 - (IBAction)sidewalk:(id)sender {
     
-    UIAlertView *sidewalkPopup = [[UIAlertView alloc] initWithTitle:@"Sidewalk!" message:@"" delegate:self cancelButtonTitle:@"No Preference" otherButtonTitles:@"Introduction",@"Set as essential", @"Set as secondary", nil];
+    UIAlertView *sidewalkPopup = [[UIAlertView alloc] initWithTitle:@"Sidewalk" message:@"" delegate:self cancelButtonTitle:@"No Preference" otherButtonTitles:@"Information",@"Set as essential", @"Set as secondary", nil];
     
     sidewalkPopup.tag = 4;
     [sidewalkPopup show];
@@ -396,7 +396,7 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
 
 - (IBAction)Slope:(id)sender {
     
-    UIAlertView *slopePopup = [[UIAlertView alloc] initWithTitle:@"Slope!" message:@"" delegate:self cancelButtonTitle:@"No Preference" otherButtonTitles:@"Introduction",@"Set as essential", @"Set as secondary", nil];
+    UIAlertView *slopePopup = [[UIAlertView alloc] initWithTitle:@"Slope" message:@"" delegate:self cancelButtonTitle:@"No Preference" otherButtonTitles:@"Information",@"Set as essential", @"Set as secondary", nil];
     
     slopePopup.tag = 5;
     [slopePopup show];
@@ -405,7 +405,7 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
 
 - (IBAction)residentialDensity:(id)sender {
     
-    UIAlertView *residentialPopup = [[UIAlertView alloc] initWithTitle:@"Residential Density!" message:@"" delegate:self cancelButtonTitle:@"No Preference" otherButtonTitles:@"Introduction",@"Set as essential", @"Set as secondary", nil];
+    UIAlertView *residentialPopup = [[UIAlertView alloc] initWithTitle:@"Residential Density" message:@"" delegate:self cancelButtonTitle:@"No Preference" otherButtonTitles:@"Information",@"Set as essential", @"Set as secondary", nil];
     
     residentialPopup.tag = 6;
     [residentialPopup show];
@@ -414,7 +414,7 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
 
 - (IBAction)businessDensity:(id)sender {
     
-    UIAlertView *businessPopup = [[UIAlertView alloc] initWithTitle:@"Business Density!" message:@"" delegate:self cancelButtonTitle:@"No Preference" otherButtonTitles:@"Introduction",@"Set as essential", @"Set as secondary", nil];
+    UIAlertView *businessPopup = [[UIAlertView alloc] initWithTitle:@"Business Density" message:@"" delegate:self cancelButtonTitle:@"No Preference" otherButtonTitles:@"Information",@"Set as essential", @"Set as secondary", nil];
     
     businessPopup.tag =7;
     [businessPopup show];
@@ -455,7 +455,7 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
     
     if (alertView.tag == 1){
         if (buttonIndex == 1){
-            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"TRAFFIC!" message:@"This parameter indicates the real-time traffic on roads" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"TRAFFIC" message:@"This parameter indicates the real-time traffic on roads" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
             [alertView2 show];
             
         } else if (buttonIndex == 2){
@@ -486,7 +486,7 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
     } else if (alertView.tag == 2){
         if (buttonIndex == 1){
             
-            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"GREENERY!" message:@"This parameter indicates the greenery on the way." delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"GREENERY" message:@"This parameter indicates the greenery on the way." delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
             [alertView2 show];
         
             
@@ -517,7 +517,7 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
     }else if (alertView.tag == 3){
         if (buttonIndex == 1){
             
-            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"CRIME!" message:@"This parameter indicates the level of crime on the routes." delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"CRIME" message:@"This parameter indicates the level of crime on the routes." delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
             [alertView2 show];
             
             
@@ -550,7 +550,7 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
         if (buttonIndex == 1){
             
             
-            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"SIDEWALK!" message:@"This parameter indicates the importance to sidewalks." delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"SIDEWALK" message:@"This parameter indicates the importance to sidewalks." delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
             [alertView2 show];
                 
             
@@ -583,7 +583,7 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
         
         if (buttonIndex == 1){
             
-            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"SLOPE!" message:@"This parameter indicates the slope of the road. Can be useful for people on wheelchair." delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"SLOPE" message:@"This parameter indicates the slope of the road. Can be useful for people on wheelchair." delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
             [alertView2 show];
             
             
@@ -616,7 +616,7 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
         
         if (buttonIndex == 1){
             
-            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"RESIDENTIAL DENSITY!" message:@"This parameter indicates the residential density of the routes." delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"RESIDENTIAL DENSITY" message:@"This parameter indicates the residential density of the routes." delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
             [alertView2 show];
             
             
@@ -650,7 +650,7 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
         
         if (buttonIndex == 1){
             
-                UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"BUSINESS DENSITY!" message:@"This parameter indicates the business density of the routes" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+                UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"BUSINESS DENSITY" message:@"This parameter indicates the business density of the routes" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
                 [alertView2 show];
             
             
@@ -685,7 +685,7 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
         if (buttonIndex == 1){
             
             
-                UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"ACCESSIBILITY!" message:@"This parameter indicates the level of accessibility on the roads." delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+                UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"ACCESSIBILITY" message:@"This parameter indicates the level of accessibility on the roads." delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
                 [alertView2 show];
             
         
@@ -718,7 +718,7 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
         
         if (buttonIndex == 1){
             
-                UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"INTERSECTIONS!" message:@"This parameter indicates the importance to intersections" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+                UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"INTERSECTIONS" message:@"This parameter indicates the importance to intersections" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
                 [alertView2 show];
             
             
@@ -751,7 +751,7 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
         
         if (buttonIndex == 1){
             
-                UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"LAND VARIATIONS!" message:@"This parameter indicates the light environment along your walk. It may influence your walk in night" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+                UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"LAND VARIATIONS" message:@"This parameter indicates the light environment along your walk. It may influence your walk in night" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
                 [alertView2 show];
             
             
