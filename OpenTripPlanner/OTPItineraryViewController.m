@@ -729,7 +729,7 @@
             NSString *Lat = [attributes valueForKey:@"Lat"];
             NSString *Long = [attributes valueForKey:@"Long"];
             NSString *curbCutFlag = [attributes valueForKey:@"CURB_CUT"];
-            NSString *n = @"0";
+         //   NSString *n = @"0";
             NSLog(@"Curb Cut Flag : %@", curbCutFlag);
             if([curbCutFlag integerValue] == 0){
                 curbCutAnnotation = [RMAnnotation
@@ -741,6 +741,18 @@
                 [curbCutAnnotation.userInfo setObject:marker forKey:@"layer"];
                 [self.itineraryMapViewController.mapView addAnnotation:curbCutAnnotation];
             }
+            NSString *walkSignalFlag = [attributes valueForKey:@"WALK_SIG"];
+            if([walkSignalFlag integerValue] == 0){
+                curbCutAnnotation = [RMAnnotation
+                                     annotationWithMapView:self.itineraryMapViewController.mapView
+                                     coordinate:CLLocationCoordinate2DMake([Lat floatValue], [Long floatValue])
+                                     andTitle:@"Curb"];
+                RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"popup_parameter_2.png"]];
+                curbCutAnnotation.userInfo = [[NSMutableDictionary alloc] init];
+                [curbCutAnnotation.userInfo setObject:marker forKey:@"layer"];
+                [self.itineraryMapViewController.mapView addAnnotation:curbCutAnnotation];
+            }
+
             /*End Adds Notation */
         }
         //NSString *test = [JSONObject valueForKey:@"displayFieldName"];
