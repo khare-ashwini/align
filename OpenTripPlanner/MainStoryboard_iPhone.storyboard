@@ -1052,7 +1052,7 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="trafficButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tqd-Us-ztf">
-                                        <rect key="frame" x="57" y="60" width="206" height="40"/>
+                                        <rect key="frame" x="56" y="36" width="206" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                         <state key="normal" image="pa_traffic_unclick-1.png"/>
                                         <connections>
@@ -1060,7 +1060,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="greeneryButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2Q-BA-o0d">
-                                        <rect key="frame" x="45" y="102" width="231" height="40"/>
+                                        <rect key="frame" x="44" y="78" width="231" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                         <state key="normal" image="pa_Greenery_unclick-1.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1071,7 +1071,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="crimeButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5TB-BX-YiH">
-                                        <rect key="frame" x="82" y="144" width="157" height="40"/>
+                                        <rect key="frame" x="81" y="120" width="157" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                         <state key="normal" image="pa_Crime_unclick-1.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1082,7 +1082,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="sidewalkButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3O-dk-KlW">
-                                        <rect key="frame" x="45" y="186" width="230" height="40"/>
+                                        <rect key="frame" x="44" y="162" width="230" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                         <state key="normal" image="pa_Sidewalk_unclick-1.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1092,7 +1092,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="slopeButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jp-Uh-gV2">
-                                        <rect key="frame" x="58" y="228" width="204" height="40"/>
+                                        <rect key="frame" x="58" y="200" width="204" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                         <state key="normal" image="pa_Slope_unclick-1.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1103,9 +1103,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="residentialButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvJ-BR-8qb">
-                                        <rect key="frame" x="5" y="270" width="311" height="40"/>
+                                        <rect key="frame" x="4" y="240" width="311" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                        <state key="normal" image="pa_LandVariation_click_S-1.png">
+                                        <state key="normal" image="pa_Residential_Density_unclick-1.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -1114,7 +1114,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="businessButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kov-uX-7v1">
-                                        <rect key="frame" x="12" y="312" width="296" height="40"/>
+                                        <rect key="frame" x="12" y="279" width="296" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                         <state key="normal" image="pa_Business_Density_unclick-1.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1125,7 +1125,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="accessibilityButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCa-gb-0QY">
-                                        <rect key="frame" x="87" y="354" width="146" height="40"/>
+                                        <rect key="frame" x="86" y="309" width="146" height="40"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <state key="normal" title="Acccessibility">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1136,7 +1136,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="intersectionsButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhI-rW-Hyh">
-                                        <rect key="frame" x="30" y="396" width="261" height="40"/>
+                                        <rect key="frame" x="29" y="337" width="261" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                         <state key="normal" image="pa_Intersections_unclick-1.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1146,10 +1146,51 @@
                                             <action selector="intersections:" destination="49j-Ml-5AT" eventType="touchUpInside" id="teB-6p-rI7"/>
                                         </connections>
                                     </button>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jxs-HY-YGg">
+                                        <rect key="frame" x="-5" y="416" width="320" height="44"/>
+                                        <color key="backgroundColor" red="0.36470588235294116" green="0.78823529411764703" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                        <items>
+                                            <barButtonItem width="6" style="plain" systemItem="fixedSpace" id="HZI-zX-yFR">
+                                                <color key="tintColor" red="0.36470588235294116" green="0.78823529411764703" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" id="UDc-ey-SvG">
+                                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BoK-wq-EGm">
+                                                    <rect key="frame" x="22" y="6" width="270" height="33"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.36470588235294116" green="0.78823529411764703" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <state key="normal" title="Done">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="done:" destination="49j-Ml-5AT" eventType="touchUpInside" id="g97-T2-z3v"/>
+                                                    </connections>
+                                                </button>
+                                                <color key="tintColor" red="0.36470588235294116" green="0.78823529411764703" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                            </barButtonItem>
+                                            <barButtonItem width="39" style="plain" systemItem="fixedSpace" id="l6A-bC-3uo">
+                                                <color key="tintColor" red="0.36470588235294116" green="0.78823529411764703" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                            </barButtonItem>
+                                        </items>
+                                        <color key="barTintColor" red="0.36470588235294116" green="0.78823529411764703" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                    </toolbar>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="k3x-bL-Xuv">
+                                        <rect key="frame" x="20" y="0.0" width="282" height="29"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <segments>
+                                            <segment title="All Parameters"/>
+                                            <segment title="My Parameters"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.29351700889999999" green="0.50085832129999996" blue="0.66559709820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="parameterSegment:" destination="49j-Ml-5AT" eventType="valueChanged" id="YIg-cD-E4M"/>
+                                        </connections>
+                                    </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="landvariationsButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLH-XF-Ghf">
-                                        <rect key="frame" x="20" y="438" width="281" height="40"/>
+                                        <rect key="frame" x="19" y="376" width="281" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="1"/>
-                                        <state key="normal" image="pa_Intersections_unclick-1.png">
+                                        <state key="normal" image="pa_LandVariation_unclick-1.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -1160,52 +1201,8 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.3718354311091423" green="0.80903121452711302" blue="0.908203125" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="k3x-bL-Xuv">
-                                <rect key="frame" x="19" y="36" width="282" height="29"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <segments>
-                                    <segment title="All Parameters"/>
-                                    <segment title="My Parameters"/>
-                                </segments>
-                                <color key="tintColor" red="0.29351700889999999" green="0.50085832129999996" blue="0.66559709820000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="parameterSegment:" destination="49j-Ml-5AT" eventType="valueChanged" id="YIg-cD-E4M"/>
-                                </connections>
-                            </segmentedControl>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jxs-HY-YGg">
-                                <rect key="frame" x="0.0" y="438" width="320" height="44"/>
-                                <color key="backgroundColor" red="0.36470588235294116" green="0.78823529411764703" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
-                                <items>
-                                    <barButtonItem width="6" style="plain" systemItem="fixedSpace" id="HZI-zX-yFR">
-                                        <color key="tintColor" red="0.36470588235294116" green="0.78823529411764703" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" id="UDc-ey-SvG">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BoK-wq-EGm">
-                                            <rect key="frame" x="22" y="6" width="270" height="33"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.36470588235294116" green="0.78823529411764703" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                            <state key="normal" title="Done">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="done:" destination="49j-Ml-5AT" eventType="touchUpInside" id="g97-T2-z3v"/>
-                                            </connections>
-                                        </button>
-                                        <color key="tintColor" red="0.36470588235294116" green="0.78823529411764703" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
-                                    </barButtonItem>
-                                    <barButtonItem width="39" style="plain" systemItem="fixedSpace" id="l6A-bC-3uo">
-                                        <color key="tintColor" red="0.36470588235294116" green="0.78823529411764703" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
-                                    </barButtonItem>
-                                </items>
-                                <color key="barTintColor" red="0.36470588235294116" green="0.78823529411764703" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="0.37254901960784315" green="0.80784313725490198" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="Jxs-HY-YGg" secondAttribute="bottom" id="BRN-5X-AVg"/>
-                        </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="480"/>
@@ -1749,13 +1746,6 @@
                                             <segue destination="peN-Jn-A0e" kind="modal" id="2Cy-ZR-6I5"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="90F-HI-C8u"/>
-                                    <barButtonItem title="Next" width="55" id="B7Z-6Y-QEW">
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <segue destination="49j-Ml-5AT" kind="modal" id="I4T-NW-vbU"/>
-                                        </connections>
-                                    </barButtonItem>
                                 </items>
                                 <color key="barTintColor" red="0.23921568627450979" green="0.68627450980392157" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
@@ -2217,7 +2207,8 @@
         <image name="pa_Crime_unclick-1.png" width="572" height="142"/>
         <image name="pa_Greenery_unclick-1.png" width="157" height="40"/>
         <image name="pa_Intersections_unclick-1.png" width="157" height="40"/>
-        <image name="pa_LandVariation_click_S-1.png" width="157" height="40"/>
+        <image name="pa_LandVariation_unclick-1.png" width="157" height="42"/>
+        <image name="pa_Residential_Density_unclick-1.png" width="157" height="40"/>
         <image name="pa_Sidewalk_unclick-1.png" width="157" height="40"/>
         <image name="pa_Slope_unclick-1.png" width="157" height="40"/>
         <image name="pa_traffic_unclick-1.png" width="157" height="40"/>
@@ -2228,9 +2219,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="0Mc-MM-mch"/>
+        <segue reference="2Cy-ZR-6I5"/>
         <segue reference="rCH-Ep-34k"/>
-        <segue reference="o4K-HA-Rwa"/>
         <segue reference="fkt-Eh-CPt"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -71,6 +71,10 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
 
 - (void)viewDidLoad
 {
+    
+    //UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    //[self.view addSubview:scrollView];
+    //[scrollView setContentSize:CGSizeMake(scrollView.bounds.size.width, scrollView.bounds.size.height*2)];
     [super viewDidLoad];
     
     WalkableParameter *wp = [WalkableParameter params];
