@@ -91,7 +91,7 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
     
     
     if (info_count < 1){
-        UIAlertView *intro = [[UIAlertView alloc] initWithTitle:@"Information!" message:@"You can set upto 5 essential parameters" delegate:self cancelButtonTitle:@"Ok, Got it." otherButtonTitles: nil];
+        UIAlertView *intro = [[UIAlertView alloc] initWithTitle:@"Information" message:@"You can set upto 5 essential parameters" delegate:self cancelButtonTitle:@"Ok, Got it." otherButtonTitles: nil];
         
         intro.tag = 1;
         

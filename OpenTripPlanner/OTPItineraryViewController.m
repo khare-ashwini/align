@@ -758,7 +758,7 @@
                                      annotationWithMapView:self.itineraryMapViewController.mapView
                                      coordinate:CLLocationCoordinate2DMake([Lat floatValue], [Long floatValue])
                                      andTitle:@"Curb"];
-                    RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"popup-transfer.png"]];
+                    RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"troublespot_32.png"]];
                     curbCutAnnotation.userInfo = [[NSMutableDictionary alloc] init];
                     [curbCutAnnotation.userInfo setObject:marker forKey:@"layer"];
                     [self.itineraryMapViewController.mapView addAnnotation:curbCutAnnotation];
@@ -770,7 +770,7 @@
                                          annotationWithMapView:self.itineraryMapViewController.mapView
                                          coordinate:CLLocationCoordinate2DMake([Lat floatValue], [Long floatValue])
                                          andTitle:@"Curb"];
-                    RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"popup_parameter_2.png"]];
+                    RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"troublespot_32.png"]];
                     curbCutAnnotation.userInfo = [[NSMutableDictionary alloc] init];
                     [curbCutAnnotation.userInfo setObject:marker forKey:@"layer"];
                     [self.itineraryMapViewController.mapView addAnnotation:curbCutAnnotation];
