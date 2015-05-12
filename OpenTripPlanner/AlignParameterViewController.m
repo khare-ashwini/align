@@ -29,7 +29,7 @@
 @implementation AlignParameterViewController
 @synthesize allParameterView, myParameterView;
 @synthesize segmentedControl;
-@synthesize trafficButton, greeneryButton, slopeButton, crimeButton, accessibilityButton, residentialButton, sidewalkButton, intersectionsButton, landvariationsButton;
+@synthesize trafficButton, greeneryButton, slopeButton, crimeButton, accessibilityButton, residentialButton, sidewalkButton, intersectionsButton, landvariationsButton, bottomBar;
 
 NSInteger traffic = 0;
 NSInteger greenery = 0;
@@ -101,7 +101,8 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
         
     }
     
-    //UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 450)];
+    
+   // UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 450)];
     
     //[self.view addSubview:scrollView];
     // Do any additional setup after loading the view.

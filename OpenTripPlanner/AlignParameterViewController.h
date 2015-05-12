@@ -29,7 +29,7 @@
 - (IBAction)landVariables:(id)sender;
 
 - (IBAction)done:(id)sender;
-
+@property (weak, nonatomic) IBOutlet UIToolbar *bottomBar;
 @property (weak, nonatomic) IBOutlet UIButton *trafficButton;
 @property (weak, nonatomic) IBOutlet UIButton *greeneryButton;
 @property (weak, nonatomic) IBOutlet UIButton *crimeButton;
