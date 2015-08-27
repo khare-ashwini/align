@@ -652,6 +652,36 @@
     [self.itineraryTableViewController.tableView deselectRowAtIndexPath:[self.itineraryTableViewController.tableView indexPathForSelectedRow] animated:YES];
 }
 
+- (BOOL) compareCoordinate : (CLLocationCoordinate2D)p1
+             withCoordinate: (CLLocationCoordinate2D)p2
+{
+   
+    int epsilon = 1000;
+    
+    float p1_lat = p1.latitude;
+    float p1_lng = p1.longitude;
+    float p2_lat = p2.latitude;
+    float p2_lng = p2.longitude;
+    
+    p1_lat *= epsilon;
+    p2_lat *= epsilon;
+    p1_lng *= epsilon;
+    p2_lng *= epsilon;
+    
+    p1_lat = (int) p1_lat;
+    p1_lng = (int) p1_lng;
+    p2_lng = (int) p2_lng;
+    p2_lat = (int) p2_lat;
+    
+    if(p1_lat == p2_lat && p1_lng == p2_lng){
+        NSLog(@"Match Found!");
+        return YES;
+    }
+    
+    return NO;
+    
+}
+
 //@ Todo : look at the critical bug of routing in chore trips
 - (void) displayItinerary
 {
@@ -688,29 +718,13 @@
         }
         
         _allSteps = [self.itinerary.legs valueForKeyPath:@"@unionOfArrays.steps"];
-        
-        /*
-        for(int i=1; i<_allSteps.count; i++){
-            Step *step = [_allSteps objectAtIndex:i];
-            /*Change Adds notation 33.776475, -84.387259
-            NSLog(@"Annotation Called");
-            curbCutAnnotation = [RMAnnotation
-                                 annotationWithMapView:self.itineraryMapViewController.mapView
-                                 coordinate:CLLocationCoordinate2DMake(step.lat.floatValue, step.lon.floatValue)
-                                 andTitle:@"Curb"];
-            RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"popup-funicular.png"]];
-            curbCutAnnotation.userInfo = [[NSMutableDictionary alloc] init];
-            [curbCutAnnotation.userInfo setObject:marker forKey:@"layer"];
-            [self.itineraryMapViewController.mapView addAnnotation:curbCutAnnotation];
-            /*End Adds Notation
 
-        }
         
-        */
         // Retrieve local JSON file called example.json
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"node" ofType:@"json"];
         // Load the file into an NSData object called JSONData
         NSError *error = nil;
+        
         NSData *JSONData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
         
         /*Test - Start parsing of JSON points*/
@@ -722,59 +736,72 @@
         
         NSArray *features = [JSONObject valueForKey:@"features"];
         
-        /* Get sw and last */
-        
-        Leg* start = [self.itinerary.legs objectAtIndex:0];
-        
-        float epsilon = 0.002;
-        float max_lat = start.to.lat.floatValue + epsilon;
-        float min_lat = start.to.lat.floatValue - epsilon;
-        float max_lon = start.to.lon.floatValue + epsilon;
-        float min_lon = start.to.lon.floatValue - epsilon;
-        
-        CLLocationCoordinate2D sw = CLLocationCoordinate2DMake(start.to.lat.floatValue - 0.001, start.to.lon.floatValue - 0.001);
-        CLLocationCoordinate2D ne = CLLocationCoordinate2DMake(start.to.lat.floatValue + 0.001, start.to.lon.floatValue + 0.001);
         
         /* Adds Curb Cut Flag & Walk Signal */
         
         for(NSDictionary *dic in features){
+            
             NSDictionary* attributes = [dic valueForKey:@"attributes"];
             NSString *Lat = [attributes valueForKey:@"Lat"];
             NSString *Long = [attributes valueForKey:@"Long"];
             NSString *curbCutFlag = [attributes valueForKey:@"CURB_CUT"];
-         //   NSString *n = @"0";
-            NSLog(@"Curb Cut Flag : %@", curbCutFlag);
+    
             
             float cur_lat = [Lat floatValue];
             float cur_lon = [Long floatValue];
             
-            if( cur_lat >= min_lat &&
-                cur_lat <= max_lat &&
-                cur_lon >= min_lon &&
-                cur_lon <= max_lon
-                ){
-                if([curbCutFlag integerValue] == 0){
-                    curbCutAnnotation = [RMAnnotation
+            for(int i=0; i<_allSteps.count; i++){
+                Step *step = [_allSteps objectAtIndex:i];
+            
+                NSLog(@"Annotation Called");
+                /*
+                curbCutAnnotation = [RMAnnotation
                                      annotationWithMapView:self.itineraryMapViewController.mapView
-                                     coordinate:CLLocationCoordinate2DMake([Lat floatValue], [Long floatValue])
+                                     coordinate:CLLocationCoordinate2DMake(step.lat.floatValue, step.lon.floatValue)
                                      andTitle:@"Curb"];
-                    RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"troublespot_32.png"]];
-                    curbCutAnnotation.userInfo = [[NSMutableDictionary alloc] init];
-                    [curbCutAnnotation.userInfo setObject:marker forKey:@"layer"];
-                    [self.itineraryMapViewController.mapView addAnnotation:curbCutAnnotation];
+                RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"popup-funicular.png"]];
+                curbCutAnnotation.userInfo = [[NSMutableDictionary alloc] init];
+                [curbCutAnnotation.userInfo setObject:marker forKey:@"layer"];
+                [self.itineraryMapViewController.mapView addAnnotation:curbCutAnnotation];
+                 */
+                /*End Adds Notation*/
+                
+                float epsilon = 1;
+                
+                float max_lat = step.lat.floatValue + epsilon;
+                float min_lat = step.lat.floatValue - epsilon;
+                float max_lon = step.lon.floatValue + epsilon;
+                float min_lon = step.lon.floatValue - epsilon;
+                
+                CLLocationCoordinate2D intersection_tagged = CLLocationCoordinate2DMake(cur_lat, cur_lon);
+                CLLocationCoordinate2D intersection_mapped = CLLocationCoordinate2DMake(step.lat.floatValue, step.lon.floatValue);
+                
+                if([self compareCoordinate:intersection_mapped withCoordinate:intersection_tagged]){
+                    
+                    if([curbCutFlag integerValue] == 0){
+                        curbCutAnnotation = [RMAnnotation
+                                             annotationWithMapView:self.itineraryMapViewController.mapView
+                                             coordinate:CLLocationCoordinate2DMake([Lat floatValue], [Long floatValue])
+                                             andTitle:@"Curb"];
+                        RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"troublespot_32.png"]];
+                        curbCutAnnotation.userInfo = [[NSMutableDictionary alloc] init];
+                        [curbCutAnnotation.userInfo setObject:marker forKey:@"layer"];
+                        [self.itineraryMapViewController.mapView addAnnotation:curbCutAnnotation];
+                    }
+                    
+                    NSString *walkSignalFlag = [attributes valueForKey:@"WALK_SIG"];
+                    if([walkSignalFlag integerValue] == 0){
+                        curbCutAnnotation = [RMAnnotation
+                                             annotationWithMapView:self.itineraryMapViewController.mapView
+                                             coordinate:CLLocationCoordinate2DMake([Lat floatValue], [Long floatValue])
+                                             andTitle:@"Curb"];
+                        RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"troublespot_32.png"]];
+                        curbCutAnnotation.userInfo = [[NSMutableDictionary alloc] init];
+                        [curbCutAnnotation.userInfo setObject:marker forKey:@"layer"];
+                        [self.itineraryMapViewController.mapView addAnnotation:curbCutAnnotation];
+                    }
                 }
                 
-                NSString *walkSignalFlag = [attributes valueForKey:@"WALK_SIG"];
-                if([walkSignalFlag integerValue] == 0){
-                    curbCutAnnotation = [RMAnnotation
-                                         annotationWithMapView:self.itineraryMapViewController.mapView
-                                         coordinate:CLLocationCoordinate2DMake([Lat floatValue], [Long floatValue])
-                                         andTitle:@"Curb"];
-                    RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"troublespot_32.png"]];
-                    curbCutAnnotation.userInfo = [[NSMutableDictionary alloc] init];
-                    [curbCutAnnotation.userInfo setObject:marker forKey:@"layer"];
-                    [self.itineraryMapViewController.mapView addAnnotation:curbCutAnnotation];
-                }
             }
 
             /*End Adds Notation */
