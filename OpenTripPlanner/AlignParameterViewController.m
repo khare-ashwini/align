@@ -27,10 +27,17 @@
 @end
 
 @implementation AlignParameterViewController
+
 @synthesize allParameterView, myParameterView;
 @synthesize segmentedControl;
-@synthesize trafficButton, greeneryButton, slopeButton, crimeButton, accessibilityButton, residentialButton, sidewalkButton, intersectionsButton, landvariationsButton, bottomBar;
 
+// Synthesize buttons
+@synthesize trafficButton, greeneryButton, slopeButton,
+            crimeButton, accessibilityButton, residentialButton,
+            sidewalkButton, intersectionsButton, landvariationsButton,
+            bottomBar;
+
+// @review - Instance variables?
 NSInteger traffic = 0;
 NSInteger greenery = 0;
 NSInteger crime = 0;
@@ -48,13 +55,49 @@ NSInteger count_essential = 1;
 
 NSInteger parameter_array[10] = {0,0,0,0,0,0,0,0,0,0};
 
-NSString  *parameter_names[10]={@"Traffic",@"Greenery",@"Crime",@"Sidewalk",@"Slope", @"Residential", @"Business",@"Accessibility", @"Intersections",@"Landvariations"};
+NSString  *parameter_names[10]={ @"Traffic",
+                                 @"Greenery",
+                                 @"Crime",
+                                 @"Sidewalk",
+                                 @"Slope",
+                                 @"Residential",
+                                 @"Business",
+                                 @"Accessibility",
+                                 @"Intersections",
+                                 @"Landvariations"};
 
-NSString  *parameter_images[10]={@"pa_traffic_unclick-1.png",@"pa_Greenery_unclick-1.png",@"pa_Crime_unclick-1.png",@"pa_Sidewalk_unclick-1.png",@"pa_Slope_unclick-1.png", @"pa_Residential_Density_unclick-1.png", @"pa_Business_Density_unclick-1.png",@"pa_Business_Density_unclick-1.png", @"pa_Intersections_unclick-1.png",@"pa_LandVariation_unclick-1.png"};
+NSString *parameter_images[10]={@"pa_traffic_unclick-1.png",
+                                @"pa_Greenery_unclick-1.png",
+                                @"pa_Crime_unclick-1.png",
+                                @"pa_Sidewalk_unclick-1.png",
+                                @"pa_Slope_unclick-1.png",
+                                @"pa_Residential_Density_unclick-1.png",
+                                @"pa_Business_Density_unclick-1.png",
+                                @"pa_Business_Density_unclick-1.png",
+                                @"pa_Intersections_unclick-1.png",
+                                @"pa_LandVariation_unclick-1.png"};
 
-NSString  *parameter_primary_images[10]={@"pa_traffic_click_E-1.png",@"pa_Greenery_click_E-1.png",@"pa_Crime_click_E-1.png",@"pa_Sidewalk_click_E-1.png",@"pa_Slope_click_E-1.png", @"pa_Residential_Density_click_E-1.png", @"pa_Business_Density_click_E-1.png",@"pa_Business_Density_click_E-1.png", @"pa_Intersections_E-1.png",@"pa_LandVariation_click_E-1.png"};
+NSString  *parameter_primary_images[10]={@"pa_traffic_click_E-1.png",
+                                         @"pa_Greenery_click_E-1.png",
+                                         @"pa_Crime_click_E-1.png",
+                                         @"pa_Sidewalk_click_E-1.png",
+                                         @"pa_Slope_click_E-1.png",
+                                         @"pa_Residential_Density_click_E-1.png",
+                                         @"pa_Business_Density_click_E-1.png",
+                                         @"pa_Business_Density_click_E-1.png",
+                                         @"pa_Intersections_E-1.png",
+                                         @"pa_LandVariation_click_E-1.png"};
 
-NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Greenery_click_S-1.png",@"pa_Crime_click_S-1.png",@"pa_Sidewalk_click_S-1.png",@"pa_Slope_click_S-1.png", @"pa_Residential_Density_click_S-1.png", @"pa_Business_Density_click_S-1.png",@"pa_Business_Density_click_S-1.png", @"pa_Intersections_click_S-1.png",@"pa_LandVariation_click_S-1.png"};
+NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",
+                                           @"pa_Greenery_click_S-1.png",
+                                           @"pa_Crime_click_S-1.png",
+                                           @"pa_Sidewalk_click_S-1.png",
+                                           @"pa_Slope_click_S-1.png",
+                                           @"pa_Residential_Density_click_S-1.png",
+                                           @"pa_Business_Density_click_S-1.png",
+                                           @"pa_Business_Density_click_S-1.png",
+                                           @"pa_Intersections_click_S-1.png",
+                                           @"pa_LandVariation_click_S-1.png"};
 
 
 //parameter_buttons = [NSArray arrayWithObjects:UIbutton traffic_button,UIButton greenery_button,UIButton crime_button,nil];
@@ -91,14 +134,16 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
     
     
     if (info_count < 1){
-        UIAlertView *intro = [[UIAlertView alloc] initWithTitle:@"Information" message:@"You can set upto 5 essential parameters" delegate:self cancelButtonTitle:@"Ok, Got it." otherButtonTitles: nil];
+        UIAlertView *intro = [[UIAlertView alloc] initWithTitle:@"Information"
+                                                  message:@"You can set upto 5 essential parameters"
+                                                  delegate:self
+                                                  cancelButtonTitle:@"Ok, Got it."
+                                                  otherButtonTitles: nil];
         
         intro.tag = 1;
-        
         [intro show];
-        
+    // Review - Set Flag Instead?
         info_count = info_count + 1;
-        
     }
     
     
@@ -208,7 +253,7 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
             
             
              for (int i = 0 ; i < count; i++){
-             [(UIButton*)[self.myParameterView viewWithTag:i]  removeFromSuperview];
+                 [(UIButton*)[self.myParameterView viewWithTag:i]  removeFromSuperview];
              }
              count = 0;
             
@@ -262,13 +307,13 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
                     //[self.myParameterView addSubview:button];
                     
                     button.tag = count;
-                    count = count +1;
+                    count += 1;
                     
                     [buttons_primary addObject:button];
                     
                     //y= y+35;
                     
-                }else if (parameter_array[i] == 1){
+                } else if (parameter_array[i] == 1){
                     
                     //NSString *title = parameter_names[i];
                     NSString *image_name = parameter_secondary_images[i];
@@ -279,13 +324,14 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
                     [button setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
                     
                     button.tag = count;
-                    count = count +1;
+                    count += 1;
                     
                     [buttons_secondary addObject:button];
                 }
             }
             
             if (essential_state == 1){
+                
                 NSLog(@"Primary label., %i", y);
                 UILabel *essential_label = [[UILabel alloc] initWithFrame:CGRectMake(70,y, 200,40)];
                 //[[essential_label layer] set];
@@ -299,7 +345,8 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
                 
                 [self.myParameterView addSubview:essential_label];
                 
-                y = y+ 35;
+                //Review look at constants
+                y += 35;
             }
             
             for (UIButton *button in buttons_primary){
@@ -315,7 +362,7 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
                 
                 [self.myParameterView addSubview:button];
                 
-                y = y+42;
+                y += 42;
             }
             
             if (secondary_state == 1){
@@ -333,9 +380,7 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
                 
                 [self.myParameterView addSubview:secondary_label];
                 
-                
-                
-                y = y + 35;
+                y += 35;
             }
             
             for (UIButton *button in buttons_secondary){
@@ -352,7 +397,7 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
                 
                 [self.myParameterView addSubview:button];
                 
-                y = y+42;
+                y += 42;
             }
             
             break;
@@ -363,19 +408,27 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
     
 }
 
+// Review - Add Template Method
+
 - (IBAction)traffic:(id)sender {
     
-    UIAlertView *trafficPopup = [[UIAlertView alloc] initWithTitle:@"Traffic" message:@"" delegate:self cancelButtonTitle:@"No Preference" otherButtonTitles:@"Information",@"Set as essential", @"Set as secondary", nil];
+    UIAlertView *trafficPopup = [[UIAlertView alloc] initWithTitle:@"Traffic"
+                                                     message:@"" delegate:self
+                                                     cancelButtonTitle:@"No Preference"
+                                                     otherButtonTitles:@"Information",@"Set as essential", @"Set as secondary", nil];
     
     trafficPopup.tag = 1;
-    
     [trafficPopup show];
     
 }
 
 - (IBAction)greenery:(id)sender {
     
-    UIAlertView *greeneryPopup = [[UIAlertView alloc] initWithTitle:@"Greenery" message:@"" delegate:self cancelButtonTitle:@"No Preference" otherButtonTitles:@"Information",@"Set as essential", @"Set as secondary", nil];
+    UIAlertView *greeneryPopup = [[UIAlertView alloc] initWithTitle:@"Greenery"
+                                                      message:@""
+                                                      delegate:self
+                                                      cancelButtonTitle:@"No Preference"
+                                                      otherButtonTitles:@"Information",@"Set as essential", @"Set as secondary", nil];
     
     greeneryPopup.tag = 2;
     [greeneryPopup show];
@@ -384,7 +437,11 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
 
 - (IBAction)crime:(id)sender {
     
-    UIAlertView *crimePopup = [[UIAlertView alloc] initWithTitle:@"Crime" message:@"" delegate:self cancelButtonTitle:@"No Preference" otherButtonTitles:@"Information",@"Set as essential", @"Set as secondary", nil];
+    UIAlertView *crimePopup = [[UIAlertView alloc] initWithTitle:@"Crime"
+                                                   message:@""
+                                                   delegate:self
+                                                   cancelButtonTitle:@"No Preference"
+                                                   otherButtonTitles:@"Information",@"Set as essential", @"Set as secondary", nil];
     
     crimePopup.tag = 3;
     [crimePopup show];
@@ -393,7 +450,11 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
 
 - (IBAction)sidewalk:(id)sender {
     
-    UIAlertView *sidewalkPopup = [[UIAlertView alloc] initWithTitle:@"Sidewalk" message:@"" delegate:self cancelButtonTitle:@"No Preference" otherButtonTitles:@"Information",@"Set as essential", @"Set as secondary", nil];
+    UIAlertView *sidewalkPopup = [[UIAlertView alloc] initWithTitle:@"Sidewalk"
+                                                      message:@""
+                                                      delegate:self
+                                                      cancelButtonTitle:@"No Preference"
+                                                      otherButtonTitles:@"Information",@"Set as essential", @"Set as secondary", nil];
     
     sidewalkPopup.tag = 4;
     [sidewalkPopup show];
@@ -401,7 +462,11 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
 
 - (IBAction)Slope:(id)sender {
     
-    UIAlertView *slopePopup = [[UIAlertView alloc] initWithTitle:@"Slope" message:@"" delegate:self cancelButtonTitle:@"No Preference" otherButtonTitles:@"Information",@"Set as essential", @"Set as secondary", nil];
+    UIAlertView *slopePopup = [[UIAlertView alloc] initWithTitle:@"Slope"
+                                                   message:@""
+                                                   delegate:self
+                                                   cancelButtonTitle:@"No Preference"
+                                                   otherButtonTitles:@"Information",@"Set as essential", @"Set as secondary", nil];
     
     slopePopup.tag = 5;
     [slopePopup show];
@@ -410,7 +475,11 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
 
 - (IBAction)residentialDensity:(id)sender {
     
-    UIAlertView *residentialPopup = [[UIAlertView alloc] initWithTitle:@"Residential Density" message:@"" delegate:self cancelButtonTitle:@"No Preference" otherButtonTitles:@"Information",@"Set as essential", @"Set as secondary", nil];
+    UIAlertView *residentialPopup = [[UIAlertView alloc] initWithTitle:@"Residential Density"
+                                                         message:@""
+                                                         delegate:self
+                                                         cancelButtonTitle:@"No Preference"
+                                                         otherButtonTitles:@"Information",@"Set as essential", @"Set as secondary", nil];
     
     residentialPopup.tag = 6;
     [residentialPopup show];
@@ -419,9 +488,13 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
 
 - (IBAction)businessDensity:(id)sender {
     
-    UIAlertView *businessPopup = [[UIAlertView alloc] initWithTitle:@"Business Density" message:@"" delegate:self cancelButtonTitle:@"No Preference" otherButtonTitles:@"Information",@"Set as essential", @"Set as secondary", nil];
+    UIAlertView *businessPopup = [[UIAlertView alloc] initWithTitle:@"Business Density"
+                                                      message:@""
+                                                      delegate:self
+                                                      cancelButtonTitle:@"No Preference"
+                                                      otherButtonTitles:@"Information",@"Set as essential", @"Set as secondary", nil];
     
-    businessPopup.tag =7;
+    businessPopup.tag = 7;
     [businessPopup show];
 }
 
@@ -429,7 +502,11 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
 - (IBAction)accessibility:(id)sender {
     
     
-    UIAlertView *accessibilityPopup = [[UIAlertView alloc] initWithTitle:@"Accessibility!" message:@"" delegate:self cancelButtonTitle:@"No Preference" otherButtonTitles:@"Introduction",@"Set as essential", @"Set as secondary", nil];
+    UIAlertView *accessibilityPopup = [[UIAlertView alloc] initWithTitle:@"Accessibility!"
+                                                           message:@""
+                                                           delegate:self
+                                                           cancelButtonTitle:@"No Preference"
+                                                           otherButtonTitles:@"Introduction",@"Set as essential", @"Set as secondary", nil];
     
     accessibilityPopup.tag = 8;
     [accessibilityPopup show];
@@ -438,7 +515,11 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
 
 - (IBAction)intersections:(id)sender {
     
-    UIAlertView *intersectionsPopup = [[UIAlertView alloc] initWithTitle:@"Intersections!" message:@"" delegate:self cancelButtonTitle:@"No Preference" otherButtonTitles:@"Introduction",@"Set as essential", @"Set as secondary", nil];
+    UIAlertView *intersectionsPopup = [[UIAlertView alloc] initWithTitle:@"Intersections!"
+                                                           message:@""
+                                                           delegate:self
+                                                           cancelButtonTitle:@"No Preference"
+                                                           otherButtonTitles:@"Introduction",@"Set as essential", @"Set as secondary", nil];
     
     intersectionsPopup.tag = 9;
     [intersectionsPopup show];
@@ -447,26 +528,421 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
 
 - (IBAction)landVariables:(id)sender {
     
-    UIAlertView *landvariationsPopup = [[UIAlertView alloc] initWithTitle:@"Landvariations!" message:@"" delegate:self cancelButtonTitle:@"No Preference" otherButtonTitles:@"Introduction",@"Set as essential", @"Set as secondary", nil];
+    UIAlertView *landvariationsPopup = [[UIAlertView alloc] initWithTitle:@"Landvariations!"
+                                                            message:@""
+                                                            delegate:self
+                                                            cancelButtonTitle:@"No Preference"
+                                                            otherButtonTitles:@"Introduction",@"Set as essential", @"Set as secondary", nil];
     
     landvariationsPopup.tag = 10;
     [landvariationsPopup show];
 }
+/*
+ overMaximumEssentialAlert
+ Displays pop-up when no. of esssential parameters > UPPER_BOUND(=5)
+ */
 
+-(void) overMaximumEssentialAlert{
+    UIAlertView *infoAlert = [[UIAlertView alloc] initWithTitle:@"Information"
+                                                  message:@"Maximum number of essential parameters allowed is 5"
+                                                  delegate:self cancelButtonTitle:@"Ok, Got it"
+                                                  otherButtonTitles: nil];
+    [infoAlert show];
+}
 
-
-
+/*
+ alertView: clickButtonAtIndex:
+ Handles - 
+ 1. Setting essential / parameter, along with substituting the images
+ 2. Display another alertView for more traffic information
+ 3. Check for upper count of number of parameters
+*/
 - (void) alertView:(UIAlertView *) alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     
+    switch (alertView.tag) {
+        case 1:
+            if (buttonIndex == 1){
+                UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"TRAFFIC"
+                                                                     message:@"This parameter indicates the real-time traffic on roads"
+                                                                    delegate:self
+                                                           cancelButtonTitle:@"Done"
+                                                           otherButtonTitles: nil];
+                [alertView2 show];
+                
+            } else if (buttonIndex == 2){
+                
+                if (count_essential < 6){
+                    count_essential += 1;
+                    // Review - why is this being set to 5
+                    traffic = 5;
+                    parameter_array[0] = 2;
+                    //[self.trafficButton setTitle:@"Traffic E!" forState:UIControlStateNormal];
+                    NSString *image_name = parameter_primary_images[0];
+                    [self.trafficButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                }
+                else{
+                    [self overMaximumEssentialAlert];
+                }
+                
+            } else if (buttonIndex == 3){
+                // Review - why is being set to2
+                traffic = 2;
+                parameter_array[0] = 1;
+                NSString *image_name = parameter_secondary_images[0];
+                [self.trafficButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                
+                //[self.trafficButton setTitle:@"Traffic S!" forState:UIControlStateNormal];
+                
+            }
+            break;
+            
+        case 2:
+            if (buttonIndex == 1){
+                
+                UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"GREENERY"
+                                                               message:@"This parameter indicates the greenery on the way."
+                                                               delegate:self
+                                                               cancelButtonTitle:@"Done"
+                                                               otherButtonTitles: nil];
+                [alertView2 show];
+                
+                
+            } else if (buttonIndex == 2){
+                if (count_essential < 6){
+                    count_essential = count_essential +1;
+                    greenery = 5;
+                    parameter_array[1] = 2;
+                    //[self.greeneryButton setTitle:@"Greenery E!" forState:UIControlStateNormal];
+                    NSString *image_name = parameter_primary_images[1];
+                    [self.greeneryButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                    
+                }
+                else{
+                    [self overMaximumEssentialAlert];
+                }
+                
+            } else if (buttonIndex == 3){
+                greenery = 2;
+                parameter_array[1] = 1;
+                NSString *image_name = parameter_secondary_images[1];
+                [self.greeneryButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                
+                
+                //[self.greeneryButton setTitle:@"Greenery S!" forState:UIControlStateNormal];
+            }
+            break;
+            
+        case 3:
+            if (buttonIndex == 1){
+                
+                UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"CRIME"
+                                                               message:@"This parameter indicates the level of crime on the routes."
+                                                               delegate:self
+                                                               cancelButtonTitle:@"Done"
+                                                               otherButtonTitles: nil];
+                [alertView2 show];
+                
+                
+            } else if (buttonIndex == 2){
+                if (count_essential < 6){
+                    count_essential += 1;
+                    crime = 5;
+                    parameter_array[2] = 2;
+                    NSString *image_name = parameter_primary_images[2];
+                    [self.crimeButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                    
+                    //[self.crimeButton setTitle:@"Crime E!" forState:UIControlStateNormal];
+                }
+                else{
+                    [self overMaximumEssentialAlert];
+                }
+                
+            } else if (buttonIndex == 3){
+                crime = 2;
+                parameter_array[2] = 1;
+                NSString *image_name = parameter_secondary_images[2];
+                [self.crimeButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                
+                //[self.crimeButton setTitle:@"Crime S!" forState:UIControlStateNormal];
+                
+            }
+            break;
+        
+        case 4:
+            if (buttonIndex == 1){
+                
+    
+                UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"SIDEWALK"
+                                                               message:@"This parameter indicates the importance to sidewalks."
+                                                               delegate:self
+                                                               cancelButtonTitle:@"Done"
+                                                               otherButtonTitles: nil];
+                [alertView2 show];
+                
+                
+            } else if (buttonIndex == 2){
+                if (count_essential < 6){
+                    count_essential += 1;
+                    sidewalk = 5;
+                    parameter_array[3] = 2;
+                    NSString *image_name = parameter_primary_images[3];
+                    [self.sidewalkButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                    
+                    //[self.sidewalkButton setTitle:@"Sidewalk E!" forState:UIControlStateNormal];
+                }
+                else{
+                    [self overMaximumEssentialAlert];
+                }
+                
+            } else if (buttonIndex == 3){
+                sidewalk = 2;
+                parameter_array[3] = 1;
+                NSString *image_name = parameter_secondary_images[3];
+                [self.sidewalkButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                
+                //[self.sidewalkButton setTitle:@"Sidewalk S!" forState:UIControlStateNormal];
+                
+            }
+            break;
+            
+        case 5:
+            if (buttonIndex == 1){
+                
+                UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"SLOPE"
+                                                               message:@"This parameter indicates the slope of the road. Can be useful for people on wheelchair."
+                                                               delegate:self
+                                                               cancelButtonTitle:@"Done"
+                                                               otherButtonTitles: nil];
+                [alertView2 show];
+                
+                
+            } else if (buttonIndex == 2){
+                if (count_essential < 6){
+                    count_essential = count_essential +1;
+                    slope = 5;
+                    parameter_array[4] = 2;
+                    NSString *image_name = parameter_primary_images[4];
+                    [self.slopeButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                    
+                    //[self.slopeButton setTitle:@"Slope E!" forState:UIControlStateNormal];
+                }
+                else{
+                    [self overMaximumEssentialAlert];
+                }
+                
+            } else if (buttonIndex == 3){
+                slope = 2;
+                parameter_array[4] = 1;
+                NSString *image_name = parameter_secondary_images[4];
+                [self.slopeButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                
+                //[self.slopeButton setTitle:@"Slope S!" forState:UIControlStateNormal];
+                
+            }
+            break;
+            
+        case 6:
+            if (buttonIndex == 1){
+                
+                UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"RESIDENTIAL DENSITY"
+                                                               message:@"This parameter indicates the residential density of the routes."
+                                                               delegate:self
+                                                               cancelButtonTitle:@"Done"
+                                                               otherButtonTitles: nil];
+                [alertView2 show];
+                
+                
+            } else if (buttonIndex == 2){
+                
+                if (count_essential < 6){
+                    count_essential = count_essential +1;
+                    residential = 5;
+                    parameter_array[5] = 2;
+                    NSString *image_name = parameter_primary_images[5];
+                    [self.residentialButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                    
+                    //[self.residentialButton setTitle:@"Residential Density E!" forState:UIControlStateNormal];
+                }
+                else{
+                    [self overMaximumEssentialAlert];
+                }
+                
+            } else if (buttonIndex == 3){
+                
+                residential = 2;
+                parameter_array[5] = 1;
+                NSString *image_name = parameter_secondary_images[5];
+                [self.residentialButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                
+                //[self.residentialButton setTitle:@"Residential Density S!" forState:UIControlStateNormal];
+            }
+            break;
+            
+        case 7:
+            if (buttonIndex == 1){
+                
+                UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"BUSINESS DENSITY"
+                                                               message:@"This parameter indicates the business density of the routes"
+                                                               delegate:self
+                                                               cancelButtonTitle:@"Done"
+                                                               otherButtonTitles: nil];
+                [alertView2 show];
+                
+                
+            } else if (buttonIndex == 2){
+                if (count_essential < 6){
+                    count_essential = count_essential +1;
+                    business = 5;
+                    parameter_array[6] = 2;
+                    NSString *image_name = parameter_primary_images[6];
+                    [self.businessButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                    
+                    //[self.businessButton setTitle:@"Business Density E!" forState:UIControlStateNormal];
+                }
+                else{
+                    [self overMaximumEssentialAlert];
+                }
+                
+            } else if (buttonIndex == 3){
+                business = 2;
+                parameter_array[6] = 1;
+                NSString *image_name = parameter_secondary_images[6];
+                [self.businessButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                
+                //[self.businessButton setTitle:@"Business Density S!" forState:UIControlStateNormal];
+                
+            }
+            break;
+            
+        case 8:
+            if (buttonIndex == 1){
+                
+                
+                UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"ACCESSIBILITY"
+                                                               message:@"This parameter indicates the level of accessibility on the roads."
+                                                               delegate:self
+                                                               cancelButtonTitle:@"Done"
+                                                               otherButtonTitles: nil];
+                [alertView2 show];
+                
+                
+            } else if (buttonIndex == 2){
+                if (count_essential < 6){
+                    count_essential += 1;
+                    accessibility = 5;
+                    parameter_array[7] = 2;
+                    NSString *image_name = parameter_primary_images[7];
+                    [self.accessibilityButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                    
+                    //[self.accessibilityButton setTitle:@"Accessibility E!" forState:UIControlStateNormal];
+                }
+                else{
+                    [self overMaximumEssentialAlert];
+                }
+                
+            } else if (buttonIndex == 3){
+                accessibility = 2;
+                parameter_array[7] = 1;
+                NSString *image_name = parameter_secondary_images[7];
+                [self.accessibilityButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                
+                //[self.accessibilityButton setTitle:@"Accessibility S!" forState:UIControlStateNormal];
+                
+            }
+            break;
+            
+        case 9:
+            if (buttonIndex == 1){
+                
+                UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"INTERSECTIONS"
+                                                               message:@"This parameter indicates the importance to intersections"
+                                                               delegate:self
+                                                               cancelButtonTitle:@"Done"
+                                                               otherButtonTitles: nil];
+                [alertView2 show];
+                
+                
+            } else if (buttonIndex == 2){
+                if (count_essential < 6){
+                    count_essential = count_essential +1;
+                    intersections = 5;
+                    parameter_array[8] = 2;
+                    NSString *image_name = parameter_primary_images[8];
+                    [self.intersectionsButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                    
+                    //[self.intersectionsButton setTitle:@"Intersections E!" forState:UIControlStateNormal];
+                }
+                else{
+                    [self overMaximumEssentialAlert];
+                }
+                
+            } else if (buttonIndex == 3){
+                intersections = 2;
+                parameter_array[8] = 1;
+                NSString *image_name = parameter_secondary_images[8];
+                [self.intersectionsButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                
+                //[self.intersectionsButton setTitle:@"Intersections S!" forState:UIControlStateNormal];
+                
+            }
+            break;
+            
+        case 10:
+            if (buttonIndex == 1){
+                
+                UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"LAND VARIATIONS"
+                                                               message:@"This parameter indicates the light environment along your walk. It may influence your walk in night"
+                                                               delegate:self
+                                                               cancelButtonTitle:@"Done"
+                                                               otherButtonTitles: nil];
+                [alertView2 show];
+                
+                
+            } else if (buttonIndex == 2){
+                if (count_essential < 6){
+                    count_essential = count_essential +1;
+                    landvariations = 5;
+                    parameter_array[9] = 2;
+                    NSString *image_name = parameter_primary_images[9];
+                    [self.landvariationsButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                    
+                    //[self.landvariationsButton setTitle:@"Land Variations E!" forState:UIControlStateNormal];
+                }
+                else{
+                    [self overMaximumEssentialAlert];
+                }
+                
+            } else if (buttonIndex == 3){
+                landvariations = 2;
+                parameter_array[9] = 1;
+                NSString *image_name = parameter_secondary_images[9];
+                [self.landvariationsButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
+                
+                //[self.landvariationsButton setTitle:@"Land Variations S!" forState:UIControlStateNormal];
+                
+            }
+            break;
+            
+            
+        default:
+            break;
+    }
+    /*
     if (alertView.tag == 1){
+        
         if (buttonIndex == 1){
-            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"TRAFFIC" message:@"This parameter indicates the real-time traffic on roads" delegate:self cancelButtonTitle:@"Done" otherButtonTitles: nil];
+            UIAlertView *alertView2 = [[UIAlertView alloc] initWithTitle:@"TRAFFIC"
+                                                           message:@"This parameter indicates the real-time traffic on roads"
+                                                           delegate:self
+                                                           cancelButtonTitle:@"Done"
+                                                           otherButtonTitles: nil];
             [alertView2 show];
             
         } else if (buttonIndex == 2){
             
             if (count_essential < 6){
-                count_essential = count_essential +1;
+                count_essential += 1;
+                // Review - why is this being set to 5
                 traffic = 5;
                 parameter_array[0] = 2;
                 //[self.trafficButton setTitle:@"Traffic E!" forState:UIControlStateNormal];
@@ -474,16 +950,15 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
                 [self.trafficButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
             }
             else{
-                UIAlertView *infoAlert = [[UIAlertView alloc] initWithTitle:@"Information" message:@"Maximum number of essential parameters allowed is 5" delegate:self cancelButtonTitle:@"Ok, Got it" otherButtonTitles: nil];
-                [infoAlert show];
+                [self overMaximumEssentialAlert];
             }
             
         } else if (buttonIndex == 3){
+            // Review - why is being set to2 
             traffic = 2;
             parameter_array[0] = 1;
             NSString *image_name = parameter_secondary_images[0];
             [self.trafficButton setImage:[UIImage imageNamed:image_name] forState:UIControlStateNormal];
-            
             
             //[self.trafficButton setTitle:@"Traffic S!" forState:UIControlStateNormal];
             
@@ -786,6 +1261,7 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",@"pa_Gree
         }
         
     }
+     */
     
 }
 
