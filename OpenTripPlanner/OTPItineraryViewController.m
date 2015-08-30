@@ -271,6 +271,7 @@
         }
     }
     [_primaryInstructionStrings addObject:[NSString stringWithFormat:@"Arrive at %@", self.toTextField.text]];
+    
     AVSpeechUtterance *utterance = [AVSpeechUtterance
                                     speechUtteranceWithString:[NSString stringWithFormat:@"Arrive at Destination"]];
     utterance.rate = AVSpeechUtteranceMinimumSpeechRate;
@@ -353,6 +354,11 @@
 {
     return [self cellCount];
 }
+
+/*
+  tableView: cellForRowAtIndexPath:
+  Adds different steps of itinerary to tableView
+ */
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -473,8 +479,12 @@
     // Arrival cell
     if ((!_shouldDisplaySteps && indexPath.row == self.itinerary.legs.count + 1) || (_shouldDisplaySteps && indexPath.row == _allSteps.count + 1)) {
         
-        float height = [primaryInstruction sizeWithFont:[UIFont boldSystemFontOfSize:13] constrainedToSize:CGSizeMake(193, MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping].height;
+        float height = [primaryInstruction sizeWithFont:[UIFont boldSystemFontOfSize:13]
+                                           constrainedToSize:CGSizeMake(193, MAXFLOAT)
+                                           lineBreakMode:NSLineBreakByWordWrapping].height;
+        
         return MAX(60, 8 + height + 8);
+        
     } else {
         // use steps as segments
         if (_shouldDisplaySteps) {
@@ -646,11 +656,19 @@
 
 - (void)revealController:(ZUUIRevealController *)revealController didHideRearViewController:(UIViewController *)rearViewController
 {
-    if (revealController.currentFrontViewPosition != FrontViewPositionLeft) return;
+    if (revealController.currentFrontViewPosition != FrontViewPositionLeft){
+        return;
+    }
     [TestFlight passCheckpoint:@"ITINERARY_HIDE_MAP_WITH_SWIPE"];
     _mapShowing = NO;
-    [self.itineraryTableViewController.tableView deselectRowAtIndexPath:[self.itineraryTableViewController.tableView indexPathForSelectedRow] animated:YES];
+    [self.itineraryTableViewController.tableView
+                deselectRowAtIndexPath:[self.itineraryTableViewController.tableView indexPathForSelectedRow]
+                animated:YES];
 }
+
+/* compareCoordinate: withCoordinate:
+   Determines if two coordinates are nearby to account for margin of error
+*/
 
 - (BOOL) compareCoordinate : (CLLocationCoordinate2D)p1
              withCoordinate: (CLLocationCoordinate2D)p2
@@ -766,23 +784,18 @@
                  */
                 /*End Adds Notation*/
                 
-                float epsilon = 1;
-                
-                float max_lat = step.lat.floatValue + epsilon;
-                float min_lat = step.lat.floatValue - epsilon;
-                float max_lon = step.lon.floatValue + epsilon;
-                float min_lon = step.lon.floatValue - epsilon;
-                
                 CLLocationCoordinate2D intersection_tagged = CLLocationCoordinate2DMake(cur_lat, cur_lon);
                 CLLocationCoordinate2D intersection_mapped = CLLocationCoordinate2DMake(step.lat.floatValue, step.lon.floatValue);
                 
                 if([self compareCoordinate:intersection_mapped withCoordinate:intersection_tagged]){
                     
                     if([curbCutFlag integerValue] == 0){
+                        
                         curbCutAnnotation = [RMAnnotation
                                              annotationWithMapView:self.itineraryMapViewController.mapView
                                              coordinate:CLLocationCoordinate2DMake([Lat floatValue], [Long floatValue])
                                              andTitle:@"Curb"];
+                        
                         RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"troublespot_32.png"]];
                         curbCutAnnotation.userInfo = [[NSMutableDictionary alloc] init];
                         [curbCutAnnotation.userInfo setObject:marker forKey:@"layer"];
@@ -791,14 +804,16 @@
                     
                     NSString *walkSignalFlag = [attributes valueForKey:@"WALK_SIG"];
                     if([walkSignalFlag integerValue] == 0){
-                        curbCutAnnotation = [RMAnnotation
+                        
+                        RMAnnotation* walkSignalAnnotation = [RMAnnotation
                                              annotationWithMapView:self.itineraryMapViewController.mapView
                                              coordinate:CLLocationCoordinate2DMake([Lat floatValue], [Long floatValue])
-                                             andTitle:@"Curb"];
+                                             andTitle:@"Walk Signal"];
+                        
                         RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"troublespot_32.png"]];
-                        curbCutAnnotation.userInfo = [[NSMutableDictionary alloc] init];
-                        [curbCutAnnotation.userInfo setObject:marker forKey:@"layer"];
-                        [self.itineraryMapViewController.mapView addAnnotation:curbCutAnnotation];
+                        walkSignalAnnotation.userInfo = [[NSMutableDictionary alloc] init];
+                        [walkSignalAnnotation.userInfo setObject:marker forKey:@"layer"];
+                        [self.itineraryMapViewController.mapView addAnnotation:walkSignalAnnotation];
                     }
                 }
                 
@@ -821,18 +836,6 @@
         [self.itineraryMapViewController.mapView addAnnotation:modeAnnotation];
         
         
-        /*Change Adds notation 33.776475, -84.387259
-        NSLog(@"Annotation Called");
-        RMAnnotation* curbCutAnnotation = [RMAnnotation
-                                       annotationWithMapView:self.itineraryMapViewController.mapView
-                                       coordinate:CLLocationCoordinate2DMake(33.776475, -84.387259)
-                                       andTitle:leg.from.name];
-        RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"popup-ferry.png"]];
-        curbCutAnnotation.userInfo = [[NSMutableDictionary alloc] init];
-        [curbCutAnnotation.userInfo setObject:marker forKey:@"layer"];
-        [self.itineraryMapViewController.mapView addAnnotation:curbCutAnnotation];
-        /*End Adds Notation */
-        
         id altObj = [_popuprModeIcons objectForKey:[NSString stringWithFormat:@"%@-ALT", leg.mode]];
         if(altObj == nil) {
             modeAnnotationAlt = nil;
@@ -848,8 +851,6 @@
             popupMarker.hidden = YES;
             [self.itineraryMapViewController.mapView addAnnotation:modeAnnotationAlt];
         }
-
-       // NSLog(@"Leg Counter: %i", legCounter);
         
         
         int counter = 0;
@@ -953,7 +954,10 @@
 
 - (void)displayItineraryOverview
 {
-    [self.itineraryMapViewController.mapView zoomWithLatitudeLongitudeBoundsSouthWest:self.itinerary.bounds.swCorner northEast:self.itinerary.bounds.neCorner animated:YES];
+    [self.itineraryMapViewController.mapView
+            zoomWithLatitudeLongitudeBoundsSouthWest:self.itinerary.bounds.swCorner
+            northEast:self.itinerary.bounds.neCorner
+            animated:YES];
 }
 
 - (void)displayLeg:(Leg *)leg

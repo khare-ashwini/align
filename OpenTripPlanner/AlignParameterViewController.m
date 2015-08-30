@@ -68,34 +68,34 @@ NSString  *parameter_names[10]={ @"Traffic",
 
 NSString *parameter_images[10]={@"pa_traffic_unclick-1.png",
                                 @"pa_Greenery_unclick-1.png",
-                                @"pa_Crime_unclick-1.png",
+                                @"pa_Crime_unclick.png",
                                 @"pa_Sidewalk_unclick-1.png",
                                 @"pa_Slope_unclick-1.png",
                                 @"pa_Residential_Density_unclick-1.png",
                                 @"pa_Business_Density_unclick-1.png",
-                                @"pa_Business_Density_unclick-1.png",
+                                @"pa_Accessibility_unclick.png",
                                 @"pa_Intersections_unclick-1.png",
                                 @"pa_LandVariation_unclick-1.png"};
 
 NSString  *parameter_primary_images[10]={@"pa_traffic_click_E-1.png",
                                          @"pa_Greenery_click_E-1.png",
-                                         @"pa_Crime_click_E-1.png",
+                                         @"pa_Crime_click_E.png",
                                          @"pa_Sidewalk_click_E-1.png",
                                          @"pa_Slope_click_E-1.png",
                                          @"pa_Residential_Density_click_E-1.png",
                                          @"pa_Business_Density_click_E-1.png",
-                                         @"pa_Business_Density_click_E-1.png",
+                                         @"pa_Accessibility_E.png",
                                          @"pa_Intersections_E-1.png",
                                          @"pa_LandVariation_click_E-1.png"};
 
 NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",
                                            @"pa_Greenery_click_S-1.png",
-                                           @"pa_Crime_click_S-1.png",
+                                           @"pa_Crime_click_S.png",
                                            @"pa_Sidewalk_click_S-1.png",
                                            @"pa_Slope_click_S-1.png",
                                            @"pa_Residential_Density_click_S-1.png",
                                            @"pa_Business_Density_click_S-1.png",
-                                           @"pa_Business_Density_click_S-1.png",
+                                           @"pa_Accessibility_click_S.png",
                                            @"pa_Intersections_click_S-1.png",
                                            @"pa_LandVariation_click_S-1.png"};
 
@@ -146,6 +146,7 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",
         info_count = info_count + 1;
     }
     
+    self.myParameterView.hidden = YES;
     
    // UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 450)];
     
@@ -177,6 +178,10 @@ NSString  *parameter_secondary_images[10]={@"pa_traffic_click_S-1.png",
     // Pass the selected object to the new view controller.
 }
 */
+
+/*
+ Switch between My Parameters & allParameters
+ */
 
 - (IBAction)parameterSegment:(UISegmentedControl *)sender {
     
