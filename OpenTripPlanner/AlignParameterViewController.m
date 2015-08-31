@@ -78,7 +78,7 @@ NSString *parameter_images[10]={@"pa_traffic_unclick-1.png",
                                 @"pa_LandVariation_unclick-1.png"};
 
 NSString  *parameter_primary_images[10]={@"pa_traffic_click_E-1.png",
-                                         @"pa_Greenery_click_E-1.png",
+                                         @"pa_Greenery_click_E.png",
                                          @"pa_Crime_click_E.png",
                                          @"pa_Sidewalk_click_E-1.png",
                                          @"pa_Slope_click_E-1.png",

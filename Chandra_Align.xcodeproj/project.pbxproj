@@ -83,13 +83,15 @@
 		5E7FA9F41B923F9800C291F6 /* pa_Crime_unclick.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E7FA9F31B923F9800C291F6 /* pa_Crime_unclick.png */; };
 		5E7FA9FA1B92408300C291F6 /* pa_Crime_click_E.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E7FA9F91B92408300C291F6 /* pa_Crime_click_E.png */; };
 		5E7FA9FC1B92409800C291F6 /* pa_Crime_click_S.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E7FA9FB1B92409800C291F6 /* pa_Crime_click_S.png */; };
-		5EA72E3D1B013F63004954F4 /* TroubleSpot.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EA72E3C1B013F63004954F4 /* TroubleSpot.png */; };
-		5EA72E461B014258004954F4 /* troublespot_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EA72E451B014258004954F4 /* troublespot_32.png */; };
+		5EA72E461B014258004954F4 /* curbCut_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EA72E451B014258004954F4 /* curbCut_32.png */; };
 		5EC035DA1ABD373A00BF06BC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC035D91ABD373A00BF06BC /* AVFoundation.framework */; };
 		5EC06D5B1B9242C5008AD90A /* pa_Accessibility_unclick.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EC06D5A1B9242C5008AD90A /* pa_Accessibility_unclick.png */; };
 		5EC06D621B9242E4008AD90A /* Buttons in Resources */ = {isa = PBXBuildFile; fileRef = 5EC06D601B9242E4008AD90A /* Buttons */; };
 		5EC06D631B9242E4008AD90A /* pa_Accessibility_click_S.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EC06D611B9242E4008AD90A /* pa_Accessibility_click_S.png */; };
 		5EC06D651B9242F3008AD90A /* pa_Accessibility_E.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EC06D641B9242F3008AD90A /* pa_Accessibility_E.png */; };
+		5EC06D671B92B32B008AD90A /* walkSignal_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EC06D661B92B32B008AD90A /* walkSignal_32.png */; };
+		5EC06D691B942295008AD90A /* pa_Greenery_click_E1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EC06D681B942295008AD90A /* pa_Greenery_click_E1.png */; };
+		5EC06D6B1B942329008AD90A /* pa_Greenery_click_E.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EC06D6A1B942329008AD90A /* pa_Greenery_click_E.png */; };
 		5ED549141AE8667A0022BF4C /* popup_parameter.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ED549131AE8667A0022BF4C /* popup_parameter.png */; };
 		5ED5491A1AE86AD10022BF4C /* popup_parameter_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ED549191AE86AD10022BF4C /* popup_parameter_2.png */; };
 		5EF12CAF1AA506EE002E807F /* AboutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF12CAE1AA506EE002E807F /* AboutTableViewController.m */; };
@@ -110,7 +112,6 @@
 		76430E6C1A369B470005A3B4 /* pa_Business_Density_click_E-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 76430E621A369B460005A3B4 /* pa_Business_Density_click_E-1.png */; };
 		76430E6D1A369B470005A3B4 /* pa_Crime_click_E-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 76430E631A369B460005A3B4 /* pa_Crime_click_E-1.png */; };
 		76430E6E1A369B470005A3B4 /* pa_CurbCuts_E-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 76430E641A369B460005A3B4 /* pa_CurbCuts_E-1.png */; };
-		76430E6F1A369B470005A3B4 /* pa_Greenery_click_E-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 76430E651A369B460005A3B4 /* pa_Greenery_click_E-1.png */; };
 		76430E701A369B470005A3B4 /* pa_Intersections_E-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 76430E661A369B460005A3B4 /* pa_Intersections_E-1.png */; };
 		76430E711A369B470005A3B4 /* pa_LandVariation_click_E-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 76430E671A369B460005A3B4 /* pa_LandVariation_click_E-1.png */; };
 		76430E721A369B470005A3B4 /* pa_Residential_Density_click_E-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 76430E681A369B460005A3B4 /* pa_Residential_Density_click_E-1.png */; };
@@ -537,13 +538,15 @@
 		5E7FA9F31B923F9800C291F6 /* pa_Crime_unclick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Crime_unclick.png; sourceTree = "<group>"; };
 		5E7FA9F91B92408300C291F6 /* pa_Crime_click_E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Crime_click_E.png; sourceTree = "<group>"; };
 		5E7FA9FB1B92409800C291F6 /* pa_Crime_click_S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Crime_click_S.png; sourceTree = "<group>"; };
-		5EA72E3C1B013F63004954F4 /* TroubleSpot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TroubleSpot.png; sourceTree = "<group>"; };
-		5EA72E451B014258004954F4 /* troublespot_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = troublespot_32.png; sourceTree = "<group>"; };
+		5EA72E451B014258004954F4 /* curbCut_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = curbCut_32.png; sourceTree = "<group>"; };
 		5EC035D91ABD373A00BF06BC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5EC06D5A1B9242C5008AD90A /* pa_Accessibility_unclick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pa_Accessibility_unclick.png; path = icons/pa_Accessibility_unclick.png; sourceTree = "<group>"; };
 		5EC06D601B9242E4008AD90A /* Buttons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Buttons; path = icons/Buttons; sourceTree = "<group>"; };
 		5EC06D611B9242E4008AD90A /* pa_Accessibility_click_S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pa_Accessibility_click_S.png; path = icons/pa_Accessibility_click_S.png; sourceTree = "<group>"; };
 		5EC06D641B9242F3008AD90A /* pa_Accessibility_E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pa_Accessibility_E.png; path = icons/pa_Accessibility_E.png; sourceTree = "<group>"; };
+		5EC06D661B92B32B008AD90A /* walkSignal_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = walkSignal_32.png; path = ../OpenTripPlanner/walkSignal_32.png; sourceTree = "<group>"; };
+		5EC06D681B942295008AD90A /* pa_Greenery_click_E1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Greenery_click_E1.png; sourceTree = "<group>"; };
+		5EC06D6A1B942329008AD90A /* pa_Greenery_click_E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Greenery_click_E.png; sourceTree = "<group>"; };
 		5ED549131AE8667A0022BF4C /* popup_parameter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popup_parameter.png; sourceTree = "<group>"; };
 		5ED549191AE86AD10022BF4C /* popup_parameter_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popup_parameter_2.png; sourceTree = "<group>"; };
 		5EF12CAD1AA506EE002E807F /* AboutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutTableViewController.h; sourceTree = "<group>"; };
@@ -566,7 +569,6 @@
 		76430E621A369B460005A3B4 /* pa_Business_Density_click_E-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_Business_Density_click_E-1.png"; sourceTree = "<group>"; };
 		76430E631A369B460005A3B4 /* pa_Crime_click_E-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_Crime_click_E-1.png"; sourceTree = "<group>"; };
 		76430E641A369B460005A3B4 /* pa_CurbCuts_E-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_CurbCuts_E-1.png"; sourceTree = "<group>"; };
-		76430E651A369B460005A3B4 /* pa_Greenery_click_E-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_Greenery_click_E-1.png"; sourceTree = "<group>"; };
 		76430E661A369B460005A3B4 /* pa_Intersections_E-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_Intersections_E-1.png"; sourceTree = "<group>"; };
 		76430E671A369B460005A3B4 /* pa_LandVariation_click_E-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_LandVariation_click_E-1.png"; sourceTree = "<group>"; };
 		76430E681A369B460005A3B4 /* pa_Residential_Density_click_E-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pa_Residential_Density_click_E-1.png"; sourceTree = "<group>"; };
@@ -1026,6 +1028,7 @@
 				CCBCD5231635FC9900037B29 /* OTPGradientView.m */,
 				76E1E4B719D7DA14008F410B /* AlignParameterViewController.h */,
 				76E1E4B819D7DA14008F410B /* AlignParameterViewController.m */,
+				5EC06D6A1B942329008AD90A /* pa_Greenery_click_E.png */,
 				5E7FA9FB1B92409800C291F6 /* pa_Crime_click_S.png */,
 				5E7FA9F91B92408300C291F6 /* pa_Crime_click_E.png */,
 				763A7B8719DC87140035FFCD /* AlignSettingsViewController.h */,
@@ -1142,8 +1145,9 @@
 		CC2316EA16260F9200EE0F48 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				5EA72E451B014258004954F4 /* troublespot_32.png */,
-				5EA72E3C1B013F63004954F4 /* TroubleSpot.png */,
+				5EC06D681B942295008AD90A /* pa_Greenery_click_E1.png */,
+				5EC06D661B92B32B008AD90A /* walkSignal_32.png */,
+				5EA72E451B014258004954F4 /* curbCut_32.png */,
 				5E55BBDB1ACE522900A49A06 /* line_chart.png */,
 				76430E761A369B590005A3B4 /* pa_Business_Density_click_S-1.png */,
 				76430E771A369B590005A3B4 /* pa_Crime_click_S-1.png */,
@@ -1158,7 +1162,6 @@
 				76430E621A369B460005A3B4 /* pa_Business_Density_click_E-1.png */,
 				76430E631A369B460005A3B4 /* pa_Crime_click_E-1.png */,
 				76430E641A369B460005A3B4 /* pa_CurbCuts_E-1.png */,
-				76430E651A369B460005A3B4 /* pa_Greenery_click_E-1.png */,
 				76430E661A369B460005A3B4 /* pa_Intersections_E-1.png */,
 				76430E671A369B460005A3B4 /* pa_LandVariation_click_E-1.png */,
 				76430E681A369B460005A3B4 /* pa_Residential_Density_click_E-1.png */,
@@ -1764,7 +1767,6 @@
 				762DB7661A360E4100238625 /* dropdown_cropped-2.png in Resources */,
 				CC23171F16260F9200EE0F48 /* mode-walk.png in Resources */,
 				CC23172016260F9200EE0F48 /* mode-walk@2x.png in Resources */,
-				76430E6F1A369B470005A3B4 /* pa_Greenery_click_E-1.png in Resources */,
 				CCF669661630BA6E007A9634 /* marker-dropped.png in Resources */,
 				CCF669671630BA6E007A9634 /* marker-dropped@2x.png in Resources */,
 				CCF669681630BA6E007A9634 /* mode-bike-to-transit.png in Resources */,
@@ -1866,13 +1868,14 @@
 				CCF66A141631B12A007A9634 /* hard-left_32.png in Resources */,
 				CCF66A151631B12A007A9634 /* hard-left_32@2x.png in Resources */,
 				CCF66A161631B12A007A9634 /* hard-left_52.png in Resources */,
+				5EC06D6B1B942329008AD90A /* pa_Greenery_click_E.png in Resources */,
 				CCF66A171631B12A007A9634 /* hard-left_52@2x.png in Resources */,
 				CCF66A181631B12A007A9634 /* hard-right_32.png in Resources */,
 				CCF66A191631B12A007A9634 /* hard-right_32@2x.png in Resources */,
 				769A589819F6B5A900084DC6 /* crime2.png in Resources */,
 				CCF66A1A1631B12A007A9634 /* hard-right_52.png in Resources */,
 				CCF66A1B1631B12A007A9634 /* hard-right_52@2x.png in Resources */,
-				5EA72E461B014258004954F4 /* troublespot_32.png in Resources */,
+				5EA72E461B014258004954F4 /* curbCut_32.png in Resources */,
 				5EC06D651B9242F3008AD90A /* pa_Accessibility_E.png in Resources */,
 				762DB77A1A36199800238625 /* pa_traffic_unclick-1.png in Resources */,
 				CCF66A1C1631B12A007A9634 /* slight-left_32.png in Resources */,
@@ -1950,6 +1953,8 @@
 				0D4553DA16432356006D4A3B /* popup-elevator@2x.png in Resources */,
 				0D4553DB16432356006D4A3B /* popup-ferry.png in Resources */,
 				0D4553DC16432356006D4A3B /* popup-ferry@2x.png in Resources */,
+				5EC06D671B92B32B008AD90A /* walkSignal_32.png in Resources */,
+				5EC06D691B942295008AD90A /* pa_Greenery_click_E1.png in Resources */,
 				0D4553DD16432356006D4A3B /* popup-funicular.png in Resources */,
 				0D4553DE16432356006D4A3B /* popup-funicular@2x.png in Resources */,
 				0D4553DF16432356006D4A3B /* popup-gondola.png in Resources */,
@@ -1995,7 +2000,6 @@
 				769313331A087AC700CA80A4 /* arrow_enter_1.png in Resources */,
 				4F0E5E8D18E3F26100F05186 /* help-pg01-tip02.png in Resources */,
 				4F4AB31D18EA02DD00299AA1 /* dots-1_75.png in Resources */,
-				5EA72E3D1B013F63004954F4 /* TroubleSpot.png in Resources */,
 				4F4AB32218EA2A7800299AA1 /* dots-2_75.png in Resources */,
 				4F4AB32318EA2A7800299AA1 /* dots-3_75.png in Resources */,
 				76430E6D1A369B470005A3B4 /* pa_Crime_click_E-1.png in Resources */,

@@ -700,6 +700,11 @@
     
 }
 
+-(BOOL) mapView:(RMMapView *)mapView annotationView:(MKAnnotationView *)view
+                calloutAccessoryControlTapped:(UIControl *)control{
+    return YES;
+}
+
 //@ Todo : look at the critical bug of routing in chore trips
 - (void) displayItinerary
 {
@@ -716,6 +721,7 @@
             RMAnnotation* startAnnotation = [RMAnnotation
                                              annotationWithMapView:self.itineraryMapViewController.mapView
                                              coordinate:CLLocationCoordinate2DMake(leg.from.lat.floatValue, leg.from.lon.floatValue)
+                                             
                                              andTitle:nil];
             RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"marker-start.png"]];
             startAnnotation.userInfo = [[NSMutableDictionary alloc] init];
@@ -796,8 +802,9 @@
                                              coordinate:CLLocationCoordinate2DMake([Lat floatValue], [Long floatValue])
                                              andTitle:@"Curb"];
                         
-                        RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"troublespot_32.png"]];
+                        RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"curbCut_32.png"]];
                         curbCutAnnotation.userInfo = [[NSMutableDictionary alloc] init];
+                        curbCutAnnotation.title = @"Missing Curb Cut";
                         [curbCutAnnotation.userInfo setObject:marker forKey:@"layer"];
                         [self.itineraryMapViewController.mapView addAnnotation:curbCutAnnotation];
                     }
@@ -810,9 +817,10 @@
                                              coordinate:CLLocationCoordinate2DMake([Lat floatValue], [Long floatValue])
                                              andTitle:@"Walk Signal"];
                         
-                        RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"troublespot_32.png"]];
+                        RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"walkSignal_32.png"]];
                         walkSignalAnnotation.userInfo = [[NSMutableDictionary alloc] init];
                         [walkSignalAnnotation.userInfo setObject:marker forKey:@"layer"];
+                         walkSignalAnnotation.title = @"Missing Walk Signal";
                         [self.itineraryMapViewController.mapView addAnnotation:walkSignalAnnotation];
                     }
                 }
