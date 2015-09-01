@@ -616,7 +616,7 @@
         AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc] init];
         [synth speakUtterance:utterance];
         
-        //[self.itineraryMapViewController.mapView zoomWithLatitudeLongitudeBoundsSouthWest:sw northEast:ne animated:YES];
+        [self.itineraryMapViewController.mapView zoomWithLatitudeLongitudeBoundsSouthWest:sw northEast:ne animated:YES];
     // Handle leg based segments
     } else {
         [TestFlight passCheckpoint:@"ITINERARY_DISPLAY_LEG"];
@@ -654,7 +654,8 @@
     ((OTPItineraryMapViewController *) rearViewController).itineraryTypeLabel.text = self.itinerary.title;
 }
 
-- (void)revealController:(ZUUIRevealController *)revealController didHideRearViewController:(UIViewController *)rearViewController
+- (void)revealController:(ZUUIRevealController *)revealController
+                        didHideRearViewController:(UIViewController *)rearViewController
 {
     if (revealController.currentFrontViewPosition != FrontViewPositionLeft){
         return;
@@ -692,17 +693,11 @@
     p2_lat = (int) p2_lat;
     
     if(p1_lat == p2_lat && p1_lng == p2_lng){
-        NSLog(@"Match Found!");
         return YES;
     }
     
     return NO;
     
-}
-
--(BOOL) mapView:(RMMapView *)mapView annotationView:(MKAnnotationView *)view
-                calloutAccessoryControlTapped:(UIControl *)control{
-    return YES;
 }
 
 //@ Todo : look at the critical bug of routing in chore trips
@@ -744,92 +739,7 @@
         _allSteps = [self.itinerary.legs valueForKeyPath:@"@unionOfArrays.steps"];
 
         
-        // Retrieve local JSON file called example.json
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"node" ofType:@"json"];
-        // Load the file into an NSData object called JSONData
-        NSError *error = nil;
-        
-        NSData *JSONData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
-        
-        /*Test - Start parsing of JSON points*/
-        // Create an Objective-C object from JSON Data
-        id JSONObject = [NSJSONSerialization
-                         JSONObjectWithData:JSONData
-                         options:NSJSONReadingAllowFragments
-                         error:&error];
-        
-        NSArray *features = [JSONObject valueForKey:@"features"];
-        
-        
-        /* Adds Curb Cut Flag & Walk Signal */
-        
-        for(NSDictionary *dic in features){
-            
-            NSDictionary* attributes = [dic valueForKey:@"attributes"];
-            NSString *Lat = [attributes valueForKey:@"Lat"];
-            NSString *Long = [attributes valueForKey:@"Long"];
-            NSString *curbCutFlag = [attributes valueForKey:@"CURB_CUT"];
-    
-            
-            float cur_lat = [Lat floatValue];
-            float cur_lon = [Long floatValue];
-            
-            for(int i=0; i<_allSteps.count; i++){
-                Step *step = [_allSteps objectAtIndex:i];
-            
-                NSLog(@"Annotation Called");
-                /*
-                curbCutAnnotation = [RMAnnotation
-                                     annotationWithMapView:self.itineraryMapViewController.mapView
-                                     coordinate:CLLocationCoordinate2DMake(step.lat.floatValue, step.lon.floatValue)
-                                     andTitle:@"Curb"];
-                RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"popup-funicular.png"]];
-                curbCutAnnotation.userInfo = [[NSMutableDictionary alloc] init];
-                [curbCutAnnotation.userInfo setObject:marker forKey:@"layer"];
-                [self.itineraryMapViewController.mapView addAnnotation:curbCutAnnotation];
-                 */
-                /*End Adds Notation*/
-                
-                CLLocationCoordinate2D intersection_tagged = CLLocationCoordinate2DMake(cur_lat, cur_lon);
-                CLLocationCoordinate2D intersection_mapped = CLLocationCoordinate2DMake(step.lat.floatValue, step.lon.floatValue);
-                
-                if([self compareCoordinate:intersection_mapped withCoordinate:intersection_tagged]){
-                    
-                    if([curbCutFlag integerValue] == 0){
-                        
-                        curbCutAnnotation = [RMAnnotation
-                                             annotationWithMapView:self.itineraryMapViewController.mapView
-                                             coordinate:CLLocationCoordinate2DMake([Lat floatValue], [Long floatValue])
-                                             andTitle:@"Curb"];
-                        
-                        RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"curbCut_32.png"]];
-                        curbCutAnnotation.userInfo = [[NSMutableDictionary alloc] init];
-                        curbCutAnnotation.title = @"Missing Curb Cut";
-                        [curbCutAnnotation.userInfo setObject:marker forKey:@"layer"];
-                        [self.itineraryMapViewController.mapView addAnnotation:curbCutAnnotation];
-                    }
-                    
-                    NSString *walkSignalFlag = [attributes valueForKey:@"WALK_SIG"];
-                    if([walkSignalFlag integerValue] == 0){
-                        
-                        RMAnnotation* walkSignalAnnotation = [RMAnnotation
-                                             annotationWithMapView:self.itineraryMapViewController.mapView
-                                             coordinate:CLLocationCoordinate2DMake([Lat floatValue], [Long floatValue])
-                                             andTitle:@"Walk Signal"];
-                        
-                        RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"walkSignal_32.png"]];
-                        walkSignalAnnotation.userInfo = [[NSMutableDictionary alloc] init];
-                        [walkSignalAnnotation.userInfo setObject:marker forKey:@"layer"];
-                         walkSignalAnnotation.title = @"Missing Walk Signal";
-                        [self.itineraryMapViewController.mapView addAnnotation:walkSignalAnnotation];
-                    }
-                }
-                
-            }
-
-            /*End Adds Notation */
-        }
-        //NSString *test = [JSONObject valueForKey:@"displayFieldName"];
+                //NSString *test = [JSONObject valueForKey:@"displayFieldName"];
         //NSLog(@"displayFieldName %@", test);
         
         // map mode popup:
@@ -860,28 +770,32 @@
             [self.itineraryMapViewController.mapView addAnnotation:modeAnnotationAlt];
         }
         
-        
         int counter = 0;
         RMShape *polyline = [[RMShape alloc] initWithView:self.itineraryMapViewController.mapView];
 
+        // Retrieve local JSON file called example.json
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"node" ofType:@"json"];
+        // Load the file into an NSData object called JSONData
+        NSError *error = nil;
+        
+        NSData *JSONData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
+        
+        /*Test - Start parsing of JSON points*/
+        // Create an Objective-C object from JSON Data
+        id JSONObject = [NSJSONSerialization
+                         JSONObjectWithData:JSONData
+                         options:NSJSONReadingAllowFragments
+                         error:&error];
+        
+        NSArray *features = [JSONObject valueForKey:@"features"];
         
         for (CLLocation *loc in leg.decodedLegGeometry) {
-           // if(counter > 5) break;
-           // if(counter > 5){
-                
-                polyline.lineWidth = 3;
-                polyline.lineCap = kCALineCapRound;
-                polyline.lineJoin = kCALineJoinRound;
-                polyline.lineColor =  [UIColor colorWithRed:1 green:0 blue:1 alpha:0.5];
-           // }
-           // else{
         
-                polyline.lineWidth = 6;
-                polyline.lineCap = kCALineCapRound;
-                polyline.lineJoin = kCALineJoinRound;
-                polyline.lineColor = [UIColor colorWithRed:0 green:0 blue:1 alpha:0.5];
-           // }
-           // NSLog(@"Loc Counter: %i", counter);
+            polyline.lineWidth = 6;
+            polyline.lineCap = kCALineCapRound;
+            polyline.lineJoin = kCALineJoinRound;
+            polyline.lineColor = [UIColor colorWithRed:0 green:0 blue:1 alpha:0.5];
+     
             if (counter == 0) {
                 [polyline moveToCoordinate:loc.coordinate];
             } else {
@@ -889,6 +803,61 @@
             }
             [_shapesForLegs addObject:polyline];
             counter++;
+            
+            
+            /* Adds Curb Cut Flag & Walk Signal */
+            
+            for(NSDictionary *dic in features){
+                
+                NSDictionary* attributes = [dic valueForKey:@"attributes"];
+                NSString *Lat = [attributes valueForKey:@"Lat"];
+                NSString *Long = [attributes valueForKey:@"Long"];
+                NSString *curbCutFlag = [attributes valueForKey:@"CURB_CUT"];
+                
+                
+                float cur_lat = [Lat floatValue];
+                float cur_lon = [Long floatValue];
+        
+                /*End Adds Notation*/
+                
+                CLLocationCoordinate2D intersection_tagged = CLLocationCoordinate2DMake(cur_lat, cur_lon);
+                CLLocationCoordinate2D intersection_mapped = loc.coordinate;
+                
+                if([self compareCoordinate:intersection_mapped withCoordinate:intersection_tagged]){
+                    
+                    if([curbCutFlag integerValue] == 0){
+                        
+                        curbCutAnnotation = [RMAnnotation
+                                             annotationWithMapView:self.itineraryMapViewController.mapView
+                                             coordinate:CLLocationCoordinate2DMake([Lat floatValue], [Long floatValue])
+                                             andTitle:@"Curb"];
+                        
+                        RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"curbCut_32.png"]];
+                        curbCutAnnotation.userInfo = [[NSMutableDictionary alloc] init];
+                        curbCutAnnotation.title = @"Missing Curb Cut";
+                        [curbCutAnnotation.userInfo setObject:marker forKey:@"layer"];
+                        [self.itineraryMapViewController.mapView addAnnotation:curbCutAnnotation];
+                    }
+                    
+                    NSString *walkSignalFlag = [attributes valueForKey:@"WALK_SIG"];
+                    if([walkSignalFlag integerValue] == 0){
+                        
+                        RMAnnotation* walkSignalAnnotation = [RMAnnotation
+                                                              annotationWithMapView:self.itineraryMapViewController.mapView
+                                                              coordinate:CLLocationCoordinate2DMake([Lat floatValue], [Long floatValue])
+                                                              andTitle:@"Walk Signal"];
+                        
+                        RMMarker *marker = [[RMMarker alloc] initWithUIImage:[UIImage imageNamed:@"walkSignal_32.png"]];
+                        walkSignalAnnotation.userInfo = [[NSMutableDictionary alloc] init];
+                        [walkSignalAnnotation.userInfo setObject:marker forKey:@"layer"];
+                        walkSignalAnnotation.title = @"Missing Walk Signal";
+                        [self.itineraryMapViewController.mapView addAnnotation:walkSignalAnnotation];
+                    }
+                }
+                
+                /*End Adds Notation */
+            }
+
         }
         
         //[_shapesForLegs addObject:polyline];
