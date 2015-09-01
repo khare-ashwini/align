@@ -51,11 +51,15 @@
     RMAnnotation* curbCuts;
 }
 
+
+
 - (void)resetLegsWithColor:(UIColor *)color;
 
 @end
 
 @implementation OTPItineraryViewController
+
+NSInteger displayItineraryCount = 0;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -703,8 +707,15 @@
 //@ Todo : look at the critical bug of routing in chore trips
 - (void) displayItinerary
 {
-    [self.itineraryMapViewController.mapView removeAllAnnotations];
     
+    
+    displayItineraryCount += 1;
+    
+    if(displayItineraryCount == 1){
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    
+    [self.itineraryMapViewController.mapView removeAllAnnotations];
     //NSLog(@"display Itinerary called");
     int legCounter = 0;
     RMAnnotation* curbCutAnnotation;
