@@ -59,7 +59,7 @@
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0w-h2-iOC">
                                                     <rect key="frame" x="3" y="8" width="154" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -336,8 +336,36 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lD9-nI-dO9">
+                                <rect key="frame" x="17" y="420" width="157" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="157" id="zkN-dc-ROh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="   Missing Walk Signal" image="walkSignal_32.png">
+                                    <color key="titleColor" red="0.017977382600000001" green="0.017977382600000001" blue="0.017977382600000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfu-Bl-6id">
+                                <rect key="frame" x="19" y="461" width="135" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="9kS-93-oA2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="    Missing Curb Cut" image="curbCut_32.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <color key="backgroundColor" red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="9YT-vq-aTt" firstAttribute="top" secondItem="gfu-Bl-6id" secondAttribute="bottom" constant="10" id="Bmy-PV-FL0"/>
+                            <constraint firstItem="lD9-nI-dO9" firstAttribute="leading" secondItem="9aV-qy-xhF" secondAttribute="leadingMargin" constant="1" id="Bsq-fy-ycd"/>
+                            <constraint firstItem="gfu-Bl-6id" firstAttribute="top" secondItem="lD9-nI-dO9" secondAttribute="bottom" constant="10" id="C3S-gs-Sqi"/>
+                            <constraint firstItem="gfu-Bl-6id" firstAttribute="leading" secondItem="9aV-qy-xhF" secondAttribute="leadingMargin" constant="10" id="lqj-qg-mQO"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
@@ -678,7 +706,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <color key="backgroundColor" red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afM-eD-4cq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -721,7 +749,7 @@
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Traffic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amz-lQ-EKY">
                                                         <rect key="frame" x="12" y="5" width="120" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="dots-0_75.png" translatesAutoresizingMaskIntoConstraints="NO" id="qlA-mj-cHM" userLabel="Image View - Traffic">
@@ -742,7 +770,7 @@
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Greenery" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yi2-g2-DHU" userLabel="Label - Greenery">
                                                         <rect key="frame" x="12" y="5" width="120" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="dots-0_75.png" translatesAutoresizingMaskIntoConstraints="NO" id="hby-7i-zK4" userLabel="Image View - Greenery">
@@ -775,7 +803,7 @@
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Crime" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZ7-uW-Tc0">
                                                         <rect key="frame" x="12" y="5" width="120" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="dots-0_75.png" translatesAutoresizingMaskIntoConstraints="NO" id="sXI-OQ-Sf4" userLabel="Image View - Crime">
@@ -796,7 +824,7 @@
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Sidewalk" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DqW-QC-A1l">
                                                         <rect key="frame" x="12" y="5" width="120" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="dots-0_75.png" translatesAutoresizingMaskIntoConstraints="NO" id="gHM-wf-7HZ" userLabel="Image View - Sidewalk">
@@ -829,7 +857,7 @@
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Residential Density" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6v-79-ZZc" userLabel="Label - Residential Density">
                                                         <rect key="frame" x="12" y="5" width="130" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="dots-0_75.png" translatesAutoresizingMaskIntoConstraints="NO" id="q2a-5m-NZ1" userLabel="Image View - Residential Density">
@@ -850,7 +878,7 @@
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Business Density" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5y-eS-viL" userLabel="Label - Business Density">
                                                         <rect key="frame" x="12" y="5" width="120" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="dots-0_75.png" translatesAutoresizingMaskIntoConstraints="NO" id="nYe-DV-hzO" userLabel="Image View - Business Density">
@@ -883,7 +911,7 @@
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Accessibility" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4n-zn-Df6" userLabel="Label - Accessibility">
                                                         <rect key="frame" x="12" y="5" width="130" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="dots-0_75.png" translatesAutoresizingMaskIntoConstraints="NO" id="7Lw-DH-qvI" userLabel="Image View - Accessibility">
@@ -904,7 +932,7 @@
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Intersections" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fY9-Cw-hTU" userLabel="Label - Intersections">
                                                         <rect key="frame" x="12" y="5" width="120" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="dots-0_75.png" translatesAutoresizingMaskIntoConstraints="NO" id="taD-0p-rq6" userLabel="Image View - Intersections">
@@ -937,7 +965,7 @@
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Slope" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yjb-2f-noz" userLabel="Label - Slope">
                                                         <rect key="frame" x="12" y="5" width="130" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="dots-0_75.png" translatesAutoresizingMaskIntoConstraints="NO" id="CQG-xB-ztm" userLabel="Image View - Slope">
@@ -958,7 +986,7 @@
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Land Variations" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4D-af-l8o" userLabel="Label - Land Variations">
                                                         <rect key="frame" x="12" y="5" width="120" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="dots-0_75.png" translatesAutoresizingMaskIntoConstraints="NO" id="8EB-H8-8KZ" userLabel="Image View - Land Variations">
@@ -2076,13 +2104,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Feedback" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3px-jL-gaz">
                                 <rect key="frame" x="117" y="5" width="76" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Feedback" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVh-zM-ptp">
                                 <rect key="frame" x="109" y="79" width="101" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -2211,6 +2239,7 @@
         <image name="Parameters_1.png" width="230" height="50"/>
         <image name="Usability_1.png" width="230" height="50"/>
         <image name="cross.png" width="20" height="20"/>
+        <image name="curbCut_32.png" width="32" height="32"/>
         <image name="curl.png" width="34" height="44"/>
         <image name="dots-0_75.png" width="75" height="15"/>
         <image name="dropdown_cropped-2.png" width="34" height="34"/>
@@ -2234,6 +2263,7 @@
         <image name="pa_Sidewalk_unclick-1.png" width="157" height="40"/>
         <image name="pa_Slope_unclick-1.png" width="157" height="40"/>
         <image name="pa_traffic_unclick-1.png" width="157" height="40"/>
+        <image name="walkSignal_32.png" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -2241,7 +2271,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="UNF-hY-sWH"/>
+        <segue reference="0Mc-MM-mch"/>
         <segue reference="rCH-Ep-34k"/>
         <segue reference="fkt-Eh-CPt"/>
     </inferredMetricsTieBreakers>

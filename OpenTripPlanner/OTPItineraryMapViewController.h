@@ -12,6 +12,7 @@
 #import "Itinerary.h"
 #import "OTPInsetLabel.h"
 
+
 @interface OTPItineraryMapViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet RMMapView *mapView;
@@ -19,6 +20,7 @@
 @property (nonatomic, strong) RMUserLocation *userLocation;
 @property (nonatomic) BOOL needsPanToUserLocation;
 @property (weak, nonatomic) IBOutlet UILabel *itineraryTypeLabel;
+@property (weak, nonatomic) IBOutlet UIButton *legendButton;
 
 @property (weak, nonatomic) IBOutlet UIButton *goHomeBtn;
 

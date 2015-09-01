@@ -38,6 +38,7 @@
 		0DE8936E163B4967002BC54C /* OTPAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8936D163B4967002BC54C /* OTPAboutViewController.m */; };
 		1CE5C55D16275187001E83D3 /* OTPItineraryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE5C55C16275187001E83D3 /* OTPItineraryCell.m */; };
 		1CE5C57E162C672E001E83D3 /* OTPItineraryCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE5C57D162C672E001E83D3 /* OTPItineraryCollectionView.m */; };
+		27FF7070D197563D646CF5A3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F602D3D0F819D74BA943B13C /* libPods.a */; };
 		4F0E5E8218E3DFFF00F05186 /* help-next-page_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F0E5E7A18E3DFFF00F05186 /* help-next-page_32.png */; };
 		4F0E5E8318E3DFFF00F05186 /* help-next-page_32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F0E5E7B18E3DFFF00F05186 /* help-next-page_32@2x.png */; };
 		4F0E5E8418E3DFFF00F05186 /* help-next-tip_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F0E5E7C18E3DFFF00F05186 /* help-next-tip_32.png */; };
@@ -534,6 +535,7 @@
 		4FD0B1E818E23F580019FF28 /* WTWHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTWHomeViewController.m; sourceTree = "<group>"; };
 		4FE6A02B1924674500BB64C6 /* dots-0_75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dots-0_75.png"; sourceTree = "<group>"; };
 		5E290AEE1AA62845005B102F /* Align_120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Align_120x120.png; path = icons/Align_120x120.png; sourceTree = "<group>"; };
+		5E529BEC1B964E9100109835 /* WYPopoverController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WYPopoverController.m; path = Pods/WYPopoverController/WYPopoverController/WYPopoverController.m; sourceTree = "<group>"; };
 		5E55BBDB1ACE522900A49A06 /* line_chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line_chart.png; sourceTree = "<group>"; };
 		5E7FA9F31B923F9800C291F6 /* pa_Crime_unclick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Crime_unclick.png; sourceTree = "<group>"; };
 		5E7FA9F91B92408300C291F6 /* pa_Crime_click_E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pa_Crime_click_E.png; sourceTree = "<group>"; };
@@ -881,6 +883,9 @@
 		CCF66A571632112F007A9634 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CCF66A5F16321331007A9634 /* home-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home-icon.png"; path = "../home-icon.png"; sourceTree = "<group>"; };
 		CCF66A611632134F007A9634 /* home-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home-icon@2x.png"; path = "../home-icon@2x.png"; sourceTree = "<group>"; };
+		F1B2C26F164360A48F888BC8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F602D3D0F819D74BA943B13C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF17C1DA4E76395E2A4C8F64 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -888,6 +893,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCCDFBCB15EEBACE00B26133 /* QuartzCore.framework in Frameworks */,
 				5EC035DA1ABD373A00BF06BC /* AVFoundation.framework in Frameworks */,
 				5E00B5AC1AA82A6A00C22F09 /* Social.framework in Frameworks */,
 				CCE01DA0165DF5F7008F873E /* MessageUI.framework in Frameworks */,
@@ -898,7 +904,6 @@
 				CCCDFBDF15EEC16C00B26133 /* CoreLocation.framework in Frameworks */,
 				CCCDFBCD15EEBAEA00B26133 /* libxml2.dylib in Frameworks */,
 				4F32C46618FCA41C0081A3EC /* MapKit.framework in Frameworks */,
-				CCCDFBCB15EEBACE00B26133 /* QuartzCore.framework in Frameworks */,
 				CCCDFBC915EEBABF00B26133 /* SystemConfiguration.framework in Frameworks */,
 				CCCDFBC715EEBAB100B26133 /* Security.framework in Frameworks */,
 				CCCDFBC515EEBAA200B26133 /* MobileCoreServices.framework in Frameworks */,
@@ -908,6 +913,7 @@
 				CCCDFB6A15EEAAC600B26133 /* Foundation.framework in Frameworks */,
 				CCCDFB6C15EEAAC600B26133 /* CoreGraphics.framework in Frameworks */,
 				93EA08D3164582A500705096 /* libTestFlight.a in Frameworks */,
+				27FF7070D197563D646CF5A3 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1044,6 +1050,15 @@
 				0DE8936D163B4967002BC54C /* OTPAboutViewController.m */,
 			);
 			name = "About View";
+			sourceTree = "<group>";
+		};
+		18C488BB76EF89CF6F75D4A5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF17C1DA4E76395E2A4C8F64 /* Pods.debug.xcconfig */,
+				F1B2C26F164360A48F888BC8 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		4F1C491B18E3A1AE00238834 /* Instructions View */ = {
@@ -1472,6 +1487,7 @@
 		CCCDFB5815EEAAC600B26133 = {
 			isa = PBXGroup;
 			children = (
+				5E529BEC1B964E9100109835 /* WYPopoverController.m */,
 				5EC06D641B9242F3008AD90A /* pa_Accessibility_E.png */,
 				5EC06D601B9242E4008AD90A /* Buttons */,
 				5EC06D611B9242E4008AD90A /* pa_Accessibility_click_S.png */,
@@ -1492,6 +1508,7 @@
 				CCCDFB8515EEAAC600B26133 /* OpenTripPlannerTests */,
 				CC2316EA16260F9200EE0F48 /* Icons */,
 				CC2316D11626067D00EE0F48 /* MapBoxResources */,
+				18C488BB76EF89CF6F75D4A5 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1524,6 +1541,7 @@
 				CCCDFBE315EEC1BC00B26133 /* libz.dylib */,
 				CCCDFBE115EEC1AB00B26133 /* libsqlite3.dylib */,
 				CCCDFBCC15EEBAEA00B26133 /* libxml2.dylib */,
+				F602D3D0F819D74BA943B13C /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1594,9 +1612,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CCCDFB9015EEAAC600B26133 /* Build configuration list for PBXNativeTarget "Chandra_Align" */;
 			buildPhases = (
+				1875D2D1751DF2C7F06C361E /* Check Pods Manifest.lock */,
 				CCCDFB5F15EEAAC600B26133 /* Sources */,
 				CCCDFB6015EEAAC600B26133 /* Frameworks */,
 				CCCDFB6115EEAAC600B26133 /* Resources */,
+				5EF9307553ACD3B9EAB6DE91 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2028,6 +2048,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1875D2D1751DF2C7F06C361E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5EF9307553ACD3B9EAB6DE91 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CCCDFB7C15EEAAC600B26133 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2214,6 +2264,7 @@
 		};
 		CCCDFB9115EEAAC600B26133 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF17C1DA4E76395E2A4C8F64 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: Ashwini Khare (C7J8WTZM54)";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
@@ -2224,6 +2275,7 @@
 					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"/**",
 					"\"$(SRCROOT)/MapBox\"/**",
 					"\"$(SRCROOT)/OHAttributedLabel\"/**",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = "OpenTripPlanner/Chandra_Align-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
@@ -2235,6 +2287,7 @@
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
+					"$(inherited)",
 				);
 				PRODUCT_NAME = "Align!";
 				PROVISIONING_PROFILE = "";
@@ -2247,6 +2300,7 @@
 		};
 		CCCDFB9215EEAAC600B26133 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1B2C26F164360A48F888BC8 /* Pods.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -2256,6 +2310,7 @@
 					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"/**",
 					"\"$(SRCROOT)/MapBox\"/**",
 					"\"$(SRCROOT)/OHAttributedLabel\"/**",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = "OpenTripPlanner/Chandra_Align-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
@@ -2267,6 +2322,7 @@
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
+					"$(inherited)",
 				);
 				PRODUCT_NAME = "Align!";
 				PROVISIONING_PROFILE = "";

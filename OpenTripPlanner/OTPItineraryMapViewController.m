@@ -10,11 +10,12 @@
 
 #import "OTPItineraryMapViewController.h"
 
-@interface OTPItineraryMapViewController ()
-
+@interface OTPItineraryMapViewController () <UIActionSheetDelegate>
 @end
 
 @implementation OTPItineraryMapViewController
+
+@synthesize legendButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -55,6 +56,7 @@
     self.itineraryTypeLabel.layer.borderColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.5].CGColor;
     self.itineraryTypeLabel.layer.borderWidth = 0.5;
     self.itineraryTypeLabel.layer.cornerRadius = 5;
+    
 }
 
 - (void)panToUserLocation:(id)sender
