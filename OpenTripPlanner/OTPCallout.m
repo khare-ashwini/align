@@ -41,7 +41,10 @@ BOOL visible;
         visible = NO;
     } else {
         self.frame = CGRectMake(-self.marker.frame.origin.x, 0, self.map.frame.size.width, 0);
-        [self.calloutView presentCalloutFromRect:CGRectMake(self.marker.frame.origin.x + self.marker.bounds.size.width/2, 0, 0, 0) inView:self constrainedToView:self.map permittedArrowDirections:SMCalloutArrowDirectionDown animated:YES];
+        [self.calloutView presentCalloutFromRect:CGRectMake(self.marker.frame.origin.x + self.marker.bounds.size.width/2, 0, 0, 0)
+                          inView:self constrainedToView:self.map
+                          permittedArrowDirections:SMCalloutArrowDirectionDown
+                          animated:YES];
         visible = YES;
     }
 }

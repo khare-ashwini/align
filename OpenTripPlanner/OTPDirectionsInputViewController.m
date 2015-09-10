@@ -21,6 +21,7 @@
 #import "ParametersViewController.h"
 #import "WalkableParameter.h"
 #import <AVFoundation/AVFoundation.h>
+#import <Firebase/Firebase.h>
 
 NSString * const kTransitModeTypeArray[] = {
     @"WALK,TRANSIT",
@@ -258,7 +259,8 @@ NSMutableArray *poiAnnotationsOnMap;
     
     if(stored_flag){
         NSLog(@"Coordiantes are store");
-        CLLocation* temp_start = [[CLLocation alloc] initWithLatitude:start_stored.latitude longitude:start_stored.longitude];
+        CLLocation* temp_start = [[CLLocation alloc] initWithLatitude:start_stored.latitude
+                                                     longitude:start_stored.longitude];
        // OTP
        // [self updateTextField:textField withText:@"Dropped Pin" andLocation:currentLongPressLocation];
     }
@@ -480,6 +482,20 @@ NSMutableArray *poiAnnotationsOnMap;
                                    // @"apiKey", apiKey,
                                    // @"signature", signature,
                                    nil];
+    
+    //Firebase Stuff
+    // Create a reference to a Firebase database URL
+    Firebase *myRootRef = [[Firebase alloc] initWithUrl:@"https://sweltering-torch-1850.firebaseio.com"];
+    // Write data to Firebase
+    NSDictionary *sampleEntry = @{
+        @"data" : params
+    };
+    Firebase *postRef = [myRootRef childByAutoId];
+    [postRef setValue:sampleEntry];
+    // Read data and react to changes
+    [myRootRef observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+        NSLog(@"%@ -> %@", snapshot.key, snapshot.value);
+    }];
     
     NSString* resourcePath = [planServicePath stringByAppendingQueryParameters:params];
     
