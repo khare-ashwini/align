@@ -286,7 +286,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bnn-XQ-jBQ" customClass="RMMapView">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bnn-XQ-jBQ" customClass="RMMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="260" height="568"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Start your Trip" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNf-0W-Obj" userLabel="LAbel" customClass="OTPInsetLabel">
@@ -332,38 +332,40 @@
                                             <segue destination="peN-Jn-A0e" kind="push" id="0Mc-MM-mch"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lD9-nI-dO9">
+                                        <rect key="frame" x="64" y="460" width="42" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" image="walkSignal_32.png">
+                                            <color key="titleColor" red="0.017977382600000001" green="0.017977382600000001" blue="0.017977382600000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="walkSignalIcon:" destination="Pzg-fe-bwz" eventType="touchUpInside" id="oMW-7g-iYg"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="lD9-nI-dO9" secondAttribute="bottom" constant="76" id="wSR-iF-bEe"/>
+                                </constraints>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lD9-nI-dO9">
-                                <rect key="frame" x="17" y="420" width="157" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="157" id="zkN-dc-ROh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <state key="normal" title="   Missing Walk Signal" image="walkSignal_32.png">
-                                    <color key="titleColor" red="0.017977382600000001" green="0.017977382600000001" blue="0.017977382600000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfu-Bl-6id">
-                                <rect key="frame" x="19" y="461" width="135" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="135" id="9kS-93-oA2"/>
-                                </constraints>
+                                <rect key="frame" x="19" y="461" width="40" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <state key="normal" title="    Missing Curb Cut" image="curbCut_32.png">
+                                <state key="normal" image="curbCut_32.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="curbCutIcon:" destination="Pzg-fe-bwz" eventType="touchUpInside" id="P1g-YB-vH6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="lD9-nI-dO9" firstAttribute="leading" secondItem="gfu-Bl-6id" secondAttribute="trailing" constant="5" id="1SG-bM-wpu"/>
                             <constraint firstItem="9YT-vq-aTt" firstAttribute="top" secondItem="gfu-Bl-6id" secondAttribute="bottom" constant="10" id="Bmy-PV-FL0"/>
-                            <constraint firstItem="lD9-nI-dO9" firstAttribute="leading" secondItem="9aV-qy-xhF" secondAttribute="leadingMargin" constant="1" id="Bsq-fy-ycd"/>
-                            <constraint firstItem="gfu-Bl-6id" firstAttribute="top" secondItem="lD9-nI-dO9" secondAttribute="bottom" constant="10" id="C3S-gs-Sqi"/>
                             <constraint firstItem="gfu-Bl-6id" firstAttribute="leading" secondItem="9aV-qy-xhF" secondAttribute="leadingMargin" constant="10" id="lqj-qg-mQO"/>
                         </constraints>
                     </view>

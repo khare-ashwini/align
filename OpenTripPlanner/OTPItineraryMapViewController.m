@@ -60,6 +60,24 @@
     
 }
 
+- (IBAction)walkSignalIcon:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Legend"
+                                              message:@"Missing Walk Signal"
+                                              delegate:nil
+                                              cancelButtonTitle:@"Dismiss"
+                                              otherButtonTitles:nil];
+    [alert show];
+}
+
+- (IBAction)curbCutIcon:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Legend"
+                                               message:@"Missing Curb Cut"
+                                               delegate:nil
+                                               cancelButtonTitle:@"Dismiss"
+                                                otherButtonTitles:nil];
+    [alert show];
+}
+
 - (void)panToUserLocation:(id)sender
 {
     [TestFlight passCheckpoint:@"ITINERARY_PAN_TO_USER_LOCATION"];

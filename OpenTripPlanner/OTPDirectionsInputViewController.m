@@ -580,7 +580,11 @@ NSMutableArray *poiAnnotationsOnMap;
         }
         
         if(showNoPOIError) {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:[NSString stringWithFormat:@"%@ '%@'",searchNearbyNoResultsPrefix,textField.text] delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                      message:[NSString stringWithFormat:@"%@ '%@'",    searchNearbyNoResultsPrefix,textField.text]
+                                                      delegate:nil
+                                                      cancelButtonTitle:@"Dismiss"
+                                                      otherButtonTitles:nil];
             [alert show];
         }
     }];
