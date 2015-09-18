@@ -155,7 +155,8 @@
 
         CGAffineTransform scaling = CGAffineTransformMakeScale(scale, scale);
         UIBezierPath *scaledPath = [bezierPath copy];
-        [scaledPath applyTransform:scaling];
+        if(scale != INFINITY)
+            [scaledPath applyTransform:scaling];
 
         if (animated)
         {

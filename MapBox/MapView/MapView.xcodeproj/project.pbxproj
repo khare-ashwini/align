@@ -46,6 +46,7 @@
 		25757F4F1291C8640083D504 /* RMCircle.h in Headers */ = {isa = PBXBuildFile; fileRef = 25757F4D1291C8640083D504 /* RMCircle.h */; };
 		25757F501291C8640083D504 /* RMCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 25757F4E1291C8640083D504 /* RMCircle.m */; };
 		3849889C0F6F758100496293 /* libProj4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D818500F6F67B90034598B /* libProj4.a */; };
+		5E4BA17E1BABD05800E68D0A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E4BA17D1BABD05800E68D0A /* AVFoundation.framework */; };
 		5E55BBD91ACE334100A49A06 /* FeedbackViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E55BBD71ACE334100A49A06 /* FeedbackViewController.h */; };
 		5E55BBDA1ACE334100A49A06 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E55BBD81ACE334100A49A06 /* FeedbackViewController.m */; };
 		9378877916154C9E007CF24C /* libGRMustache5-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9378877816154C9E007CF24C /* libGRMustache5-iOS.a */; };
@@ -181,6 +182,7 @@
 		25757F4E1291C8640083D504 /* RMCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMCircle.m; sourceTree = "<group>"; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		32CA4F630368D1EE00C91783 /* MapView_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView_Prefix.pch; sourceTree = "<group>"; };
+		5E4BA17D1BABD05800E68D0A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5E55BBD71ACE334100A49A06 /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FeedbackViewController.h; path = ../../OpenTripPlanner/FeedbackViewController.h; sourceTree = "<group>"; };
 		5E55BBD81ACE334100A49A06 /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FeedbackViewController.m; path = ../../OpenTripPlanner/FeedbackViewController.m; sourceTree = "<group>"; };
 		9378877816154C9E007CF24C /* libGRMustache5-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libGRMustache5-iOS.a"; path = "Map/GRMustache/lib/libGRMustache5-iOS.a"; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E4BA17E1BABD05800E68D0A /* AVFoundation.framework in Frameworks */,
 				9378877916154C9E007CF24C /* libGRMustache5-iOS.a in Frameworks */,
 				B8C974500E8A19B2007D16AD /* CoreFoundation.framework in Frameworks */,
 				B8C974510E8A19B2007D16AD /* CoreGraphics.framework in Frameworks */,
@@ -344,6 +347,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5E4BA17D1BABD05800E68D0A /* AVFoundation.framework */,
 				B83E654A0E80E7A8001663B6 /* Proj4.xcodeproj */,
 				B8474BC00EB4019A006A0BC1 /* libsqlite3.dylib */,
 				B83E65590E80E7EB001663B6 /* CoreFoundation.framework */,

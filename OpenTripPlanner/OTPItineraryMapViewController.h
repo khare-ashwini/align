@@ -26,7 +26,6 @@
 
 - (IBAction)walkSignalIcon:(id)sender;
 - (IBAction)curbCutIcon:(id)sender;
-
 - (IBAction)panToUserLocation:(id)sender;
 - (void)enableUserLocation;
 - (void)updateViewsForCurrentUserLocation;
