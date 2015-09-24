@@ -347,18 +347,6 @@
                                     <action selector="curbCutIcon:" destination="Pzg-fe-bwz" eventType="touchUpInside" id="P1g-YB-vH6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opP-3u-X3g">
-                                <rect key="frame" x="262" y="130" width="32" height="32"/>
-                                <state key="normal" image="previous_icon_32.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Si-FM-E1V">
-                                <rect key="frame" x="262" y="80" width="32" height="32"/>
-                                <state key="normal" image="next_icon_32.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGM-Np-N9M">
                                 <rect key="frame" x="265" y="280" width="32" height="32"/>
                                 <state key="normal" image="feedback_32.png">
@@ -383,14 +371,10 @@
                         <color key="backgroundColor" red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="lD9-nI-dO9" secondAttribute="trailing" constant="10" id="0yk-TW-Eb6"/>
-                            <constraint firstItem="7Si-FM-E1V" firstAttribute="top" secondItem="0l3-1L-MBk" secondAttribute="bottom" constant="80" id="4hD-uj-BHj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jGM-Np-N9M" secondAttribute="trailing" constant="10" id="658-32-ugk"/>
                             <constraint firstItem="lD9-nI-dO9" firstAttribute="top" secondItem="0l3-1L-MBk" secondAttribute="bottom" constant="230" id="Pjb-ee-pyP"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="opP-3u-X3g" secondAttribute="trailing" constant="10" id="SRO-U7-T6M"/>
                             <constraint firstItem="gfu-Bl-6id" firstAttribute="top" secondItem="0l3-1L-MBk" secondAttribute="bottom" constant="180" id="XmG-Bi-34x"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7Si-FM-E1V" secondAttribute="trailing" constant="10" id="afg-7Z-Rz6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gfu-Bl-6id" secondAttribute="trailing" constant="10" id="dkE-Be-msj"/>
-                            <constraint firstItem="opP-3u-X3g" firstAttribute="top" secondItem="0l3-1L-MBk" secondAttribute="bottom" constant="130" id="hw4-77-bmd"/>
                             <constraint firstItem="jGM-Np-N9M" firstAttribute="top" secondItem="0l3-1L-MBk" secondAttribute="bottom" constant="280" id="iqw-Tb-puw"/>
                         </constraints>
                     </view>
@@ -2307,7 +2291,6 @@
         <image name="help-prev-page_32.png" width="32" height="32"/>
         <image name="help-prev-tip_32.png" width="32" height="32"/>
         <image name="marker-end-cropped.png" width="30" height="40"/>
-        <image name="next_icon_32.png" width="32" height="32"/>
         <image name="overview-disabled.png" width="44" height="48"/>
         <image name="overview.png" width="44" height="48"/>
         <image name="pa_Accessibility_unclick.png" width="157" height="40"/>
@@ -2320,7 +2303,6 @@
         <image name="pa_Sidewalk_unclick-1.png" width="157" height="40"/>
         <image name="pa_Slope_unclick-1.png" width="157" height="40"/>
         <image name="pa_traffic_unclick-1.png" width="157" height="40"/>
-        <image name="previous_icon_32.png" width="32" height="32"/>
         <image name="walkSignal_32.png" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -49,6 +49,7 @@
     RMAnnotation* modeAnnotationAlt;
     /* @Change : curbCuts */
     RMAnnotation* curbCuts;
+    NSInteger step_count;
 }
 
 
@@ -336,6 +337,22 @@ NSInteger displayItineraryCount = 0;
                      error:&error];
     
     features = [JSONObject valueForKey:@"features"];
+    
+    //Add actions to previous/next buttons
+    //[self.itineraryMapViewController.previousButton addTarget:self action:@selector(doNothing:) forControlEvents:UIControlEventTouchUpInside];
+    //[self.itineraryMapViewController.nextButton addTarget:self action:@selector(doNothing:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [button addTarget:self
+               action:@selector(nextStep:)
+     forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:@"" forState:UIControlStateNormal];
+    [button setBackgroundImage:[UIImage imageNamed:@"next_icon_32.png"] forState:UIControlStateNormal];
+    button.frame = CGRectMake(265.0, 100.0, 32.0, 32.0);
+    [self.itineraryMapViewController.mapView addSubview:button];
+    
+    //Step count
+    step_count = 0;
 }
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
@@ -1182,6 +1199,41 @@ NSInteger displayItineraryCount = 0;
     }
     
     return NO;
+}
+
+-(void) nextStep :(id) sender{
+
+    int size = [_allSteps count];
+    
+    if(step_count < size){
+        
+        Step *step = [_allSteps objectAtIndex:step_count];
+        CLLocationCoordinate2D sw = CLLocationCoordinate2DMake(step.lat.doubleValue - 0.002, step.lon.doubleValue - 0.002);
+        CLLocationCoordinate2D ne = CLLocationCoordinate2DMake(step.lat.doubleValue + 0.002, step.lon.doubleValue + 0.002);
+        
+        [self moveAnnotationWRTStepAndDest:step];
+        NSString *instruction = [NSString stringWithFormat:@"%@ on %@ for %d feet",
+                                 [_relativeDirectionDisplayStrings objectForKey:step.relativeDirection],
+                                 step.streetName, step.distance.intValue];
+        self.itineraryMapViewController.instructionLabel.text = instruction;
+        AVSpeechUtterance *utterance = [AVSpeechUtterance
+                                        speechUtteranceWithString:instruction];
+        utterance.rate = AVSpeechUtteranceMinimumSpeechRate;
+        AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc] init];
+        [synth speakUtterance:utterance];
+        [self.itineraryMapViewController.mapView zoomWithLatitudeLongitudeBoundsSouthWest:sw
+                                                                                northEast:ne animated:YES];
+        step_count += 1;
+    }
+    else if(step_count == size){
+        NSString *instruction = @"Arrive at destination";
+        AVSpeechUtterance *utterance = [AVSpeechUtterance
+                                        speechUtteranceWithString:instruction];
+        utterance.rate = AVSpeechUtteranceMinimumSpeechRate;
+        AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc] init];
+        [synth speakUtterance:utterance];
+        self.itineraryMapViewController.instructionLabel.text = instruction;
+    }
 }
 
 @end

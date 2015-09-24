@@ -29,5 +29,8 @@
 - (IBAction)panToUserLocation:(id)sender;
 - (void)enableUserLocation;
 - (void)updateViewsForCurrentUserLocation;
+@property (weak, nonatomic) IBOutlet UIButton *previousButton;
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
+
 
 @end

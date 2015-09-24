@@ -16,6 +16,8 @@
 @implementation OTPItineraryMapViewController
 
 @synthesize legendButton;
+@synthesize previousButton;
+@synthesize nextButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
