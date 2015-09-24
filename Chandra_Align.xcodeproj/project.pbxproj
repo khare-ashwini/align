@@ -80,6 +80,8 @@
 		4FD0B1E918E23F580019FF28 /* WTWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD0B1E818E23F580019FF28 /* WTWHomeViewController.m */; };
 		4FE6A02C1924674500BB64C6 /* dots-0_75.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FE6A02B1924674500BB64C6 /* dots-0_75.png */; };
 		5E00B5AC1AA82A6A00C22F09 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F3D61D718ED1178003CE02C /* Social.framework */; };
+		5E19E2B81BB391320060B02D /* next_icon_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E19E2B71BB391320060B02D /* next_icon_32.png */; };
+		5E19E2BE1BB3913E0060B02D /* previous_icon_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E19E2BD1BB3913E0060B02D /* previous_icon_32.png */; };
 		5E4BA1781BAA906300E68D0A /* feedback_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E4BA1771BAA906300E68D0A /* feedback_32.png */; };
 		5E55BBDC1ACE522900A49A06 /* line_chart.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E55BBDB1ACE522900A49A06 /* line_chart.png */; };
 		5E7FA9F41B923F9800C291F6 /* pa_Crime_unclick.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E7FA9F31B923F9800C291F6 /* pa_Crime_unclick.png */; };
@@ -535,6 +537,8 @@
 		4FD0B1E718E23F580019FF28 /* WTWHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTWHomeViewController.h; sourceTree = "<group>"; };
 		4FD0B1E818E23F580019FF28 /* WTWHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTWHomeViewController.m; sourceTree = "<group>"; };
 		4FE6A02B1924674500BB64C6 /* dots-0_75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dots-0_75.png"; sourceTree = "<group>"; };
+		5E19E2B71BB391320060B02D /* next_icon_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = next_icon_32.png; path = ../../../../Downloads/next_icon_32.png; sourceTree = "<group>"; };
+		5E19E2BD1BB3913E0060B02D /* previous_icon_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = previous_icon_32.png; path = ../../../../Downloads/previous_icon_32.png; sourceTree = "<group>"; };
 		5E290AEE1AA62845005B102F /* Align_120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Align_120x120.png; path = icons/Align_120x120.png; sourceTree = "<group>"; };
 		5E4BA1771BAA906300E68D0A /* feedback_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feedback_32.png; sourceTree = "<group>"; };
 		5E529BEC1B964E9100109835 /* WYPopoverController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WYPopoverController.m; path = Pods/WYPopoverController/WYPopoverController/WYPopoverController.m; sourceTree = "<group>"; };
@@ -1162,6 +1166,8 @@
 		CC2316EA16260F9200EE0F48 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				5E19E2BD1BB3913E0060B02D /* previous_icon_32.png */,
+				5E19E2B71BB391320060B02D /* next_icon_32.png */,
 				5EC06D681B942295008AD90A /* pa_Greenery_click_E1.png */,
 				5EC06D661B92B32B008AD90A /* walkSignal_32.png */,
 				5E4BA1771BAA906300E68D0A /* feedback_32.png */,
@@ -1977,6 +1983,7 @@
 				0D4553DA16432356006D4A3B /* popup-elevator@2x.png in Resources */,
 				0D4553DB16432356006D4A3B /* popup-ferry.png in Resources */,
 				0D4553DC16432356006D4A3B /* popup-ferry@2x.png in Resources */,
+				5E19E2B81BB391320060B02D /* next_icon_32.png in Resources */,
 				5EC06D671B92B32B008AD90A /* walkSignal_32.png in Resources */,
 				5EC06D691B942295008AD90A /* pa_Greenery_click_E1.png in Resources */,
 				0D4553DD16432356006D4A3B /* popup-funicular.png in Resources */,
@@ -1987,6 +1994,7 @@
 				0D4553E216432356006D4A3B /* popup-train@2x.png in Resources */,
 				0D4553E316432356006D4A3B /* popup-transfer.png in Resources */,
 				0D4553E416432356006D4A3B /* popup-transfer@2x.png in Resources */,
+				5E19E2BE1BB3913E0060B02D /* previous_icon_32.png in Resources */,
 				0D4553E516432356006D4A3B /* popup-walk.png in Resources */,
 				0D4553E616432356006D4A3B /* popup-walk@2x.png in Resources */,
 				7654BD4319E6EB350026D330 /* dropdown_original.png in Resources */,

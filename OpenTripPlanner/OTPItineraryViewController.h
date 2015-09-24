@@ -27,6 +27,8 @@
 @property (nonatomic, strong) OTPGeocodedTextField *toTextField;
 @property (nonatomic) BOOL mapShowedUserLocation;
 
+// Pre-load crowd-sourced data at once
+@property (nonatomic, strong) NSArray* features;
 @property(nonatomic) float rate;
 
 @property (nonatomic,strong) NSString *debug_value;

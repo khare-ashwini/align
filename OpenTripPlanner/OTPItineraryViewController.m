@@ -59,6 +59,8 @@
 
 @implementation OTPItineraryViewController
 
+@synthesize features;
+
 NSInteger displayItineraryCount = 0;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -295,7 +297,7 @@ NSInteger displayItineraryCount = 0;
     self.frontViewController = self.itineraryTableViewController;
     self.rearViewController = self.itineraryMapViewController;
     self.frontViewShadowRadius = 5;
-    self.rearViewRevealWidth = 260;
+    self.rearViewRevealWidth = 10;
     self.maxRearViewRevealOverdraw = 0;
     self.toggleAnimationDuration = 0.1;
     self.itineraryMapViewController.instructionLabel.hidden = FALSE;
@@ -319,6 +321,21 @@ NSInteger displayItineraryCount = 0;
     
     [super viewDidLoad];
     [self repositionItineraryTable];
+    
+    // Retrieve local JSON file called example.json
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"node" ofType:@"json"];
+    // Load the file into an NSData object called JSONData
+    NSError *error = nil;
+    
+    NSData *JSONData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
+    
+    // Create an Objective-C object from JSON Data
+    id JSONObject = [NSJSONSerialization
+                     JSONObjectWithData:JSONData
+                     options:NSJSONReadingAllowFragments
+                     error:&error];
+    
+    features = [JSONObject valueForKey:@"features"];
 }
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
@@ -524,12 +541,16 @@ NSInteger displayItineraryCount = 0;
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Don't select the feedback cell
-    if ((!_shouldDisplaySteps && indexPath.row == self.itinerary.legs.count + 2) || (_shouldDisplaySteps && indexPath.row == _allSteps.count + 2)) {
+    if ((!_shouldDisplaySteps && indexPath.row == self.itinerary.legs.count + 2)
+        || (_shouldDisplaySteps && indexPath.row == _allSteps.count + 2)) {
         return nil;
     }
     return indexPath;
 }
 
+/* tableView: tableView didSelectRowAtIndexPath:
+ *  Handles tap on itinerary list, moves current marker.
+ */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     _selectedIndexPath = indexPath;
@@ -604,7 +625,9 @@ NSInteger displayItineraryCount = 0;
         [self.itineraryMapViewController.mapView zoomWithLatitudeLongitudeBoundsSouthWest:sw northEast:ne animated:YES];
     // Handle step based segments
     //@ToDo Add Voice Command here.
+        
     } else if (_shouldDisplaySteps) {
+        
         [TestFlight passCheckpoint:@"ITINERARY_DISPLAY_STEP"];
         Step *step = [_allSteps objectAtIndex:indexPath.row-1];
         CLLocationCoordinate2D sw = CLLocationCoordinate2DMake(step.lat.doubleValue - 0.002, step.lon.doubleValue - 0.002);
@@ -620,7 +643,47 @@ NSInteger displayItineraryCount = 0;
         AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc] init];
         [synth speakUtterance:utterance];
         
-        [self.itineraryMapViewController.mapView zoomWithLatitudeLongitudeBoundsSouthWest:sw northEast:ne animated:YES];
+        for(NSDictionary *dic in features){
+            
+            NSDictionary* attributes = [dic valueForKey:@"attributes"];
+            NSString *Lat = [attributes valueForKey:@"Lat"];
+            NSString *Long = [attributes valueForKey:@"Long"];
+            NSString *curbCutFlag = [attributes valueForKey:@"CURB_CUT"];
+            NSString *walkSignalFlag = [attributes valueForKey:@"WALK_SIG"];
+            
+            float cur_lat = [Lat floatValue];
+            float cur_lon = [Long floatValue];
+            
+            
+            CLLocationCoordinate2D intersection_tagged = CLLocationCoordinate2DMake(cur_lat, cur_lon);
+            CLLocationCoordinate2D intersection_mapped = CLLocationCoordinate2DMake(step.lat.doubleValue, step.lon.doubleValue);
+            
+            if([self compareCoordinate:intersection_mapped withCoordinate:intersection_tagged]){
+                
+                if([curbCutFlag integerValue] == 0){
+                    NSString *instruction = [NSString stringWithFormat:@"There is a missing curb cut on this intersection"];
+                    AVSpeechUtterance *utterance = [AVSpeechUtterance
+                                                    speechUtteranceWithString:instruction];
+                    utterance.rate = AVSpeechUtteranceMinimumSpeechRate;
+                    AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc] init];
+                    [synth speakUtterance:utterance];
+                }
+                
+                
+                if([walkSignalFlag integerValue] == 0){
+                    NSString *instruction = [NSString stringWithFormat:@"There is a missing walk-signal on this intersection"];
+                    AVSpeechUtterance *utterance = [AVSpeechUtterance
+                                                    speechUtteranceWithString:instruction];
+                    utterance.rate = AVSpeechUtteranceMinimumSpeechRate;
+                    AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc] init];
+                    [synth speakUtterance:utterance];
+                    NSLog(@"Missing walk signal");
+                }
+            }
+
+        }
+        [self.itineraryMapViewController.mapView zoomWithLatitudeLongitudeBoundsSouthWest:sw
+                                                                                northEast:ne animated:YES];
     // Handle leg based segments
     } else {
         [TestFlight passCheckpoint:@"ITINERARY_DISPLAY_LEG"];
@@ -653,7 +716,7 @@ NSInteger displayItineraryCount = 0;
     } else {
         [TestFlight passCheckpoint:@"ITINERARY_SHOW_MAP_FROM_TAP"];
     }
-    [self.itineraryTableViewController.tableView selectRowAtIndexPath:_selectedIndexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
+    //[self.itineraryTableViewController.tableView selectRowAtIndexPath:_selectedIndexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
     
     ((OTPItineraryMapViewController *) rearViewController).itineraryTypeLabel.text = self.itinerary.title;
 }
@@ -783,22 +846,6 @@ NSInteger displayItineraryCount = 0;
         
         int counter = 0;
         RMShape *polyline = [[RMShape alloc] initWithView:self.itineraryMapViewController.mapView];
-
-        // Retrieve local JSON file called example.json
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"node" ofType:@"json"];
-        // Load the file into an NSData object called JSONData
-        NSError *error = nil;
-        
-        NSData *JSONData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
-        
-        /*Test - Start parsing of JSON points*/
-        // Create an Objective-C object from JSON Data
-        id JSONObject = [NSJSONSerialization
-                         JSONObjectWithData:JSONData
-                         options:NSJSONReadingAllowFragments
-                         error:&error];
-        
-        NSArray *features = [JSONObject valueForKey:@"features"];
         
         for (CLLocation *loc in leg.decodedLegGeometry) {
         
@@ -829,7 +876,6 @@ NSInteger displayItineraryCount = 0;
                 float cur_lat = [Lat floatValue];
                 float cur_lon = [Long floatValue];
         
-                /*End Adds Notation*/
                 
                 CLLocationCoordinate2D intersection_tagged = CLLocationCoordinate2DMake(cur_lat, cur_lon);
                 CLLocationCoordinate2D intersection_mapped = loc.coordinate;
@@ -1115,7 +1161,7 @@ NSInteger displayItineraryCount = 0;
         newWidth = screenRect.size.height;
         newHeight = screenRect.size.width - self.itineraryMapViewController.navigationController.navigationBar.frame.size.height - [UIApplication sharedApplication].statusBarFrame.size.width;
     }
-    self.rearViewRevealWidth = screenWidth - 60;
+    self.rearViewRevealWidth = screenWidth - 10;
     
     self.itineraryMapViewController.view.frame = CGRectMake(currRect.origin.x, iosVersionYOffsetDelta, newWidth, newHeight);
 }
